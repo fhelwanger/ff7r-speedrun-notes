@@ -2,7 +2,6 @@ import React from "react";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import ListSubheader from "@material-ui/core/ListSubheader";
 import { SettingsContext } from "../useSettings";
 import Card from "./Card";
 import { cardsPalette } from "./palette";
@@ -24,17 +23,17 @@ function Pick({ item, description, optional }: PickProps) {
     return null;
   }
 
-  let title = "Pick";
+  let text = `Pick ${item}`;
 
   if (optional) {
-    title += " (optional)";
+    text += " (optional)";
   }
 
   return (
     <Card color={optional ? cardsPalette.pickOptional : cardsPalette.pick}>
-      <List dense subheader={<ListSubheader>{title}</ListSubheader>}>
+      <List dense>
         <ListItem>
-          <ListItemText primary={item} secondary={description} />
+          <ListItemText primary={text} secondary={description} />
         </ListItem>
       </List>
     </Card>

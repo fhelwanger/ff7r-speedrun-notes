@@ -2,7 +2,6 @@ import React from "react";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import ListSubheader from "@material-ui/core/ListSubheader";
 import { SettingsContext } from "../useSettings";
 import Card from "./Card";
 import { cardsPalette } from "./palette";
@@ -24,7 +23,7 @@ function Dialogue({ optionText, optionPosition, when }: DialogueProps) {
 
   return (
     <Card color={cardsPalette.dialogue}>
-      <List dense subheader={<ListSubheader>Dialogue</ListSubheader>}>
+      <List dense>
         <ListItem>
           <ListItemText primary={text} />
         </ListItem>
