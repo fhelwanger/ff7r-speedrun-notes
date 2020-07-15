@@ -9,12 +9,7 @@ import LightThemeIcon from "@material-ui/icons/Brightness7";
 import MenuIcon from "@material-ui/icons/Menu";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { makeStyles } from "@material-ui/core/styles";
-import { Theme } from "./useTheme";
-
-export interface HeaderProps {
-  setTheme: (theme: Theme) => void;
-  theme: Theme;
-}
+import { Theme } from "../useTheme";
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -22,6 +17,11 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
+
+export interface HeaderProps {
+  setTheme: (theme: Theme) => void;
+  theme: Theme;
+}
 
 function Header({ theme, setTheme }: HeaderProps) {
   const classes = useStyles();
