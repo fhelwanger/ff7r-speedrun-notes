@@ -1,4 +1,5 @@
 import React from "react";
+import Box from "@material-ui/core/Box";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -11,6 +12,13 @@ import { cardsPalette } from "./palette";
 const useStyles = makeStyles((theme) => ({
   nestedList: {
     marginLeft: theme.spacing(2),
+  },
+  list: {
+    display: "flex",
+    flexWrap: "wrap",
+  },
+  listSubheader: {
+    width: "100%",
   },
   listItemText: {
     lineHeight: 1,
@@ -33,9 +41,17 @@ function Shop({ name, sell, buy }: ShopProps) {
 
   return (
     <Card color={cardsPalette.shop}>
-      <List dense subheader={<ListSubheader>{name}</ListSubheader>}>
+      <List
+        dense
+        className={classes.list}
+        subheader={
+          <ListSubheader className={classes.listSubheader}>
+            {name}
+          </ListSubheader>
+        }
+      >
         {sell && sell.length > 0 && (
-          <>
+          <Box>
             <ListItem>
               <ListItemText
                 primary="Sell"
@@ -52,10 +68,10 @@ function Shop({ name, sell, buy }: ShopProps) {
                 </ListItem>
               ))}
             </List>
-          </>
+          </Box>
         )}
         {buy && buy.length > 0 && (
-          <>
+          <Box>
             <ListItem>
               <ListItemText
                 primary="Buy"
@@ -72,7 +88,7 @@ function Shop({ name, sell, buy }: ShopProps) {
                 </ListItem>
               ))}
             </List>
-          </>
+          </Box>
         )}
       </List>
     </Card>

@@ -1,4 +1,5 @@
 import React from "react";
+import Box from "@material-ui/core/Box";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -8,6 +9,13 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   nestedList: {
     marginLeft: theme.spacing(2),
+  },
+  list: {
+    display: "flex",
+    flexWrap: "wrap",
+  },
+  listSubheader: {
+    width: "100%",
   },
   listItemText: {
     lineHeight: 1,
@@ -28,9 +36,17 @@ function UpgradeWeapons({ characters }: UpgradeWeaponsProps) {
   const classes = useStyles();
 
   return (
-    <List dense subheader={<ListSubheader>Upgrade Weapons</ListSubheader>}>
+    <List
+      dense
+      className={classes.list}
+      subheader={
+        <ListSubheader className={classes.listSubheader}>
+          Upgrade Weapons
+        </ListSubheader>
+      }
+    >
       {characters.map((character, characterIndex) => (
-        <React.Fragment key={characterIndex}>
+        <Box key={characterIndex}>
           <ListItem>
             <ListItemText
               primary={character.name}
@@ -48,7 +64,7 @@ function UpgradeWeapons({ characters }: UpgradeWeaponsProps) {
               </ListItem>
             ))}
           </List>
-        </React.Fragment>
+        </Box>
       ))}
     </List>
   );

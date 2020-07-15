@@ -1,4 +1,5 @@
 import React from "react";
+import Box from "@material-ui/core/Box";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
@@ -11,6 +12,13 @@ import { charactersPalette } from "./palette";
 const useStyles = makeStyles((theme) => ({
   nestedList: {
     marginLeft: theme.spacing(2),
+  },
+  list: {
+    display: "flex",
+    flexWrap: "wrap",
+  },
+  listSubheader: {
+    width: "100%",
   },
   listItemIcon: {
     minWidth: 64,
@@ -56,9 +64,15 @@ function Materia({ characters }: MateriaProps) {
   };
 
   return (
-    <List dense subheader={<ListSubheader>Materia</ListSubheader>}>
+    <List
+      dense
+      className={classes.list}
+      subheader={
+        <ListSubheader className={classes.listSubheader}>Materia</ListSubheader>
+      }
+    >
       {characters.map((character, characterIndex) => (
-        <React.Fragment key={characterIndex}>
+        <Box key={characterIndex}>
           <ListItem>
             <ListItemText
               primary={character.name}
@@ -94,7 +108,7 @@ function Materia({ characters }: MateriaProps) {
               />
             </ListItem>
           </List>
-        </React.Fragment>
+        </Box>
       ))}
     </List>
   );

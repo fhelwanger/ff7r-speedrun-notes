@@ -28,9 +28,7 @@ function Route({ title, children }: RouteProps) {
       >
         {title}
       </Typography>
-      <Box maxWidth={800} margin="0 auto">
         {children}
-      </Box>
     </>
   );
 }

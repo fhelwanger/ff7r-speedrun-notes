@@ -1,4 +1,5 @@
 import React from "react";
+import Box from "@material-ui/core/Box";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
@@ -13,6 +14,13 @@ import XIcon from "@material-ui/icons/Close";
 const useStyles = makeStyles((theme) => ({
   nestedList: {
     marginLeft: theme.spacing(2),
+  },
+  list: {
+    display: "flex",
+    flexWrap: "wrap",
+  },
+  listSubheader: {
+    width: "100%",
   },
   listItemText: {
     lineHeight: 1,
@@ -43,9 +51,17 @@ function BattleSettings({ characters }: BattleSettingsProps) {
   };
 
   return (
-    <List dense subheader={<ListSubheader>Battle Settings</ListSubheader>}>
+    <List
+      dense
+      className={classes.list}
+      subheader={
+        <ListSubheader className={classes.listSubheader}>
+          Battle Settings
+        </ListSubheader>
+      }
+    >
       {characters.map((character, characterIndex) => (
-        <React.Fragment key={characterIndex}>
+        <Box key={characterIndex}>
           <ListItem>
             <ListItemText
               primary={character.name}
@@ -65,7 +81,7 @@ function BattleSettings({ characters }: BattleSettingsProps) {
               </ListItem>
             ))}
           </List>
-        </React.Fragment>
+        </Box>
       ))}
     </List>
   );
