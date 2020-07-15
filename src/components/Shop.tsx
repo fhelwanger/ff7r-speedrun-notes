@@ -4,6 +4,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import { makeStyles } from "@material-ui/core/styles";
+import { SettingsContext } from "../useSettings";
 import Card from "./Card";
 import palette from "./palette";
 
@@ -24,6 +25,11 @@ export interface ShopProps {
 
 function Shop({ name, sell, buy }: ShopProps) {
   const classes = useStyles();
+  const settings = React.useContext(SettingsContext);
+
+  if (!settings.showShops) {
+    return null;
+  }
 
   return (
     <Card color={palette.shop}>

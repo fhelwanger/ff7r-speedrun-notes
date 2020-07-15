@@ -1,5 +1,6 @@
 import React from "react";
 import Divider from "@material-ui/core/Divider";
+import { SettingsContext } from "../useSettings";
 import Card from "./Card";
 import palette from "./palette";
 
@@ -8,6 +9,12 @@ export interface MenuProps {
 }
 
 function Menu({ children }: MenuProps) {
+  const settings = React.useContext(SettingsContext);
+
+  if (!settings.showMenus) {
+    return null;
+  }
+
   const mappedChildren = React.Children.map(children, (child, childIndex) => {
     if (childIndex === 0) {
       return child;

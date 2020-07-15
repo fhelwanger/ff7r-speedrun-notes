@@ -4,6 +4,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import { makeStyles } from "@material-ui/core/styles";
+import { SettingsContext } from "../useSettings";
 import Card from "./Card";
 import palette from "./palette";
 
@@ -26,6 +27,11 @@ export interface BossProps {
 
 function Boss({ name, phases }: BossProps) {
   const classes = useStyles();
+  const settings = React.useContext(SettingsContext);
+
+  if (!settings.showBosses) {
+    return null;
+  }
 
   return (
     <Card color={palette.boss}>

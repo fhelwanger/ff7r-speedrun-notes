@@ -7,7 +7,6 @@ import Typography from "@material-ui/core/Typography";
 import DarkThemeIcon from "@material-ui/icons/Brightness5";
 import LightThemeIcon from "@material-ui/icons/Brightness7";
 import MenuIcon from "@material-ui/icons/Menu";
-import SettingsIcon from "@material-ui/icons/Settings";
 import { makeStyles } from "@material-ui/core/styles";
 import { Theme } from "../useTheme";
 
@@ -21,15 +20,16 @@ const useStyles = makeStyles((theme) => ({
 export interface HeaderProps {
   setTheme: (theme: Theme) => void;
   theme: Theme;
+  onMenuClick: () => void;
 }
 
-function Header({ theme, setTheme }: HeaderProps) {
+function Header({ theme, setTheme, onMenuClick }: HeaderProps) {
   const classes = useStyles();
 
   return (
     <AppBar position="sticky">
       <Toolbar>
-        <IconButton edge="start" color="inherit">
+        <IconButton color="inherit" edge="start" onClick={onMenuClick}>
           <MenuIcon />
         </IconButton>
         <Typography className={classes.title} variant="h6" noWrap>
@@ -38,14 +38,10 @@ function Header({ theme, setTheme }: HeaderProps) {
         <Tooltip title="Toggle light/dark theme">
           <IconButton
             color="inherit"
+            edge="end"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
             {theme === "light" ? <DarkThemeIcon /> : <LightThemeIcon />}
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Settings">
-          <IconButton edge="end" color="inherit">
-            <SettingsIcon />
           </IconButton>
         </Tooltip>
       </Toolbar>
