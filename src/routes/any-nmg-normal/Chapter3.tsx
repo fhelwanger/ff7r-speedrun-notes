@@ -9,7 +9,7 @@ import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
 import Shop from "../../components/Shop";
 
-function Chapter2() {
+function Chapter3() {
   return (
     <>
       <Typography variant="h4" paragraph>
@@ -120,4 +120,4 @@ function Chapter2() {
   );
 }
 
-export default Chapter2;
+export default Chapter3;
