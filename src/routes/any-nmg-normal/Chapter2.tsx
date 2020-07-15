@@ -1,14 +1,11 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
+import Chapter from "../../components/Chapter";
 import Encounter from "../../components/Encounter";
 import Pick from "../../components/Pick";
 
 function Chapter2() {
   return (
-    <>
-      <Typography variant="h4" paragraph>
-        Chapter 2
-      </Typography>
+    <Chapter number={2}>
       <Pick item="Ether" description="When you go outside" />
       <Encounter
         enemies="Security Officer x2, Guard Dog"
@@ -46,7 +43,7 @@ function Chapter2() {
           "Huntsman: Fire to pressure, Punisher, Berserk, Fire",
         ]}
       />
-    </>
+    </Chapter>
   );
 }
 

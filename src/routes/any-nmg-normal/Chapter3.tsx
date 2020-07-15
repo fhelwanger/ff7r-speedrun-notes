@@ -1,6 +1,6 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import BattleSettings from "../../components/BattleSettings";
+import Chapter from "../../components/Chapter";
 import Dialogue from "../../components/Dialogue";
 import Encounter from "../../components/Encounter";
 import Equipment from "../../components/Equipment";
@@ -11,10 +11,7 @@ import Shop from "../../components/Shop";
 
 function Chapter3() {
   return (
-    <>
-      <Typography variant="h4" paragraph>
-        Chapter 3
-      </Typography>
+    <Chapter number={3}>
       <Shop name="Item Shop" buy={["Deadly Dodge"]} />
       <Menu>
         <Materia
@@ -116,7 +113,7 @@ function Chapter3() {
         optionPosition="2nd"
         when="when talking to Jessie"
       />
-    </>
+    </Chapter>
   );
 }
 

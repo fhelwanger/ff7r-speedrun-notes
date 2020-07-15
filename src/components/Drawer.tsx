@@ -6,12 +6,14 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
+import ListSubheader from "@material-ui/core/ListSubheader";
 import MuiDrawer from "@material-ui/core/Drawer";
 import Switch from "@material-ui/core/Switch";
 import Toolbar from "@material-ui/core/Toolbar";
 import Tooltip from "@material-ui/core/Tooltip";
 import { makeStyles } from "@material-ui/core/styles";
 import CloseIcon from "@material-ui/icons/Close";
+import { IndexContext } from "../useIndex";
 import { Settings } from "../useSettings";
 
 const useStyles = makeStyles((theme) => ({
@@ -29,23 +31,45 @@ export interface DrawerProps {
 
 function Drawer({ open, onClose, settings, setSettings }: DrawerProps) {
   const classes = useStyles();
+  const { index } = React.useContext(IndexContext);
 
   return (
     <MuiDrawer open={open} onClose={onClose}>
       <Box width={300}>
         <Toolbar variant="dense">
           <Tooltip title="Close">
-          <IconButton
-            className={classes.closeButton}
-            edge="end"
-            onClick={onClose}
-          >
-            <CloseIcon />
-          </IconButton>
+            <IconButton
+              className={classes.closeButton}
+              edge="end"
+              onClick={onClose}
+            >
+              <CloseIcon />
+            </IconButton>
           </Tooltip>
         </Toolbar>
         <Divider />
-        <List>
+        <List
+          dense
+          subheader={<ListSubheader disableSticky>Index</ListSubheader>}
+        >
+          {index.map((x) => (
+            <ListItem
+              key={x.id}
+              button
+              onClick={() => {
+                document.getElementById(x.id)?.scrollIntoView();
+                onClose();
+              }}
+            >
+              <ListItemText primary={x.text} />
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <List
+          dense
+          subheader={<ListSubheader disableSticky>Settings</ListSubheader>}
+        >
           <ListItem>
             <ListItemText primary="Show encounters" />
             <ListItemSecondaryAction>

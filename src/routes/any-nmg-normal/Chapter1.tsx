@@ -1,17 +1,14 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import Boss from "../../components/Boss";
 import BattleSettings from "../../components/BattleSettings";
+import Chapter from "../../components/Chapter";
 import Encounter from "../../components/Encounter";
 import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
 
 function Chapter1() {
   return (
-    <>
-      <Typography variant="h4" paragraph>
-        Chapter 1
-      </Typography>
+    <Chapter number={1}>
       <Encounter enemies="Security Officer x2" instructions={["Cleave"]} />
       <Encounter enemies="Security Officer x2" instructions={["Punisher"]} />
       <Menu>
@@ -152,7 +149,7 @@ function Chapter1() {
           "Cloud: Counter and Fire/Braver/Punisher Shock Troopers",
         ]}
       />
-    </>
+    </Chapter>
   );
 }
 
