@@ -2,7 +2,7 @@ import React from "react";
 import Divider from "@material-ui/core/Divider";
 import { SettingsContext } from "../useSettings";
 import Card from "./Card";
-import palette from "./palette";
+import { cardsPalette } from "./palette";
 
 export interface MenuProps {
   children?: React.ReactNode;
@@ -28,7 +28,7 @@ function Menu({ children }: MenuProps) {
     );
   });
 
-  return <Card color={palette.menu}>{mappedChildren}</Card>;
+  return <Card color={cardsPalette.menu}>{mappedChildren}</Card>;
 }
 
 export default Menu;

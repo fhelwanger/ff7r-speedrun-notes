@@ -6,7 +6,7 @@ import ListSubheader from "@material-ui/core/ListSubheader";
 import { makeStyles } from "@material-ui/core/styles";
 import { SettingsContext } from "../useSettings";
 import Card from "./Card";
-import palette from "./palette";
+import { cardsPalette } from "./palette";
 
 const useStyles = makeStyles((theme) => ({
   nestedList: {
@@ -34,7 +34,7 @@ function Boss({ name, phases }: BossProps) {
   }
 
   return (
-    <Card color={palette.boss}>
+    <Card color={cardsPalette.boss}>
       <List dense subheader={<ListSubheader>{name}</ListSubheader>}>
         {phases.map((phase, phaseIndex) => (
           <React.Fragment key={phaseIndex}>

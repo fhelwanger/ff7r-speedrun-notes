@@ -5,7 +5,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import { SettingsContext } from "../useSettings";
 import Card from "./Card";
-import palette from "./palette";
+import { cardsPalette } from "./palette";
 
 export interface PickProps {
   item: string;
@@ -31,7 +31,7 @@ function Pick({ item, description, optional }: PickProps) {
   }
 
   return (
-    <Card color={optional ? palette.pickOptional : palette.pick}>
+    <Card color={optional ? cardsPalette.pickOptional : cardsPalette.pick}>
       <List dense subheader={<ListSubheader>{title}</ListSubheader>}>
         <ListItem>
           <ListItemText primary={item} secondary={description} />

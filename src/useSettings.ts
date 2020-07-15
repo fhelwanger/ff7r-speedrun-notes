@@ -7,6 +7,7 @@ export interface Settings {
   showOptionalPick: boolean;
   showMenus: boolean;
   showShops: boolean;
+  showDialogue: boolean;
 }
 
 const defaultSettings: Settings = {
@@ -16,6 +17,7 @@ const defaultSettings: Settings = {
   showOptionalPick: true,
   showMenus: true,
   showShops: true,
+  showDialogue: true,
 };
 
 export const SettingsContext = React.createContext(defaultSettings);

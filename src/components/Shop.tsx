@@ -6,7 +6,7 @@ import ListSubheader from "@material-ui/core/ListSubheader";
 import { makeStyles } from "@material-ui/core/styles";
 import { SettingsContext } from "../useSettings";
 import Card from "./Card";
-import palette from "./palette";
+import { cardsPalette } from "./palette";
 
 const useStyles = makeStyles((theme) => ({
   nestedList: {
@@ -32,7 +32,7 @@ function Shop({ name, sell, buy }: ShopProps) {
   }
 
   return (
-    <Card color={palette.shop}>
+    <Card color={cardsPalette.shop}>
       <List dense subheader={<ListSubheader>{name}</ListSubheader>}>
         {sell && sell.length > 0 && (
           <>

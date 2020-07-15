@@ -133,6 +133,21 @@ function Drawer({ open, onClose, settings, setSettings }: DrawerProps) {
               />
             </ListItemSecondaryAction>
           </ListItem>
+          <ListItem>
+            <ListItemText primary="Show dialogue options" />
+            <ListItemSecondaryAction>
+              <Switch
+                edge="end"
+                checked={settings.showDialogue}
+                onChange={() =>
+                  setSettings({
+                    ...settings,
+                    showDialogue: !settings.showDialogue,
+                  })
+                }
+              />
+            </ListItemSecondaryAction>
+          </ListItem>
         </List>
       </Box>
     </MuiDrawer>

@@ -6,7 +6,7 @@ import ListSubheader from "@material-ui/core/ListSubheader";
 import { makeStyles } from "@material-ui/core/styles";
 import { SettingsContext } from "../useSettings";
 import Card from "./Card";
-import palette from "./palette";
+import { cardsPalette } from "./palette";
 
 const useStyles = makeStyles((theme) => ({
   listItemText: {
@@ -28,7 +28,7 @@ function Encounter({ enemies, instructions }: EncounterProps) {
   }
 
   return (
-    <Card color={palette.encounter}>
+    <Card color={cardsPalette.encounter}>
       <List dense subheader={<ListSubheader>{enemies}</ListSubheader>}>
         {instructions.map((instruction, index) => (
           <ListItem key={index}>
