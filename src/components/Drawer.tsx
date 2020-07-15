@@ -9,6 +9,7 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import MuiDrawer from "@material-ui/core/Drawer";
 import Switch from "@material-ui/core/Switch";
 import Toolbar from "@material-ui/core/Toolbar";
+import Tooltip from "@material-ui/core/Tooltip";
 import { makeStyles } from "@material-ui/core/styles";
 import CloseIcon from "@material-ui/icons/Close";
 import { Settings } from "../useSettings";
@@ -32,7 +33,8 @@ function Drawer({ open, onClose, settings, setSettings }: DrawerProps) {
   return (
     <MuiDrawer open={open} onClose={onClose}>
       <Box width={300}>
-        <Toolbar>
+        <Toolbar variant="dense">
+          <Tooltip title="Close">
           <IconButton
             className={classes.closeButton}
             edge="end"
@@ -40,6 +42,7 @@ function Drawer({ open, onClose, settings, setSettings }: DrawerProps) {
           >
             <CloseIcon />
           </IconButton>
+          </Tooltip>
         </Toolbar>
         <Divider />
         <List>

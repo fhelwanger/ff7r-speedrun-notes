@@ -28,7 +28,7 @@ function Header({ theme, setTheme, onMenuClick }: HeaderProps) {
 
   return (
     <AppBar position="sticky">
-      <Toolbar>
+      <Toolbar variant="dense">
         <IconButton color="inherit" edge="start" onClick={onMenuClick}>
           <MenuIcon />
         </IconButton>
