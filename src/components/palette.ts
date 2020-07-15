@@ -1,8 +1,8 @@
 export const charactersPalette = {
-  cloud: "#BF9000",
-  tifa: "#38761D",
-  barret: "#990000",
-  aerith: "#1155CC",
+  cloud: "#F9A825",
+  tifa: "#4CAF50",
+  barret: "#F44336",
+  aerith: "#2196F3",
 };
 
 export const cardsPalette = {
