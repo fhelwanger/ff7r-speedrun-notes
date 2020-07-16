@@ -207,10 +207,10 @@ function Chapter7() {
         name="Air Buster"
         phases={[
           [
-            "Barret: Overcharge",
-            "Tifa: Whirl, Roll, Combo x5, Whirl, Divekick",
-            "Tifa: Combo x6, Whirl, Divekick, Focused Shot",
-            "Tifa: Combo x6, Whirl, Divekick, Focused Thrust",
+            "Barret: Roll",
+            "Tifa: Whirl, Roll, Combo x6, Whirl, Divekick",
+            "Tifa: Combo x6, Whirl, Overcharge, Divekick",
+            "Tifa: Combo x6, Whirl, Divekick, Focused Shot, Focused Thrust",
             "Tifa: Combo x6, Whirl, Divekick, Whirl, Divekick",
           ],
           [
