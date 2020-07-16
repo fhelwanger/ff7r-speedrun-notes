@@ -12,6 +12,7 @@ import useTheme from "./useTheme";
 const useStyles = makeStyles((theme) => ({
   box: {
     padding: theme.spacing(2),
+    paddingBottom: theme.spacing(1),
   },
 }));
 

@@ -5,10 +5,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(1),
   },
   colorBox: {
-    height: theme.spacing(1),
+    height: theme.spacing(0.5),
   },
 }));
 
