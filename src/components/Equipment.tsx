@@ -5,6 +5,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import { makeStyles } from "@material-ui/core/styles";
+import { charactersPalette } from "./palette";
 
 const useStyles = makeStyles((theme) => ({
   nestedList: {
@@ -25,7 +26,10 @@ const useStyles = makeStyles((theme) => ({
 export interface EquipmentProps {
   characters: Array<{
     name: string;
-    equipments: Array<{ name: string }>;
+    equipments: Array<{
+      name: string;
+      source?: "cloud" | "tifa" | "barret" | "aerith";
+    }>;
   }>;
 }
 
@@ -56,6 +60,11 @@ function Equipment({ characters }: EquipmentProps) {
                 <ListItemText
                   primary={equipment.name}
                   classes={{ primary: classes.listItemText }}
+                  style={{
+                    color: equipment.source
+                      ? charactersPalette[equipment.source]
+                      : undefined,
+                  }}
                 />
               </ListItem>
             ))}

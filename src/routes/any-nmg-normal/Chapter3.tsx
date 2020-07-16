@@ -19,8 +19,8 @@ function Chapter3() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire", status: "unchanged" },
-                { name: "Deadly Dodge", status: "new" },
+                { name: "Fire" },
+                { name: "Deadly Dodge", source: "inventory" },
               ],
               armor: [],
               summon: [],
@@ -55,11 +55,11 @@ function Chapter3() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire", status: "unchanged" },
-                { name: "Ice", status: "new" },
-                { name: "Assess", status: "new" },
+                { name: "Fire" },
+                { name: "Ice", source: "inventory" },
+                { name: "Assess", source: "inventory" },
               ],
-              armor: [{ name: "Deadly Dodge", status: "cloud" }],
+              armor: [{ name: "Deadly Dodge", source: "cloud" }],
               summon: [],
             },
           ]}

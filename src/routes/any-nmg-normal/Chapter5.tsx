@@ -118,32 +118,32 @@ function Chapter5() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Revival", status: "barret" },
-                { name: "Barrier", status: "barret" },
-                { name: "Lightning", status: "unchanged" },
+                { name: "Revival", source: "barret" },
+                { name: "Barrier", source: "barret" },
+                { name: "Lightning" },
               ],
-              armor: [{ name: "First Strike", status: "unchanged" }],
-              summon: [{ name: "Ifrit", status: "unchanged" }],
+              armor: [{ name: "First Strike" }],
+              summon: [{ name: "Ifrit" }],
             },
             {
               name: "Barret",
               weapon: [
-                { name: "Lightning", status: "unchanged" },
-                { name: "Ice", status: "cloud" },
-                { name: "Fire", status: "new" },
+                { name: "Lightning" },
+                { name: "Ice", source: "cloud" },
+                { name: "Fire", source: "inventory" },
               ],
-              armor: [{ name: "Fire", status: "cloud" }],
-              summon: [{ name: "", status: "unchanged" }],
+              armor: [{ name: "Fire", source: "cloud" }],
+              summon: [{ name: "" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire", status: "unchanged" },
-                { name: "Ice", status: "unchanged" },
-                { name: "Lightning", status: "new" },
+                { name: "Fire" },
+                { name: "Ice" },
+                { name: "Lightning", source: "inventory" },
               ],
               armor: [],
-              summon: [{ name: "", status: "unchanged" }],
+              summon: [{ name: "" }],
             },
           ]}
         />
@@ -179,22 +179,22 @@ function Chapter5() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire", status: "barret" },
-                { name: "Ice", status: "barret" },
-                { name: "Lightning", status: "unchanged" },
+                { name: "Fire", source: "barret" },
+                { name: "Ice", source: "barret" },
+                { name: "Lightning" },
               ],
-              armor: [{ name: "First Strike", status: "unchanged" }],
-              summon: [{ name: "Ifrit", status: "unchanged" }],
+              armor: [{ name: "First Strike" }],
+              summon: [{ name: "Ifrit" }],
             },
             {
               name: "Barret",
               weapon: [
-                { name: "Lightning", status: "unchanged" },
-                { name: "Barrier", status: "cloud" },
-                { name: "Fire", status: "unchanged" },
+                { name: "Lightning" },
+                { name: "Barrier", source: "cloud" },
+                { name: "Fire" },
               ],
-              armor: [{ name: "Revival", status: "cloud" }],
-              summon: [{ name: "", status: "unchanged" }],
+              armor: [{ name: "Revival", source: "cloud" }],
+              summon: [{ name: "" }],
             },
           ]}
         />

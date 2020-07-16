@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 export interface MateriaItem {
   name: string;
-  status: "unchanged" | "new" | "cloud" | "tifa" | "barret" | "aerith";
+  source?: "inventory" | "cloud" | "tifa" | "barret" | "aerith";
 }
 
 export interface MateriaProps {
@@ -53,11 +53,11 @@ function Materia({ characters }: MateriaProps) {
         variant="body2"
         className={classes.listItemText}
         style={{
-          fontWeight: x.status !== "unchanged" ? "bold" : undefined,
-          textTransform: x.status !== "unchanged" ? "uppercase" : undefined,
+          fontWeight: x.source ? "bold" : undefined,
+          textTransform: x.source ? "uppercase" : undefined,
           color:
-            x.status !== "unchanged" && x.status !== "new"
-              ? charactersPalette[x.status]
+            x.source && x.source !== "inventory"
+              ? charactersPalette[x.source]
               : undefined,
         }}
       >{`(${x.name || "Empty"}) `}</Typography>

@@ -22,21 +22,21 @@ function Chapter4() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire", status: "unchanged" },
-                { name: "Ice", status: "unchanged" },
-                { name: "Lightning", status: "new" },
+                { name: "Fire" },
+                { name: "Ice" },
+                { name: "Lightning", source: "inventory" },
               ],
-              armor: [{ name: "Deadly Dodge", status: "unchanged" }],
-              summon: [{ name: "Ifrit", status: "new" }],
+              armor: [{ name: "Deadly Dodge" }],
+              summon: [{ name: "Ifrit", source: "inventory" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire", status: "new" },
-                { name: "Ice", status: "new" },
+                { name: "Fire", source: "inventory" },
+                { name: "Ice", source: "inventory" },
               ],
               armor: [],
-              summon: [{ name: "Empty", status: "unchanged" }],
+              summon: [{ name: "Empty" }],
             },
           ]}
         />
@@ -137,21 +137,21 @@ function Chapter4() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire", status: "unchanged" },
-                { name: "Ice", status: "unchanged" },
-                { name: "Lightning", status: "unchanged" },
+                { name: "Fire" },
+                { name: "Ice" },
+                { name: "Lightning" },
               ],
-              armor: [{ name: "First Strike", status: "new" }],
-              summon: [{ name: "Ifrit", status: "unchanged" }],
+              armor: [{ name: "First Strike", source: "inventory" }],
+              summon: [{ name: "Ifrit" }],
             },
             {
               name: "Barret",
               weapon: [
-                { name: "Lightning", status: "unchanged" },
-                { name: "Barrier", status: "new" },
+                { name: "Lightning" },
+                { name: "Barrier", source: "inventory" },
               ],
-              armor: [{ name: "Revival", status: "new" }],
-              summon: [{ name: "Empty", status: "unchanged" }],
+              armor: [{ name: "Revival", source: "inventory" }],
+              summon: [{ name: "Empty" }],
             },
           ]}
         />
