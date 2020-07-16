@@ -205,6 +205,21 @@ function Drawer({ open, onClose, settings, setSettings }: DrawerProps) {
               />
             </ListItemSecondaryAction>
           </ListItem>
+          <ListItem>
+            <ListItemText primary="Show breaks" />
+            <ListItemSecondaryAction>
+              <Switch
+                edge="end"
+                checked={settings.showBreaks}
+                onChange={() =>
+                  setSettings({
+                    ...settings,
+                    showBreaks: !settings.showBreaks,
+                  })
+                }
+              />
+            </ListItemSecondaryAction>
+          </ListItem>
         </List>
       </Box>
     </MuiDrawer>

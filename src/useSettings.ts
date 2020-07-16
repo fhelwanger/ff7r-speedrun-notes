@@ -10,6 +10,7 @@ export interface Settings {
   showDialogue: boolean;
   showBench: boolean;
   showOptionalBench: boolean;
+  showBreaks: boolean;
 }
 
 const defaultSettings: Settings = {
@@ -22,6 +23,7 @@ const defaultSettings: Settings = {
   showDialogue: true,
   showBench: true,
   showOptionalBench: true,
+  showBreaks: true,
 };
 
 export const SettingsContext = React.createContext(defaultSettings);
