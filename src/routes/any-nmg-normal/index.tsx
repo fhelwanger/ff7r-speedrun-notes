@@ -10,6 +10,7 @@ import Chapter7 from "./Chapter7";
 import Chapter8 from "./Chapter8";
 import Chapter9 from "./Chapter9";
 import Chapter10 from "./Chapter10";
+import Chapter11 from "./Chapter11";
 
 function AnyPercentNoMajorGlitchesNormal() {
   return (
@@ -24,6 +25,7 @@ function AnyPercentNoMajorGlitchesNormal() {
       <Chapter8 />
       <Chapter9 />
       <Chapter10 />
+      <Chapter11 />
     </Route>
   );
 }
