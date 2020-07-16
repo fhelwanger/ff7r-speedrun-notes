@@ -19,10 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
 export interface BossProps {
   name: string;
-  phases: Array<{
-    name: string;
-    instructions: Array<string>;
-  }>;
+  phases: Array<Array<string>>;
 }
 
 function Boss({ name, phases }: BossProps) {
@@ -40,12 +37,12 @@ function Boss({ name, phases }: BossProps) {
           <React.Fragment key={phaseIndex}>
             <ListItem>
               <ListItemText
-                primary={phase.name}
+                primary={"Phase " + (phaseIndex + 1)}
                 classes={{ primary: classes.listItemText }}
               />
             </ListItem>
             <List dense disablePadding className={classes.nestedList}>
-              {phase.instructions.map((instruction, instructionIndex) => (
+              {phase.map((instruction, instructionIndex) => (
                 <ListItem key={instructionIndex}>
                   <ListItemText
                     primary={instruction}

@@ -91,41 +91,26 @@ function Chapter1() {
       <Boss
         name="Guard Scorpion"
         phases={[
-          {
-            name: "Phase 1",
-            instructions: [
-              "Cloud: Dash",
-              "Barret: Lock, run back, Overcharge",
-              "Cloud: Counter, Punisher full, Berserk, Fire, Focused Shot",
-              "Cloud: Punisher full, Fire, Punisher x4, Berserk, Fire, Punisher",
-            ],
-          },
-          {
-            name: "Phase 2",
-            instructions: [
-              "Cloud: Dash and Roll x2, go behind",
-              "Cloud: Punisher x4, Berserk, Fire, Punisher x4, Focused Thrust",
-              "Barret: Combo, Focused Shot, Combo",
-              "Cloud: Counter, Punisher x4, Berserk, Focused Thrust, Thunder",
-              "Cloud: Punisher x2, Berserk, Overcharge, Punisher full, Thunder, Berserk",
-            ],
-          },
-          {
-            name: "Phase 3",
-            instructions: [
-              "Cloud: Fire",
-              "Barret: Combo, Thunder, Combo, Charge, Combo, Charge, Focused Shot",
-              "Cloud: Dash, Punisher x3, Berserk, Cross Slash",
-              "Barret: Overcharge, Combo, Swap to Cloud",
-            ],
-          },
-          {
-            name: "Phase 4",
-            instructions: [
-              "Cloud: Punisher x2, Berserk, Fire on Left Leg",
-              "Fire, Thunder",
-            ],
-          },
+          [
+            "Cloud: Dash",
+            "Barret: Lock, run back, Overcharge",
+            "Cloud: Counter, Punisher full, Berserk, Fire, Focused Shot",
+            "Cloud: Punisher full, Fire, Punisher x4, Berserk, Fire, Punisher",
+          ],
+          [
+            "Cloud: Dash and Roll x2, go behind",
+            "Cloud: Punisher x4, Berserk, Fire, Punisher x4, Focused Thrust",
+            "Barret: Combo, Focused Shot, Combo",
+            "Cloud: Counter, Punisher x4, Berserk, Focused Thrust, Thunder",
+            "Cloud: Punisher x2, Berserk, Overcharge, Punisher full, Thunder, Berserk",
+          ],
+          [
+            "Cloud: Fire",
+            "Barret: Combo, Thunder, Combo, Charge, Combo, Charge, Focused Shot",
+            "Cloud: Dash, Punisher x3, Berserk, Cross Slash",
+            "Barret: Overcharge, Combo, Swap to Cloud",
+          ],
+          ["Cloud: Punisher x2, Berserk, Fire on Left Leg", "Fire, Thunder"],
         ]}
       />
       <Encounter
