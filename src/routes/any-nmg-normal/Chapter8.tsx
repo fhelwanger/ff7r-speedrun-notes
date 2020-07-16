@@ -4,6 +4,7 @@ import Bench from "../../components/Bench";
 import Break from "../../components/Break";
 import Boss from "../../components/Boss";
 import Chapter from "../../components/Chapter";
+import Dialogue from "../../components/Dialogue";
 import Encounter from "../../components/Encounter";
 import Equipment from "../../components/Equipment";
 import Materia from "../../components/Materia";
@@ -11,7 +12,6 @@ import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
 import Shop from "../../components/Shop";
 import UpgradeWeapons from "../../components/UpgradeWeapons";
-import Dialogue from "../../components/Dialogue";
 
 function Chapter8() {
   return (
