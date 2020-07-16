@@ -54,6 +54,7 @@ function Materia({ characters }: MateriaProps) {
         className={classes.listItemText}
         style={{
           fontWeight: x.status !== "unchanged" ? "bold" : undefined,
+          textTransform: x.status !== "unchanged" ? "uppercase" : undefined,
           color:
             x.status !== "unchanged" && x.status !== "new"
               ? charactersPalette[x.status]
