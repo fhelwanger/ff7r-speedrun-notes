@@ -37,6 +37,7 @@ export interface BattleSettingsProps {
       shortcut: "circle" | "square" | "triangle" | "x";
       ability: string;
     }>;
+    leader?: boolean;
   }>;
 }
 
@@ -69,6 +70,14 @@ function BattleSettings({ characters }: BattleSettingsProps) {
             />
           </ListItem>
           <List dense disablePadding className={classes.nestedList}>
+            {character.leader && (
+              <ListItem>
+                <ListItemText
+                  primary="Leader"
+                  classes={{ primary: classes.listItemText }}
+                />
+              </ListItem>
+            )}
             {character.shortcuts.map((shortcut, shortcutIndex) => (
               <ListItem key={shortcutIndex}>
                 <ListItemIcon className={classes.shortcutIcon}>
