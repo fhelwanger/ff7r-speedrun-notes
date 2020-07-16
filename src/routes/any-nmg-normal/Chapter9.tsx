@@ -83,26 +83,26 @@ function Chapter9() {
       <Dialogue
         optionText="She's great at handling the books"
         optionPosition="3rd"
-        when="when talking to Sam"
+        details="when talking to Sam"
       />
       <Shop name="Weapon Shop" buy={["Hardedge", "Caliginous Bracelet"]} />
       <Pick item="1200 gil" />
       <Dialogue
         optionText="No deal."
         optionPosition="3rd"
-        when="when talking to Sam"
+        details="when talking to Sam"
       />
       <Pick item="Elixir" />
       <Shop name="Chadley" buy={["Parry"]} />
       <Dialogue
         optionText="Poor Man's"
         optionPosition="3rd"
-        when="when talking to Madam M"
+        details="when talking to Madam M"
       />
       <Dialogue
         optionText="It matters..."
         optionPosition="3rd"
-        when="when talking to Aerith"
+        details="when talking to Aerith"
       />
       <Menu>
         <Equipment
@@ -244,7 +244,7 @@ function Chapter9() {
       <Dialogue
         optionText="No"
         optionPosition="2nd"
-        when="after dance practice"
+        details="after dance practice"
       />
       <Break time="2m30s" description="Dance" />
       <Pick item="Turbo Ether" />

@@ -99,7 +99,7 @@ function Chapter3() {
       <Dialogue
         optionText="No"
         optionPosition="2nd"
-        when="before entering 7th Heaven"
+        details="before entering 7th Heaven"
       />
       <Encounter
         enemies="Hoodlum x4"
@@ -111,7 +111,7 @@ function Chapter3() {
       <Dialogue
         optionText="Yeah"
         optionPosition="2nd"
-        when="when talking to Jessie"
+        details="when talking to Jessie"
       />
     </Chapter>
   );

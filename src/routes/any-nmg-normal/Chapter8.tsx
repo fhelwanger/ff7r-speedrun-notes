@@ -245,7 +245,7 @@ function Chapter8() {
       <Dialogue
         optionText="Yeah"
         optionPosition="2nd"
-        when="before entering Aerith’s House"
+        details="before entering Aerith’s House"
       />
     </Chapter>
   );

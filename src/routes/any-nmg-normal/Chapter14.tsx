@@ -273,7 +273,7 @@ function Chapter14() {
           ],
         ]}
       />
-      <Dialogue optionText="Yes" optionPosition="2nd" when="to climb" />
+      <Dialogue optionText="Yes" optionPosition="2nd" details="to climb" />
     </Chapter>
   );
 }
