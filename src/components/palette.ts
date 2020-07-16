@@ -13,4 +13,6 @@ export const cardsPalette = {
   pickOptional: "#6FBF73",
   shop: "#FF9800",
   dialogue: "#795548",
+  bench: "#757575",
+  benchOptional: "#9E9E9E",
 };

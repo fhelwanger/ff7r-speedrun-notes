@@ -8,6 +8,8 @@ export interface Settings {
   showMenus: boolean;
   showShops: boolean;
   showDialogue: boolean;
+  showBench: boolean;
+  showOptionalBench: boolean;
 }
 
 const defaultSettings: Settings = {
@@ -18,6 +20,8 @@ const defaultSettings: Settings = {
   showMenus: true,
   showShops: true,
   showDialogue: true,
+  showBench: true,
+  showOptionalBench: true,
 };
 
 export const SettingsContext = React.createContext(defaultSettings);
