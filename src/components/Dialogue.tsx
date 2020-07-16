@@ -9,7 +9,7 @@ import { cardsPalette } from "./palette";
 export interface DialogueProps {
   optionText: string;
   optionPosition: "1st" | "2nd" | "3rd";
-  when: string;
+  when?: string;
 }
 
 function Dialogue({ optionText, optionPosition, when }: DialogueProps) {
@@ -19,7 +19,11 @@ function Dialogue({ optionText, optionPosition, when }: DialogueProps) {
     return null;
   }
 
-  let text = `Choose "${optionText}" (${optionPosition}) ${when}`;
+  let text = `Choose "${optionText}" (${optionPosition})`;
+
+  if (when) {
+    text += ` ${when}`;
+  }
 
   return (
     <Card color={cardsPalette.dialogue}>
