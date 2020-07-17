@@ -119,6 +119,36 @@ function RecommendedSettings() {
   );
 }
 
+function Cutscenes() {
+  const tips = [
+    "To skip a cutscene, you can hold down, then press Options + X. The down input gets buffered and you skip it immediately.",
+    "If you are not sure if you can skip a cutscene, press Triangle. If you see a Triangle icon in the bottom right side of the screen, you can.",
+    "In chapter 8, the scene with a helicopter after the train station is faster to skip by holding Triangle instead of pressing Options.",
+  ];
+
+  return (
+    <>
+      <Typography variant="h5" paragraph>
+        Cutscenes
+      </Typography>
+      <Typography>
+        I didn't include cutscene skips in the notes because after running the
+        game a couple of times I found it to be too much information, which made
+        the notes harder to follow. So I believe it's something that is better
+        learned by just running the game. That said, here are some tips about
+        cutscene skipping:
+      </Typography>
+      <List dense>
+        {tips.map((tip, tipIndex) => (
+          <ListItem key={tipIndex}>
+            <ListItemText primary={tip} />
+          </ListItem>
+        ))}
+      </List>
+    </>
+  );
+}
+
 function FirstStrike() {
   const enemies = [
     "Guard Dog",
@@ -163,8 +193,9 @@ function Introduction() {
       <Card color={theme.palette.text.primary}>
         <Box padding={2} paddingBottom={0}>
           <Menus />
-          <RecommendedSettings />
+          <Cutscenes />
           <FirstStrike />
+          <RecommendedSettings />
         </Box>
       </Card>
     </>
