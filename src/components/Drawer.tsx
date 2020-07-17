@@ -17,6 +17,11 @@ import { IndexContext } from "../useIndex";
 import { Settings } from "../useSettings";
 
 const useStyles = makeStyles((theme) => ({
+  wrapper: {
+    // @ts-ignore
+    height: `calc(100vh - ${theme.mixins.toolbar.minHeight + 1}px)`,
+    overflow: "auto",
+  },
   closeButton: {
     marginLeft: "auto",
   },
@@ -48,179 +53,181 @@ function Drawer({ open, onClose, settings, setSettings }: DrawerProps) {
           </Tooltip>
         </Toolbar>
         <Divider />
-        <List
-          dense
-          subheader={<ListSubheader disableSticky>Index</ListSubheader>}
-        >
-          {index.map((x) => (
-            <ListItem
-              key={x.id}
-              button
-              onClick={() => {
-                document.getElementById(x.id)?.scrollIntoView();
-                onClose();
-              }}
-            >
-              <ListItemText primary={x.text} />
+        <Box className={classes.wrapper}>
+          <List
+            dense
+            subheader={<ListSubheader disableSticky>Index</ListSubheader>}
+          >
+            {index.map((x) => (
+              <ListItem
+                key={x.id}
+                button
+                onClick={() => {
+                  document.getElementById(x.id)?.scrollIntoView();
+                  onClose();
+                }}
+              >
+                <ListItemText primary={x.text} />
+              </ListItem>
+            ))}
+          </List>
+          <Divider />
+          <List
+            dense
+            subheader={<ListSubheader disableSticky>Settings</ListSubheader>}
+          >
+            <ListItem>
+              <ListItemText primary="Show encounters" />
+              <ListItemSecondaryAction>
+                <Switch
+                  edge="end"
+                  checked={settings.showEncounters}
+                  onChange={() =>
+                    setSettings({
+                      ...settings,
+                      showEncounters: !settings.showEncounters,
+                    })
+                  }
+                />
+              </ListItemSecondaryAction>
             </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List
-          dense
-          subheader={<ListSubheader disableSticky>Settings</ListSubheader>}
-        >
-          <ListItem>
-            <ListItemText primary="Show encounters" />
-            <ListItemSecondaryAction>
-              <Switch
-                edge="end"
-                checked={settings.showEncounters}
-                onChange={() =>
-                  setSettings({
-                    ...settings,
-                    showEncounters: !settings.showEncounters,
-                  })
-                }
-              />
-            </ListItemSecondaryAction>
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Show bosses" />
-            <ListItemSecondaryAction>
-              <Switch
-                edge="end"
-                checked={settings.showBosses}
-                onChange={() =>
-                  setSettings({
-                    ...settings,
-                    showBosses: !settings.showBosses,
-                  })
-                }
-              />
-            </ListItemSecondaryAction>
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Show items to pick" />
-            <ListItemSecondaryAction>
-              <Switch
-                edge="end"
-                checked={settings.showPick}
-                onChange={() =>
-                  setSettings({
-                    ...settings,
-                    showPick: !settings.showPick,
-                  })
-                }
-              />
-            </ListItemSecondaryAction>
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Show optional items to pick" />
-            <ListItemSecondaryAction>
-              <Switch
-                edge="end"
-                checked={settings.showOptionalPick}
-                onChange={() =>
-                  setSettings({
-                    ...settings,
-                    showOptionalPick: !settings.showOptionalPick,
-                  })
-                }
-              />
-            </ListItemSecondaryAction>
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Show menus" />
-            <ListItemSecondaryAction>
-              <Switch
-                edge="end"
-                checked={settings.showMenus}
-                onChange={() =>
-                  setSettings({
-                    ...settings,
-                    showMenus: !settings.showMenus,
-                  })
-                }
-              />
-            </ListItemSecondaryAction>
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Show shops" />
-            <ListItemSecondaryAction>
-              <Switch
-                edge="end"
-                checked={settings.showShops}
-                onChange={() =>
-                  setSettings({
-                    ...settings,
-                    showShops: !settings.showShops,
-                  })
-                }
-              />
-            </ListItemSecondaryAction>
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Show dialogue options" />
-            <ListItemSecondaryAction>
-              <Switch
-                edge="end"
-                checked={settings.showDialogue}
-                onChange={() =>
-                  setSettings({
-                    ...settings,
-                    showDialogue: !settings.showDialogue,
-                  })
-                }
-              />
-            </ListItemSecondaryAction>
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Show benches" />
-            <ListItemSecondaryAction>
-              <Switch
-                edge="end"
-                checked={settings.showBench}
-                onChange={() =>
-                  setSettings({
-                    ...settings,
-                    showBench: !settings.showBench,
-                  })
-                }
-              />
-            </ListItemSecondaryAction>
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Show optional benches" />
-            <ListItemSecondaryAction>
-              <Switch
-                edge="end"
-                checked={settings.showOptionalBench}
-                onChange={() =>
-                  setSettings({
-                    ...settings,
-                    showOptionalBench: !settings.showOptionalBench,
-                  })
-                }
-              />
-            </ListItemSecondaryAction>
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Show breaks" />
-            <ListItemSecondaryAction>
-              <Switch
-                edge="end"
-                checked={settings.showBreaks}
-                onChange={() =>
-                  setSettings({
-                    ...settings,
-                    showBreaks: !settings.showBreaks,
-                  })
-                }
-              />
-            </ListItemSecondaryAction>
-          </ListItem>
-        </List>
+            <ListItem>
+              <ListItemText primary="Show bosses" />
+              <ListItemSecondaryAction>
+                <Switch
+                  edge="end"
+                  checked={settings.showBosses}
+                  onChange={() =>
+                    setSettings({
+                      ...settings,
+                      showBosses: !settings.showBosses,
+                    })
+                  }
+                />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Show items to pick" />
+              <ListItemSecondaryAction>
+                <Switch
+                  edge="end"
+                  checked={settings.showPick}
+                  onChange={() =>
+                    setSettings({
+                      ...settings,
+                      showPick: !settings.showPick,
+                    })
+                  }
+                />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Show optional items to pick" />
+              <ListItemSecondaryAction>
+                <Switch
+                  edge="end"
+                  checked={settings.showOptionalPick}
+                  onChange={() =>
+                    setSettings({
+                      ...settings,
+                      showOptionalPick: !settings.showOptionalPick,
+                    })
+                  }
+                />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Show menus" />
+              <ListItemSecondaryAction>
+                <Switch
+                  edge="end"
+                  checked={settings.showMenus}
+                  onChange={() =>
+                    setSettings({
+                      ...settings,
+                      showMenus: !settings.showMenus,
+                    })
+                  }
+                />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Show shops" />
+              <ListItemSecondaryAction>
+                <Switch
+                  edge="end"
+                  checked={settings.showShops}
+                  onChange={() =>
+                    setSettings({
+                      ...settings,
+                      showShops: !settings.showShops,
+                    })
+                  }
+                />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Show dialogue options" />
+              <ListItemSecondaryAction>
+                <Switch
+                  edge="end"
+                  checked={settings.showDialogue}
+                  onChange={() =>
+                    setSettings({
+                      ...settings,
+                      showDialogue: !settings.showDialogue,
+                    })
+                  }
+                />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Show benches" />
+              <ListItemSecondaryAction>
+                <Switch
+                  edge="end"
+                  checked={settings.showBench}
+                  onChange={() =>
+                    setSettings({
+                      ...settings,
+                      showBench: !settings.showBench,
+                    })
+                  }
+                />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Show optional benches" />
+              <ListItemSecondaryAction>
+                <Switch
+                  edge="end"
+                  checked={settings.showOptionalBench}
+                  onChange={() =>
+                    setSettings({
+                      ...settings,
+                      showOptionalBench: !settings.showOptionalBench,
+                    })
+                  }
+                />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Show breaks" />
+              <ListItemSecondaryAction>
+                <Switch
+                  edge="end"
+                  checked={settings.showBreaks}
+                  onChange={() =>
+                    setSettings({
+                      ...settings,
+                      showBreaks: !settings.showBreaks,
+                    })
+                  }
+                />
+              </ListItemSecondaryAction>
+            </ListItem>
+          </List>
+        </Box>
       </Box>
     </MuiDrawer>
   );
