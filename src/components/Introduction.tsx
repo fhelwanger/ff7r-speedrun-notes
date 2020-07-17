@@ -5,9 +5,10 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
+import SquareIcon from "@material-ui/icons/Stop";
 import Card from "./Card";
 import IndexTitle from "./IndexTitle";
-import { charactersPalette } from "./palette";
+import { charactersPalette, cardsPalette } from "./palette";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -20,6 +21,93 @@ const useStyles = makeStyles((theme) => ({
     width: "auto",
   },
 }));
+
+function Sections() {
+  const sections = [
+    {
+      name: "Encounter",
+      color: cardsPalette.encounter,
+      description:
+        "A normal encounter that you should fight. Every encounter in those notes should be fought otherwise you may run into EXP/AP/Gil problems. You should flee from encounters not listed here.",
+    },
+    {
+      name: "Boss",
+      color: cardsPalette.boss,
+      description: "A boss fight.",
+    },
+    {
+      name: "Item",
+      color: cardsPalette.pick,
+      description: "Mandatory item to pick.",
+    },
+    {
+      name: "Optional Item",
+      color: cardsPalette.pickOptional,
+      description:
+        "Optional item to pick. Usually pick those only in your first runs or for marathon safety.",
+    },
+    {
+      name: "Menu",
+      color: cardsPalette.menu,
+      description: "A menu.",
+    },
+    {
+      name: "Shop",
+      color: cardsPalette.shop,
+      description: "A shop.",
+    },
+    {
+      name: "Dialogue",
+      color: cardsPalette.dialogue,
+      description: "When you must choose a non default dialogue option.",
+    },
+    {
+      name: "Bench",
+      color: cardsPalette.bench,
+      description: "When you should use a bench to rest.",
+    },
+    {
+      name: "Optional Bench",
+      color: cardsPalette.benchOptional,
+      description:
+        "A bench that should only be used to save items in case of emergency or marathon safety.",
+    },
+    {
+      name: "Break",
+      color: cardsPalette.break,
+      description: "One of the few breaks that you have in this speedrun.",
+    },
+  ];
+
+  return (
+    <>
+      <Typography variant="h5" paragraph>
+        Sections
+      </Typography>
+      <Typography>
+        The notes are divided in sections. For example, some sections for
+        encounters, for bosses, shops, menus, etc. The color at the beginning of
+        each section indicates its type. If you open the menu in the left side
+        you can select which sections to include to remove clutter, for example,
+        if you don't want information about normal encounters. The colors are
+        the following:
+      </Typography>
+      <List dense>
+        {sections.map((section, sectionIndex) => (
+          <ListItem key={sectionIndex}>
+            <ListItemIcon>
+              <SquareIcon style={{ fill: section.color }} />
+            </ListItemIcon>
+            <ListItemText
+              primary={section.name}
+              secondary={section.description}
+            />
+          </ListItem>
+        ))}
+      </List>
+    </>
+  );
+}
 
 function Menus() {
   const materiaColors = [
@@ -192,6 +280,7 @@ function Introduction() {
       <IndexTitle id="intro" text="Introduction" />
       <Card color={theme.palette.text.primary}>
         <Box padding={2} paddingBottom={0}>
+          <Sections />
           <Menus />
           <Cutscenes />
           <FirstStrike />
