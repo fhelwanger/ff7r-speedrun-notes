@@ -2,6 +2,7 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Introduction from "./Introduction";
+import Hollow from "./Hollow";
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -30,6 +31,7 @@ function Route({ title, children }: RouteProps) {
       </Typography>
       <Introduction />
       {children}
+      <Hollow />
     </>
   );
 }
