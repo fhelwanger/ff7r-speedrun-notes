@@ -61,20 +61,19 @@ function Chapter4() {
       </Menu>
       <Encounter
         enemies="Security Officers x17, Grenadier x2"
-        instructions={["Deadly Dodge, Cleave, TRIPOLOSKI", "Save 2 ATB"]}
+        instructions={["Deadly Dodge, Cleave, TRIPOLOSKI", "Save 1 ATB"]}
       />
       <Encounter
         enemies="Elite Security Officer, Riot Trooper"
         instructions={[
-          "Fire Riot Trooper",
-          "Fire, Punisher Elite Security Officer",
+          "Fire (try to hit bot both), Punisher Elite Security Officer",
         ]}
       />
       <Encounter
         enemies="Shock Trooper,  Elite Grenadier"
         instructions={[
-          "Berserk Elite Grenadier, Fire Shock Trooper",
-          "Punisher, Fire",
+          "Berserk Elite Grenadier, Fire",
+          "Punisher, Fire Shock Trooper",
         ]}
       />
       <Encounter
@@ -90,17 +89,19 @@ function Chapter4() {
           "Punisher full, Berserk B, Thunder A",
           "Cross Slash A (hit both)",
           "Punisher, Berserk, Thunder...",
-          "Save 1 ATB",
         ]}
       />
       <Boss
         name="Roche"
         phases={[
-          ["Berserk, Operator, Fire", "Counter, 2 ATB, Fire, Fire"],
           [
-            "Dash, Counter, Punisher full, Focused Thrust when pressured",
+            "Berserk, Operator, Counter, Fire",
+            "Operator, Counter, Fire, Punisher",
+          ],
+          [
+            "Fire",
+            "Counter, Punisher full, Focused Thrust if pressured, Roll",
             "Staggered: Punisher, Berserk, Fire",
-            "Roll when flames",
           ],
         ]}
       />
