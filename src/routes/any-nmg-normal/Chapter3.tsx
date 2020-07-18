@@ -87,14 +87,18 @@ function Chapter3() {
       <Encounter
         enemies="Wererats x2, Gorger"
         instructions={[
-          "Build ATB and Assess Gorger + Wererat",
-          "Deadly Dodge",
+          "Operator x3, Roll on Gorger to build ATB",
+          "Assess Gorger then Wererat",
+          "Deadly Dodge, Cleave",
           "Flee if Call to Arms",
         ]}
       />
       <Encounter
         enemies="Security Officer x2, Elite Security Officer, Guard Dog"
-        instructions={["Cloud: Deadly Dodge, Fire Dog, Berserk, TRIPOLOSKI"]}
+        instructions={[
+          "Cloud: Deadly Dodge, Cleave",
+          "Cloud: Fire Dog, Berserk, TRIPOLOSKI",
+        ]}
       />
       <Dialogue
         optionText="No"
@@ -103,10 +107,7 @@ function Chapter3() {
       />
       <Encounter
         enemies="Hoodlum x4"
-        instructions={[
-          "Deadly Dodge, Fire",
-          "TRIPOLOSKI if low HP, Fire otherwise",
-        ]}
+        instructions={["Deadly Dodge, Fire", "Punisher/Berserk/Fire"]}
       />
       <Dialogue
         optionText="Yeah"
