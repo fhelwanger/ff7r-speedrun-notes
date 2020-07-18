@@ -10,8 +10,9 @@ function Chapter2() {
       <Encounter
         enemies="Security Officer x2, Guard Dog"
         instructions={[
-          "Dash, Berserk, Punisher Security Officers",
-          "Fire, Punisher Guard Dog",
+          "Security Officer: Dash, Punisher x3, Berserk",
+          "Security Officer: Punisher",
+          "Guard Dog: Fire, Punisher",
         ]}
       />
       <Encounter
@@ -39,6 +40,7 @@ function Chapter2() {
       <Encounter
         enemies="Security Officer x6, Grenadier x2, Riot Trooper x2, The Huntsman"
         instructions={[
+          "Cleave/Counters to fill ATB",
           "Grenade Riot Troopers, Berserk before Huntsman",
           "Huntsman: Fire to pressure, Punisher, Berserk, Fire",
         ]}
