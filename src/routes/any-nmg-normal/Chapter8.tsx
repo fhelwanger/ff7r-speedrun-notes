@@ -80,11 +80,14 @@ function Chapter8() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire" },
-                { name: "Ice", source: "barret" },
+                { name: "Wind" },
+                { name: "Ice" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "First Strike" }, { name: "Wind" }],
+              armor: [
+                { name: "First Strike" },
+                { name: "Refocus", source: "aerith" },
+              ],
               summon: [{ name: "Ifrit", source: "tifa" }],
             },
             {
@@ -96,7 +99,7 @@ function Chapter8() {
               ],
               armor: [
                 { name: "Lightning", source: "barret" },
-                { name: "Refocus" },
+                { name: "", source: "cloud" },
               ],
               summon: [{ name: "" }],
             },
@@ -104,7 +107,7 @@ function Chapter8() {
               name: "Barret",
               weapon: [
                 { name: "", source: "aerith" },
-                { name: "", source: "cloud" },
+                { name: "" },
                 { name: "", source: "aerith" },
               ],
               armor: [{ name: "", source: "inventory" }],
@@ -112,8 +115,12 @@ function Chapter8() {
             },
             {
               name: "Tifa",
-              weapon: [{ name: "Fire" }, { name: "Ice" }, { name: "" }],
-              armor: [{ name: "Lightning" }],
+              weapon: [
+                { name: "Fire" },
+                { name: "Ice" },
+                { name: "Lightning" },
+              ],
+              armor: [{ name: "Fire" }],
               summon: [{ name: "", source: "cloud" }],
             },
           ]}
@@ -190,7 +197,7 @@ function Chapter8() {
       />
       <Encounter
         enemies="Smogger"
-        instructions={["Cloud Thundara, Aerith Thunder"]}
+        instructions={["Cloud: Punisher full, Berserk, Thundara"]}
       />
       <Encounter
         enemies="Hedgehog Pie x3"
@@ -203,13 +210,13 @@ function Chapter8() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire" },
+                { name: "Wind" },
                 { name: "Ice" },
                 { name: "Lightning" },
               ],
               armor: [
                 { name: "First Strike", source: "aerith" },
-                { name: "Wind" },
+                { name: "ATB Boost", source: "aerith" },
               ],
               summon: [{ name: "Ifrit" }],
             },
@@ -217,11 +224,22 @@ function Chapter8() {
               name: "Aerith",
               weapon: [
                 { name: "First Strike", source: "cloud" },
-                { name: "ATB Boost" },
+                { name: "Refocus", source: "cloud" },
                 { name: "Fire" },
               ],
               armor: [{ name: "Lightning" }, { name: "Wind" }],
               summon: [{ name: "" }],
+            },
+          ]}
+        />
+        <UpgradeWeapons
+          characters={[
+            {
+              name: "Tifa",
+              weapons: [
+                { name: "Sonic Strikers", upgrade: "Auto - Attack" },
+                { name: "Metal Knuckles", upgrade: "Manual" },
+              ],
             },
           ]}
         />
@@ -232,13 +250,13 @@ function Chapter8() {
           [
             "Dash, Counter, Operator, Aero, Lock",
             "Punisher x3, Focused Thrust, Aerith Aero",
-            "Punisher full, Berserk, Punisher x4, Berserk",
+            "Punisher full, Berserk, Aero, Punisher",
           ],
           [
-            "Roll, Dash, Aero",
+            "Roll, Dash, ATB Boost, Aero",
             "Punisher x4, Berserk, Focused Thrust",
             "Punisher full, Berserk, Focused Thrust, Aerith Aero",
-            "Punisher full, Berserk, Aero, Operator, Aero",
+            "Punisher full, Berserk, Aero, Punisher",
           ],
         ]}
       />
