@@ -116,7 +116,7 @@ function Chapter7() {
         name="Vending Machine"
         buy={["Mega-Potion x3", "Ether", "Phoenix Down"]}
       />
-      <Menu>
+      <Menu instructions={["Remove Deadly Dodge before swapping with Barret"]}>
         <UpgradeWeapons
           characters={[
             {
