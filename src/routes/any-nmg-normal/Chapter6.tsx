@@ -71,9 +71,9 @@ function Chapter6() {
               weapon: [
                 { name: "Fire" },
                 { name: "Ice" },
-                { name: "Wind", source: "inventory" },
+                { name: "Lightning" },
               ],
-              armor: [{ name: "Lightning", source: "tifa" }],
+              armor: [{ name: "Wind", source: "inventory" }],
               summon: [{ name: "" }],
             },
           ]}
