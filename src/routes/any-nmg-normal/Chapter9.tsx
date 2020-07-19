@@ -22,13 +22,13 @@ function Chapter9() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire" },
+                { name: "Fire", source: "tifa" },
                 { name: "Ice" },
                 { name: "Lightning" },
               ],
               armor: [
                 { name: "First Strike", source: "aerith" },
-                { name: "Refocus", source: "inventory" },
+                { name: "Refocus", source: "aerith" },
               ],
               summon: [{ name: "Ifrit" }],
             },
@@ -36,11 +36,29 @@ function Chapter9() {
               name: "Aerith",
               weapon: [
                 { name: "First Strike", source: "cloud" },
-                { name: "ATB Boost" },
+                { name: "ATB Boost", source: "cloud" },
                 { name: "Fire" },
               ],
               armor: [{ name: "Lightning" }, { name: "Wind" }],
               summon: [{ name: "" }],
+            },
+            {
+              name: "Tifa",
+              weapon: [
+                { name: "Fire" },
+                { name: "Ice" },
+                { name: "Lightning" },
+              ],
+              armor: [{ name: "Wind", source: "cloud" }],
+              summon: [{ name: "" }],
+            },
+          ]}
+        />
+        <BattleSettings
+          characters={[
+            {
+              name: "Cloud",
+              shortcuts: [{ shortcut: "circle", ability: "Thunder" }],
             },
           ]}
         />
@@ -54,7 +72,7 @@ function Chapter9() {
         enemies="Sweeper Prototype"
         instructions={[
           "Aerith: 1 hit, ATB Boost, Arcane Ward, Thundara",
-          "Cloud: Punisher x6, Berserk, Thundara, Thunder",
+          "Cloud: Punisher full, Berserk, Thunder, Thunder",
         ]}
       />
       <Pick item="Hi-Potion x2" optional />
@@ -62,23 +80,24 @@ function Chapter9() {
       <Encounter
         enemies="Beck, Burke, Butch"
         instructions={[
-          "TRIPOLOSKI, Roll",
-          "Punisher + TRIPOLOSKI",
+          "Cloud: Fira, Aerith Fire, Punisher",
           "Careful with mines",
         ]}
       />
       <Encounter
         enemies="Sweeper Prototype, Bandit x2"
         instructions={[
-          "Cloud: Fira Bandit",
-          "Aerith: 1 hit, ATB Boost, Arcane Ward, Thundara",
-          "Cloud: Punisher x4, Berserk, Thunder",
-          "Aerith: Thundara",
+          "Cloud: Fira Bandit A",
+          "Aerith: 1 hit, ATB Boost, Arcane Ward, Tempest full",
+          "Aerith: Thundara, Thundara",
         ]}
       />
       <Encounter
         enemies="Bandit x4"
-        instructions={["TRIPOLOSKI, Punisher x4, Berserk, TRIPOLOSKI"]}
+        instructions={[
+          "Aerith: 1 hit, Aero",
+          "Cloud: Punisher, TRIPOLOSKI (careful with mines)",
+        ]}
       />
       <Dialogue
         optionText="She's great at handling the books"
@@ -92,8 +111,6 @@ function Chapter9() {
         optionPosition="3rd"
         details="when talking to Sam"
       />
-      <Pick item="Elixir" />
-      <Shop name="Chadley" buy={["Parry"]} />
       <Dialogue
         optionText="Poor Man's"
         optionPosition="3rd"
@@ -153,11 +170,13 @@ function Chapter9() {
             },
             {
               name: "Tifa",
-              weapon: [{ name: "Fire" }, { name: "", source: "aerith" }],
-              armor: [
+              weapon: [
+                { name: "Fire" },
+                { name: "", source: "aerith" },
                 { name: "Lightning" },
-                { name: "Parry", source: "inventory" },
+                { name: "" },
               ],
+              armor: [{ name: "Wind" }, { name: "" }],
               summon: [{ name: "" }],
             },
           ]}
@@ -166,11 +185,7 @@ function Chapter9() {
           characters={[
             {
               name: "Cloud",
-              weapons: [{ name: "Hardedge", upgrade: "Atk+4 x2, M.Atk+4" }],
-            },
-            {
-              name: "Tifa",
-              weapons: [{ name: "Sonic Strikers", upgrade: "Auto - Attack" }],
+              weapons: [{ name: "Hardedge", upgrade: "Auto - Attack" }],
             },
           ]}
         />
@@ -200,7 +215,7 @@ function Chapter9() {
         instructions={[
           "Aerith: Fira Lackey A",
           "Cloud: Dash, TRIPOLOSKI",
-          "Punisher + TRIPOLOSKI",
+          "Punisher + TRIPOLOSKI, Fira",
         ]}
       />
       <Bench />
@@ -221,7 +236,7 @@ function Chapter9() {
         name="Hell House"
         phases={[
           [
-            "Cloud: Dash, Cleave",
+            "Cloud: Dash",
             "Aerith: ATB Boost, Arcane Ward, Cloud Blizzard, Blizzard",
             "Cloud: Punisher full, Berserk, TRIPOLOSKI, Punisher",
           ],
@@ -236,11 +251,13 @@ function Chapter9() {
           [
             "Coud: Hits for ATB, Refocus",
             "Aerith: Magic",
-            "Cloud: 3 ATB, Fira",
+            "Cloud: Berserk, 3 ATB, Fira",
             "Aerith: Fira, Infinity End",
           ],
         ]}
       />
+      <Shop name="Chadley" buy={["Parry", "Reset Hardedge"]} />
+      <Pick item="Elixir" />
       <Dialogue
         optionText="No"
         optionPosition="2nd"
@@ -264,8 +281,37 @@ function Chapter9() {
         <Equipment
           characters={[
             {
+              name: "Tifa",
+              equipments: [{ name: "Power Wristguards", source: "cloud" }],
+            },
+            {
               name: "Aerith",
               equipments: [{ name: "Fury Ring" }],
+            },
+          ]}
+        />
+        <Materia
+          characters={[
+            {
+              name: "Tifa",
+              weapon: [
+                { name: "Fire" },
+                { name: "" },
+                { name: "Lightning" },
+                { name: "" },
+              ],
+              armor: [{ name: "Wind" }, { name: "Parry", source: "inventory" }],
+              summon: [{ name: "Ifrit", source: "cloud" }],
+            },
+            {
+              name: "Cloud",
+              weapon: [
+                { name: "Fire" },
+                { name: "Ice" },
+                { name: "Lightning" },
+              ],
+              armor: [{ name: "First Strike" }, { name: "Refocus" }],
+              summon: [{ name: "", source: "tifa" }],
             },
           ]}
         />
