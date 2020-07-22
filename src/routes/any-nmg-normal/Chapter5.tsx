@@ -168,6 +168,7 @@ function Chapter5() {
             "Stagger: Cloud Thunder Arm Left, Berserk, Punisher",
           ],
           [
+            "Cloud: Dash",
             "Arm: Tifa/Barret Thunder each",
             "Stagger: everyone Thunder Generator",
           ],
