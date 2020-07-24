@@ -5,7 +5,6 @@ import Boss from "../../components/Boss";
 import Chapter from "../../components/Chapter";
 import Encounter from "../../components/Encounter";
 import Equipment from "../../components/Equipment";
-import Materia from "../../components/Materia";
 import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
 
@@ -16,34 +15,28 @@ function Chapter10() {
         name="Abzu"
         phases={[
           [
-            "Aerith: ATB Boost, Arcane Ward, Fire Left Horn",
+            "Aerith: ATB Boost, Arcane Ward, Lock any horn, Fire",
             "Cloud: Focused Thrust, Punisher full, Berserk, Punisher",
-            "Aerith: 1 ATB, Fira Left Horn, 1 ATB",
-            "Cloud: Dash to evade jump, Roll",
-            "Cloud: Dash, Focused Thrust, Aerith Fire",
-            "Cloud: Punisher full, Berserk, Focused Thrust",
-            "Tifa: Focused Strike to stagger",
-            "Tifa: Unbridled, Omni, Whirl, Focused Strike",
-            "Tifa: Whirl, Divekick",
-            "Cloud: TRIPOLOSKI, Berserk, Punisher",
+            "Aerith: Combo x4, Fira, Focused Thrust, Combo x4, Tempest",
+            "Tifa: Focused Strike (evade Pounce), Aerith Fire",
+            "Tifa: Whirl, Divekick, Combo x6, Whirl, Divekick",
+            "Tifa: Whirl, Hit, Whirl, Focused Strike, Whirl, Focused Strike",
+            "Tifa: Unbridled x2, Rise, Omni, Braver, Whirl, Divekick, Whirl",
           ],
           [
-            "Aerith: Fira after Enrage",
-            "Coud: Dash, Focused Thrust, Focused Strike",
-            "Cloud: Punisher full, Focused Thrust",
-            "Aerith: 2 ATB, Fira",
-            "Cloud: Punisher full, Aerith Fira, Focused Thrust",
-            "Tifa: Focused Strike, Unbridled, Omni, Whirl",
-            "Tifa: Focused Strike, Whirl until learned, Divekick",
+            "Aerith: Tempest full, Fira",
+            "Cloud: Dash, Focused Thrust, Focused Strike",
+            "Cloud: Punisher full, Berserk, Punisher",
+            "Aerith: Fira x2",
+            "Cloud: Punisher full, Berserk, Focused Thrust",
+            "Tifa: Whirl, Focused Strike, Whirl, Focused Strike",
+            "Tifa: Whirl, Divekick, TRIPOLOSKI, Whirl, Divekick",
           ],
         ]}
       />
       <Encounter
         enemies="Sahagin"
-        instructions={[
-          "Cloud: Fira",
-          "Tifa: Combo until stagger, Whirl + Divekick",
-        ]}
+        instructions={["Cloud: Berserk, Fira, Aerith Fira"]}
       />
       <Pick item="Hi-Potion x2" optional />
       <Pick item="Feathered Gloves" />
@@ -51,140 +44,89 @@ function Chapter10() {
         <Equipment
           characters={[
             {
+              name: "Cloud",
+              equipments: [{ name: "Iron Blade" }],
+            },
+            {
               name: "Tifa",
               equipments: [{ name: "Feathered Gloves" }],
-            },
-          ]}
-        />
-        <Materia
-          characters={[
-            {
-              name: "Tifa",
-              weapon: [
-                { name: "Fire" },
-                { name: "ATB Boost", source: "aerith" },
-                { name: "First Strike", source: "aerith" },
-              ],
-              armor: [{ name: "Lightning" }, { name: "Parry" }],
-              summon: [{ name: "" }],
-            },
-            {
-              name: "Aerith",
-              weapon: [
-                { name: "", source: "tifa" },
-                { name: "", source: "tifa" },
-                { name: "Fire" },
-              ],
-              armor: [{ name: "Lightning" }, { name: "Wind" }, { name: "Ice" }],
-              summon: [{ name: "" }],
             },
           ]}
         />
         <BattleSettings
           characters={[
             {
+              name: "Cloud",
+              shortcuts: [{ shortcut: "square", ability: "Fire" }],
+            },
+            {
               name: "Tifa",
-              leader: true,
-              shortcuts: [{ shortcut: "x", ability: "Starshower" }],
+              shortcuts: [
+                { shortcut: "x", ability: "Starshower" },
+                { shortcut: "circle", ability: "Fira" },
+              ],
             },
           ]}
         />
       </Menu>
       <Encounter
         enemies="Wererat x2, Scissorclaw"
-        instructions={[
-          "Tifa: ATB Boost, Parry + Starshower rats, Fire Scissor",
-          "TRIPOLOSKI",
-        ]}
+        instructions={["Aerith Fire Scissor, TRIPOLOSKI"]}
       />
       <Encounter
         enemies="Scissorclaw x2"
-        instructions={["Tifa: ATB Boost, Fire, Fire"]}
+        instructions={["Cloud Fire, Aerith Fire"]}
       />
       <Pick item="keys" />
       <Encounter
         enemies="Wererat x3, Blugu"
-        instructions={[
-          "Parry Blugu, ATB Boost, Starshower, Starshower",
-          "TRIPOLOSKI",
-        ]}
+        instructions={["Berserk Blugu, TRIPOLOSKI", "Careful with sleep"]}
       />
       <Encounter
         enemies="Blugu x2, Scissorclaw"
-        instructions={[
-          "Parry Blugu, ATB Boost, Starshower, Fire Scissor",
-          "TRIPOLOSKI",
-        ]}
+        instructions={["Aerith Fire Scissor", "Berserk, TRIPOLOSKI Blugus"]}
       />
       <Encounter
         enemies="Blugu, Scissorclaw x2"
         instructions={[
-          "Parry Blugu, ATB Boost, Starshower, Fire Scissor",
-          "Cloud Fire",
+          "Aerith Fire Scissor, Cloud Fire Scissor",
+          "Whirl, Divekick if needed",
         ]}
       />
       <Encounter
         enemies="Sahagin"
-        instructions={[
-          "Cloud: Dash, Fira",
-          "Tifa: ATB Boost, Stagger, Starshower, Starshower",
-        ]}
+        instructions={["Cloud: Berserk, Fira, Aerith Fire"]}
       />
       <Bench optional description="Aerith needs 30 MP" />
       <Encounter
         enemies="Scissorclaw x2"
-        instructions={["Tifa: ATB Boost, Fire, Fire"]}
+        instructions={["Aerith Fire, Cloud Fire"]}
       />
       <Encounter
         enemies="Wererat x2, Blugu, Scissorclaw"
-        instructions={[
-          "Parry Blugu, ATB Boost, Starshower, Fire Scissor",
-          "TRIPOLOSKI",
-        ]}
+        instructions={["Aerith Fire Scissor", "Berserk Blugu, TRIPOLOSKI"]}
       />
-      <Menu>
-        <Materia
-          characters={[
-            {
-              name: "Tifa",
-              weapon: [
-                { name: "Fire" },
-                { name: "", source: "aerith" },
-                { name: "", source: "aerith" },
-              ],
-              armor: [{ name: "Lightning" }, { name: "Parry" }],
-              summon: [{ name: "" }],
-            },
-            {
-              name: "Aerith",
-              weapon: [
-                { name: "First Strike", source: "tifa" },
-                { name: "ATB Boost", source: "tifa" },
-                { name: "Fire" },
-              ],
-              armor: [{ name: "Lightning" }, { name: "Wind" }, { name: "Ice" }],
-              summon: [{ name: "" }],
-            },
-          ]}
-        />
-      </Menu>
       <Encounter
         enemies="Sahagin x2"
         instructions={[
-          "Cloud: Dash, Fira A, Aerith Fira B",
-          "Punisher, TRIPOLOSKI",
+          "Berserk A, Fira A",
+          "Aerith Fira B, Punisher B",
+          "TRIPOLOSKI, Punisher",
         ]}
       />
       <Encounter
         enemies="Blugu x2, Sahagin"
-        instructions={["TRIPOLOSKI Blugu", "Aerith Fira Sahagin, Punisher"]}
+        instructions={[
+          "Aerith Fira Sahagin, Cloud Fire Sahagin",
+          "Tifa: Parry Blugu, Whirl, Divekick",
+        ]}
       />
       <Encounter
         enemies="Sahagin x3"
         instructions={[
           "Aerith: ATB Boost, Arcane Ward, Fira",
           "Cloud: Fira",
-          "Tifa: Whirl, Starshower",
+          "Tifa: Whirl, Divekick/Starshower",
         ]}
       />
     </Chapter>
