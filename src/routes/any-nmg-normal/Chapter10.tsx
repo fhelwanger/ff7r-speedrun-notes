@@ -16,7 +16,7 @@ function Chapter10() {
         phases={[
           [
             "Aerith: ATB Boost, Arcane Ward, Lock any horn, Fire",
-            "Cloud: Focused Thrust, Punisher full, Berserk, Punisher",
+            "Cloud: Punisher x2, Focused Thrust, Punisher full, Berserk, Punisher",
             "Aerith: Combo x4, Fira, Focused Thrust, Combo x4, Tempest",
             "Tifa: Focused Strike (evade Pounce), Aerith Fire",
             "Tifa: Whirl, Divekick, Combo x6, Whirl, Divekick",
@@ -126,7 +126,7 @@ function Chapter10() {
         instructions={[
           "Aerith: ATB Boost, Arcane Ward, Fira",
           "Cloud: Fira",
-          "Tifa: Whirl, Divekick/Starshower",
+          "Tifa: Whirl, Starshower",
         ]}
       />
     </Chapter>

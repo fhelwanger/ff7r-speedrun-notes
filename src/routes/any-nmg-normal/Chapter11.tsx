@@ -16,26 +16,37 @@ function Chapter11() {
     <Chapter number={11}>
       <Pick item="Mythril Rod" />
       <Menu>
-        <Materia
+        <Equipment
           characters={[
             {
               name: "Cloud",
-              weapon: [
-                { name: "Fire" },
-                { name: "Ice" },
-                { name: "Lightning" },
+              equipments: [{ name: "Hardedge" }],
+            },
+            {
+              name: "Aerith",
+              equipments: [
+                { name: "Mythril Rod" },
+                { name: "Earrings", source: "cloud" },
               ],
+            },
+          ]}
+        />
+        <Materia
+          characters={[
+            {
+              name: "Tifa",
+              weapon: [{ name: "Fire" }, { name: "" }, { name: "Lightning" }],
               armor: [
                 { name: "First Strike", source: "aerith" },
-                { name: "ATB Boost", source: "aerith" },
+                { name: "Parry" },
               ],
               summon: [{ name: "Ifrit" }],
             },
             {
               name: "Aerith",
               weapon: [
-                { name: "First Strike", source: "cloud" },
-                { name: "Refocus", source: "cloud" },
+                { name: "Wind", source: "tifa" },
+                { name: "ATB Boost" },
                 { name: "Fire" },
               ],
               armor: [{ name: "Lightning" }, { name: "Wind" }, { name: "Ice" }],
@@ -50,15 +61,11 @@ function Chapter11() {
               shortcuts: [{ shortcut: "square", ability: "Blizzara" }],
             },
             {
-              name: "Tifa",
-              shortcuts: [{ shortcut: "circle", ability: "Fira" }],
-            },
-            {
               name: "Aerith",
               shortcuts: [
+                { shortcut: "square", ability: "Blizzara" },
                 { shortcut: "circle", ability: "Aerora" },
                 { shortcut: "x", ability: "Blizzard" },
-                { shortcut: "square", ability: "Blizzara" },
               ],
             },
           ]}
@@ -67,26 +74,39 @@ function Chapter11() {
       <Encounter enemies="Wererats x3" instructions={["TRIPOLOSKI"]} />
       <Encounter
         enemies="Cripshay x3 "
-        instructions={["ATB Boost, TRIPOLOSKI, Berserk, TRIPOLOSKI"]}
+        instructions={["TRIPOLOSKI, Starshower, Punisher"]}
       />
       <Encounter
         enemies="Wererats x2, Cripshay x2 "
-        instructions={["ATB Boost, TRIPOLOSKI, Berserk, TRIPOLOSKI"]}
+        instructions={["Dash, TRIPOLOSKI, Starshower, Punisher"]}
       />
       <Encounter
         enemies="Cripshay x5"
         instructions={[
-          "Dash, Counter, TRIPOLOSKI, TRIPOLOSKI",
-          "Punisher + TRIPOLOSKI",
+          "Tifa: Starshower, Whirl B/C",
+          "Tifa: TRIPOLOSKI, 1 ATB A",
+          "Tifa: Starshower, Whirl D/E",
         ]}
       />
-      <Encounter enemies="Ghost" instructions={["Phoenix Down"]} />
+      <Encounter
+        enemies="Ghost"
+        instructions={["Starshower if not learned yet", "Phoenix Down"]}
+      />
       <Encounter
         enemies="Cripshay x3"
-        instructions={["ATB Boost, TRIPOLOSKI, TRIPOLOSKI, Punisher"]}
+        instructions={[
+          "Cloud: Dash, TRIPOLOSKI",
+          "Tifa: Starshower, Whirl the rest",
+        ]}
       />
-      <Encounter enemies="Ghost x2" instructions={["Phoenix Down"]} />
-      <Encounter enemies="Ghost" instructions={["Phoenix Down"]} />
+      <Encounter
+        enemies="Ghost x2"
+        instructions={["Cloud/Tifa Phoenix Down"]}
+      />
+      <Encounter
+        enemies="Ghost"
+        instructions={["Starshower if not learned yet", "Phoenix Down"]}
+      />
       <Pick item="1000 gil" />
       <Shop
         name="Vending Machine"
@@ -96,15 +116,16 @@ function Chapter11() {
         <Equipment
           characters={[
             {
+              name: "Cloud",
+              equipments: [{ name: "Iron Blade" }],
+            },
+            {
               name: "Tifa",
-              equipments: [
-                { name: "Power Wristguards", source: "cloud" },
-                { name: "Metal Knuckles" },
-              ],
+              equipments: [{ name: "Metal Knuckles" }],
             },
             {
               name: "Aerith",
-              equipments: [{ name: "Mythirl Rod" }],
+              equipments: [{ name: "Fury Ring", source: "cloud" }],
             },
           ]}
         />
@@ -117,26 +138,27 @@ function Chapter11() {
                 { name: "Ice" },
                 { name: "Lightning" },
               ],
-              armor: [
-                { name: "Fire", source: "tifa" },
-                { name: "Refocus", source: "aerith" },
-              ],
-              summon: [{ name: "Ifrit" }],
+              armor: [{ name: "Wind", source: "aerith" }, { name: "Refocus" }],
+              summon: [{ name: "" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "First Strike", source: "cloud" },
+                { name: "Fire" },
                 { name: "Binding", source: "inventory" },
+                { name: "Lightning" },
               ],
-              armor: [{ name: "Lightning" }, { name: "Parry" }],
-              summon: [{ name: "" }],
+              armor: [
+                { name: "First Strike", source: "cloud" },
+                { name: "Parry" },
+              ],
+              summon: [{ name: "Ifrit" }],
             },
             {
               name: "Aerith",
               weapon: [
-                { name: "First Strike" },
-                { name: "ATB Boost", source: "cloud" },
+                { name: "First Strike", source: "tifa" },
+                { name: "ATB Boost" },
                 { name: "Fire" },
               ],
               armor: [{ name: "Lightning" }, { name: "Wind" }, { name: "Ice" }],
@@ -149,7 +171,10 @@ function Chapter11() {
             {
               name: "Aerith",
               weapons: [
-                { name: "Mythril Rod", upgrade: "M.Atk+5, M.Atk+6 x3" },
+                {
+                  name: "Mythril Rod",
+                  upgrade: "Auto - Attack, Auto - Balanced",
+                },
               ],
             },
           ]}
@@ -158,10 +183,13 @@ function Chapter11() {
       <Boss
         name="Ghoul"
         phases={[
-          ["Parry, Starshower, Whirl", "Elixir when pressured"],
           [
-            "Parry, wait Piercing Scream",
-            "Starshower, Whirl",
+            "Tifa: Starshower, Aerith ATB Boost, Whirl",
+            "Elixir when pressured",
+          ],
+          [
+            "Tifa: Defend Piercing Scream",
+            "Tifa: Starshower, Whirl",
             "Elixir when pressured",
           ],
         ]}
@@ -169,7 +197,7 @@ function Chapter11() {
       <Pick item="Mega-Potion x2" optional />
       <Encounter
         enemies="Wererats x3"
-        instructions={["1 ATB, TRIPOLOSKI", "Aerith ATB Boost"]}
+        instructions={["Aerith ATB Boost", "Berserk, 1 ATB, TRIPOLOSKI"]}
       />
       <Encounter
         enemies="Ghost x2"
@@ -177,15 +205,16 @@ function Chapter11() {
       />
       <Encounter
         enemies="Cripshay x4"
-        instructions={["Starshower, Whirl, Starshower"]}
+        instructions={["Starshower, Whirl, Divekick"]}
       />
       <Pick item="Mega-Potion x2" />
       <Encounter
         enemies="Lesser Drake, Cerulean Drake"
         instructions={[
-          "Lesser: Sleep, ATB Boost, Aerora",
-          "Cerulean: Sleep, Aerora, Tempest spam until stagger",
-          "Whirl, Divekick, Whirl",
+          "Lesser: Sleep, Aerith Aero, Tempest",
+          "Lesser: Cloud 1 ATB, Tifa 1 ATB",
+          "Cerulean: Sleep, Aerith ATB Boost, Aerith Aerora, Cloud Aero",
+          "Cerulean: Whirl, Divekick, Whirl",
         ]}
       />
       <Menu>
@@ -194,16 +223,17 @@ function Chapter11() {
             {
               name: "Tifa",
               weapon: [
-                { name: "First Strike" },
+                { name: "Fire" },
                 { name: "Subversion", source: "inventory" },
+                { name: "Lightning" },
               ],
-              armor: [{ name: "Lightning" }, { name: "Parry" }],
-              summon: [{ name: "" }],
+              armor: [{ name: "First Strike" }, { name: "Parry" }],
+              summon: [{ name: "Ifrit" }],
             },
           ]}
         />
       </Menu>
-      <Bench />
+      <Bench optional description="Aerith needs full MP" />
       <Shop
         name="Vending Machine"
         buy={["Mega-Potion x3", "Ether x2", "Phoenix Down x2"]}
@@ -213,9 +243,9 @@ function Chapter11() {
         phases={[
           [
             "Dash, Counter, Aerith Blizzara, Operator, Counter",
-            "Punisher x6, Focused Thrust x2",
+            "Punisher x2, Blizzara, Focused Thrust",
             "Tifa: Whirl",
-            "Aerith: Tempest full, 1 ATB, Blizzara, 1 ATB Arcane Ward, build ATB",
+            "Aerith: Tempest full, 1 ATB, Blizzara, 1 ATB, Arcane Ward, Combo",
           ],
           ["Aerith: Tifa Breach, 1 ATB, ATB Boost", "Aerith: Aerora x2"],
           [
