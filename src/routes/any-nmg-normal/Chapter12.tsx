@@ -17,11 +17,9 @@ function Chapter12() {
       <Encounter
         enemies="Mysterious Spectre, Enigmatic Spectre"
         instructions={[
-          "Aerith: ATB Boost, Arcane Ward",
-          "Tifa: Starshower, Whirl, Whirl Mysterious",
-          "Cloud: Punisher full, Focused Thrust Enigmatic",
-          "Cloud: Punisher full, Focused Thrust Enigmatic",
-          "Staggered: Aerith Aerora, Starshower, Aerith Aerora, Starshower",
+          "Aerith: Tempest full, Arcane Ward, ATB Boost Mysterious",
+          "Aerith: Aerora, Aerora Enigmatic",
+          "Tifa: Whirl, 2 ATB, Starshower, Starshower Enigmatic",
         ]}
       />
       <Menu>
@@ -29,10 +27,11 @@ function Chapter12() {
           characters={[
             {
               name: "Cloud",
-              equipments: [
-                { name: "Iron Blade" },
-                { name: "Fury Ring", source: "aerith" },
-              ],
+              equipments: [{ name: "Fury Ring", source: "aerith" }],
+            },
+            {
+              name: "Tifa",
+              equipments: [{ name: "Feathered Gloves" }],
             },
           ]}
         />
@@ -46,42 +45,44 @@ function Chapter12() {
                 { name: "Lightning" },
               ],
               armor: [
-                { name: "First Strike", source: "tifa" },
+                { name: "First Strike", source: "aerith" },
                 { name: "Refocus" },
               ],
-              summon: [{ name: "Ifrit" }],
+              summon: [{ name: "Ifrit", source: "tifa" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire", source: "cloud" },
-                { name: "First Strike", source: "aerith" },
+                { name: "Fire" },
+                { name: "Subversion" },
+                { name: "Lightning" },
               ],
-              armor: [{ name: "Lightning" }, { name: "Parry" }],
-              summon: [{ name: "" }],
+              armor: [{ name: "First Strike" }, { name: "Parry" }],
+              summon: [{ name: "", source: "cloud" }],
             },
             {
               name: "Aerith",
               weapon: [
-                { name: "Subversion", source: "tifa" },
+                { name: "Wind", source: "cloud" },
                 { name: "Ice", source: "cloud" },
-                { name: "Fire" },
+                { name: "", source: "barret" },
+                { name: "" },
               ],
               armor: [
                 { name: "", source: "barret" },
                 { name: "", source: "barret" },
-                { name: "", source: "barret" },
+                { name: "Ice" },
               ],
               summon: [{ name: "" }],
             },
             {
               name: "Barret",
               weapon: [
-                { name: "Wind", source: "aerith" },
-                { name: "" },
                 { name: "Lightning", source: "aerith" },
+                { name: "Wind", source: "aerith" },
+                { name: "Fire", source: "aerith" },
               ],
-              armor: [{ name: "Ice", source: "aerith" }],
+              armor: [{ name: "" }],
               summon: [{ name: "" }],
             },
           ]}
@@ -90,13 +91,13 @@ function Chapter12() {
           characters={[
             {
               name: "Cloud",
-              weapons: [{ name: "Hardedge", upgrade: "Auto - Attack, Manual" }],
+              weapons: [{ name: "Hardedge", upgrade: "Auto - Attack" }],
             },
             {
               name: "Tifa",
               weapons: [
+                { name: "Metal Knuckles", upgrade: "Auto - Attack" },
                 { name: "Feathered Gloves", upgrade: "Auto - Attack" },
-                { name: "Metal Knuckles", upgrade: "Atk+4, Atk+10 x2" },
               ],
             },
           ]}
@@ -115,17 +116,17 @@ function Chapter12() {
         />
       </Menu>
       <Encounter
-        enemies="Elite Security Officer x3, Sentry Gun"
-        instructions={["Lure guards, ATB Boost, Fira", "Ignore Sentry Gun"]}
-      />
-      <Encounter
-        enemies="Elite Riot Trooper x2, Elite Grenadier"
-        instructions={["ATB Boost, Fira Riots", "Dash, Punisher/Counter"]}
+        enemies="Elite Security Officer x3, Sentry Gun / Elite Riot Trooper x2, Elite Grenadier"
+        instructions={[
+          "Lure everyone to the top of stairs",
+          "ATB Boost, Fira",
+          "Ignore Sentry Gun",
+        ]}
       />
       <Pick
         item="Orb of Gravity x2"
         optional
-        description="Pick in chapter 13 is faster, but relies in a random drop"
+        description="Pick in chapter 13 is faster, but relies on a random drop"
       />
       <Encounter
         enemies="Helitrooper x2"
@@ -134,11 +135,11 @@ function Chapter12() {
       <Pick item="Ether" optional />
       <Encounter
         enemies="Helitrooper, Elite Security Officer x2"
-        instructions={["ATB Boost, Fira, Fire Heli", "TRIPOLOSKI"]}
+        instructions={["ATB Boost, Fira, Fire Heli", "Counter, TRIPOLOSKI"]}
       />
       <Encounter
         enemies="Elite Riot Trooper x2"
-        instructions={["ATB Boost, Fira"]}
+        instructions={["Starshower if they get stuck", "Fira otherwise"]}
       />
       <Encounter
         enemies="Elite Riot Trooper x2"
@@ -146,7 +147,7 @@ function Chapter12() {
       />
       <Encounter
         enemies="Elite Grenadier, Helitrooper"
-        instructions={["Fira, Fire Heli", "Tifa Starshower Grenadier"]}
+        instructions={["Fira, Fire Heli", "Tifa Divekick Grenadier"]}
       />
       <Encounter
         enemies="Elite Shock Trooper, Helitrooper x2, Sentry Gun x2"
@@ -154,23 +155,24 @@ function Chapter12() {
           "Shock Trooper: Cloud Fira, Tifa Fira, Punisher",
           "Heli A: Fira, ATB Boost, Fire",
           "Heli B: Cloud Fira, Whirl Sentries, Tifa Fira",
-          "Sentries: Whirl + Thundara/Starshower",
+          "Sentries: Whirl, Starshower",
         ]}
       />
       <Pick item="Elixir" optional />
-      <Shop
-        name="Vending Machine"
-        buy={["Mega-Potion x3", "Ether x2", "Phoenix Down x2"]}
-      />
+      <Shop name="Vending Machine" buy={["Mega-Potion x3", "Ether x2"]} />
       <Bench optional description="Don't need MP for the Turks" />
       <Menu>
         <Equipment
           characters={[
             {
               name: "Cloud",
+              equipments: [{ name: "Hardedge" }],
+            },
+            {
+              name: "Tifa",
               equipments: [
-                { name: "Hardedge" },
-                { name: "Power Wristguards", source: "tifa" },
+                { name: "Metal Knuckles" },
+                { name: "Fury Ring", source: "cloud" },
               ],
             },
             {
@@ -192,41 +194,50 @@ function Chapter12() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "Parry", source: "tifa" },
+                { name: "ATB Boost" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "First Strike" }, { name: "Refocus" }],
+              armor: [
+                { name: "First Strike" },
+                { name: "Parry", source: "tifa" },
+              ],
               summon: [{ name: "", source: "tifa" }],
             },
             {
               name: "Tifa",
-              weapon: [{ name: "Fire" }, { name: "First Strike" }],
-              armor: [
+              weapon: [
+                { name: "Fire" },
+                { name: "Subversion" },
                 { name: "Lightning" },
-                { name: "ATB Boost", source: "cloud" },
+                { name: "Ice", source: "inventory" },
+              ],
+              armor: [
+                { name: "First Strike" },
+                { name: "Refocus", source: "cloud" },
               ],
               summon: [{ name: "Ifrit", source: "cloud" }],
             },
             {
               name: "Barret",
               weapon: [
-                { name: "Wind" },
-                { name: "Binding", source: "inventory" },
                 { name: "Lightning" },
+                { name: "Wind" },
+                { name: "Fire" },
               ],
               armor: [
-                { name: "Ice" },
                 { name: "" },
-                { name: "Fire", source: "aerith" },
+                { name: "Ice", source: "aerith" },
+                { name: "Binding", source: "inventory" },
               ],
               summon: [{ name: "" }],
             },
             {
               name: "Aerith",
               weapon: [
-                { name: "", source: "inventory" },
-                { name: "Ice" },
+                { name: "Wind" },
                 { name: "", source: "barret" },
+                { name: "" },
+                { name: "" },
               ],
               armor: [],
               summon: [{ name: "" }],
@@ -239,17 +250,20 @@ function Chapter12() {
         phases={[
           [
             "Cloud: Roll back, Parry left, Counter, Starshower",
-            "Cloud: Punisher full, Berserk, TRIPOLOSKI, Whirl, TRIPOLOSKI, Whirl",
+            "Cloud: Punisher full, Berserk, TRIPOLOSKI, Whirl",
+            "Cloud: Punisher x2, TRIPOLOSKI, Whirl, Punisher",
           ],
           [
-            "Barret: Combo, Thunder, Overcharge, Charge, Charge on Helicopter",
-            "Tifa: Starshower, Whirl, Divekick, Whirl on Reno",
-            "Cloud: Combo full on Helicopter",
-            "Tifa: 1 ATB, ATB Boost",
-            "Barret: Thunder, Overcharge",
+            "Barret: Overcharge, Thunder, Combo, Charge x3 Helicopter",
+            "Barret: Overcharge Reno",
+            "Cloud: Starshower, Punisher full, Berserk, Punisher x4, Operator",
+            "Cloud: Wait Pyramid, TRIPOLOSKI",
+            "Tifa: Cloud ATB Boost, 2 ATB",
+            "Barret: Thunder, Charge, Charge, Overcharge, Thunder",
           ],
           [
-            "TRIPOLOSKI, Aero, Starshower, Starshower",
+            "TRIPOLOSKI, Aero Reno",
+            "Punisher, Starshower, TRIPOLOSKI x2",
             "Can use Sleep as a backup",
           ],
         ]}
