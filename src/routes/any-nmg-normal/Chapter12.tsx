@@ -65,7 +65,7 @@ function Chapter12() {
               weapon: [
                 { name: "Wind", source: "cloud" },
                 { name: "Ice", source: "cloud" },
-                { name: "", source: "barret" },
+                { name: "Fire" },
                 { name: "" },
               ],
               armor: [
@@ -80,7 +80,7 @@ function Chapter12() {
               weapon: [
                 { name: "Lightning", source: "aerith" },
                 { name: "Wind", source: "aerith" },
-                { name: "Fire", source: "aerith" },
+                { name: "Binding" },
               ],
               armor: [{ name: "" }],
               summon: [{ name: "" }],
@@ -222,12 +222,12 @@ function Chapter12() {
               weapon: [
                 { name: "Lightning" },
                 { name: "Wind" },
-                { name: "Fire" },
+                { name: "Binding" },
               ],
               armor: [
                 { name: "" },
                 { name: "Ice", source: "aerith" },
-                { name: "Binding", source: "inventory" },
+                { name: "Fire", source: "aerith" },
               ],
               summon: [{ name: "" }],
             },
@@ -236,7 +236,7 @@ function Chapter12() {
               weapon: [
                 { name: "Wind" },
                 { name: "", source: "barret" },
-                { name: "" },
+                { name: "", source: "barret" },
                 { name: "" },
               ],
               armor: [],
