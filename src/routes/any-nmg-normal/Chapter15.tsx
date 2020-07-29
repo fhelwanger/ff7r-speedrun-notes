@@ -102,7 +102,10 @@ function Chapter15() {
             },
             {
               name: "Tifa",
-              shortcuts: [{ shortcut: "circle", ability: "Thundara" }],
+              shortcuts: [
+                { shortcut: "square", ability: "Thundara" },
+                { shortcut: "circle", ability: "Haste All" },
+              ],
             },
           ]}
         />
