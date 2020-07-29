@@ -91,7 +91,7 @@ function Chapter12() {
           characters={[
             {
               name: "Cloud",
-              weapons: [{ name: "Hardedge", upgrade: "Auto - Attack" }],
+              weapons: [{ name: "Hardedge", upgrade: "Auto - Attack, Manual" }],
             },
             {
               name: "Tifa",

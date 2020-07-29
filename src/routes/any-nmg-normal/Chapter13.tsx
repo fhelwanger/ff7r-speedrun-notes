@@ -123,10 +123,6 @@ function Chapter13() {
         <UpgradeWeapons
           characters={[
             {
-              name: "Cloud",
-              weapons: [{ name: "Hardedge", upgrade: "Manual" }],
-            },
-            {
               name: "Barret",
               weapons: [{ name: "Big Bertha", upgrade: "Auto - Attack" }],
             },
