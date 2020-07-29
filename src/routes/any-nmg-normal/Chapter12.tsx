@@ -80,7 +80,7 @@ function Chapter12() {
               weapon: [
                 { name: "Lightning", source: "aerith" },
                 { name: "Wind", source: "aerith" },
-                { name: "Binding" },
+                { name: "Binding", source: "inventory" },
               ],
               armor: [{ name: "" }],
               summon: [{ name: "" }],
