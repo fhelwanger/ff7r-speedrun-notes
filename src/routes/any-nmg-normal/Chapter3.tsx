@@ -88,7 +88,7 @@ function Chapter3() {
         enemies="Wererats x2, Gorger"
         instructions={[
           "Counter to build ATB",
-          "Assess Wererat then Gorger",
+          "Assess Gorger and Wererat",
           "Deadly Dodge, Cleave",
           "Flee if Call to Arms",
         ]}
