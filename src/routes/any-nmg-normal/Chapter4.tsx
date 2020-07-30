@@ -100,7 +100,7 @@ function Chapter4() {
           ],
           [
             "Fire",
-            "Counter, Punisher full, Focused Thrust if pressured, Fire if not, Roll",
+            "Counter, Punisher full, Focused Thrust if pressured, Roll",
             "Staggered: Punisher, Berserk, Fire",
           ],
         ]}
