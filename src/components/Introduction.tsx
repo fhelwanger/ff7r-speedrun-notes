@@ -184,10 +184,6 @@ function RecommendedSettings() {
       value: "3",
     },
     {
-      name: "Responsiveness",
-      value: "5",
-    },
-    {
       name: "Combo Targeting",
       value: "Free",
     },
