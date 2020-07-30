@@ -40,7 +40,7 @@ function Chapter14() {
             {
               name: "Barret",
               weapons: [
-                { name: "Light Machine Gun", upgrade: "Auto - Attack, Manual" },
+                { name: "Light Machine Gun", upgrade: "Auto - Attack" },
               ],
             },
             {
