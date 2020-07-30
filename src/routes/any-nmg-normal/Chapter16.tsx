@@ -221,7 +221,7 @@ function Chapter16() {
                 { name: "Ice", source: "cloud" },
                 { name: "ATB Stagger", source: "inventory" },
               ],
-              armor: [{ name: "Magnify" }, { name: "Time" }, { name: "Fire" }],
+              armor: [{ name: "Time" }, { name: "Magnify" }, { name: "Fire" }],
               summon: [{ name: "" }],
             },
             {
