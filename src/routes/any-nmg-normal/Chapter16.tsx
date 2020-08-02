@@ -63,8 +63,8 @@ function Chapter16() {
             {
               name: "Tifa",
               weapon: [
-                { name: "", source: "barret" },
                 { name: "", source: "cloud" },
+                { name: "", source: "barret" },
                 { name: "Lightning" },
                 { name: "Fire" },
               ],
@@ -208,8 +208,8 @@ function Chapter16() {
               ],
               armor: [
                 { name: "First Strike" },
-                { name: "", source: "tifa" },
                 { name: "Subversion", source: "barret" },
+                { name: "", source: "tifa" },
               ],
               summon: [{ name: "", source: "tifa" }],
             },
@@ -287,8 +287,8 @@ function Chapter16() {
               ],
               armor: [
                 { name: "First Strike" },
-                { name: "Refocus", source: "tifa" },
                 { name: "ATB Stagger", source: "barret" },
+                { name: "Refocus", source: "tifa" },
               ],
               summon: [{ name: "Ifrit", source: "tifa" }],
             },

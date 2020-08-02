@@ -15,10 +15,7 @@ import UpgradeWeapons from "../../components/UpgradeWeapons";
 function Chapter14() {
   return (
     <Chapter number={14}>
-      <Shop
-        name="Chadley Sector 5"
-        buy={["ATB Assist", "Reset Light Machine Gun"]}
-      />
+      <Shop name="Chadley Sector 5" buy={["ATB Assist"]} />
       <Pick
         item="Adrenaline"
         description="Wall Market Inn - Ignore if already dropped one"
@@ -35,12 +32,6 @@ function Chapter14() {
               name: "Cloud",
               weapons: [
                 { name: "Mythril Saber", upgrade: "MP+10, Auto - Attack" },
-              ],
-            },
-            {
-              name: "Barret",
-              weapons: [
-                { name: "Light Machine Gun", upgrade: "Auto - Attack" },
               ],
             },
             {
@@ -101,8 +92,8 @@ function Chapter14() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "ATB Assist", source: "inventory" },
+                { name: "Fire" },
                 { name: "Lightning" },
                 { name: "Ice" },
               ],
@@ -127,6 +118,7 @@ function Chapter14() {
             {
               name: "Tifa",
               shortcuts: [
+                { shortcut: "circle", ability: "Fira" },
                 { shortcut: "square", ability: "Unbridled Strength" },
               ],
             },
@@ -256,8 +248,8 @@ function Chapter14() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "ATB Assist" },
+                { name: "Fire" },
                 { name: "Lightning" },
                 { name: "Ice" },
               ],
@@ -288,15 +280,16 @@ function Chapter14() {
             "Tifa: Combo, Focused Strike, Combo, Focused Strike, Combo, Unbridled",
           ],
           [
-            "Cloud Mega-Potion Barret, Cloud ATB Boost if needed",
+            "Cloud Mega-Potion Barret, Cloud ATB Boost",
             "Tifa: Hit to stagger",
             "Tifa: Starshower, Cloud Fira, Barret Fira, Omni, Whirl, Whirl",
           ],
           [
             "Tifa: Starshower, Overcharge, Starshower",
             "Enrage: Barret Sleep Abzu, Mega-Potion Tifa",
-            "Tifa: 1 ATB, Starshower, Cloud Fira All x2, Somersault",
-            "Should get at least 2 Shoats, otherwise kill Byabapolis x2 in Chapter 15",
+            "Tifa: 1 ATB, Starshower",
+            "Cloud: 2 ATB, Fira All x2, Somersault",
+            "Should get at least 3 Shoats, otherwise kill Byabapolis x2 in Chapter 15",
           ],
         ]}
       />

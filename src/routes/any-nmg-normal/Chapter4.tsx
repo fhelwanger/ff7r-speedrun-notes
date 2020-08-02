@@ -32,8 +32,8 @@ function Chapter4() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire", source: "inventory" },
                 { name: "Ice", source: "inventory" },
+                { name: "Fire", source: "inventory" },
               ],
               armor: [],
               summon: [{ name: "Empty" }],
@@ -61,13 +61,11 @@ function Chapter4() {
       </Menu>
       <Encounter
         enemies="Security Officers x17, Grenadier x2"
-        instructions={["Deadly Dodge, Cleave, TRIPOLOSKI", "Save 1 ATB"]}
+        instructions={["Deadly Dodge, Cleave, TRIPOLOSKI", "Save 2 ATB"]}
       />
       <Encounter
         enemies="Elite Security Officer, Riot Trooper"
-        instructions={[
-          "Fire (try to hit bot both), Punisher Elite Security Officer",
-        ]}
+        instructions={["Fire x2, Punisher Elite Security Officer"]}
       />
       <Encounter
         enemies="Shock Trooper,  Elite Grenadier"
@@ -118,7 +116,8 @@ function Chapter4() {
         enemies="Mysterious Spectre, Enigmatic Spectre"
         instructions={[
           "Deadly Dodge, Cleave",
-          "Mysterious x2: Fire, Punisher (stagger)",
+          "Mysterious: Fire, Punisher (stagger), Fire Enigmatic",
+          "Mysterious: Fire, Punisher (stagger)",
           "Enigmatic: Fire/Focused Thrust, Punisher/Berserk until stagger",
           "Stagger: Cross Slash, Divekick, Whirl",
         ]}

@@ -19,7 +19,7 @@ function Chapter8() {
       <Encounter
         enemies="Security Officer x2, Elite Security Officer"
         instructions={[
-          "Dash, Punisher Elite, Punisher B",
+          "Dash, Punisher B",
           "TRIPOLOSKI + Focused Thrust Elite, Punisher",
         ]}
       />
@@ -35,7 +35,7 @@ function Chapter8() {
           [
             "Dash, Counter",
             "Punisher x4, Focused Thrust",
-            "Punisher x4, Focused Thrust, Roll",
+            "Punisher x3, Focused Thrust, Roll",
             "Counter, Punisher full, Beserk, Punisher x4, Berserk",
           ],
           ["Aero, Dash, Cross Slash"],
@@ -107,7 +107,7 @@ function Chapter8() {
               name: "Barret",
               weapon: [
                 { name: "", source: "aerith" },
-                { name: "" },
+                { name: "Deadly Dodge" },
                 { name: "", source: "aerith" },
               ],
               armor: [{ name: "", source: "inventory" }],
@@ -116,8 +116,8 @@ function Chapter8() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "Ice" },
+                { name: "Fire" },
                 { name: "Lightning" },
               ],
               armor: [{ name: "Fire" }],
@@ -141,14 +141,7 @@ function Chapter8() {
       <Pick item="200 gil" />
       <Shop
         name="Materia Shop"
-        sell={[
-          "Mesmeric Armlet",
-          "Revival",
-          "Ice",
-          "Barrier",
-          "Prayer",
-          "Deadly Dodge",
-        ]}
+        sell={["Mesmeric Armlet", "Revival", "Ice", "Barrier", "Prayer"]}
       />
       <Shop name="Chadley" buy={["Wind", "ATB Boost", "First Strike"]} />
       <Menu>

@@ -53,8 +53,8 @@ function Chapter12() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "Subversion" },
+                { name: "Fire" },
                 { name: "Lightning" },
               ],
               armor: [{ name: "First Strike" }, { name: "Parry" }],
@@ -206,8 +206,8 @@ function Chapter12() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "Subversion" },
+                { name: "Fire" },
                 { name: "Lightning" },
                 { name: "Ice", source: "inventory" },
               ],

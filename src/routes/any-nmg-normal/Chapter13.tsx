@@ -23,7 +23,7 @@ function Chapter13() {
           characters={[
             {
               name: "Cloud",
-              equipments: [{ name: "Iron Blade" }],
+              equipments: [{ name: "Iron Blade" }, { name: "Earrings" }],
             },
             {
               name: "Tifa",
@@ -49,8 +49,8 @@ function Chapter13() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "Subversion" },
+                { name: "Fire" },
                 { name: "Lightning" },
                 { name: "Ice" },
               ],
@@ -68,18 +68,21 @@ function Chapter13() {
               name: "Cloud",
               shortcuts: [{ shortcut: "square", ability: "Thundara" }],
             },
+            {
+              name: "Barret",
+              shortcuts: [{ shortcut: "square", ability: "Thundara" }],
+            },
           ]}
         />
       </Menu>
-      <Pick item="Mega-Potion" />
+      <Pick item="Mega-Potion" optional />
       <Encounter
         enemies="Sweeper Prototype, Smogger"
         instructions={[
           "Smogger: Cloud Thundara, Tifa Thundara",
-          "Cloud: Berserk, 1 ATB, Roll (avoid SD)",
-          "Cloud: ATB Boost, Thundara, Thundara",
+          "Barret: Overcharge, Thundara",
+          "Cloud: Berserk, 1 ATB, ATB Boost, Thundara, Thundara",
           "Tifa: Whirl, Thundara",
-          "Barret: Overcharge, Thunder",
         ]}
       />
       <Pick item="Heavy-Duty Bracer" />
@@ -172,8 +175,8 @@ function Chapter13() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "Subversion" },
+                { name: "Fire" },
                 { name: "Lightning" },
                 { name: "Ice" },
               ],
@@ -191,10 +194,13 @@ function Chapter13() {
             {
               name: "Barret",
               shortcuts: [
-                { shortcut: "square", ability: "Thundara" },
                 { shortcut: "x", ability: "Maximum Fury" },
                 { shortcut: "circle", ability: "Blizzard All" },
               ],
+            },
+            {
+              name: "Tifa",
+              shortcuts: [{ shortcut: "circle", ability: "Focused Strike" }],
             },
           ]}
         />
@@ -215,18 +221,29 @@ function Chapter13() {
       <Pick item="Healing Carcanet" optional />
       <Encounter
         enemies="Gorger x2"
-        instructions={["ATB Boost, Maximum Fury"]}
+        instructions={["Blizzard All, Overcharge"]}
       />
       <Encounter
         enemies="Gorger, Bugaboo x2"
-        instructions={["ATB Boost, Maximum Fury"]}
+        instructions={["Blizzard All, Overcharge"]}
       />
+      <Menu>
+        <Equipment
+          characters={[
+            {
+              name: "Barret",
+              equipments: [{ name: "Light Machine Gun" }],
+            },
+          ]}
+        />
+      </Menu>
       <Encounter
         enemies="Cutter, Monodrive x2"
         instructions={[
-          "Barret: Overcharge Monodrives, Thundara Cutter, Tifa Thundara, ATB Boost",
-          "Tifa: Barret Blizzard All, Combo until stagger",
-          "Tifa: Starshower, Barret Thundara, Thundara",
+          "Barret: Overcharge Monodrive",
+          "Tifa: Combo + Whirl Monodrive, Thundara Cutter, Barret Thundara, Barret ATB Boost",
+          "Tifa: Focused Strike until Stagger",
+          "Tifa Thundara, Barret Thundara x2",
         ]}
       />
       <Shop name="Vending Machine" buy={["Mega-Potion x3", "Ether x2"]} />
@@ -235,8 +252,15 @@ function Chapter13() {
         <Equipment
           characters={[
             {
+              name: "Barret",
+              equipments: [{ name: "Big Bertha" }],
+            },
+            {
               name: "Tifa",
-              equipments: [{ name: "Metal Knuckles" }],
+              equipments: [
+                { name: "Metal Knuckles" },
+                { name: "Power Wristguards" },
+              ],
             },
           ]}
         />

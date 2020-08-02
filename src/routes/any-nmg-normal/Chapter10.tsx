@@ -97,7 +97,7 @@ function Chapter10() {
         enemies="Sahagin"
         instructions={["Cloud: Berserk, Fira, Aerith Fire"]}
       />
-      <Bench optional description="Aerith needs 30 MP" />
+      <Bench optional />
       <Encounter
         enemies="Scissorclaw x2"
         instructions={["Aerith Fire, Cloud Fire"]}
@@ -117,7 +117,7 @@ function Chapter10() {
       <Encounter
         enemies="Blugu x2, Sahagin"
         instructions={[
-          "Aerith Fira Sahagin, Cloud Fire Sahagin",
+          "Aerith Fira Sahagin, Cloud Fira Sahagin",
           "Tifa: Parry Blugu, Whirl, Divekick",
         ]}
       />

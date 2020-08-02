@@ -35,7 +35,7 @@ function Chapter11() {
           characters={[
             {
               name: "Tifa",
-              weapon: [{ name: "Fire" }, { name: "" }, { name: "Lightning" }],
+              weapon: [{ name: "" }, { name: "Fire" }, { name: "Lightning" }],
               armor: [
                 { name: "First Strike", source: "aerith" },
                 { name: "Parry" },
@@ -144,8 +144,8 @@ function Chapter11() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "Binding", source: "inventory" },
+                { name: "Fire" },
                 { name: "Lightning" },
               ],
               armor: [
@@ -223,8 +223,8 @@ function Chapter11() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "Subversion", source: "inventory" },
+                { name: "Fire" },
                 { name: "Lightning" },
               ],
               armor: [{ name: "First Strike" }, { name: "Parry" }],

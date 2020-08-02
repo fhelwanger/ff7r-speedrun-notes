@@ -14,6 +14,7 @@ import UpgradeWeapons from "../../components/UpgradeWeapons";
 function Chapter5() {
   return (
     <Chapter number={5}>
+      <Pick item="Healing" />
       <Encounter
         enemies="Slug Ray x5"
         instructions={["Punisher, Berserk, TRIPOLOSKI"]}
@@ -90,7 +91,7 @@ function Chapter5() {
       <Bench />
       <Shop
         name="Vending Machine"
-        sell={["Healing x2"]}
+        sell={["Healing x3"]}
         buy={[
           "Hi-Potion x3",
           "Ether",
@@ -138,8 +139,8 @@ function Chapter5() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "Ice" },
+                { name: "Fire" },
                 { name: "Lightning", source: "inventory" },
               ],
               armor: [],

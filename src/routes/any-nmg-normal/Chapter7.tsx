@@ -35,7 +35,10 @@ function Chapter7() {
       />
       <Encounter
         enemies="Elite Shock Trooper, Shock Trooper x2"
-        instructions={["Berserk, Overcharge", "Fire / Counter / TRIPOLOSKI"]}
+        instructions={[
+          "Berserk, Punisher until dodge, Blizzard",
+          "Punisher / TRIPOLOSKI / Counter",
+        ]}
       />
       <Encounter
         enemies="Elite Security Officer x2, Security Officer x4"
@@ -63,9 +66,8 @@ function Chapter7() {
       <Encounter
         enemies="Elite Shock Trooper, Laser Cannon x2"
         instructions={[
-          "Cloud: Dash, Fire Trooper",
           "Barret: Overcharge Cannon B, Thunder A",
-          "Barret: 1 ATB, Fire Trooper",
+          "Cloud Blizzard Trooper",
           "Tifa: Combo until stagger, Whirl + Divekick x2",
         ]}
       />
@@ -87,10 +89,8 @@ function Chapter7() {
       <Encounter
         enemies="Elite Shock Trooper x2"
         instructions={[
-          "Cloud: Dash, Fire",
-          "Barret: Overcharge",
-          "Tifa: Combo until stagger, Whirl + Divekick",
-          "Tifa: Fire other until staggered, Whirl + Divekick",
+          "Blizzard for pressure",
+          "Whirl + Divekick when staggered",
         ]}
       />
       <Encounter
@@ -116,7 +116,7 @@ function Chapter7() {
         name="Vending Machine"
         buy={["Mega-Potion x3", "Ether", "Phoenix Down"]}
       />
-      <Menu instructions={["Remove Deadly Dodge before swapping with Barret"]}>
+      <Menu>
         <UpgradeWeapons
           characters={[
             {
@@ -159,7 +159,7 @@ function Chapter7() {
               name: "Barret",
               weapon: [
                 { name: "Lightning" },
-                { name: "Empty", source: "cloud" },
+                { name: "Deadly Dodge", source: "cloud" },
                 { name: "Fire" },
               ],
               armor: [{ name: "Revival" }],
@@ -168,8 +168,8 @@ function Chapter7() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "Ice" },
+                { name: "Fire" },
                 { name: "Lightning" },
               ],
               armor: [{ name: "Fire", source: "cloud" }],
@@ -211,20 +211,20 @@ function Chapter7() {
         name="Air Buster"
         phases={[
           [
-            "Barret: Overcharge",
+            "Barret: Roll",
             "Tifa: Whirl, Roll, Combo x6, Whirl, Divekick",
-            "Tifa: Combo x6, Whirl, Divekick",
+            "Tifa: Combo x6, Whirl, Overcharge, Divekick",
             "Tifa: Combo x6, Whirl, Divekick, Focused Shot, Blizzara",
             "Tifa: Combo x3, Whirl, Divekick, Whirl, Divekick, Whirl",
           ],
           [
             "Tifa: Combo, Roll, Combo x6, Unbridled, Combo (take Tankbuster)",
-            "Barret: Combo, Unbridled, Overcharge",
+            "Barret: Combo, Charge, Unbridled, Overcharge",
             "Tifa: Hit to stagger, Rise, Omni, Whirl, Divekick",
             "Tifa: Whirl, Divekick, Whirl, Divekick, Whirl, Barret Mega-Potion Tifa",
           ],
           [
-            "Barret: Combo, Charge, Combo, Combo",
+            "Barret: Combo, Charge, Combo, Charge",
             "Barret: Thunder, Overcharge, Cloud Thundara, Combo",
             "Tifa: Defend, Whirl, Divekick, Whirl",
             "Cloud: Berserk, 2 ATB, Thundara",
