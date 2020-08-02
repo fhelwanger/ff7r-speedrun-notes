@@ -32,8 +32,8 @@ function Chapter4() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire", source: "inventory" },
                 { name: "Ice", source: "inventory" },
+                { name: "Fire", source: "inventory" },
               ],
               armor: [],
               summon: [{ name: "Empty" }],
@@ -65,16 +65,13 @@ function Chapter4() {
       />
       <Encounter
         enemies="Elite Security Officer, Riot Trooper"
-        instructions={[
-          "Fire Riot Trooper",
-          "Fire, Punisher Elite Security Officer",
-        ]}
+        instructions={["Fire x2, Punisher Elite Security Officer"]}
       />
       <Encounter
         enemies="Shock Trooper,  Elite Grenadier"
         instructions={[
-          "Berserk Elite Grenadier, Fire Shock Trooper",
-          "Punisher, Fire",
+          "Berserk Elite Grenadier, Fire",
+          "Punisher, Fire Shock Trooper",
         ]}
       />
       <Encounter
@@ -90,17 +87,19 @@ function Chapter4() {
           "Punisher full, Berserk B, Thunder A",
           "Cross Slash A (hit both)",
           "Punisher, Berserk, Thunder...",
-          "Save 1 ATB",
         ]}
       />
       <Boss
         name="Roche"
         phases={[
-          ["Berserk, Operator, Fire", "Counter, 2 ATB, Fire, Fire"],
           [
-            "Dash, Counter, Punisher full, Focused Thrust when pressured",
+            "Berserk, Operator, Counter, Fire",
+            "Punisher x2, Operator, Counter, Fire, Punisher",
+          ],
+          [
+            "Fire",
+            "Counter, Punisher full, Focused Thrust if pressured, Roll",
             "Staggered: Punisher, Berserk, Fire",
-            "Roll when flames",
           ],
         ]}
       />
@@ -117,7 +116,8 @@ function Chapter4() {
         enemies="Mysterious Spectre, Enigmatic Spectre"
         instructions={[
           "Deadly Dodge, Cleave",
-          "Mysterious x2: Fire, Punisher (stagger)",
+          "Mysterious: Fire, Punisher (stagger), Fire Enigmatic",
+          "Mysterious: Fire, Punisher (stagger)",
           "Enigmatic: Fire/Focused Thrust, Punisher/Berserk until stagger",
           "Stagger: Cross Slash, Divekick, Whirl",
         ]}

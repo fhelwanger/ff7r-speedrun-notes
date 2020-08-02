@@ -27,15 +27,18 @@ function Chapter7() {
       <Encounter
         enemies="Sweeper x2, Laser Cannon x2"
         instructions={[
-          "Overcharge Laser Cannon, Thunder the other",
-          "Berserk, Thunder to pressure",
-          "Punisher, Focused Shot to stagger",
+          "Barret: Overcharge Laser Cannon, Thunder the other",
+          "Cloud: Berserk, Thunder to pressure",
+          "Cloud: Punisher, Focused Shot to stagger",
           "Thunders when staggered",
         ]}
       />
       <Encounter
         enemies="Elite Shock Trooper, Shock Trooper x2"
-        instructions={["Berserk, Overcharge", "Fire / Counter / TRIPOLOSKI"]}
+        instructions={[
+          "Berserk, Punisher until dodge, Blizzard",
+          "Punisher / TRIPOLOSKI / Counter",
+        ]}
       />
       <Encounter
         enemies="Elite Security Officer x2, Security Officer x4"
@@ -55,23 +58,24 @@ function Chapter7() {
       />
       <Encounter
         enemies="Security Officer x2, Elite Grenadier x2"
-        instructions={["Deadly Dodge, Operator left one", "TRIPOLOSKI"]}
+        instructions={[
+          "Punisher x3, Berserk, Operator Security Officer",
+          "TRIPOLOSKI",
+        ]}
       />
       <Encounter
         enemies="Elite Shock Trooper, Laser Cannon x2"
         instructions={[
-          "Cloud: Dash, Fire Trooper",
           "Barret: Overcharge Cannon B, Thunder A",
-          "Barret: 1 ATB, Fire Trooper",
+          "Cloud Blizzard Trooper",
           "Tifa: Combo until stagger, Whirl + Divekick x2",
         ]}
       />
       <Encounter
         enemies="Elite Security Officer x3, Security Officer x2"
         instructions={[
-          "Berserk, TRIPOLOSKI left one",
-          "Punisher, TRIPOLOSKI",
-          "Whirl, Divekick high HP ones",
+          "Berserk, TRIPOLOSKI the one in computer",
+          "Punisher, Berserk, TRIPOLOSKI",
         ]}
       />
       <Pick item="Sonic Strikers" />
@@ -80,16 +84,13 @@ function Chapter7() {
         instructions={[
           "Dash, TRIPOLOSKI Grenadier",
           "Punisher, Berserk, TRIPOLOSKI",
-          "Whirl, Divekick",
         ]}
       />
       <Encounter
         enemies="Elite Shock Trooper x2"
         instructions={[
-          "Cloud: Fire",
-          "Barret: Overcharge: Fire",
-          "Tifa: Combo until stagger, Whirl + Divekick",
-          "Tifa: Fire other until staggered, Whirl + Divekick",
+          "Blizzard for pressure",
+          "Whirl + Divekick when staggered",
         ]}
       />
       <Encounter
@@ -125,13 +126,16 @@ function Chapter7() {
             {
               name: "Barret",
               weapons: [
-                { name: "Light Machine Gun", upgrade: "Auto - Attack, Manual" },
+                { name: "Light Machine Gun", upgrade: "Auto - Attack" },
               ],
             },
             {
               name: "Tifa",
               weapons: [
-                { name: "Metal Knuckles", upgrade: "Atk+4 x2, Atk+8 x3" },
+                {
+                  name: "Metal Knuckles",
+                  upgrade: "Auto - Attack, Auto - Balanced",
+                },
               ],
             },
           ]}
@@ -141,13 +145,13 @@ function Chapter7() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire" },
-                { name: "Barrier", source: "barret" },
+                { name: "Wind", source: "tifa" },
+                { name: "Ice" },
                 { name: "Lightning" },
               ],
               armor: [
                 { name: "First Strike" },
-                { name: "Wind", source: "tifa" },
+                { name: "Barrier", source: "barret" },
               ],
               summon: [{ name: "", source: "tifa" }],
             },
@@ -155,7 +159,7 @@ function Chapter7() {
               name: "Barret",
               weapon: [
                 { name: "Lightning" },
-                { name: "Ice", source: "cloud" },
+                { name: "Deadly Dodge", source: "cloud" },
                 { name: "Fire" },
               ],
               armor: [{ name: "Revival" }],
@@ -164,11 +168,11 @@ function Chapter7() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "Ice" },
-                { name: "", source: "cloud" },
+                { name: "Fire" },
+                { name: "Lightning" },
               ],
-              armor: [{ name: "Lightning" }],
+              armor: [{ name: "Fire", source: "cloud" }],
               summon: [{ name: "Ifrit", source: "cloud" }],
             },
           ]}
@@ -210,24 +214,23 @@ function Chapter7() {
             "Barret: Roll",
             "Tifa: Whirl, Roll, Combo x6, Whirl, Divekick",
             "Tifa: Combo x6, Whirl, Overcharge, Divekick",
-            "Tifa: Combo x6, Whirl, Divekick, Focused Shot, Focused Thrust",
-            "Tifa: Combo x6, Whirl, Divekick, Whirl, Divekick",
+            "Tifa: Combo x6, Whirl, Divekick, Focused Shot, Blizzara",
+            "Tifa: Combo x3, Whirl, Divekick, Whirl, Divekick, Whirl",
           ],
           [
             "Tifa: Combo, Roll, Combo x6, Unbridled, Combo (take Tankbuster)",
-            "Barret: Combo, Overcharge, Mega-Potion Tifa",
-            "Tifa: Hits to stagger, Omni, Whirl, Divekick",
-            "Tifa: Whirl, Divekick, Whirl, Divekick, Barret Thunder",
-            "Tifa: Combo x5, Whirl, Divekick, Whirl",
+            "Barret: Combo, Charge, Unbridled, Overcharge",
+            "Tifa: Hit to stagger, Rise, Omni, Whirl, Divekick",
+            "Tifa: Whirl, Divekick, Whirl, Divekick, Whirl, Barret Mega-Potion Tifa",
           ],
           [
-            "Barret: Combo, Charge, Combo, Combo",
-            "Barret: Thunder, Cloud Thundara, Overcharge",
-            "Tifa: Defend, Whirl, Divekick, Whirl (take fire)",
-            "Cloud: Punisher x4, Berserk, 2 ATB, Thundara",
-            "Tifa: Combo x6, Blizzard, Focused Shot, Focused Thrust, Blizzard, Combo",
-            "Tifa: Whirl, Divekick",
-            "Cloud: Berserk, Punisher full, Thundara",
+            "Barret: Combo, Charge, Combo, Charge",
+            "Barret: Thunder, Overcharge, Cloud Thundara, Combo",
+            "Tifa: Defend, Whirl, Divekick, Whirl",
+            "Cloud: Berserk, 2 ATB, Thundara",
+            "Tifa: Whirl, Blizzard, Focused Shot, Focused Thrust, Blizzard, Combo",
+            "Tifa: Whirl, Divekick, Whirl",
+            "Cloud: Berserk, Thunder, Divekick, 1 ATB",
             "Barret: Overcharge",
           ],
           ["Barret: Somersault, Cloud Thundara, Thunder"],

@@ -1,5 +1,4 @@
 import React from "react";
-import BattleSettings from "../../components/BattleSettings";
 import Chapter from "../../components/Chapter";
 import Dialogue from "../../components/Dialogue";
 import Encounter from "../../components/Encounter";
@@ -69,20 +68,12 @@ function Chapter6() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 { name: "Ice" },
-                { name: "Wind", source: "inventory" },
+                { name: "Fire" },
+                { name: "Lightning" },
               ],
-              armor: [{ name: "Lightning", source: "tifa" }],
+              armor: [{ name: "Wind", source: "inventory" }],
               summon: [{ name: "" }],
-            },
-          ]}
-        />
-        <BattleSettings
-          characters={[
-            {
-              name: "Cloud",
-              shortcuts: [{ shortcut: "circle", ability: "Fire" }],
             },
           ]}
         />

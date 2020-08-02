@@ -9,7 +9,10 @@ import Pick from "../../components/Pick";
 function Chapter1() {
   return (
     <Chapter number={1}>
-      <Encounter enemies="Security Officer x2" instructions={["Cleave"]} />
+      <Encounter
+        enemies="Security Officer x2"
+        instructions={["Cleave left one"]}
+      />
       <Encounter enemies="Security Officer x2" instructions={["Punisher"]} />
       <Menu>
         <BattleSettings
@@ -102,7 +105,7 @@ function Chapter1() {
             "Cloud: Punisher x4, Berserk, Fire, Punisher x4, Focused Thrust",
             "Barret: Combo, Focused Shot, Combo",
             "Cloud: Counter, Punisher x4, Berserk, Focused Thrust, Thunder",
-            "Cloud: Punisher x2, Berserk, Overcharge, Punisher full, Thunder, Berserk",
+            "Cloud: Punisher x4, Berserk, Overcharge, Punisher full, Thunder, Berserk",
           ],
           [
             "Cloud: Fire",
@@ -110,14 +113,15 @@ function Chapter1() {
             "Cloud: Dash, Punisher x3, Berserk, Cross Slash",
             "Barret: Overcharge, Combo, Swap to Cloud",
           ],
-          ["Cloud: Punisher x2, Berserk, Fire on Left Leg", "Fire, Thunder"],
+          [
+            "Cloud: Dash, Punisher x2, Berserk, Fire on Left Leg",
+            "Thunder, Fire",
+          ],
         ]}
       />
       <Encounter
         enemies="Monodrive x2"
-        instructions={[
-          "Punisher B, Roll and Operator until ATB, Focused Thrust A",
-        ]}
+        instructions={["Punisher x4 B, Operator, Dash, Focused Thrust A"]}
       />
       <Encounter
         enemies="Security Officer x2, Monodrive x2"
