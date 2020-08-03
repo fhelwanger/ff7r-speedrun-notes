@@ -34,21 +34,11 @@ function Chapter9() {
               name: "Cloud",
               weapon: [
                 { name: "Fire", source: "tifa" },
-                { name: "Deadly Dodge", source: "barret" },
+                { name: "Deadly Dodge" },
                 { name: "Lightning" },
               ],
               armor: [{ name: "First Strike" }, { name: "ATB Boost" }],
               summon: [{ name: "Ifrit" }],
-            },
-            {
-              name: "Barret",
-              weapon: [
-                { name: "" },
-                { name: "", source: "cloud" },
-                { name: "" },
-              ],
-              armor: [{ name: "" }],
-              summon: [{ name: "" }],
             },
             {
               name: "Tifa",

@@ -81,7 +81,7 @@ function Chapter8() {
               name: "Cloud",
               weapon: [
                 { name: "Wind" },
-                { name: "Ice" },
+                { name: "Deadly Dodge", source: "barret" },
                 { name: "Lightning" },
               ],
               armor: [
@@ -107,7 +107,7 @@ function Chapter8() {
               name: "Barret",
               weapon: [
                 { name: "", source: "aerith" },
-                { name: "Deadly Dodge" },
+                { name: "", source: "cloud" },
                 { name: "", source: "aerith" },
               ],
               armor: [{ name: "", source: "inventory" }],
@@ -128,10 +128,13 @@ function Chapter8() {
       </Menu>
       <Pick item="500 gil" optional />
       <Encounter enemies="Wererat x3" instructions={["TRIPOLOSKI"]} />
-      <Encounter enemies="Gorgers x3" instructions={["TRIPOLOSKI"]} />
+      <Encounter
+        enemies="Gorgers x3"
+        instructions={["Deadly Dodge, TRIPOLOSKI"]}
+      />
       <Encounter
         enemies="Hedgehog Pie x3"
-        instructions={["TRIPOLOSKI, Punisher"]}
+        instructions={["Deadly Dodge, TRIPOLOSKI, Punisher"]}
       />
       <Encounter
         enemies="Smogger"
@@ -194,7 +197,7 @@ function Chapter8() {
       />
       <Encounter
         enemies="Hedgehog Pie x3"
-        instructions={["TRIPOLOSKI, Punisher"]}
+        instructions={["Berserk, TRIPOLOSKI, Punisher"]}
       />
       <Bench optional description="Cloud needs 16 MP, Aerith needs 8 MP" />
       <Menu>
@@ -204,7 +207,7 @@ function Chapter8() {
               name: "Cloud",
               weapon: [
                 { name: "Wind" },
-                { name: "Ice" },
+                { name: "Deadly Dodge" },
                 { name: "Lightning" },
               ],
               armor: [
