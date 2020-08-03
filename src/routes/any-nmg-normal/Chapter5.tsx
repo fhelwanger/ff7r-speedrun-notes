@@ -17,7 +17,10 @@ function Chapter5() {
       <Pick item="Healing" />
       <Encounter
         enemies="Slug Ray x5"
-        instructions={["Punisher, Berserk, TRIPOLOSKI"]}
+        instructions={[
+          "Punisher full, Berserk, 2 ATB, TRIPOLOSKI, Focused Thrust, Punisher A, B and C",
+          "Cross Slash D and E",
+        ]}
       />
       <Pick
         item="Elixir"
