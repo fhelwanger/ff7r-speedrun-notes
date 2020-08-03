@@ -140,6 +140,35 @@ function Chapter7() {
             },
           ]}
         />
+        <BattleSettings
+          characters={[
+            {
+              name: "Cloud",
+              shortcuts: [
+                { shortcut: "square", ability: "Thundara" },
+                { shortcut: "circle", ability: "Aero" },
+              ],
+            },
+            {
+              name: "Tifa",
+              shortcuts: [
+                { shortcut: "square", ability: "Unbridled Strength" },
+              ],
+            },
+          ]}
+        />
+        <Equipment
+          characters={[
+            {
+              name: "Barret",
+              equipments: [{ name: "Light Machine Gun" }],
+            },
+            {
+              name: "Tifa",
+              equipments: [{ name: "Metal Knucles" }],
+            },
+          ]}
+        />
         <Materia
           characters={[
             {
@@ -174,35 +203,6 @@ function Chapter7() {
               ],
               armor: [{ name: "Fire", source: "cloud" }],
               summon: [{ name: "Ifrit", source: "cloud" }],
-            },
-          ]}
-        />
-        <Equipment
-          characters={[
-            {
-              name: "Barret",
-              equipments: [{ name: "Light Machine Gun" }],
-            },
-            {
-              name: "Tifa",
-              equipments: [{ name: "Metal Knucles" }],
-            },
-          ]}
-        />
-        <BattleSettings
-          characters={[
-            {
-              name: "Cloud",
-              shortcuts: [
-                { shortcut: "square", ability: "Thundara" },
-                { shortcut: "circle", ability: "Aero" },
-              ],
-            },
-            {
-              name: "Tifa",
-              shortcuts: [
-                { shortcut: "square", ability: "Unbridled Strength" },
-              ],
             },
           ]}
         />
