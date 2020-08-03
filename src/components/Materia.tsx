@@ -55,10 +55,7 @@ function Materia({ characters }: MateriaProps) {
         style={{
           fontWeight: x.source ? "bold" : undefined,
           textTransform: x.source ? "uppercase" : undefined,
-          color:
-            x.source && x.source !== "inventory"
-              ? charactersPalette[x.source]
-              : undefined,
+          color: x.source ? charactersPalette[x.source] : undefined,
         }}
       >{`(${x.name || "Empty"}) `}</Typography>
     ));

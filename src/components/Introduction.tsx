@@ -112,8 +112,8 @@ function Sections() {
 function Menus() {
   const materiaColors = [
     {
-      colorName: "Default",
-      color: undefined,
+      colorName: "Purple",
+      color: charactersPalette.inventory,
       description: "From the inventory",
     },
     {

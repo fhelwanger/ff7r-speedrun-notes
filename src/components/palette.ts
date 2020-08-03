@@ -3,6 +3,7 @@ export const charactersPalette = {
   tifa: "#2ECC61",
   barret: "#E7483E",
   aerith: "#3598DB",
+  inventory: "#8561C5",
 };
 
 export const cardsPalette = {
