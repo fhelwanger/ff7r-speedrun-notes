@@ -63,10 +63,10 @@ function Chapter15() {
             {
               name: "Tifa",
               weapon: [
-                { name: "" },
+                { name: "Time", source: "inventory" },
                 { name: "Fire" },
                 { name: "Lightning" },
-                { name: "Time", source: "inventory" },
+                { name: "Ice" },
               ],
               armor: [
                 { name: "First Strike", source: "barret" },
@@ -236,10 +236,10 @@ function Chapter15() {
             {
               name: "Tifa",
               weapon: [
-                { name: "" },
-                { name: "Time", source: "tifa" },
+                { name: "Time" },
+                { name: "Fire" },
                 { name: "Lightning" },
-                { name: "Fire", source: "tifa" },
+                { name: "Ice" },
               ],
               armor: [{ name: "First Strike" }, { name: "Parry" }],
               summon: [{ name: "", source: "cloud" }],
@@ -311,7 +311,7 @@ function Chapter15() {
               name: "Cloud",
               weapon: [
                 { name: "Fire", source: "aerith" },
-                { name: "", source: "tifa" },
+                { name: "Fire", source: "tifa" },
                 { name: "Lightning" },
                 { name: "ATB Boost" },
               ],
@@ -336,10 +336,10 @@ function Chapter15() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Magnify", source: "cloud" },
                 { name: "Time" },
+                { name: "Magnify", source: "cloud" },
                 { name: "Lightning" },
-                { name: "Fire" },
+                { name: "Ice" },
               ],
               armor: [{ name: "First Strike" }, { name: "Parry" }],
               summon: [{ name: "" }],

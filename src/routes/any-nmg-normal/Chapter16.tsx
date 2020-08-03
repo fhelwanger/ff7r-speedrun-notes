@@ -63,10 +63,10 @@ function Chapter16() {
             {
               name: "Tifa",
               weapon: [
-                { name: "", source: "cloud" },
                 { name: "", source: "barret" },
+                { name: "Fire", source: "cloud" },
                 { name: "Lightning" },
-                { name: "Fire" },
+                { name: "Ice" },
               ],
               armor: [{ name: "First Strike" }, { name: "Parry" }],
               summon: [{ name: "" }],
