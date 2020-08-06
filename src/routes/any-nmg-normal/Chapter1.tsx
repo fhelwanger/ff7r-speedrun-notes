@@ -105,7 +105,7 @@ function Chapter1() {
             "Cloud: Punisher x4, Berserk, Fire, Punisher x4, Focused Thrust",
             "Barret: Combo, Focused Shot, Combo",
             "Cloud: Counter, Punisher x4, Berserk, Focused Thrust, Thunder",
-            "Cloud: Punisher x4, Berserk, Overcharge, Punisher full, Thunder, Berserk",
+            "Cloud: Berserk, Overcharge, Punisher full, Thunder, Berserk",
           ],
           [
             "Cloud: Fire",
@@ -134,7 +134,7 @@ function Chapter1() {
       <Encounter
         enemies="Shock Trooper x3, Sentry Ray x2"
         instructions={[
-          "Barret: Overcharge Sentry Ray A, Thunder B",
+          "Barret: Overcharge one Sentry Ray, Thunder other",
           "Cloud: Counter and Fire/Braver/Punisher Shock Troopers",
         ]}
       />
