@@ -250,12 +250,13 @@ function FirstStrike() {
         First Strike
       </Typography>
       <Typography>
-        For this route to work it's mandatory to get First Strike in Chapter 4.
-        To do it you must fill an ATB bar using any "triangle" move (Punisher,
-        Overcharge, Whirl) when the enemy is staggered. Sometimes the passive
-        ATB gain will "steal" a bar from you, so pay attention. If you follow
-        the instructions for the fights you should be able to get it. Those are
-        the enemies where you can do it:
+        For this route to work it's mandatory to get First Strike in Chapter 4,
+        which you get by completing "The Stagger Effect Pt.1" battle intel. To
+        do it you must fill an ATB bar using any "triangle" move (Punisher,
+        Overcharge, Whirl) when the enemy is staggered 10 times. Sometimes the
+        passive ATB gain will "steal" a bar from you, so pay attention. If you
+        follow the instructions for the fights you should be able to get it.
+        Those are the enemies where you can do it:
       </Typography>
       <List dense>
         {enemies.map((enemy, enemyIndex) => (
