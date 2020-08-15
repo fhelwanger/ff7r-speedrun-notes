@@ -56,10 +56,10 @@ function Chapter3() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "Ice", source: "inventory" },
+                { name: "Deadly Dodge" },
                 { name: "Assess", source: "inventory" },
               ],
-              armor: [{ name: "Deadly Dodge", source: "cloud" }],
+              armor: [{ name: "Ice", source: "inventory" }],
               summon: [],
             },
           ]}

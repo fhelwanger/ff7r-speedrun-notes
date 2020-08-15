@@ -19,7 +19,7 @@ function Chapter12() {
         instructions={[
           "Aerith: Tempest full, Arcane Ward, ATB Boost Mysterious",
           "Aerith: Aerora, Aerora Enigmatic",
-          "Tifa: Whirl, 2 ATB, Starshower, Starshower Enigmatic",
+          "Tifa: 2 ATB, Starshower, Divekick Enigmatic",
         ]}
       />
       <Menu>
@@ -41,11 +41,11 @@ function Chapter12() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "ATB Boost", source: "aerith" },
+                { name: "First Strike", source: "aerith" },
                 { name: "Lightning" },
               ],
               armor: [
-                { name: "First Strike", source: "aerith" },
+                { name: "ATB Boost", source: "aerith" },
                 { name: "Refocus" },
               ],
               summon: [{ name: "Ifrit", source: "tifa" }],
@@ -91,7 +91,7 @@ function Chapter12() {
           characters={[
             {
               name: "Cloud",
-              weapons: [{ name: "Hardedge", upgrade: "Auto - Attack, Manual" }],
+              weapons: [{ name: "Hardedge", upgrade: "Auto - Attack" }],
             },
             {
               name: "Tifa",
@@ -107,10 +107,6 @@ function Chapter12() {
             {
               name: "Cloud",
               shortcuts: [{ shortcut: "square", ability: "Fire" }],
-            },
-            {
-              name: "Tifa",
-              shortcuts: [{ shortcut: "square", ability: "Thundara" }],
             },
           ]}
         />
@@ -137,10 +133,7 @@ function Chapter12() {
         enemies="Helitrooper, Elite Security Officer x2"
         instructions={["ATB Boost, Fira, Fire Heli", "Counter, TRIPOLOSKI"]}
       />
-      <Encounter
-        enemies="Elite Riot Trooper x2"
-        instructions={["Starshower if they get stuck", "Fira otherwise"]}
-      />
+      <Encounter enemies="Elite Riot Trooper x2" instructions={["Fira"]} />
       <Encounter
         enemies="Elite Riot Trooper x2"
         instructions={["ATB Boost, Fira, (Fire + Punisher)", "Block for 2 ATB"]}
@@ -194,13 +187,10 @@ function Chapter12() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "ATB Boost" },
+                { name: "First Strike" },
                 { name: "Lightning" },
               ],
-              armor: [
-                { name: "First Strike" },
-                { name: "Parry", source: "tifa" },
-              ],
+              armor: [{ name: "ATB Boost" }, { name: "Parry", source: "tifa" }],
               summon: [{ name: "", source: "tifa" }],
             },
             {
@@ -256,7 +246,7 @@ function Chapter12() {
           [
             "Barret: Overcharge, Thunder, Combo, Charge x3 Helicopter",
             "Barret: Overcharge Reno",
-            "Cloud: Starshower, Punisher full, Berserk, Punisher x4, Operator",
+            "Cloud: Dash, Starshower, Punisher full, Berserk, Punisher x4, Operator",
             "Cloud: Wait Pyramid, TRIPOLOSKI",
             "Tifa: Cloud ATB Boost, 2 ATB",
             "Barret: Thunder, Charge, Charge, Overcharge, Thunder",

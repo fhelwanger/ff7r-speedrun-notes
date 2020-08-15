@@ -23,10 +23,10 @@ function Chapter4() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "Ice" },
+                { name: "Deadly Dodge" },
                 { name: "Lightning", source: "inventory" },
               ],
-              armor: [{ name: "Deadly Dodge" }],
+              armor: [{ name: "Ice" }],
               summon: [{ name: "Ifrit", source: "inventory" }],
             },
             {
@@ -84,7 +84,7 @@ function Chapter4() {
       <Encounter
         enemies="Sweeper x2"
         instructions={[
-          "Punisher full, Berserk B, Thunder A",
+          "Punisher/Berserk B, Thunder A",
           "Cross Slash A (hit both)",
           "Punisher, Berserk, Thunder...",
         ]}
@@ -107,9 +107,9 @@ function Chapter4() {
       <Encounter
         enemies="Mysterious Spectre"
         instructions={[
-          "Kill B and C first",
-          "Deadly Dodge, Cleave, Fire, Punisher",
-          "Cross Slash, Whirl, Divekick",
+          "Deadly Dodge, Cleave, Counter if possible",
+          "Berserk, TRIPOLOSKIS",
+          "Whirl + Divekick if high HP",
         ]}
       />
       <Encounter
@@ -117,9 +117,8 @@ function Chapter4() {
         instructions={[
           "Deadly Dodge, Cleave",
           "Mysterious: Fire, Punisher (stagger), Fire Enigmatic",
-          "Mysterious: Fire, Punisher (stagger)",
-          "Enigmatic: Fire/Focused Thrust, Punisher/Berserk until stagger",
-          "Stagger: Cross Slash, Divekick, Whirl",
+          "Mysterious: Fire, Punisher (stagger), Punisher x4 + Focused Thrust Enigmatic",
+          "Stagger: Berserk, Cross Slash, Divekick, Whirl",
         ]}
       />
       <Shop name="Chadley" buy={["Wind", "First Strike"]} />
@@ -138,10 +137,10 @@ function Chapter4() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "Ice" },
+                { name: "First Strike", source: "inventory" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "First Strike", source: "inventory" }],
+              armor: [{ name: "Ice" }],
               summon: [{ name: "Ifrit" }],
             },
             {

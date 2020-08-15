@@ -65,12 +65,12 @@ function Chapter14() {
                 { name: "Fire" },
                 { name: "Magnify", source: "barret" },
                 { name: "Lightning", source: "barret" },
-                { name: "ATB Boost", source: "barret" },
+                { name: "Subversion", source: "tifa" },
               ],
               armor: [
+                { name: "ATB Boost", source: "barret" },
                 { name: "First Strike", source: "barret" },
                 { name: "Refocus", source: "barret" },
-                { name: "Subversion", source: "tifa" },
               ],
               summon: [{ name: "" }],
             },
@@ -78,12 +78,12 @@ function Chapter14() {
               name: "Barret",
               weapon: [
                 { name: "Lightning", source: "cloud" },
-                { name: "Wind", source: "cloud" },
                 { name: "Binding", source: "cloud" },
+                { name: "", source: "cloud" },
                 { name: "", source: "cloud" },
               ],
               armor: [
-                { name: "", source: "cloud" },
+                { name: "Wind", source: "cloud" },
                 { name: "Ice" },
                 { name: "Fire" },
               ],
@@ -106,14 +106,14 @@ function Chapter14() {
           characters={[
             {
               name: "Cloud",
-              shortcuts: [
-                { shortcut: "square", ability: "Fira" },
-                { shortcut: "circle", ability: "Fira All" },
-              ],
+              shortcuts: [{ shortcut: "square", ability: "Fira All" }],
             },
             {
               name: "Barret",
-              shortcuts: [{ shortcut: "circle", ability: "Fira" }],
+              shortcuts: [
+                { shortcut: "square", ability: "Sleep" },
+                { shortcut: "circle", ability: "Fira" },
+              ],
             },
             {
               name: "Tifa",
@@ -220,23 +220,12 @@ function Chapter14() {
         <Materia
           characters={[
             {
-              name: "Cloud",
-              weapon: [
-                { name: "Fire" },
-                { name: "Magnify" },
-                { name: "Lightning" },
-                { name: "ATB Boost" },
-              ],
-              armor: [{ name: "First Strike" }, { name: "", source: "tifa" }],
-              summon: [{ name: "" }],
-            },
-            {
               name: "Barret",
               weapon: [
                 { name: "Lightning" },
-                { name: "Wind" },
                 { name: "Binding" },
-                { name: "Subversion", source: "inventory" },
+                { name: "" },
+                { name: "" },
               ],
               armor: [
                 { name: "First Strike", source: "tifa" },
@@ -254,9 +243,9 @@ function Chapter14() {
                 { name: "Ice" },
               ],
               armor: [
-                { name: "", source: "barret" },
+                { name: "Wind", source: "barret" },
                 { name: "Parry" },
-                { name: "Refocus", source: "cloud" },
+                { name: "Refocus", source: "inventory" },
               ],
               summon: [{ name: "Ifrit" }],
             },
@@ -266,7 +255,10 @@ function Chapter14() {
           characters={[
             {
               name: "Tifa",
-              shortcuts: [{ shortcut: "circle", ability: "Focused Strike" }],
+              shortcuts: [
+                { ability: "Leader" },
+                { shortcut: "circle", ability: "Focused Strike" },
+              ],
             },
           ]}
         />
@@ -276,19 +268,21 @@ function Chapter14() {
         phases={[
           [
             "Tifa: Lock Abzu, Lifesaver, 2 ATB",
-            "Tifa: Starshower, Overcharge, Starshower, Focused Shot",
-            "Tifa: Combo, Focused Strike, Combo, Focused Strike, Combo, Unbridled",
+            "Tifa: Starshower, Overcharge, Starshower, Focused Thrust, Focused Shot",
+            "Tifa: Combo x6, Combo x3, Whirl, Focused Strike, Combo, Whirl",
+            "Tifa: Unbridled, Barret Mega-Potion Barret",
           ],
           [
-            "Cloud Mega-Potion Barret, Cloud ATB Boost",
             "Tifa: Hit to stagger",
-            "Tifa: Starshower, Cloud Fira, Barret Fira, Omni, Whirl, Whirl",
+            "Tifa: Omni, Whirl, Divekick, Cloud Fira, Whirl, Divekick, Whirl",
           ],
           [
-            "Tifa: Starshower, Overcharge, Starshower",
-            "Enrage: Barret Sleep Abzu, Mega-Potion Tifa",
-            "Tifa: 1 ATB, Starshower",
-            "Cloud: 2 ATB, Fira All x2, Somersault",
+            "Tifa: Cloud ATB Boost, Fira All x2",
+            "Tifa: 2 ATB, Starshower, Overcharge, Starshower",
+          ],
+          [
+            "Barret Sleep Abzu, Mega-Potion",
+            "Tifa: Starshower, Somersault",
             "Should get at least 3 Shoats, otherwise kill Byabapolis x2 in Chapter 15",
           ],
         ]}

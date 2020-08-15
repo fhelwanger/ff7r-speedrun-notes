@@ -15,22 +15,28 @@ function Chapter10() {
         name="Abzu"
         phases={[
           [
-            "Aerith: ATB Boost, Arcane Ward, Lock any horn, Fire",
-            "Cloud: Punisher x2, Focused Thrust, Punisher full, Berserk, Punisher",
-            "Aerith: Combo x4, Fira, Focused Thrust, Combo x4, Tempest",
-            "Tifa: Focused Strike (evade Pounce), Aerith Fire",
-            "Tifa: Whirl, Divekick, Combo x6, Whirl, Divekick",
-            "Tifa: Whirl, Hit, Whirl, Focused Strike, Whirl, Focused Strike",
-            "Tifa: Unbridled x2, Rise, Omni, Braver, Whirl, Divekick, Whirl",
+            "Aerith: Roll right, ATB Boost, Arcane Ward, Lock horn, Fira",
+            "Tifa: Combo x6, Whirl",
+            "Aerith: 1 ATB, Fira",
           ],
           [
-            "Aerith: Tempest full, Fira",
-            "Cloud: Dash, Focused Thrust, Focused Strike",
-            "Cloud: Punisher full, Berserk, Punisher",
-            "Aerith: Fira x2",
-            "Cloud: Punisher full, Berserk, Focused Thrust",
-            "Tifa: Whirl, Focused Strike, Whirl, Focused Strike",
-            "Tifa: Whirl, Divekick, TRIPOLOSKI, Whirl, Divekick",
+            "Aerith: Roll right, 1 ATB, Fira, Focused Thrust, Focused Strike",
+            "Cloud: Punisher x4, Focused Thrust",
+            "Tifa: Combo x6, Focused Strike x3",
+            "Tifa: Combo x2, Whirl",
+            "Aerith: Unbridled, Tempest full",
+            "Tifa: Omni, Whirl, Aerith Fire, Divekick, Whirl, Combo x2, Whirl",
+          ],
+          [
+            "Aerith: Fire, Tifa Ether Aerith",
+            "Cloud: Punisher x4, Focused Thrust, Punisher x4, Focused Thrust",
+            "Aerith: Roll, Combo",
+          ],
+          [
+            "Aerith: Fira",
+            "Cloud: Punisher full, Aerith Fira, Focused Thrust",
+            "Tifa: Combo x6, Focused Strike, Whirl, Focused Strike",
+            "Tifa: Whirl, Divekick...",
           ],
         ]}
       />
@@ -49,7 +55,10 @@ function Chapter10() {
             },
             {
               name: "Tifa",
-              equipments: [{ name: "Feathered Gloves" }],
+              equipments: [
+                { name: "Feathered Gloves" },
+                { name: "Power Wristguards", source: "cloud" },
+              ],
             },
           ]}
         />
@@ -62,8 +71,9 @@ function Chapter10() {
             {
               name: "Tifa",
               shortcuts: [
-                { shortcut: "x", ability: "Starshower" },
+                { shortcut: "square", ability: "Thundara" },
                 { shortcut: "circle", ability: "Fira" },
+                { shortcut: "x", ability: "Starshower" },
               ],
             },
           ]}

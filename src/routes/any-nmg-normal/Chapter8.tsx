@@ -81,11 +81,11 @@ function Chapter8() {
               name: "Cloud",
               weapon: [
                 { name: "Wind" },
-                { name: "Deadly Dodge", source: "barret" },
+                { name: "First Strike" },
                 { name: "Lightning" },
               ],
               armor: [
-                { name: "First Strike" },
+                { name: "Deadly Dodge", source: "barret" },
                 { name: "Refocus", source: "aerith" },
               ],
               summon: [{ name: "Ifrit", source: "tifa" }],
@@ -127,18 +127,21 @@ function Chapter8() {
         />
       </Menu>
       <Pick item="500 gil" optional />
-      <Encounter enemies="Wererat x3" instructions={["TRIPOLOSKI"]} />
+      <Encounter
+        enemies="Wererat x3"
+        instructions={["Deadly Dodge, TRIPOLOSKI"]}
+      />
       <Encounter
         enemies="Gorgers x3"
         instructions={["Deadly Dodge, TRIPOLOSKI"]}
       />
       <Encounter
         enemies="Hedgehog Pie x3"
-        instructions={["Deadly Dodge, TRIPOLOSKI, Punisher"]}
+        instructions={["Deadly Dodge, TRIPOLOSKI, Deadly Dodge"]}
       />
       <Encounter
         enemies="Smogger"
-        instructions={["Cloud: Punisher full, Berserk, Thundara, Punisher"]}
+        instructions={["Cloud: Berserk, Thundara, Punisher"]}
       />
       <Break time="1m33s" description="TV, heal if needed" />
       <Pick item="200 gil" />
@@ -168,24 +171,27 @@ function Chapter8() {
       </Menu>
       <Encounter
         enemies="Hedgehog Pie, Wererat x2"
-        instructions={["TRIPOLOSKI, Punisher"]}
+        instructions={["Deadly Dodge, TRIPOLOSKI, Punisher"]}
       />
-      <Encounter enemies="Wererat x4" instructions={["TRIPOLOSKI"]} />
+      <Encounter
+        enemies="Wererat x4"
+        instructions={["Deadly Dodge, TRIPOLOSKI"]}
+      />
       <Encounter
         enemies="Hedgehog Pie x2, Wererat"
-        instructions={["TRIPOLOSKI, Punisher"]}
+        instructions={["Deadly Dodge, TRIPOLOSKI, Punisher"]}
       />
       <Encounter
         enemies="Hedgehog Pie x2, Smogger"
         instructions={[
           "Cloud: TRIPOLOSKI",
           "Aerith: ATB Boost, Arcane Ward, Thundara Smogger",
-          "Cloud: Berserk, TRIPOLOSKI Hedgehog Pies",
+          "Cloud: Berserk, TRIPOLOSKI/Deadly Dodge Hedgehog Pies",
         ]}
       />
       <Encounter
         enemies="Hedgehog Pie x4"
-        instructions={["Aerith: 2 ATB", "TRIPOLOSKI, Berserk"]}
+        instructions={["Aerith: 2 ATB", "Berserk, TRIPOLOSKI/Deadly Dodge"]}
       />
       <Encounter
         enemies="Smogger x2"
@@ -193,11 +199,11 @@ function Chapter8() {
       />
       <Encounter
         enemies="Smogger"
-        instructions={["Cloud: Punisher full, Berserk, Thundara"]}
+        instructions={["Cloud: Berserk, Thundara, Punisher"]}
       />
       <Encounter
         enemies="Hedgehog Pie x3"
-        instructions={["Berserk, TRIPOLOSKI, Punisher"]}
+        instructions={["Deadly Dodge, TRIPOLOSKI"]}
       />
       <Bench optional description="Cloud needs 16 MP, Aerith needs 8 MP" />
       <Menu>
@@ -207,11 +213,11 @@ function Chapter8() {
               name: "Cloud",
               weapon: [
                 { name: "Wind" },
-                { name: "Deadly Dodge" },
+                { name: "First Strike", source: "aerith" },
                 { name: "Lightning" },
               ],
               armor: [
-                { name: "First Strike", source: "aerith" },
+                { name: "Deadly Dodge" },
                 { name: "ATB Boost", source: "aerith" },
               ],
               summon: [{ name: "Ifrit" }],
@@ -225,17 +231,6 @@ function Chapter8() {
               ],
               armor: [{ name: "Lightning" }, { name: "Wind" }],
               summon: [{ name: "" }],
-            },
-          ]}
-        />
-        <UpgradeWeapons
-          characters={[
-            {
-              name: "Tifa",
-              weapons: [
-                { name: "Sonic Strikers", upgrade: "Auto - Attack" },
-                { name: "Metal Knuckles", upgrade: "Manual" },
-              ],
             },
           ]}
         />

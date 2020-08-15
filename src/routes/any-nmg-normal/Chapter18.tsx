@@ -15,7 +15,6 @@ function Chapter18() {
       <Shop
         name="Vending Machine"
         sell={[
-          "Titanium Bangle",
           "Heavy-Duty Bracer",
           "Force Bracelet",
           "Astral Cuff",
@@ -38,28 +37,24 @@ function Chapter18() {
               name: "Cloud",
               weapon: [
                 { name: "Lightning", source: "barret" },
-                { name: "Wind" },
                 { name: "Ice", source: "barret" },
                 { name: "Fire", source: "barret" },
-              ],
-              armor: [
-                { name: "" },
                 { name: "ATB Stagger", source: "aerith" },
-                { name: "" },
               ],
+              armor: [{ name: "Wind" }, { name: "" }, { name: "" }],
               summon: [{ name: "", source: "tifa" }],
             },
             {
               name: "Barret",
               weapon: [
-                { name: "", source: "cloud" },
+                { name: "", source: "aerith" },
+                { name: "", source: "aerith" },
                 { name: "Lightning", source: "tifa" },
-                { name: "Binding", source: "cloud" },
-                { name: "", source: "tifa" },
+                { name: "" },
               ],
               armor: [
-                { name: "", source: "aerith" },
-                { name: "", source: "aerith" },
+                { name: "Binding", source: "cloud" },
+                { name: "", source: "cloud" },
                 { name: "", source: "cloud" },
               ],
               summon: [{ name: "" }],
@@ -67,16 +62,16 @@ function Chapter18() {
             {
               name: "Tifa",
               weapon: [
-                { name: "" },
-                { name: "" },
+                { name: "ATB Assist" },
+                { name: "ATB Stagger" },
                 { name: "First Strike", source: "barret" },
-                { name: "Refocus", source: "cloud" },
-                { name: "ATB Assist", source: "barret" },
+                { name: "Refocus" },
+                { name: "Parry", source: "tifa" },
               ],
               armor: [
+                { name: "" },
+                { name: "", source: "tifa" },
                 { name: "ATB Boost", source: "aerith" },
-                { name: "Parry" },
-                { name: "ATB Stagger" },
               ],
               summon: [{ name: "Ifrit", source: "cloud" }],
             },
@@ -85,14 +80,14 @@ function Chapter18() {
               weapon: [
                 { name: "Lightning" },
                 { name: "Wind" },
-                { name: "Fire" },
                 { name: "Ice" },
+                { name: "Subversion" },
               ],
               armor: [
                 { name: "Magnify", source: "barret" },
                 { name: "Time", source: "barret" },
-                { name: "Subversion" },
-                { name: "First Strike", source: "aerith" },
+                { name: "First Strike" },
+                { name: "Fire", source: "aerith" },
               ],
               summon: [{ name: "" }],
             },
@@ -101,29 +96,23 @@ function Chapter18() {
       </Menu>
       <Dialogue optionText="Yeah." optionPosition="2nd" details="to enter" />
       <Encounter
-        enemies="Whisper Rubrum, Whisper Viridi, Whisper Croceo"
+        enemies="Whisper Rubrum, Whisper Viridi, Whisper Croceo (both fights)"
         instructions={[
-          "Cloud: Punisher and Counterstance",
-          "Tifa: Unbridled x2",
-        ]}
-      />
-      <Encounter
-        enemies="Whisper Rubrum, Whisper Viridi, Whisper Croceo"
-        instructions={[
-          "Cloud: Counterstance",
-          "Tifa: Whirl/Divekick/Starshower when pressured",
+          "Tifa: Keep Unbridled up and combos (finish with Rise up)",
+          "Mega-Potions as needed",
         ]}
       />
       <Encounter
         enemies="Whisper Rubrum"
         instructions={[
-          "Cloud: Counterstance",
-          "Tifa: Combo + Starshower, Save 1 ATB",
+          "Cloud: Punisher + Counterstance until pressure",
+          "Tifa: Combo + Whirl until stagger (should have 2 ATB and Rise)",
+          "Tifa: Starshower, Combo x3, Whirl",
         ]}
       />
       <Encounter
         enemies="Whisper Viridi, Whisper Croceo"
-        instructions={["Berserk, TRIPOLOSKI", "Save 2 ATB"]}
+        instructions={["Berserk, TRIPOLOSKI/Counterstance", "Save 2 ATB"]}
       />
       <Boss
         name="Whisper Rubrum, Whisper Viridi, Whisper Croceo / Whisper Bahamut / Whisper Harbinger"
@@ -151,13 +140,13 @@ function Chapter18() {
               name: "Cloud",
               weapon: [
                 { name: "Lightning" },
-                { name: "Wind" },
                 { name: "Ice" },
                 { name: "Fire" },
+                { name: "ATB Stagger" },
               ],
               armor: [
+                { name: "Wind" },
                 { name: "First Strike", source: "tifa" },
-                { name: "ATB Stagger" },
                 { name: "Refocus", source: "tifa" },
               ],
               summon: [{ name: "Ifrit", source: "tifa" }],
@@ -165,16 +154,16 @@ function Chapter18() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Magnify", source: "aerith" },
-                { name: "Time", source: "aerith" },
-                { name: "", source: "cloud" },
-                { name: "", source: "cloud" },
                 { name: "ATB Assist" },
+                { name: "ATB Stagger" },
+                { name: "", source: "cloud" },
+                { name: "", source: "cloud" },
+                { name: "Parry" },
               ],
               armor: [
+                { name: "Magnify", source: "aerith" },
+                { name: "Time", source: "aerith" },
                 { name: "ATB Boost" },
-                { name: "Parry" },
-                { name: "ATB Stagger" },
               ],
               summon: [{ name: "", source: "cloud" }],
             },
@@ -183,14 +172,14 @@ function Chapter18() {
               weapon: [
                 { name: "Lightning" },
                 { name: "Wind" },
-                { name: "Fire" },
                 { name: "Ice" },
+                { name: "Subversion" },
               ],
               armor: [
                 { name: "", source: "tifa" },
                 { name: "", source: "tifa" },
-                { name: "Subversion" },
                 { name: "First Strike" },
+                { name: "Fire" },
               ],
               summon: [{ name: "" }],
             },
@@ -199,12 +188,8 @@ function Chapter18() {
         <UpgradeWeapons
           characters={[
             {
-              name: "Cloud",
-              weapons: [{ name: "Hardedge", upgrade: "Auto - Balanced" }],
-            },
-            {
               name: "Tifa",
-              weapons: [{ name: "Sonic Strikers", upgrade: "Auto - Balanced" }],
+              weapons: [{ name: "Leather Gloves", upgrade: "Auto - Balanced" }],
             },
           ]}
         />

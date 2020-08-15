@@ -149,12 +149,6 @@ function Chapter7() {
                 { shortcut: "circle", ability: "Aero" },
               ],
             },
-            {
-              name: "Tifa",
-              shortcuts: [
-                { shortcut: "square", ability: "Unbridled Strength" },
-              ],
-            },
           ]}
         />
         <Equipment
@@ -175,13 +169,10 @@ function Chapter7() {
               name: "Cloud",
               weapon: [
                 { name: "Wind", source: "tifa" },
-                { name: "Ice" },
+                { name: "First Strike" },
                 { name: "Lightning" },
               ],
-              armor: [
-                { name: "First Strike" },
-                { name: "Barrier", source: "barret" },
-              ],
+              armor: [{ name: "Ice" }, { name: "Barrier", source: "barret" }],
               summon: [{ name: "", source: "tifa" }],
             },
             {
@@ -225,7 +216,7 @@ function Chapter7() {
           ],
           [
             "Barret: Combo, Charge, Combo, Charge",
-            "Barret: Thunder, Overcharge, Cloud Thundara, Combo",
+            "Barret: Thunder, Overcharge, Cloud Thundara",
             "Tifa: Defend, Whirl, Divekick, Whirl",
             "Cloud: Berserk, 2 ATB, Thundara",
             "Tifa: Whirl, Blizzard, Focused Shot, Focused Thrust, Blizzard, Combo",

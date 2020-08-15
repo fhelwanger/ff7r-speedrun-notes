@@ -40,7 +40,7 @@ function Chapter11() {
                 { name: "First Strike", source: "aerith" },
                 { name: "Parry" },
               ],
-              summon: [{ name: "Ifrit" }],
+              summon: [{ name: "" }],
             },
             {
               name: "Aerith",
@@ -94,10 +94,7 @@ function Chapter11() {
       />
       <Encounter
         enemies="Cripshay x3"
-        instructions={[
-          "Cloud: Dash, TRIPOLOSKI",
-          "Tifa: Starshower, Whirl the rest",
-        ]}
+        instructions={["Cloud: Dash, TRIPOLOSKI, Starshower"]}
       />
       <Encounter
         enemies="Ghost x2"
@@ -135,11 +132,11 @@ function Chapter11() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "Ice" },
+                { name: "Wind", source: "aerith" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "Wind", source: "aerith" }, { name: "Refocus" }],
-              summon: [{ name: "" }],
+              armor: [{ name: "Ice" }, { name: "Refocus" }],
+              summon: [{ name: "", source: "tifa" }],
             },
             {
               name: "Tifa",
@@ -152,7 +149,7 @@ function Chapter11() {
                 { name: "First Strike", source: "cloud" },
                 { name: "Parry" },
               ],
-              summon: [{ name: "Ifrit" }],
+              summon: [{ name: "Ifrit", source: "cloud" }],
             },
             {
               name: "Aerith",
@@ -188,7 +185,7 @@ function Chapter11() {
             "Elixir when pressured",
           ],
           [
-            "Tifa: Defend Piercing Scream",
+            "Tifa: Try to get near, defend Piercing Scream if get hit",
             "Tifa: Starshower, Whirl",
             "Elixir when pressured",
           ],
@@ -207,7 +204,7 @@ function Chapter11() {
         enemies="Cripshay x4"
         instructions={["Starshower, Whirl, Divekick"]}
       />
-      <Pick item="Mega-Potion x2" />
+      <Pick item="Mega-Potion x2" optional />
       <Encounter
         enemies="Lesser Drake, Cerulean Drake"
         instructions={[
@@ -243,7 +240,7 @@ function Chapter11() {
         phases={[
           [
             "Dash, Counter, Aerith Blizzara, Operator, Counter",
-            "Punisher x2, Blizzara, Focused Thrust",
+            "Blizzara, Punisher x2, Focused Thrust",
             "Tifa: Whirl",
             "Aerith: Tempest full, 1 ATB, Blizzara, 1 ATB, Arcane Ward, Combo",
           ],
@@ -253,8 +250,7 @@ function Chapter11() {
             "Tifa: Whirl, Divekick Left Wheel",
             "Tifa: Whirl, Divekick Right Wheel",
             "Tifa: Whirl",
-            "Cloud: Blizzara",
-            "Aerith: Blizzard",
+            "Aerith: Blizzard x2",
           ],
         ]}
       />

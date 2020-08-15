@@ -122,21 +122,21 @@ function Chapter5() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Revival", source: "barret" },
                 { name: "Barrier", source: "barret" },
+                { name: "First Strike" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "First Strike" }],
+              armor: [{ name: "Revival", source: "barret" }],
               summon: [{ name: "Ifrit" }],
             },
             {
               name: "Barret",
               weapon: [
                 { name: "Lightning" },
-                { name: "Ice", source: "cloud" },
+                { name: "Fire", source: "cloud" },
                 { name: "Fire", source: "inventory" },
               ],
-              armor: [{ name: "Fire", source: "cloud" }],
+              armor: [{ name: "Ice", source: "cloud" }],
               summon: [{ name: "" }],
             },
             {
@@ -185,10 +185,10 @@ function Chapter5() {
               name: "Cloud",
               weapon: [
                 { name: "Fire", source: "barret" },
-                { name: "Ice", source: "barret" },
+                { name: "First Strike" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "First Strike" }],
+              armor: [{ name: "Ice", source: "barret" }],
               summon: [{ name: "Ifrit" }],
             },
             {

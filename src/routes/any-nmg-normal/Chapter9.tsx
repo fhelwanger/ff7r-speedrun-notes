@@ -34,10 +34,10 @@ function Chapter9() {
               name: "Cloud",
               weapon: [
                 { name: "Fire", source: "tifa" },
-                { name: "Deadly Dodge" },
+                { name: "First Strike" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "First Strike" }, { name: "ATB Boost" }],
+              armor: [{ name: "Deadly Dodge" }, { name: "ATB Boost" }],
               summon: [{ name: "Ifrit" }],
             },
             {
@@ -49,6 +49,17 @@ function Chapter9() {
               ],
               armor: [{ name: "Wind", source: "cloud" }],
               summon: [{ name: "" }],
+            },
+          ]}
+        />
+        <UpgradeWeapons
+          characters={[
+            {
+              name: "Tifa",
+              weapons: [
+                { name: "Sonic Strikers", upgrade: "Auto - Attack" },
+                { name: "Metal Knuckles", upgrade: "Manual" },
+              ],
             },
           ]}
         />
@@ -129,19 +140,8 @@ function Chapter9() {
               armor: [
                 { name: "Lightning" },
                 { name: "Wind" },
-                { name: "Ice", source: "tifa" },
+                { name: "Ice", source: "inventory" },
               ],
-              summon: [{ name: "" }],
-            },
-            {
-              name: "Tifa",
-              weapon: [
-                { name: "", source: "aerith" },
-                { name: "Fire" },
-                { name: "Lightning" },
-                { name: "" },
-              ],
-              armor: [{ name: "Wind" }, { name: "" }],
               summon: [{ name: "" }],
             },
           ]}
@@ -166,7 +166,7 @@ function Chapter9() {
             },
             {
               name: "Tifa",
-              shortcuts: [{ shortcut: "x", ability: "Focused Strike" }],
+              shortcuts: [{ shortcut: "circle", ability: "Focused Strike" }],
             },
           ]}
         />
@@ -203,11 +203,11 @@ function Chapter9() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "Ice", source: "inventory" },
+                { name: "First Strike" },
                 { name: "Lightning" },
               ],
               armor: [
-                { name: "First Strike" },
+                { name: "Ice", source: "tifa" },
                 { name: "Refocus", source: "aerith" },
               ],
               summon: [{ name: "Ifrit" }],
@@ -222,6 +222,17 @@ function Chapter9() {
               armor: [{ name: "Lightning" }, { name: "Wind" }, { name: "Ice" }],
               summon: [{ name: "" }],
             },
+            {
+              name: "Tifa",
+              weapon: [
+                { name: "", source: "cloud" },
+                { name: "Fire" },
+                { name: "Lightning" },
+                { name: "" },
+              ],
+              armor: [{ name: "Wind" }, { name: "" }],
+              summon: [{ name: "" }],
+            },
           ]}
         />
       </Menu>
@@ -229,7 +240,7 @@ function Chapter9() {
         name="Hell House"
         phases={[
           [
-            "Cloud: Dash",
+            "Cloud: Dash, Cleave",
             "Aerith: Arcane Ward, Cloud Blizzard, Hits until Barrier Shift, Magic",
             "Cloud: Punisher full, Berserk, TRIPOLOSKI, Punisher",
           ],
@@ -274,10 +285,6 @@ function Chapter9() {
         <Equipment
           characters={[
             {
-              name: "Tifa",
-              equipments: [{ name: "Power Wristguards", source: "cloud" }],
-            },
-            {
               name: "Aerith",
               equipments: [{ name: "Fury Ring" }],
             },
@@ -294,17 +301,7 @@ function Chapter9() {
                 { name: "" },
               ],
               armor: [{ name: "Wind" }, { name: "Parry", source: "inventory" }],
-              summon: [{ name: "Ifrit", source: "cloud" }],
-            },
-            {
-              name: "Cloud",
-              weapon: [
-                { name: "Fire" },
-                { name: "Ice" },
-                { name: "Lightning" },
-              ],
-              armor: [{ name: "First Strike" }, { name: "Refocus" }],
-              summon: [{ name: "", source: "tifa" }],
+              summon: [{ name: "" }],
             },
           ]}
         />

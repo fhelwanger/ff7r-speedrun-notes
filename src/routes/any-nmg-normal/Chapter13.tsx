@@ -37,11 +37,11 @@ function Chapter13() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "ATB Boost" },
+                { name: "First Strike" },
                 { name: "Lightning" },
               ],
               armor: [
-                { name: "First Strike" },
+                { name: "ATB Boost" },
                 { name: "Refocus", source: "tifa" },
               ],
               summon: [{ name: "" }],
@@ -148,22 +148,22 @@ function Chapter13() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
+                { name: "Wind", source: "barret" },
                 { name: "", source: "barret" },
-                { name: "Binding", source: "barret" },
               ],
               armor: [
                 { name: "Lightning", source: "barret" },
-                { name: "Wind", source: "barret" },
+                { name: "Binding", source: "barret" },
               ],
               summon: [{ name: "" }],
             },
             {
               name: "Barret",
               weapon: [
+                { name: "ATB Boost", source: "cloud" },
                 { name: "First Strike", source: "cloud" },
                 { name: "Refocus", source: "cloud" },
                 { name: "Lightning", source: "cloud" },
-                { name: "ATB Boost", source: "cloud" },
               ],
               armor: [
                 { name: "Magnify", source: "inventory" },
@@ -241,9 +241,10 @@ function Chapter13() {
         enemies="Cutter, Monodrive x2"
         instructions={[
           "Barret: Overcharge Monodrive",
-          "Tifa: Combo + Whirl Monodrive, Thundara Cutter, Barret Thundara, Barret ATB Boost",
-          "Tifa: Focused Strike until Stagger",
-          "Tifa Thundara, Barret Thundara x2",
+          "Tifa: Combo x6, Whirl Monodrive",
+          "Tifa: Barret Thundara, Thundara, Barret ATB Boost",
+          "Tifa: Combo x2, Whirl, Focused Strike x3",
+          "Barret Thundara x2, Tifa Thundara",
         ]}
       />
       <Shop name="Vending Machine" buy={["Mega-Potion x3", "Ether x2"]} />
@@ -270,6 +271,10 @@ function Chapter13() {
               name: "Barret",
               shortcuts: [{ shortcut: "circle", ability: "Blizzara All" }],
             },
+            {
+              name: "Tifa",
+              shortcuts: [{ shortcut: "circle", ability: "Blizzara" }],
+            },
           ]}
         />
       </Menu>
@@ -295,7 +300,7 @@ function Chapter13() {
           [
             "Tifa: Go back and wait for him to turn",
             "Barret: Overcharge Appendage",
-            "Barret Blizzara, Tifa Blizzara Failed Experiment",
+            "Barret Blizzara All, Tifa Blizzara Failed Experiment",
             "Fire in the Hole, Starshower, Somersault Failed Experiment",
           ],
         ]}

@@ -10,7 +10,7 @@ import Pick from "../../components/Pick";
 function Chapter6() {
   return (
     <Chapter number={6}>
-      <Pick item="Hi-Potion" />
+      <Pick item="Hi-Potion" optional />
       <Encounter
         enemies="Grashtrike x3, Sentry Ray x2"
         instructions={[
@@ -56,11 +56,11 @@ function Chapter6() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "Ice" },
+                { name: "First Strike" },
                 { name: "Lightning" },
               ],
               armor: [
-                { name: "First Strike" },
+                { name: "Ice" },
                 { name: "Deadly Dodge", source: "inventory" },
               ],
               summon: [{ name: "Ifrit" }],
