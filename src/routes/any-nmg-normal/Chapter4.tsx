@@ -12,6 +12,28 @@ import UpgradeWeapons from "../../components/UpgradeWeapons";
 function Chapter4() {
   return (
     <Chapter number={4}>
+      <Boss
+        name="Bike minigame"
+        phases={[
+          [
+            'Security Officer: Break and hit after "Right...". Combo.',
+            "Security Officer x2: Break after tunnel. Spinning Slash.",
+            "Security Officer x3: Break after ramp. Let 1 pass, Spinning Slash, Combo last.",
+          ],
+          [
+            'Elite Security Officer x2: Break and Defend until "We\'re not screwed, are we?". Spinning Slash + Combo.',
+            "Slug-Ray x4: Break until music changes. Spinning Slash, Combo rest.",
+          ],
+          [
+            "Security Officer, Elite Security Officer, Slug-Ray x2: Break, let Security Officer pass, Spinning Slash, Combo rest.",
+          ],
+          [
+            "Security Officer x4: Break, let 2 Security Officer pass, Spinning Slash, Combo rest.",
+            "Elite Security Officer x2: Break and hit, Combo to fill special.",
+          ],
+          ["Roche"],
+        ]}
+      />
       <Shop
         name="Vending Machine"
         buy={["Hi-Potion x3", "Ether", "Fire", "Ice", "Lightning"]}
