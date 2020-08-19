@@ -49,7 +49,7 @@ function Chapter13() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Subversion" },
+                { name: "Barrier" },
                 { name: "Fire" },
                 { name: "Lightning" },
                 { name: "Ice" },
@@ -175,7 +175,7 @@ function Chapter13() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Subversion" },
+                { name: "Barrier" },
                 { name: "Fire" },
                 { name: "Lightning" },
                 { name: "Ice" },

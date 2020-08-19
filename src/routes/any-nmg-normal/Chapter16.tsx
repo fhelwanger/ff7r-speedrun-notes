@@ -33,7 +33,7 @@ function Chapter16() {
                 { name: "Fire" },
                 { name: "Magnify", source: "tifa" },
                 { name: "Lightning" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -137,7 +137,7 @@ function Chapter16() {
                 { name: "Fire" },
                 { name: "Binding", source: "barret" },
                 { name: "Lightning" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -288,7 +288,7 @@ function Chapter16() {
                 { name: "Fire" },
                 { name: "Magnify", source: "barret" },
                 { name: "Lightning" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "ATB Boost" },

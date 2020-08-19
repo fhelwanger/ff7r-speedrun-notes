@@ -152,7 +152,10 @@ function Chapter12() {
         ]}
       />
       <Pick item="Elixir" optional />
-      <Shop name="Vending Machine" buy={["Mega-Potion x3", "Ether x2"]} />
+      <Shop
+        name="Vending Machine"
+        buy={["Mega-Potion x3", "Ether x2", "Barrier"]}
+      />
       <Bench optional description="Don't need MP for the Turks" />
       <Menu>
         <Equipment
@@ -196,7 +199,7 @@ function Chapter12() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Subversion" },
+                { name: "Barrier", source: "inventory" },
                 { name: "Fire" },
                 { name: "Lightning" },
                 { name: "Ice", source: "inventory" },

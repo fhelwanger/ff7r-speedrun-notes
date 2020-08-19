@@ -35,7 +35,7 @@ function Chapter15() {
                 { name: "Wind", source: "aerith" },
                 { name: "Magnify" },
                 { name: "Lightning" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -118,7 +118,7 @@ function Chapter15() {
                 { name: "Fire", source: "aerith" },
                 { name: "Magnify" },
                 { name: "Lightning" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -197,7 +197,7 @@ function Chapter15() {
                 { name: "Lightning", source: "cloud" },
                 { name: "Magnify" },
                 { name: "Fire", source: "cloud" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -258,7 +258,7 @@ function Chapter15() {
                 { name: "Wind", source: "aerith" },
                 { name: "Magnify" },
                 { name: "Lightning", source: "cloud" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -302,7 +302,7 @@ function Chapter15() {
                 { name: "Fire", source: "aerith" },
                 { name: "Fire", source: "tifa" },
                 { name: "Lightning" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "ATB Boost" },

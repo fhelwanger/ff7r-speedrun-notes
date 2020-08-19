@@ -22,7 +22,13 @@ function Chapter14() {
       />
       <Shop
         name="Weapon Shop"
-        sell={["Iron Bangle x2", "Mythril Armlet", "Earrings"]}
+        sell={[
+          "Iron Bangle x2",
+          "Mythril Armlet",
+          "Earrings",
+          "Subversion",
+          "Deadly Dodge",
+        ]}
         buy={["Mythril Saber", "Platinum Earrings"]}
       />
       <Menu>
@@ -65,7 +71,7 @@ function Chapter14() {
                 { name: "Fire" },
                 { name: "Magnify", source: "barret" },
                 { name: "Lightning", source: "barret" },
-                { name: "Subversion", source: "tifa" },
+                { name: "Barrier", source: "tifa" },
               ],
               armor: [
                 { name: "ATB Boost", source: "barret" },
@@ -269,7 +275,7 @@ function Chapter14() {
           [
             "Tifa: Lock Abzu, Lifesaver, 2 ATB",
             "Tifa: Starshower, Overcharge, Starshower, Focused Thrust, Focused Shot",
-            "Tifa: Combo x6, Combo x3, Whirl, Focused Strike, Combo, Whirl",
+            "Tifa: Combo x6, Whirl, Focused Strike, Combo, Whirl",
             "Tifa: Unbridled, Barret Mega-Potion Barret",
           ],
           [
@@ -277,11 +283,8 @@ function Chapter14() {
             "Tifa: Omni, Whirl, Divekick, Cloud Fira, Whirl, Divekick, Whirl",
           ],
           [
-            "Tifa: Cloud ATB Boost, Fira All x2",
-            "Tifa: 2 ATB, Starshower, Overcharge, Starshower",
-          ],
-          [
-            "Barret Sleep Abzu, Mega-Potion",
+            "Tifa: Cloud ATB Boost, 2 ATB, Limit",
+            "Tifa: Cloud Barrier Tifa, Starshower, Overcharge, Cloud Fira All, Barret Mega-Potion",
             "Tifa: Starshower, Somersault",
             "Should get at least 3 Shoats, otherwise kill Byabapolis x2 in Chapter 15",
           ],

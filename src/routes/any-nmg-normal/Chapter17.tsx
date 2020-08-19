@@ -30,7 +30,7 @@ function Chapter17() {
                 { name: "Fire" },
                 { name: "Binding", source: "barret" },
                 { name: "Lightning" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -100,7 +100,6 @@ function Chapter17() {
           "Talisman",
           "Fire",
           "Time",
-          "Deadly Dodge",
         ]}
         buy={[
           "Mega-Potion x3",
@@ -148,7 +147,7 @@ function Chapter17() {
                 { name: "Ice", source: "tifa" },
                 { name: "Magnify", source: "barret" },
                 { name: "Lightning", source: "cloud" },
-                { name: "Subversion", source: "cloud" },
+                { name: "Barrier", source: "cloud" },
               ],
               armor: [
                 { name: "ATB Boost", source: "cloud" },
@@ -228,7 +227,7 @@ function Chapter17() {
                 { name: "Lightning", source: "aerith" },
                 { name: "Magnify" },
                 { name: "Ice", source: "aerith" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -316,7 +315,7 @@ function Chapter17() {
                 { name: "Binding", source: "cloud" },
                 { name: "", source: "barret" },
                 { name: "Ice" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "", source: "cloud" },
@@ -468,7 +467,7 @@ function Chapter17() {
                 { name: "Fire", source: "cloud" },
                 { name: "Magnify", source: "barret" },
                 { name: "Ice" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "Lightning", source: "cloud" },
@@ -546,7 +545,7 @@ function Chapter17() {
                 { name: "Lightning", source: "aerith" },
                 { name: "Magnify" },
                 { name: "Ice" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "Fire", source: "aerith" },

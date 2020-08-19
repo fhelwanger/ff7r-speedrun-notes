@@ -81,7 +81,7 @@ function Chapter18() {
                 { name: "Lightning" },
                 { name: "Wind" },
                 { name: "Ice" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "Magnify", source: "barret" },
@@ -173,7 +173,7 @@ function Chapter18() {
                 { name: "Lightning" },
                 { name: "Wind" },
                 { name: "Ice" },
-                { name: "Subversion" },
+                { name: "Barrier" },
               ],
               armor: [
                 { name: "", source: "tifa" },
