@@ -50,44 +50,44 @@ function Chapter18() {
                 { name: "", source: "aerith" },
                 { name: "", source: "aerith" },
                 { name: "Lightning", source: "tifa" },
-                { name: "" },
+                { name: "", source: "tifa" },
               ],
               armor: [
+                { name: "", source: "cloud" },
+                { name: "", source: "cloud" },
                 { name: "Binding", source: "cloud" },
-                { name: "", source: "cloud" },
-                { name: "", source: "cloud" },
               ],
               summon: [{ name: "" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "ATB Assist" },
+                { name: "Refocus", source: "aerith" },
                 { name: "ATB Stagger" },
                 { name: "First Strike", source: "barret" },
-                { name: "Refocus" },
-                { name: "Parry", source: "tifa" },
+                { name: "ATB Assist", source: "barret" },
+                { name: "ATB Boost", source: "aerith" },
               ],
               armor: [
                 { name: "" },
                 { name: "", source: "tifa" },
-                { name: "ATB Boost", source: "aerith" },
+                { name: "Parry", source: "tifa" },
               ],
               summon: [{ name: "Ifrit", source: "cloud" }],
             },
             {
               name: "Aerith",
               weapon: [
+                { name: "Time", source: "barret" },
+                { name: "Magnify", source: "barret" },
                 { name: "Lightning" },
-                { name: "Wind" },
-                { name: "Ice" },
                 { name: "Barrier" },
               ],
               armor: [
-                { name: "Magnify", source: "barret" },
-                { name: "Time", source: "barret" },
+                { name: "Ice", source: "aerith" },
                 { name: "First Strike" },
-                { name: "Fire", source: "aerith" },
+                { name: "Wind", source: "cloud" },
+                { name: "Fire" },
               ],
               summon: [{ name: "" }],
             },
@@ -97,17 +97,16 @@ function Chapter18() {
       <Dialogue optionText="Yeah." optionPosition="2nd" details="to enter" />
       <Encounter
         enemies="Whisper Rubrum, Whisper Viridi, Whisper Croceo (both fights)"
-        instructions={[
-          "Tifa: Keep Unbridled up and combos (finish with Rise up)",
-          "Mega-Potions as needed",
-        ]}
+        instructions={["Tifa: Unbridled + Omni", "Mega-Potions as needed"]}
       />
       <Encounter
         enemies="Whisper Rubrum"
         instructions={[
           "Cloud: Punisher + Counterstance until pressure",
-          "Tifa: Combo + Whirl until stagger (should have 2 ATB and Rise)",
-          "Tifa: Starshower, Combo x3, Whirl",
+          "Tifa: 2 ATB, Unbridled x2",
+          "Tifa: Combo + Whirl until stagger",
+          "Tifa: 2 ATB, Divekick until dead",
+          "Tifa: ATB Boost",
         ]}
       />
       <Encounter
@@ -119,10 +118,10 @@ function Chapter18() {
         phases={[
           ["Cloud: Dash, Counterstance"],
           [
-            "Cloud: Dash, Counterstance",
+            "Cloud: Counter, Counterstance",
             "Aerith Firaga",
             "Tifa: Hit until pressure",
-            "Tifa: Starshower, Rise, Starshower, Omni, Starshower, Whirl",
+            "Tifa: Starshower, Rise, Starshower, Omni, Whirl, Divekick",
           ],
           [
             "Aerith: Haste All",
@@ -130,7 +129,7 @@ function Chapter18() {
             "Somersault/Cross Slash when available",
             "Stagger: Starshower, Whirl, Divekick",
           ],
-          ["Aerith: Thunder"],
+          ["Aerith: Thundara"],
         ]}
       />
       <Menu>
@@ -146,39 +145,39 @@ function Chapter18() {
               ],
               armor: [
                 { name: "Wind" },
-                { name: "First Strike", source: "tifa" },
                 { name: "Refocus", source: "tifa" },
+                { name: "First Strike", source: "tifa" },
               ],
               summon: [{ name: "Ifrit", source: "tifa" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "ATB Assist" },
+                { name: "", source: "cloud" },
                 { name: "ATB Stagger" },
                 { name: "", source: "cloud" },
-                { name: "", source: "cloud" },
-                { name: "Parry" },
+                { name: "ATB Assist" },
+                { name: "ATB Boost" },
               ],
               armor: [
-                { name: "Magnify", source: "aerith" },
                 { name: "Time", source: "aerith" },
-                { name: "ATB Boost" },
+                { name: "Magnify", source: "aerith" },
+                { name: "Parry" },
               ],
               summon: [{ name: "", source: "cloud" }],
             },
             {
               name: "Aerith",
               weapon: [
+                { name: "", source: "tifa" },
+                { name: "", source: "tifa" },
                 { name: "Lightning" },
-                { name: "Wind" },
-                { name: "Ice" },
                 { name: "Barrier" },
               ],
               armor: [
-                { name: "", source: "tifa" },
-                { name: "", source: "tifa" },
+                { name: "Ice" },
                 { name: "First Strike" },
+                { name: "Wind" },
                 { name: "Fire" },
               ],
               summon: [{ name: "" }],
