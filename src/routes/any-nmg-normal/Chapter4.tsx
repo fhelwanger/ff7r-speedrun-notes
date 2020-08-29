@@ -83,7 +83,10 @@ function Chapter4() {
       </Menu>
       <Encounter
         enemies="Security Officers x17, Grenadier x2"
-        instructions={["Deadly Dodge, Cleave, TRIPOLOSKI", "Save 2 ATB"]}
+        instructions={[
+          "Deadly Dodge, Cleave, TRIPOLOSKI",
+          "Try to Berserk and 2 ATB for next phase",
+        ]}
       />
       <Encounter
         enemies="Elite Security Officer, Riot Trooper"
