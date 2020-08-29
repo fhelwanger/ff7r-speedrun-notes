@@ -87,9 +87,9 @@ function Chapter3() {
       <Encounter
         enemies="Wererats x2, Gorger"
         instructions={[
-          "Counter to build ATB",
+          "Dash, Operator, Roll Gorger to build ATB",
           "Assess Gorger and Wererat",
-          "Deadly Dodge, Cleave",
+          "Deadly Dodge/Cleave/TRIPOLOSKI",
           "Flee if Call to Arms",
         ]}
       />
