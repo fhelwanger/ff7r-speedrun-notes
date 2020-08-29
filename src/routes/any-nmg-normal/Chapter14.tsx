@@ -279,13 +279,14 @@ function Chapter14() {
             "Tifa: Unbridled, Barret Mega-Potion Barret",
           ],
           [
-            "Tifa: Hit to stagger",
-            "Tifa: Omni, Whirl, Divekick, Cloud Fira, Whirl, Divekick, Whirl",
+            "Tifa: Combo until stagger",
+            "Tifa: Omni, Whirl, Divekick, Cloud Fira",
+            "Tifa: Whirl, Divekick, Cloud ATB Boost, Whirl",
           ],
           [
-            "Tifa: Cloud ATB Boost, 2 ATB, Limit",
-            "Tifa: Cloud Barrier Tifa, Starshower, Overcharge, Cloud Fira All, Barret Mega-Potion",
-            "Tifa: Starshower, Somersault",
+            "Cloud Fira Shoats",
+            "Tifa: Combo until 2 ATB, fill Limit",
+            "Tifa: Cloud Barrier Tifa, Starshower, Starshower, Somersault",
             "Should get at least 3 Shoats, otherwise kill Byabapolis x2 in Chapter 15",
           ],
         ]}
