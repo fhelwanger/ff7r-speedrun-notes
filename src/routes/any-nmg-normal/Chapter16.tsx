@@ -253,7 +253,8 @@ function Chapter16() {
             "Barret: Overcharge OPT, Haste All, Combo + Charge x2",
             "Tifa: Starshower Left Claw, Whirl, Divekick, Focused Shot Specimen",
             "Tifa: Combo x6, Whirl, Sleep, Overpower",
-            "Tifa: Combo x6, Focused Strike x3, Whirl, Combo x3, Unbridled, Combo",
+            "Tifa: Combo x6, Focused Strike x3, Whirl",
+            "Tifa: Combo x3, Unbridled, Combo",
           ],
           [
             "Barret: Overcharge Specimen",
