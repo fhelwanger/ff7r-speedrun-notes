@@ -36,7 +36,7 @@ function Chapter1() {
       <Encounter
         enemies="Security Officer, Guard Dog"
         instructions={[
-          "Security Officer: Dash, Punisher",
+          "Security Officer: Dash, Berserk, Operator",
           "Guard Dog: Fire, Punisher",
         ]}
       />
