@@ -105,7 +105,7 @@ function Chapter1() {
             "Cloud: Punisher x4, Berserk, Fire, Punisher x4, Focused Thrust",
             "Barret: Combo, Focused Shot, Combo",
             "Cloud: Counter, Punisher x4, Berserk, Focused Thrust, Thunder",
-            "Cloud: Berserk, Overcharge, Punisher full, Thunder, Berserk",
+            "Cloud: Punisher x4, Berserk, Overcharge, Punisher full, Thunder, Berserk",
           ],
           [
             "Cloud: Fire",
@@ -121,14 +121,17 @@ function Chapter1() {
       />
       <Encounter
         enemies="Monodrive x2"
-        instructions={["Punisher x4 B, Operator, Dash, Focused Thrust A"]}
+        instructions={[
+          "B: Punisher x4, Operator",
+          "A: Dash, 1 ATB, Focused Thrust",
+        ]}
       />
       <Encounter
         enemies="Security Officer x2, Monodrive x2"
         instructions={[
           "Cloud: Operator x1 left Monodrive, Punisher full Monodrive + Security Officer",
           "Cloud: Focused Thrust Security Officer",
-          "Barret: Overcharge Monodrive, Swap to Cloud",
+          "Barret: Overcharge Monodrive",
         ]}
       />
       <Encounter

@@ -42,7 +42,8 @@ function Chapter2() {
         instructions={[
           "Cleave/Counters to fill ATB",
           "Grenade Riot Troopers, Berserk before Huntsman",
-          "Huntsman: Fire to pressure, Punisher, Berserk, Fire",
+          "Huntsman: Fire, Punisher full, Berserk, Punisher x4, Fire",
+          "Huntsman: Punisher + Fire",
         ]}
       />
     </Chapter>
