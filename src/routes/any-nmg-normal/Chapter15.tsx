@@ -148,6 +148,14 @@ function Chapter15() {
             },
           ]}
         />
+        <BattleSettings
+          characters={[
+            {
+              name: "Cloud",
+              shortcuts: [{ shortcut: "square", ability: "Fira All" }],
+            },
+          ]}
+        />
       </Menu>
       <Encounter
         enemies="3-C Soldier Operator x2"
