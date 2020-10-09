@@ -239,8 +239,7 @@ function FirstStrike() {
     "Sweeper",
     "Guard Scorpion",
     "Shock Troopers",
-    "Huntsman",
-    "Roche",
+    "Roche (backup)",
     "Enigmatic Spectre (backup)",
   ];
 
