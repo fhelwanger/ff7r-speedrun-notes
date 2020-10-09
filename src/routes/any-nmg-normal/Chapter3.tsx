@@ -28,13 +28,11 @@ function Chapter3() {
           ]}
         />
       </Menu>
-      <Pick item="Ether" description="After Biggs/Wedge" optional />
-      <Pick item="Ice" description="In Scrap Boulevard" />
+      <Pick item="Ether" optional />
+      <Pick item="Ice" />
       <Encounter
         enemies="Gorgers and Wererats"
-        instructions={[
-          "Deadly Dodge + Cleave, then Punisher, Fire, Focused Thrust...",
-        ]}
+        instructions={["Deadly Dodge + Cleave, Punisher, Fire"]}
       />
       <Shop name="Weapon Shop" buy={["Earrings"]} />
       <Menu>
@@ -96,8 +94,8 @@ function Chapter3() {
       <Encounter
         enemies="Security Officer x2, Elite Security Officer, Guard Dog"
         instructions={[
-          "Cloud: Deadly Dodge, Cleave",
-          "Cloud: Fire Dog, Berserk, TRIPOLOSKI",
+          "Cloud: Deadly Dodge, Cleave, Counter",
+          "Cloud: Blizzard Dog, Berserk, TRIPOLOSKI",
         ]}
       />
       <Dialogue

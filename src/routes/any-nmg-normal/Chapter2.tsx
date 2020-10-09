@@ -6,7 +6,7 @@ import Pick from "../../components/Pick";
 function Chapter2() {
   return (
     <Chapter number={2}>
-      <Pick item="Ether" description="When you go outside" />
+      <Pick item="Ether" />
       <Encounter
         enemies="Security Officer x2, Guard Dog"
         instructions={[
@@ -43,7 +43,7 @@ function Chapter2() {
           "Cleave/Counters to fill ATB",
           "Grenade Riot Troopers, Berserk before Huntsman",
           "Huntsman: Fire, Punisher full, Berserk, Punisher x4, Fire",
-          "Huntsman: Punisher + Fire",
+          "Huntsman: Punisher full, Berserk, Fire",
         ]}
       />
     </Chapter>

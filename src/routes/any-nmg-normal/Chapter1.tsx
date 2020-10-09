@@ -36,7 +36,7 @@ function Chapter1() {
       <Encounter
         enemies="Security Officer, Guard Dog"
         instructions={[
-          "Security Officer: Dash, Berserk, Operator",
+          "Security Officer: Dash, Berserk",
           "Guard Dog: Fire, Punisher",
         ]}
       />
@@ -44,7 +44,7 @@ function Chapter1() {
         enemies="Security Officer x2, Guard Dog"
         instructions={[
           "Security Officers: Punisher",
-          "Guard Dog: Fire, Punisher",
+          "Guard Dog: Fire, Berserk, Punisher",
         ]}
       />
       <Encounter
@@ -86,11 +86,11 @@ function Chapter1() {
         instructions={[
           "Cloud: Dash, Punisher",
           "Barret: Overcharge, Combo, Charge, Thunder",
-          "Barret: Charge, Combo, Charge, Focused Shot, Focused Thrust",
-          "Cloud: Punisher (fill 2 ATB), Barret Thunder x2",
+          "Barret: Charge, Combo, Charge, Focused Shot, Focused Thrust, Overcharge",
+          "Cloud: Barret Thunder, Punisher (fill 2 ATB), Barret Thunder",
         ]}
       />
-      <Pick item="Ether" description="If near stairs after battle" optional />
+      <Pick item="Ether" optional />
       <Boss
         name="Guard Scorpion"
         phases={[
@@ -102,7 +102,7 @@ function Chapter1() {
           ],
           [
             "Cloud: Dash and Roll x2, go behind",
-            "Cloud: Punisher x4, Berserk, Fire, Punisher x4, Focused Thrust",
+            "Cloud: Punisher x4, Berserk, Fire, Punisher x3, Focused Thrust",
             "Barret: Combo, Focused Shot, Combo",
             "Cloud: Counter, Punisher x4, Berserk, Focused Thrust, Thunder",
             "Cloud: Punisher x4, Berserk, Overcharge, Punisher full, Thunder, Berserk",
@@ -113,10 +113,7 @@ function Chapter1() {
             "Cloud: Dash, Punisher x3, Berserk, Cross Slash",
             "Barret: Overcharge, Combo, Swap to Cloud",
           ],
-          [
-            "Cloud: Dash, Punisher x2, Berserk, Fire on Left Leg",
-            "Thunder, Fire",
-          ],
+          ["Cloud: Dash, Berserk Left Leg, Thunder, Fire x2"],
         ]}
       />
       <Encounter
@@ -138,7 +135,7 @@ function Chapter1() {
         enemies="Shock Trooper x3, Sentry Ray x2"
         instructions={[
           "Barret: Overcharge one Sentry Ray, Thunder other",
-          "Cloud: Counter and Fire/Braver/Punisher Shock Troopers",
+          "Cloud: Counter and Fire/Punisher Shock Troopers",
         ]}
       />
     </Chapter>

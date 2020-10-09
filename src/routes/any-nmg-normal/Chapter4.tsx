@@ -16,7 +16,7 @@ function Chapter4() {
         name="Bike minigame"
         phases={[
           [
-            'Security Officer: Break and hit after "Right...". Combo.',
+            'Security Officer: Break when Jessie says "Right...". Combo.',
             "Security Officer x2: Break after tunnel. Spinning Slash.",
             "Security Officer x3: Break after ramp. Let 1 pass, Spinning Slash, Combo last.",
           ],
