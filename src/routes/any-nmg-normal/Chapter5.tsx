@@ -14,7 +14,6 @@ import UpgradeWeapons from "../../components/UpgradeWeapons";
 function Chapter5() {
   return (
     <Chapter number={5}>
-      <Pick item="Healing" />
       <Encounter
         enemies="Slug Ray x5"
         instructions={[
@@ -22,12 +21,21 @@ function Chapter5() {
           "Cross Slash D and E",
         ]}
       />
-      <Pick
-        item="Elixir"
-        description="Door to the right after Barret joins"
-        optional
+      <Pick item="Elixir" optional />
+      <Menu>
+        <BattleSettings
+          characters={[
+            {
+              name: "Tifa",
+              shortcuts: [{ ability: "Leader" }],
+            },
+          ]}
+        />
+      </Menu>
+      <Encounter
+        enemies="Wererat x3"
+        instructions={["Tifa: Whirl, TRIPOLOSKI"]}
       />
-      <Encounter enemies="Wererat x3" instructions={["TRIPOLOSKI"]} />
       <Menu>
         <UpgradeWeapons
           characters={[
@@ -45,7 +53,10 @@ function Chapter5() {
           characters={[
             {
               name: "Cloud",
-              shortcuts: [{ shortcut: "circle", ability: "Blizzard" }],
+              shortcuts: [
+                { ability: "Leader" },
+                { shortcut: "circle", ability: "Blizzard" },
+              ],
             },
           ]}
         />
@@ -53,57 +64,56 @@ function Chapter5() {
       <Encounter
         enemies="Grashtrike, Wererat x2"
         instructions={[
-          "Grashtrike: Overcharge, Focused Shot, Whirl, Divekick",
-          "TRIPOLOSKI the rats",
+          "Cloud: TRIPOLOSKI",
+          "Barret: Overcharge, Focused Shot Grashtrike",
+          "Tifa: Whirl, Divekick Grashtrike",
         ]}
       />
       <Pick item="Hi-Potion x2" optional />
       <Encounter
         enemies="Grashtrike x2"
         instructions={[
-          "Overcharge, Focused Shot, Whirl, Divekick",
-          "Berserk, Blizzard",
+          "Cloud: Berserk, Blizzard A",
+          "Barret: Overcharge, Focused Shot B",
+          "Tifa: Whirl, Divekick B",
         ]}
       />
       <Encounter
         enemies="Grashtrike x2, Queen Grashtrike"
         instructions={[
-          "Grashtrike: Berserk, Blizzard, Punisher",
-          "If Blizzard hit only one: Overcharge, Focused Shot, Whirl, Divekick",
-          "Queen: Overcharge, Cloud and Tifa Blizzard",
-          "Focused Shot (2 ATB if possible) when pressured",
+          "Cloud: Berserk, Blizzard A",
+          "Barret: Overcharge B",
+          "Tifa: Combo x3, Whirl B",
+          "Cloud: Punisher B until dead",
+          "Cloud: Blizzard, Tifa Blizzard, Focused Shot, Punisher full, Berserk Queen",
+          "Cloud: Blizzard, Cross Slash",
         ]}
       />
       <Pick item="Phoenix Down x3" />
       <Encounter
         enemies="Flametrooper, Security Officer x4"
         instructions={[
-          "Berserk + Fire Flametrooper",
-          "Punisher and TRIPOLOSKI",
+          "Cloud: Berserk, Fire Flametrooper, Punisher, TRIPOLOSKI",
         ]}
       />
       <Encounter
         enemies="Flametrooper x2, Sentry Launcher x2"
         instructions={[
-          "Berserk Sentry B",
-          "Fire Flametroopers",
-          "Thunder Sentries",
+          "Cloud: Dash Sentry B",
+          "Barret: Overcharge, Cloud Thunder, Thunder Sentry B",
+          "Tifa: Whirl, Combo, Whirl Sentry B (2 ATB)",
+          "Cloud: Punisher Sentry B, Tifa Fire each Firetrooper",
+          "Cloud: Berserk (2 ATB), Thunder, Thunder Sentry A",
+          "Cloud: Punisher/TRIPOSKI/Fire",
         ]}
       />
-      <Pick item="Lightning" />
-      <Bench />
       <Shop
         name="Vending Machine"
-        sell={["Healing x3"]}
-        buy={[
-          "Hi-Potion x3",
-          "Ether",
-          "Phoenix Down",
-          "Power Wristguards",
-          "Earrings",
-          "Fire",
-        ]}
+        sell={["Healing x2"]}
+        buy={["Ether", "Phoenix Down", "Power Wristguards", "Earrings", "Fire"]}
       />
+      <Bench />
+      <Pick item="Lightning" />
       <Menu>
         <Equipment
           characters={[
@@ -163,17 +173,16 @@ function Chapter5() {
             "Front Left: Overcharge, Berserk, Thunder, Punisher full, Berserk",
             "Front Right: Thunder Rear Right, Punisher full, Berserk",
             "Front Right: Thunder Rear Left, Punisher full, Berserk",
-            "Stagger: Punisher + Berserk",
+            "Stagger: Berserk, Divekick + Whirl Rear Left",
           ],
           [
-            "Rear Left: Cloud Thunder, Barret Thunder, Overcharge",
-            "Rear Right: Cloud Thunder, Whirl/Tifa Combo",
-            "Arm Right: Divekick, Whirl, Punisher + Berserk",
+            "Rear Left: Barret Thunder",
+            "Rear Right: Cloud Thunder, Divekick",
+            "Arm Right: Whirl, Divekick, Whirl, Divekick, Whirl, Berserk, Punisher",
             "Stagger: Cloud Thunder Arm Left, Berserk, Punisher",
           ],
           [
-            "Cloud: Dash",
-            "Arm: Tifa/Barret Thunder each",
+            "Cloud: Dash, Barret Thunder Arm, Berserk, Overcharge other Arm",
             "Stagger: everyone Thunder Generator",
           ],
         ]}

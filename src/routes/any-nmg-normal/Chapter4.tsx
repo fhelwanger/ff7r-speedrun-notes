@@ -36,7 +36,7 @@ function Chapter4() {
       />
       <Shop
         name="Vending Machine"
-        buy={["Hi-Potion x3", "Ether", "Fire", "Ice", "Lightning"]}
+        buy={["Ether", "Fire", "Ice", "Lightning"]}
       />
       <Menu>
         <Materia
@@ -65,6 +65,10 @@ function Chapter4() {
         <UpgradeWeapons
           characters={[
             {
+              name: "Cloud",
+              weapons: [{ name: "Iron Blade", upgrade: "Auto - Attack" }],
+            },
+            {
               name: "Tifa",
               weapons: [
                 { name: "Leather Gloves", upgrade: "Auto - Attack, Manual" },
@@ -90,27 +94,24 @@ function Chapter4() {
       />
       <Encounter
         enemies="Elite Security Officer, Riot Trooper"
-        instructions={["Fire x2, Punisher Elite Security Officer"]}
+        instructions={["Fire each, Punisher Elite Security Officer"]}
       />
       <Encounter
         enemies="Shock Trooper,  Elite Grenadier"
-        instructions={[
-          "Berserk Elite Grenadier, Fire",
-          "Punisher, Fire Shock Trooper",
-        ]}
+        instructions={["Berserk Elite Grenadier, Counter, Fire x2"]}
       />
       <Encounter
         enemies="Guard Dog x8"
         instructions={[
-          "Dash, Cleave Wedge dogs",
-          "Lure them, Counter x2, Blizzard, TRIPOLOSKI",
+          "Dash, Cleave Wedge dogs, Lure them",
+          "Counter x3, Blizzard, Punisher, TRIPOLOSKI",
         ]}
       />
       <Encounter
         enemies="Sweeper x2"
         instructions={[
-          "Punisher/Berserk B, Thunder A",
-          "Cross Slash A (hit both)",
+          "Punisher/Berserk B",
+          "Cross Slash A (hit both), Focused Thrust if Wedge used mine",
           "Punisher, Berserk, Thunder...",
         ]}
       />
@@ -122,9 +123,9 @@ function Chapter4() {
             "Punisher x2, Operator, Counter, Fire, Punisher",
           ],
           [
-            "Fire",
-            "Counter, Punisher full, Focused Thrust if pressured, Roll",
-            "Staggered: Punisher, Berserk, Fire",
+            "Fire, Dash, Counter, Punisher full, Focused Thrust, Roll",
+            "Fire, Dash, Counter, Punisher full, Berserk, Operator",
+            "Staggered: Fire x2, Punisher",
           ],
         ]}
       />
@@ -133,20 +134,20 @@ function Chapter4() {
         enemies="Mysterious Spectre"
         instructions={[
           "Deadly Dodge, Cleave, Counter if possible",
-          "Berserk, TRIPOLOSKIS",
-          "Whirl + Divekick if high HP",
+          "Berserk, TRIPOLOSKIS/Fire/Divekick",
         ]}
       />
       <Encounter
         enemies="Mysterious Spectre, Enigmatic Spectre"
         instructions={[
-          "Deadly Dodge, Cleave",
-          "Mysterious: Fire, Punisher (stagger), Fire Enigmatic",
-          "Mysterious: Fire, Punisher (stagger), Punisher x4 + Focused Thrust Enigmatic",
-          "Stagger: Berserk, Cross Slash, Divekick, Whirl",
+          "Deadly Dodge, Cleave, Counter if possible",
+          "Cloud: Berserk, Punisher x4 on Mysterious",
+          "Tifa: Combo x6, Whirl, Unbridled, Combo/Whirl until Mysterious dead",
+          "Cloud: Blizzard, Punisher full, Berserk (stagger), Fire on Enigmatic",
+          "Tifa: Omni, Whirl, Divekick, Cloud Fire, Whril, Divekick",
         ]}
       />
-      <Shop name="Chadley" buy={["Wind", "First Strike"]} />
+      <Shop name="Chadley" buy={["Wind", "First Strike", "Reset Iron Blade"]} />
       <Menu>
         <UpgradeWeapons
           characters={[
