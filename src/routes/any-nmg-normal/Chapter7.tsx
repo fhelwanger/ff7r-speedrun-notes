@@ -159,7 +159,10 @@ function Chapter7() {
             },
             {
               name: "Tifa",
-              equipments: [{ name: "Metal Knucles" }],
+              equipments: [
+                { name: "Metal Knucles" },
+                { name: "Power Wristguards", source: "cloud" },
+              ],
             },
           ]}
         />

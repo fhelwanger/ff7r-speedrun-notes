@@ -220,6 +220,14 @@ function Chapter5() {
             },
           ]}
         />
+        <BattleSettings
+          characters={[
+            {
+              name: "Tifa",
+              shortcuts: [{ ability: "Leader" }],
+            },
+          ]}
+        />
       </Menu>
     </Chapter>
   );

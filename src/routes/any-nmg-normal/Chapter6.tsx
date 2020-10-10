@@ -1,4 +1,5 @@
 import React from "react";
+import BattleSettings from "../../components/BattleSettings";
 import Chapter from "../../components/Chapter";
 import Dialogue from "../../components/Dialogue";
 import Encounter from "../../components/Encounter";
@@ -12,29 +13,40 @@ function Chapter6() {
     <Chapter number={6}>
       <Pick item="Hi-Potion" optional />
       <Encounter
-        enemies="Grashtrike x3, Sentry Ray x2"
+        enemies="Grashtrike x3"
         instructions={[
-          "Grashtrikes: Berserk, Blizzard",
-          "Sentries: Overcharge/Thunder",
-          "Can flee and finish after light depending on ATB",
-          "Learn Focused Shot if not yet",
+          "Cloud: Berserk, Blizzard",
+          "Barret: Overcharge, Focused Shot",
+          "Cloud: Punisher/Blizzard",
         ]}
+      />
+      <Encounter
+        enemies="Sentry Ray x2"
+        instructions={["A: Overcharge", "B: Thunder"]}
       />
       <Encounter
         enemies="Sentry Gun Prototype x4"
         instructions={[
-          "Cloud: Thunder C",
-          "Barret: Overcharge A, Thunder D",
-          "Tifa: Whirl A, Thunder B",
+          "Barret: Overcharge A",
+          "Tifa: Whirl A, Barret Thunder D, Cloud Thunder C, Whirl A, Tifa Thunder B",
         ]}
       />
+      <Menu>
+        <BattleSettings
+          characters={[
+            {
+              name: "Cloud",
+              shortcuts: [{ ability: "Leader" }],
+            },
+          ]}
+        />
+      </Menu>
       <Encounter
-        enemies="Terpsicolt x2,Sentry Gun Prototype x2"
+        enemies="Terpsicolt x2, Sentry Gun Prototype x2"
         instructions={[
-          "Barret: Overcharge Sentry Gun B",
-          "Barret: Thunder Sentry Gun A",
-          "Cloud: Berserk + Punisher Terpsicolts",
-          "TRIPOLOSKI when spinning",
+          "Cloud: Dash, Punisher full, Berserk Sentry Gun A",
+          "Cloud: TRIPOLOSKI, Punisher/Berserk Sentry Gun B",
+          "Cloud: TRIPOLOSKI/Punisher Terpsicolts",
         ]}
       />
       <Pick item="Mesmeric Armlet" />
@@ -46,6 +58,7 @@ function Chapter6() {
               equipments: [
                 { name: "Mesmeric Armlet" },
                 { name: "Iron Bangle", source: "cloud" },
+                { name: "Earrings", source: "cloud" },
               ],
             },
           ]}
@@ -82,11 +95,11 @@ function Chapter6() {
       <Encounter
         enemies="Sentry Ray x2, Sentry Gun Prototype x2, Sentry Launcher x2"
         instructions={[
-          "Cloud: Dash, Berserk, Thunder Launcher A",
-          "Cloud: Punisher x6, Operator, Thunder Launcher A",
-          "Barret: Overcharge Sentry Ray A, Thunder SGP A",
-          "Cloud: Dash Launcher B, Thunder, Tifa Thunder, Punisher",
-          "Thunder rest",
+          "Cloud: Dash, Punisher full, Berserk, 2 ATB, Thunder Launcher A",
+          "Barret: Overcharge Sentry Ray A, Cloud Thunder Launcher A, Thunder SGP A",
+          "Barret: Combo, Thunder Launcher B",
+          "Tifa: Combo, Thunder Launcher B",
+          "Cloud: Punisher Launcher B, Thunder rest",
         ]}
       />
     </Chapter>
