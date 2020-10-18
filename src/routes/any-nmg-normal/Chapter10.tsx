@@ -1,6 +1,5 @@
 import React from "react";
 import BattleSettings from "../../components/BattleSettings";
-import Bench from "../../components/Bench";
 import Boss from "../../components/Boss";
 import Chapter from "../../components/Chapter";
 import Encounter from "../../components/Encounter";
@@ -17,26 +16,26 @@ function Chapter10() {
           [
             "Aerith: Roll right, ATB Boost, Arcane Ward, Lock horn, Fira",
             "Tifa: Combo x6, Whirl",
-            "Aerith: 1 ATB, Fira",
+            "Aerith: Combo x5, Fira",
           ],
           [
-            "Aerith: Roll right, 1 ATB, Fira, Focused Thrust, Focused Strike",
-            "Cloud: Punisher x4, Focused Thrust",
-            "Tifa: Combo x6, Focused Strike x3",
+            "Aerith: Roll right, Combo x5, Fira, Focused Thrust, Focused Strike",
+            "Cloud: Punisher x4",
+            "Tifa: Pary, Combo x6, Focused Strike, Focused Thrust, Focused Strike x2",
             "Tifa: Combo x2, Whirl",
             "Aerith: Unbridled, Tempest full",
-            "Tifa: Omni, Whirl, Aerith Fire, Divekick, Whirl, Combo x2, Whirl",
+            "Tifa: Omni, Whirl, Aerith Fire, Divekick, Whirl, Combo x1, Whirl",
           ],
           [
             "Aerith: Fire, Tifa Ether Aerith",
-            "Cloud: Punisher x4, Focused Thrust, Punisher x4, Focused Thrust",
-            "Aerith: Roll, Combo",
+            "Cloud: Punisher full",
+            "Aerith: Combo, Focused Thrust",
           ],
           [
             "Aerith: Fira",
-            "Cloud: Punisher full, Aerith Fira, Focused Thrust",
-            "Tifa: Combo x6, Focused Strike, Whirl, Focused Strike",
-            "Tifa: Whirl, Divekick...",
+            "Cloud: Punisher full, Berserk, Aerith Fira, Focused Thrust",
+            "Tifa: Combo x6, Focused Strike, Focused Thrust, Whirl, Focused Strike",
+            "Tifa: Unbridled, Omni, Whirl, Divekick, Whirl, Divekick",
           ],
         ]}
       />
@@ -71,9 +70,8 @@ function Chapter10() {
             {
               name: "Tifa",
               shortcuts: [
-                { shortcut: "square", ability: "Thundara" },
-                { shortcut: "circle", ability: "Fira" },
                 { shortcut: "x", ability: "Starshower" },
+                { shortcut: "circle", ability: "Fira" },
               ],
             },
           ]}
@@ -90,7 +88,7 @@ function Chapter10() {
       <Pick item="keys" />
       <Encounter
         enemies="Wererat x3, Blugu"
-        instructions={["Berserk Blugu, TRIPOLOSKI", "Careful with sleep"]}
+        instructions={["Berserk Blugu, TRIPOLOSKI"]}
       />
       <Encounter
         enemies="Blugu x2, Scissorclaw"
@@ -98,37 +96,32 @@ function Chapter10() {
       />
       <Encounter
         enemies="Blugu, Scissorclaw x2"
-        instructions={[
-          "Aerith Fire Scissor, Cloud Fire Scissor",
-          "Whirl, Divekick if needed",
-        ]}
+        instructions={["Aerith Fire Scissor, Cloud Fire Scissor", "Punisher"]}
       />
       <Encounter
         enemies="Sahagin"
         instructions={["Cloud: Berserk, Fira, Aerith Fire"]}
       />
-      <Bench optional />
       <Encounter
         enemies="Scissorclaw x2"
         instructions={["Aerith Fire, Cloud Fire"]}
       />
       <Encounter
         enemies="Wererat x2, Blugu, Scissorclaw"
-        instructions={["Aerith Fire Scissor", "Berserk Blugu, TRIPOLOSKI"]}
+        instructions={["Aerith Fire Scissor, TRIPOLOSKI"]}
       />
       <Encounter
         enemies="Sahagin x2"
         instructions={[
-          "Berserk A, Fira A",
-          "Aerith Fira B, Punisher B",
-          "TRIPOLOSKI, Punisher",
+          "Cloud: Berserk, Fira A, Aerith Fira B",
+          "Punisher/TRIPOLOSKI",
         ]}
       />
       <Encounter
         enemies="Blugu x2, Sahagin"
         instructions={[
-          "Aerith Fira Sahagin, Cloud Fira Sahagin",
-          "Tifa: Parry Blugu, Whirl, Divekick",
+          "Aerith Fira, Cloud Berserk Sahagin",
+          "TRIPOLOSKI/Punisher",
         ]}
       />
       <Encounter

@@ -36,12 +36,16 @@ function Chapter18() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Lightning", source: "barret" },
                 { name: "Ice", source: "barret" },
                 { name: "Fire", source: "barret" },
+                { name: "Lightning", source: "barret" },
+                { name: "" },
+              ],
+              armor: [
+                { name: "" },
+                { name: "" },
                 { name: "ATB Stagger", source: "aerith" },
               ],
-              armor: [{ name: "Wind" }, { name: "" }, { name: "" }],
               summon: [{ name: "", source: "tifa" }],
             },
             {
@@ -49,8 +53,8 @@ function Chapter18() {
               weapon: [
                 { name: "", source: "aerith" },
                 { name: "", source: "aerith" },
-                { name: "Lightning", source: "tifa" },
                 { name: "", source: "tifa" },
+                { name: "Lightning" },
               ],
               armor: [
                 { name: "", source: "cloud" },
@@ -62,10 +66,10 @@ function Chapter18() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Refocus", source: "aerith" },
+                { name: "ATB Assist" },
                 { name: "ATB Stagger" },
                 { name: "First Strike", source: "barret" },
-                { name: "ATB Assist", source: "barret" },
+                { name: "Refocus", source: "aerith" },
                 { name: "ATB Boost", source: "aerith" },
               ],
               armor: [
@@ -81,7 +85,7 @@ function Chapter18() {
                 { name: "Time", source: "barret" },
                 { name: "Magnify", source: "barret" },
                 { name: "Lightning" },
-                { name: "Barrier" },
+                { name: "Subversion" },
               ],
               armor: [
                 { name: "Ice", source: "aerith" },
@@ -138,25 +142,25 @@ function Chapter18() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Lightning" },
                 { name: "Ice" },
                 { name: "Fire" },
-                { name: "ATB Stagger" },
+                { name: "Lightning" },
+                { name: "" },
               ],
               armor: [
-                { name: "Wind" },
-                { name: "Refocus", source: "tifa" },
                 { name: "First Strike", source: "tifa" },
+                { name: "Refocus", source: "tifa" },
+                { name: "ATB Stagger" },
               ],
               summon: [{ name: "Ifrit", source: "tifa" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "", source: "cloud" },
+                { name: "ATB Assist" },
                 { name: "ATB Stagger" },
                 { name: "", source: "cloud" },
-                { name: "ATB Assist" },
+                { name: "", source: "cloud" },
                 { name: "ATB Boost" },
               ],
               armor: [
@@ -172,7 +176,7 @@ function Chapter18() {
                 { name: "", source: "tifa" },
                 { name: "", source: "tifa" },
                 { name: "Lightning" },
-                { name: "Barrier" },
+                { name: "Subversion" },
               ],
               armor: [
                 { name: "Ice" },
@@ -205,16 +209,16 @@ function Chapter18() {
             "Cloud: Dash, Counter, Counterstance",
             "Cloud: Berserk, Operator, Counter x2, Focused Thrust, Mega-Potion Cloud",
             "Tifa: Whirl, Swap",
-            "Cloud: Berserk, Tifa Whirl, Punisher full",
+            "Cloud: Berserk, Tifa Whirl, Punisher full, Berserk",
           ],
           [
-            "Tifa Haste All, Cloud/Aerith Magic",
-            "Tifa: Cross Slash, ATB Boost, Starshower, Cloud Magic, Starshower, Whirl",
-            "Tifa: Aerith Mega-Potion Tifa",
+            "Tifa Haste All, Cloud Magic, Aerith Magic",
+            "Tifa: Cross Slash, ATB Boost, Starshower, Aerith Magic, Starshower, Whirl",
+            "Tifa: Combo x3, Whril, Focused Strike",
             "Cloud: Counter, Focused Thrust, Counter",
-            "Stagger: Braver, Whirl + Divekick until dead",
+            "Stagger: Berserk, Braver, Whirl + Divekick until dead",
           ],
-          ["Tifa: Braver, Aerith Magic, Whirl, Starshower x2"],
+          ["Braver, Aerith Magic, Starshower"],
         ]}
       />
     </Chapter>

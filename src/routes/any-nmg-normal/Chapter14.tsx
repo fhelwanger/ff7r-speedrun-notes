@@ -22,30 +22,10 @@ function Chapter14() {
       />
       <Shop
         name="Weapon Shop"
-        sell={[
-          "Iron Bangle x2",
-          "Mythril Armlet",
-          "Earrings",
-          "Subversion",
-          "Deadly Dodge",
-        ]}
+        sell={["Iron Bangle x2", "Mythril Armlet", "Earrings", "Deadly Dodge"]}
         buy={["Mythril Saber", "Platinum Earrings"]}
       />
       <Menu>
-        <UpgradeWeapons
-          characters={[
-            {
-              name: "Cloud",
-              weapons: [
-                { name: "Mythril Saber", upgrade: "MP+10, Auto - Attack" },
-              ],
-            },
-            {
-              name: "Tifa",
-              weapons: [{ name: "Mythril Claws", upgrade: "Auto - Attack" }],
-            },
-          ]}
-        />
         <Equipment
           characters={[
             {
@@ -54,7 +34,8 @@ function Chapter14() {
                 { name: "Mythril Saber" },
                 { name: "Heavy-Duty Bracer", source: "tifa" },
                 { name: "Platinum Earrings" },
-                { name: "Fury Ring", source: "barret" },
+                { name: "Power Wristguards", source: "barret" },
+                { name: "Fury Ring", source: "tifa" },
               ],
             },
             {
@@ -69,14 +50,14 @@ function Chapter14() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "Magnify", source: "barret" },
+                { name: "Magnify", source: "tifa" },
                 { name: "Lightning", source: "barret" },
-                { name: "Barrier", source: "tifa" },
+                { name: "Subversion", source: "barret" },
               ],
               armor: [
-                { name: "ATB Boost", source: "barret" },
+                { name: "Refocus", source: "inventory" },
                 { name: "First Strike", source: "barret" },
-                { name: "Refocus", source: "barret" },
+                { name: "ATB Boost", source: "barret" },
               ],
               summon: [{ name: "" }],
             },
@@ -84,27 +65,27 @@ function Chapter14() {
               name: "Barret",
               weapon: [
                 { name: "Lightning", source: "cloud" },
-                { name: "Binding", source: "cloud" },
+                { name: "Wind", source: "cloud" },
                 { name: "", source: "cloud" },
                 { name: "", source: "cloud" },
               ],
               armor: [
-                { name: "Wind", source: "cloud" },
+                { name: "Binding", source: "cloud" },
                 { name: "Ice" },
                 { name: "Fire" },
               ],
-              summon: [{ name: "", source: "tifa" }],
+              summon: [{ name: "" }],
             },
             {
               name: "Tifa",
               weapon: [
                 { name: "ATB Assist", source: "inventory" },
-                { name: "Fire" },
+                { name: "Fire", source: "tifa" },
                 { name: "Lightning" },
-                { name: "Ice" },
+                { name: "Ice", source: "tifa" },
               ],
               armor: [{ name: "First Strike" }, { name: "Parry" }],
-              summon: [{ name: "Ifrit", source: "barret" }],
+              summon: [{ name: "Ifrit" }],
             },
           ]}
         />
@@ -144,6 +125,18 @@ function Chapter14() {
         enemies="Blugu, Wererat x3"
         instructions={["Dash, TRIPOLOSKI, Divekick"]}
       />
+      <Menu>
+        <UpgradeWeapons
+          characters={[
+            {
+              name: "Cloud",
+              weapons: [
+                { name: "Mythril Saber", upgrade: "Auto - Attack, MP+10" },
+              ],
+            },
+          ]}
+        />
+      </Menu>
       <Encounter
         enemies="Scissorclaw x3"
         instructions={["Cloud: Fira all, Starshower"]}
@@ -165,7 +158,6 @@ function Chapter14() {
         instructions={[
           "Cloud: ATB Boost, Fira All, Starshower Shoat, Fira All",
           "Punisher, TRIPOLOSKI",
-          "Careful with headbutt",
         ]}
       />
       <Encounter
@@ -173,7 +165,6 @@ function Chapter14() {
         instructions={[
           "Cloud: ATB Boost, Fira All, Starshower Sahagin, Fira All",
           "Punisher, TRIPOLOSKI",
-          "Careful with headbutt/jump",
         ]}
       />
       <Encounter
@@ -181,7 +172,6 @@ function Chapter14() {
         instructions={["ATB Boost, Fira All, Starshower Sahagin, Fira All"]}
       />
       <Pick item="Ether" />
-      <Pick item="Protective Boots" />
       <Menu>
         <Equipment
           characters={[
@@ -192,14 +182,14 @@ function Chapter14() {
           ]}
         />
       </Menu>
+      <Pick item="Protective Boots" />
       <Encounter
         enemies="Mischievous Shoat, Abzu Shoat x3"
         instructions={[
           "Cloud: ATB Boost",
           "Barret: Overcharge",
-          "Tifa: Focused Thrust, 2 ATB, Unbridled x2, Focused Shot",
-          "Tifa: Combo + Parry until he goes to the corner",
-          "Tifa: Chi Trap x2, Combo + Parry until stagger",
+          "Tifa: Focused Thrust, 2 ATB, Unbridled x2",
+          "Tifa: Combo + Parry, 2 ATB, Barret Sleep, Chi Trap x2, Combo + Parry until stagger",
           "Tifa: Rise, Omni, Everyone Fira",
         ]}
       />
@@ -226,16 +216,30 @@ function Chapter14() {
         <Materia
           characters={[
             {
+              name: "Cloud",
+              weapon: [
+                { name: "Fire" },
+                { name: "Magnify" },
+                { name: "Lightning" },
+                { name: "Subversion" },
+              ],
+              armor: [
+                { name: "ATB Boost", source: "inventory" },
+                { name: "First Strike" },
+              ],
+              summon: [{ name: "" }],
+            },
+            {
               name: "Barret",
               weapon: [
                 { name: "Lightning" },
-                { name: "Binding" },
+                { name: "Wind" },
                 { name: "" },
                 { name: "" },
               ],
               armor: [
+                { name: "Binding" },
                 { name: "First Strike", source: "tifa" },
-                { name: "Ice" },
                 { name: "Fire" },
               ],
               summon: [{ name: "" }],
@@ -249,9 +253,9 @@ function Chapter14() {
                 { name: "Ice" },
               ],
               armor: [
-                { name: "Wind", source: "barret" },
+                { name: "Ice", source: "barret" },
                 { name: "Parry" },
-                { name: "Refocus", source: "inventory" },
+                { name: "Refocus", source: "cloud" },
               ],
               summon: [{ name: "Ifrit" }],
             },
@@ -280,14 +284,14 @@ function Chapter14() {
           ],
           [
             "Tifa: Combo until stagger",
-            "Tifa: Omni, Whirl, Divekick, Cloud Fira",
-            "Tifa: Whirl, Divekick, Cloud ATB Boost, Whirl",
+            "Tifa: Omni, Whirl, Cloud Fira, Divekick",
+            "Tifa: Whirl, Cloud ATB Boost, Divekick, Whirl",
           ],
           [
-            "Cloud Fira Shoats",
-            "Tifa: Combo until 2 ATB, fill Limit",
-            "Tifa: Cloud Barrier Tifa, Starshower, Starshower, Somersault",
-            "Should get at least 3 Shoats, otherwise kill Byabapolis x2 in Chapter 15",
+            "Cloud Fira Shoats, Overcharge Abzu",
+            "Tifa: Combo + Whirl x2, fill Limit, Mega-Potions as needed",
+            "Tifa: Barret Sleep, Starshower, Starshower, Somersault",
+            "Should get at least 4 Shoats, otherwise kill Byabapolis x2 in Chapter 15",
           ],
         ]}
       />

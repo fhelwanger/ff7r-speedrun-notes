@@ -18,8 +18,8 @@ function Chapter12() {
         enemies="Mysterious Spectre, Enigmatic Spectre"
         instructions={[
           "Aerith: Tempest full, Arcane Ward, ATB Boost Mysterious",
-          "Aerith: Aerora, Aerora Enigmatic",
-          "Tifa: 2 ATB, Starshower, Divekick Enigmatic",
+          "Aerith: Aerora x2 Enigmatic",
+          "Tifa: 2 ATB, Starshower, Divekick, Whirl Enigmatic",
         ]}
       />
       <Menu>
@@ -41,12 +41,12 @@ function Chapter12() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "First Strike", source: "aerith" },
+                { name: "ATB Boost", source: "aerith" },
                 { name: "Lightning" },
               ],
               armor: [
-                { name: "ATB Boost", source: "aerith" },
                 { name: "Refocus" },
+                { name: "First Strike", source: "aerith" },
               ],
               summon: [{ name: "Ifrit", source: "tifa" }],
             },
@@ -63,7 +63,7 @@ function Chapter12() {
             {
               name: "Aerith",
               weapon: [
-                { name: "Wind", source: "cloud" },
+                { name: "", source: "cloud" },
                 { name: "Ice", source: "cloud" },
                 { name: "Fire" },
                 { name: "" },
@@ -87,21 +87,6 @@ function Chapter12() {
             },
           ]}
         />
-        <UpgradeWeapons
-          characters={[
-            {
-              name: "Cloud",
-              weapons: [{ name: "Hardedge", upgrade: "Auto - Attack" }],
-            },
-            {
-              name: "Tifa",
-              weapons: [
-                { name: "Metal Knuckles", upgrade: "Auto - Attack" },
-                { name: "Feathered Gloves", upgrade: "Auto - Attack" },
-              ],
-            },
-          ]}
-        />
         <BattleSettings
           characters={[
             {
@@ -115,7 +100,7 @@ function Chapter12() {
         enemies="Elite Security Officer x3, Sentry Gun / Elite Riot Trooper x2, Elite Grenadier"
         instructions={[
           "Lure everyone to the top of stairs",
-          "ATB Boost, Fira",
+          "Fira, ATB Boost, Fira, TRIPOLOSKI",
           "Ignore Sentry Gun",
         ]}
       />
@@ -135,12 +120,11 @@ function Chapter12() {
       />
       <Encounter enemies="Elite Riot Trooper x2" instructions={["Fira"]} />
       <Encounter
-        enemies="Elite Riot Trooper x2"
-        instructions={["ATB Boost, Fira, (Fire + Punisher)", "Block for 2 ATB"]}
-      />
-      <Encounter
-        enemies="Elite Grenadier, Helitrooper"
-        instructions={["Fira, Fire Heli", "Tifa Divekick Grenadier"]}
+        enemies="Elite Riot Trooper x2 / Elite Grenadier, Helitrooper"
+        instructions={[
+          "Riot Troopers: Cloud Fira A, Tifa Fira B, Punisher",
+          "Helitrooper + Grenadier: Block for 2 ATB, Fira, ATB Boost, Fire Helitrooper, Fire Grenadier",
+        ]}
       />
       <Encounter
         enemies="Elite Shock Trooper, Helitrooper x2, Sentry Gun x2"
@@ -148,14 +132,11 @@ function Chapter12() {
           "Shock Trooper: Cloud Fira, Tifa Fira, Punisher",
           "Heli A: Fira, ATB Boost, Fire",
           "Heli B: Cloud Fira, Whirl Sentries, Tifa Fira",
-          "Sentries: Whirl, Starshower",
+          "Sentries: Whirl (2 ATB), Tifa Thunder each",
         ]}
       />
       <Pick item="Elixir" optional />
-      <Shop
-        name="Vending Machine"
-        buy={["Mega-Potion x3", "Ether x2", "Barrier"]}
-      />
+      <Shop name="Vending Machine" buy={["Mega-Potion x3", "Ether x2"]} />
       <Bench optional description="Don't need MP for the Turks" />
       <Menu>
         <Equipment
@@ -190,24 +171,20 @@ function Chapter12() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "First Strike" },
+                { name: "ATB Boost" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "ATB Boost" }, { name: "Parry", source: "tifa" }],
+              armor: [{ name: "Refocus" }, { name: "First Strike" }],
               summon: [{ name: "", source: "tifa" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "Barrier", source: "inventory" },
+                { name: "Subversion" },
                 { name: "Fire" },
                 { name: "Lightning" },
-                { name: "Ice", source: "inventory" },
               ],
-              armor: [
-                { name: "First Strike" },
-                { name: "Refocus", source: "cloud" },
-              ],
+              armor: [{ name: "First Strike" }, { name: "Parry" }],
               summon: [{ name: "Ifrit", source: "cloud" }],
             },
             {
@@ -227,7 +204,7 @@ function Chapter12() {
             {
               name: "Aerith",
               weapon: [
-                { name: "Wind" },
+                { name: "" },
                 { name: "", source: "barret" },
                 { name: "", source: "barret" },
                 { name: "" },
@@ -237,27 +214,40 @@ function Chapter12() {
             },
           ]}
         />
+        <UpgradeWeapons
+          characters={[
+            {
+              name: "Cloud",
+              weapons: [{ name: "Hardedge", upgrade: "Auto - Attack" }],
+            },
+            {
+              name: "Tifa",
+              weapons: [
+                { name: "Metal Knuckles", upgrade: "Auto - Attack" },
+                { name: "Feathered Gloves", upgrade: "Auto - Attack" },
+              ],
+            },
+          ]}
+        />
       </Menu>
       <Boss
         name="Reno, Rude"
         phases={[
           [
-            "Cloud: Roll back, Parry left, Counter, Starshower",
+            "Cloud: Roll and walk back, Counter, Starshower",
             "Cloud: Punisher full, Berserk, TRIPOLOSKI, Whirl",
             "Cloud: Punisher x2, TRIPOLOSKI, Whirl, Punisher",
           ],
           [
-            "Barret: Overcharge, Thunder, Combo, Charge x3 Helicopter",
-            "Barret: Overcharge Reno",
-            "Cloud: Dash, Starshower, Punisher full, Berserk, Punisher x4, Operator",
-            "Cloud: Wait Pyramid, TRIPOLOSKI",
-            "Tifa: Cloud ATB Boost, 2 ATB",
-            "Barret: Thunder, Charge, Charge, Overcharge, Thunder",
+            "Barret: Overcharge, Thunder, Combo, Thunder Helicopter",
+            "Barret: Charge x3, Overcharge Reno",
+            "Cloud: Starshower, Punisher full, Berserk, Punisher x4, Wait Pyramid, TRIPOLOSKI",
+            "Tifa: Cloud ATB Boost, Combo (2 ATB)",
+            "Barret: Thunder, Combo, Swap to Cloud",
           ],
           [
-            "TRIPOLOSKI, Aero Reno",
-            "Punisher, Starshower, TRIPOLOSKI x2",
-            "Can use Sleep as a backup",
+            "Cloud TRIPOLOSKI, Barret Aero Reno",
+            "Punisher x2, TRIPOLOSKI, Starshower x2, Punisher full, Berserk, TRIPOLOSKI",
           ],
         ]}
       />

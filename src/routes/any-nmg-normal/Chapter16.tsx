@@ -33,7 +33,7 @@ function Chapter16() {
                 { name: "Fire" },
                 { name: "Magnify", source: "tifa" },
                 { name: "Lightning" },
-                { name: "Barrier" },
+                { name: "Subversion" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -107,14 +107,18 @@ function Chapter16() {
       />
       <Encounter
         enemies="Elite Security Officer x2, Elite Grenadier x2, Guard Dog x3"
-        instructions={["Fira All, ATB Boost, Starshowers..."]}
+        instructions={["Fira All, ATB Boost, Starshowers"]}
       />
       <Encounter
         enemies="Elite Riot Trooper x3, 3-C Soldier Operator x2, Guard Dog x3"
-        instructions={["Fira All, ATB Boost, Starshowers..."]}
+        instructions={["Fira All, ATB Boost, Starshowers"]}
       />
       <Encounter
-        enemies="Elite Security Officer x2 / Elite Security Officer x3"
+        enemies="Elite Security Officer x2"
+        instructions={["Fira All/TRIPOLOSKI + Starshower"]}
+      />
+      <Encounter
+        enemies="Elite Security Officer x3"
         instructions={["Fira All/TRIPOLOSKI + Starshower"]}
       />
       <Menu>
@@ -137,7 +141,7 @@ function Chapter16() {
                 { name: "Fire" },
                 { name: "Binding", source: "barret" },
                 { name: "Lightning" },
-                { name: "Barrier" },
+                { name: "Subversion" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -178,18 +182,18 @@ function Chapter16() {
       <Encounter
         enemies="Cutter x2"
         instructions={[
-          "A: Overcharge, Cloud Thundara, Focused Strike until stagger",
+          "A: Overcharge, Cloud Thundara, Whirl, Focused Strike x3",
           "Stagger: Cloud/Barret Thundara, Whirl + Divekick",
-          "B: Cloud 1 ATB, ATB Boost, Thundara, Focused Strike until stagger",
+          "B: Cloud Counter/1 ATB, ATB Boost, Thundara, Whirl, Focused Strike x3",
           "Stagger: Cloud/Barret Thundara, Whirl + Divekick",
         ]}
       />
       <Shop name="Chadley" buy={["ATB Stagger x2", "Reset Hardedge"]} />
+      <Bench />
       <Shop
         name="Vending Machine"
         buy={["Mega-Potion x3", "Ether x2", "Supreme Bracer"]}
       />
-      <Bench />
       <Menu>
         <Equipment
           characters={[
@@ -205,12 +209,27 @@ function Chapter16() {
         <Materia
           characters={[
             {
+              name: "Cloud",
+              weapon: [
+                { name: "Fire" },
+                { name: "Binding" },
+                { name: "Lightning" },
+                { name: "Subversion" },
+              ],
+              armor: [
+                { name: "ATB Boost" },
+                { name: "First Strike" },
+                { name: "ATB Stagger", source: "inventory" },
+              ],
+              summon: [{ name: "" }],
+            },
+            {
               name: "Barret",
               weapon: [
                 { name: "Time", source: "barret" },
                 { name: "Magnify" },
                 { name: "Wind" },
-                { name: "ATB Stagger", source: "inventory" },
+                { name: "" },
               ],
               armor: [
                 { name: "Lightning", source: "barret" },
@@ -252,8 +271,8 @@ function Chapter16() {
             "Cloud: Sleep Specimen",
             "Barret: Overcharge OPT, Haste All, Combo + Charge x2",
             "Tifa: Starshower Left Claw, Whirl, Divekick, Focused Shot Specimen",
-            "Tifa: Combo x6, Whirl, Sleep, Overpower",
-            "Tifa: Combo x6, Focused Strike x3, Whirl",
+            "Tifa: Combo x6, Whirl, Overpower",
+            "Tifa: Combo x6, Sleep, Focused Strike x3, Whirl",
             "Tifa: Combo x3, Unbridled, Combo",
           ],
           [
@@ -262,11 +281,10 @@ function Chapter16() {
             "Tifa: Starshower, Divekick, Whirl, Whril, Whril",
           ],
           [
-            "Tifa: Avoid Expulsion, Barret Haste All",
-            "Cloud: Fira Left Claw, ATB Boost, Counter, Sleep",
+            "Tifa: Avoid Expulsion",
+            "Cloud: Counter, Sleep, ATB Boost",
             "Tifa: Whirl, Divekick Left Claw",
-            "Barret: Overcharge",
-            "Tifa: Focused Thrust, Focused Shot, Focused Strike until stagger",
+            "Tifa: Whirl, Focused Thrust, Focused Shot, Focused Strike, Focused Thrust, Focused Strike",
             "Stagger: Unbridled, Omni, Whirl, Divekick, Whirl, Divekick",
           ],
         ]}
@@ -289,12 +307,12 @@ function Chapter16() {
                 { name: "Fire" },
                 { name: "Magnify", source: "barret" },
                 { name: "Lightning" },
-                { name: "Barrier" },
+                { name: "Subversion" },
               ],
               armor: [
                 { name: "ATB Boost" },
                 { name: "First Strike" },
-                { name: "ATB Stagger", source: "barret" },
+                { name: "ATB Stagger" },
               ],
               summon: [{ name: "Ifrit", source: "tifa" }],
             },
@@ -304,7 +322,7 @@ function Chapter16() {
                 { name: "Time" },
                 { name: "Binding", source: "cloud" },
                 { name: "Wind" },
-                { name: "", source: "cloud" },
+                { name: "" },
               ],
               armor: [
                 { name: "Lightning" },

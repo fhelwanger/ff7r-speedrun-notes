@@ -16,7 +16,7 @@ function Chapter6() {
         enemies="Grashtrike x3"
         instructions={[
           "Cloud: Berserk, Blizzard",
-          "Barret: Overcharge, Focused Shot",
+          "Barret: Overcharge, Focused Shot if less than 70% learned",
           "Cloud: Punisher/Blizzard",
         ]}
       />
@@ -26,10 +26,7 @@ function Chapter6() {
       />
       <Encounter
         enemies="Sentry Gun Prototype x4"
-        instructions={[
-          "Barret: Overcharge A",
-          "Tifa: Whirl A, Barret Thunder D, Cloud Thunder C, Whirl A, Tifa Thunder B",
-        ]}
+        instructions={["Cloud Thunder one, Tifa Flee"]}
       />
       <Menu>
         <BattleSettings

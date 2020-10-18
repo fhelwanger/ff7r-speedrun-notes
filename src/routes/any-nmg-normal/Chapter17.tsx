@@ -19,17 +19,17 @@ function Chapter17() {
       <Pick item="Ether" />
       <Encounter
         enemies="Unknown Entity x4"
-        instructions={["TRIPOLOSKI, ATB Boost, TRIPOLOSKI"]}
+        instructions={["TRIPOLOSKI, ATB Boost, TRIPOLOSKI/Punisher"]}
       />
       <Encounter
         enemies="Unknown Entity x2"
-        instructions={["TRIPOLOSKI, ATB Boost, TRIPOLOSKI"]}
+        instructions={["TRIPOLOSKI, Punisher/TRIPOLOSKI"]}
       />
       <Encounter
         enemies="Monodrive x2, Mark II Monodrive x2"
         instructions={[
           "Barret: Overcharge, Haste Cloud",
-          "Cloud: Punisher + TRIPOLOSKI, Aero when shield up",
+          "Cloud: Punisher/TRIPOLOSKI, Aerora when shield up",
           "Counter when inside ground",
         ]}
       />
@@ -55,7 +55,7 @@ function Chapter17() {
                 { name: "Lightning", source: "cloud" },
                 { name: "Magnify" },
                 { name: "Fire", source: "cloud" },
-                { name: "Barrier" },
+                { name: "Subversion" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -71,6 +71,14 @@ function Chapter17() {
             {
               name: "Cloud",
               shortcuts: [{ shortcut: "square", ability: "Thundara" }],
+            },
+            {
+              name: "Aerith",
+              shortcuts: [
+                { shortcut: "square", ability: "Thundara" },
+                { shortcut: "circle", ability: "Blizzara All" },
+                { shortcut: "x", ability: "Thundaga" },
+              ],
             },
           ]}
         />
@@ -127,7 +135,7 @@ function Chapter17() {
                 { name: "ATB Assist", source: "barret" },
                 { name: "ATB Stagger" },
                 { name: "Lightning" },
-                { name: "Wind", source: "aerith" },
+                { name: "", source: "aerith" },
               ],
               armor: [
                 { name: "First Strike", source: "barret" },
@@ -142,7 +150,7 @@ function Chapter17() {
                 { name: "Ice", source: "tifa" },
                 { name: "Magnify", source: "cloud" },
                 { name: "Lightning", source: "cloud" },
-                { name: "Barrier", source: "cloud" },
+                { name: "Subversion", source: "cloud" },
               ],
               armor: [
                 { name: "ATB Boost", source: "cloud" },
@@ -180,17 +188,6 @@ function Chapter17() {
                 { name: "Fire", source: "tifa" },
               ],
               summon: [{ name: "" }],
-            },
-          ]}
-        />
-        <BattleSettings
-          characters={[
-            {
-              name: "Aerith",
-              shortcuts: [
-                { shortcut: "square", ability: "Thundara" },
-                { shortcut: "circle", ability: "Blizzara All" },
-              ],
             },
           ]}
         />
@@ -261,28 +258,28 @@ function Chapter17() {
             {
               name: "Barret",
               weapon: [
-                { name: "Lightning", source: "barret" },
-                { name: "Magnify", source: "aerith" },
-                { name: "Wind" },
-                { name: "" },
+                { name: "Time" },
+                { name: "ATB Assist", source: "tifa" },
+                { name: "ATB Stagger", source: "tifa" },
+                { name: "First Strike", source: "tifa" },
               ],
               armor: [
-                { name: "Time", source: "barret" },
-                { name: "ATB Assist", source: "tifa" },
-                { name: "First Strike", source: "tifa" },
+                { name: "Lightning" },
+                { name: "Magnify", source: "aerith" },
+                { name: "Fire" },
               ],
               summon: [{ name: "" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "Ice", source: "barret" },
-                { name: "ATB Stagger" },
+                { name: "Binding", source: "barret" },
+                { name: "Wind", source: "barret" },
                 { name: "Lightning" },
-                { name: "Wind" },
+                { name: "" },
               ],
               armor: [
-                { name: "Fire", source: "barret" },
+                { name: "", source: "barret" },
                 { name: "Parry" },
                 { name: "", source: "cloud" },
               ],
@@ -292,9 +289,9 @@ function Chapter17() {
               name: "Aerith",
               weapon: [
                 { name: "Ice" },
-                { name: "Binding", source: "barret" },
+                { name: "Ice", source: "barret" },
                 { name: "", source: "cloud" },
-                { name: "Barrier" },
+                { name: "Subversion" },
               ],
               armor: [
                 { name: "", source: "cloud" },
@@ -331,14 +328,20 @@ function Chapter17() {
             },
             {
               name: "Barret",
-              shortcuts: [{ shortcut: "square", ability: "Thundara All" }],
+              shortcuts: [
+                { shortcut: "circle", ability: "Blizzara All" },
+                { shortcut: "square", ability: "Thundara All" },
+              ],
             },
           ]}
         />
       </Menu>
       <Encounter
         enemies="Zenene x2"
-        instructions={["Barret Haste Cloud", "Counterstance/TRIPOLOSKI"]}
+        instructions={[
+          "Barret Haste Cloud, Counterstance",
+          "Punisher/TRIPOLOSKI/ATB Boost",
+        ]}
       />
       <Menu
         instructions={[
@@ -349,9 +352,9 @@ function Chapter17() {
       <Encounter
         enemies="M.O.T.H Unit, Shock-Ray x3"
         instructions={[
-          "Cloud: Learn Counterstance/Thundaga",
+          "Cloud: Counter + Counterstance until Learned",
           "Barret: Overcharge, Thundara All x2",
-          "Cloud: ATB Boost, Thundaga, Thundaga",
+          "Cloud: Thundaga/ATB Boost",
         ]}
       />
       <Menu>
@@ -368,16 +371,27 @@ function Chapter17() {
             {
               name: "Barret",
               weapon: [
-                { name: "Time", source: "barret" },
-                { name: "Magnify" },
-                { name: "Wind" },
-                { name: "" },
-              ],
-              armor: [
-                { name: "Lightning", source: "barret" },
+                { name: "Time" },
                 { name: "ATB Assist" },
+                { name: "ATB Stagger" },
                 { name: "First Strike" },
               ],
+              armor: [
+                { name: "Ice", source: "aerith" },
+                { name: "Magnify" },
+                { name: "Lightning", source: "barret" },
+              ],
+              summon: [{ name: "" }],
+            },
+            {
+              name: "Aerith",
+              weapon: [
+                { name: "Fire", source: "barret" },
+                { name: "Ice" },
+                { name: "" },
+                { name: "Subversion" },
+              ],
+              armor: [{ name: "" }, { name: "" }, { name: "" }],
               summon: [{ name: "" }],
             },
           ]}
@@ -386,22 +400,16 @@ function Chapter17() {
       <Encounter
         enemies="Sledgeworm x3"
         instructions={[
-          "Barret: Haste All, Overcharge, Combo, Steelskin, Lifesaver",
-          "Cloud: TRIPOLOSKI/Counterstance, Focused Thrust during Torpid",
+          "Barret Thundara, Cloud Dash, Focused Thrust",
+          "Punisher/TRIPOLOSKI/Focused Thrust/Counterstance",
         ]}
       />
       <Pick item="Chain Bangle" />
       <Boss
         name="Brain Pod"
         phases={[
-          [
-            "Barret: Overcharge",
-            "Cloud: Punisher full, Berserk, Punisher full",
-          ],
-          [
-            "Barret: Haste All, Thundaga",
-            "Cloud: Berserk, TRIPOLOSKI/Counterstance",
-          ],
+          ["Berserk, Overcharge, Punisher full, Operator, Punisher"],
+          ["Berserk, TRIPOLOSKI/ATB Boost, Barret Blizzara All"],
         ]}
       />
       <Encounter
@@ -423,25 +431,21 @@ function Chapter17() {
               name: "Tifa",
               weapon: [
                 { name: "ATB Assist", source: "barret" },
-                { name: "ATB Stagger" },
-                { name: "Lightning" },
+                { name: "ATB Stagger", source: "barret" },
+                { name: "First Strike", source: "barret" },
                 { name: "Refocus", source: "cloud" },
                 { name: "" },
               ],
-              armor: [
-                { name: "First Strike", source: "barret" },
-                { name: "Parry" },
-                { name: "" },
-              ],
+              armor: [{ name: "" }, { name: "Parry" }, { name: "" }],
               summon: [{ name: "Ifrit", source: "cloud" }],
             },
             {
               name: "Aerith",
               weapon: [
-                { name: "Ice" },
                 { name: "Magnify", source: "barret" },
+                { name: "Ice" },
                 { name: "Lightning", source: "cloud" },
-                { name: "Barrier" },
+                { name: "Subversion" },
               ],
               armor: [
                 { name: "ATB Boost", source: "cloud" },
@@ -457,7 +461,7 @@ function Chapter17() {
                 { name: "" },
                 { name: "", source: "aerith" },
                 { name: "", source: "aerith" },
-                { name: "Wind", source: "tifa" },
+                { name: "", source: "tifa" },
               ],
               armor: [
                 { name: "", source: "aerith" },
@@ -470,14 +474,14 @@ function Chapter17() {
               name: "Barret",
               weapon: [
                 { name: "Time" },
-                { name: "Binding", source: "aerith" },
-                { name: "Wind" },
-                { name: "" },
+                { name: "Binding", source: "tifa" },
+                { name: "Wind", source: "tifa" },
+                { name: "Lightning", source: "tifa" },
               ],
               armor: [
+                { name: "Ice" },
+                { name: "Fire", source: "aerith" },
                 { name: "Lightning" },
-                { name: "Ice", source: "tifa" },
-                { name: "Fire", source: "tifa" },
               ],
               summon: [{ name: "" }],
             },
@@ -489,12 +493,18 @@ function Chapter17() {
               name: "Aerith",
               shortcuts: [{ ability: "Leader" }],
             },
+            {
+              name: "Cloud",
+              shortcuts: [{ shortcut: "square", ability: "Haste All" }],
+            },
           ]}
         />
       </Menu>
       <Encounter
         enemies="Sledgeworm x2"
-        instructions={["Aerith: Arcane Ward, ATB Boost, Thundara"]}
+        instructions={[
+          "Aerith: Arcane Ward, ATB Boost, Thundaga/ra + Divekick",
+        ]}
       />
       <Encounter
         enemies="Enhanced Shock Trooper x2"
@@ -514,7 +524,7 @@ function Chapter17() {
         enemies="Shock-Ray x2, Slug-Ray x2"
         instructions={["Arcane Ward, ATB Boost, Thundaras"]}
       />
-      <Dialogue details="Aerith needs 57 MP, pull lever number 4" />
+      <Dialogue details="Pull lever number 4 / Aerith needs 57 MP" />
       <Menu>
         <Materia
           characters={[
@@ -523,24 +533,20 @@ function Chapter17() {
               weapon: [
                 { name: "ATB Assist" },
                 { name: "ATB Stagger" },
-                { name: "Lightning" },
+                { name: "Lightning", source: "barret" },
                 { name: "Refocus" },
                 { name: "" },
               ],
-              armor: [
-                { name: "Lightning", source: "barret" },
-                { name: "Parry" },
-                { name: "" },
-              ],
+              armor: [{ name: "" }, { name: "Parry" }, { name: "" }],
               summon: [{ name: "Ifrit" }],
             },
             {
               name: "Aerith",
               weapon: [
-                { name: "Ice" },
                 { name: "Magnify" },
+                { name: "Ice" },
                 { name: "Lightning" },
-                { name: "Barrier" },
+                { name: "Subversion" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -553,10 +559,10 @@ function Chapter17() {
             {
               name: "Cloud",
               weapon: [
+                { name: "" },
                 { name: "First Strike", source: "aerith" },
                 { name: "" },
                 { name: "" },
-                { name: "Wind" },
               ],
               armor: [{ name: "" }, { name: "" }, { name: "" }],
               summon: [{ name: "" }],
@@ -567,29 +573,14 @@ function Chapter17() {
                 { name: "Time" },
                 { name: "Binding" },
                 { name: "Wind" },
-                { name: "" },
+                { name: "Lightning" },
               ],
               armor: [
-                { name: "First Strike", source: "tifa" },
                 { name: "Ice" },
                 { name: "Fire" },
+                { name: "First Strike", source: "tifa" },
               ],
               summon: [{ name: "" }],
-            },
-          ]}
-        />
-        <BattleSettings
-          characters={[
-            {
-              name: "Aerith",
-              shortcuts: [
-                { shortcut: "circle", ability: "Thundaga" },
-                { shortcut: "x", ability: "Soul Drain" },
-              ],
-            },
-            {
-              name: "Cloud",
-              shortcuts: [{ shortcut: "square", ability: "Haste All" }],
             },
           ]}
         />
@@ -605,8 +596,7 @@ function Chapter17() {
           ],
         ]}
       />
-      <Shop name="Vending Machine" buy={["Mega-Potion x3", "Ether x2"]} />
-      <Bench />
+      <Bench optional />
       <Menu>
         <Equipment
           characters={[
@@ -627,12 +617,12 @@ function Chapter17() {
                 { name: "Time", source: "barret" },
                 { name: "Magnify", source: "aerith" },
                 { name: "Binding", source: "barret" },
-                { name: "Wind" },
+                { name: "" },
               ],
               armor: [
+                { name: "" },
+                { name: "" },
                 { name: "First Strike", source: "tifa" },
-                { name: "" },
-                { name: "" },
               ],
               summon: [{ name: "" }],
             },
@@ -641,22 +631,18 @@ function Chapter17() {
               weapon: [
                 { name: "ATB Assist" },
                 { name: "ATB Stagger" },
-                { name: "Lightning" },
+                { name: "", source: "cloud" },
                 { name: "Refocus" },
                 { name: "" },
               ],
-              armor: [
-                { name: "", source: "cloud" },
-                { name: "Parry" },
-                { name: "" },
-              ],
+              armor: [{ name: "" }, { name: "Parry" }, { name: "" }],
               summon: [{ name: "Ifrit" }],
             },
             {
               name: "Aerith",
               weapon: [
-                { name: "Ice" },
                 { name: "", source: "cloud" },
+                { name: "Ice" },
                 { name: "Lightning" },
               ],
               armor: [
@@ -673,9 +659,9 @@ function Chapter17() {
                 { name: "", source: "cloud" },
                 { name: "", source: "cloud" },
                 { name: "Wind" },
-                { name: "" },
+                { name: "Lightning" },
               ],
-              armor: [{ name: "Lightning" }, { name: "Ice" }, { name: "Fire" }],
+              armor: [{ name: "Ice" }, { name: "Fire" }, { name: "Lightning" }],
               summon: [{ name: "" }],
             },
           ]}
@@ -713,6 +699,7 @@ function Chapter17() {
           ],
         ]}
       />
+      <Shop name="Vending Machine" buy={["Mega-Potion x3", "Ether x2"]} />
       <Bench />
       <Menu>
         <Equipment
@@ -734,9 +721,9 @@ function Chapter17() {
                 { name: "", source: "barret" },
                 { name: "", source: "barret" },
                 { name: "Binding" },
-                { name: "Wind" },
+                { name: "" },
               ],
-              armor: [{ name: "First Strike" }, { name: "" }, { name: "" }],
+              armor: [{ name: "" }, { name: "" }, { name: "First Strike" }],
               summon: [{ name: "Ifrit", source: "tifa" }],
             },
             {
@@ -745,17 +732,17 @@ function Chapter17() {
                 { name: "Time", source: "cloud" },
                 { name: "Magnify", source: "cloud" },
                 { name: "Wind" },
-                { name: "ATB Assist", source: "tifa" },
+                { name: "Lightning" },
               ],
-              armor: [{ name: "Lightning" }, { name: "Ice" }, { name: "Fire" }],
+              armor: [{ name: "Ice" }, { name: "Fire" }, { name: "Lightning" }],
               summon: [{ name: "" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "", source: "barret" },
+                { name: "ATB Assist" },
                 { name: "ATB Stagger" },
-                { name: "Lightning" },
+                { name: "" },
                 { name: "Refocus" },
                 { name: "" },
               ],
@@ -773,6 +760,19 @@ function Chapter17() {
             {
               name: "Barret",
               shortcuts: [{ shortcut: "square", ability: "Thundara" }],
+            },
+            {
+              name: "Tifa",
+              shortcuts: [
+                { shortcut: "square", ability: "Unbridled Strength" },
+              ],
+            },
+            {
+              name: "Aerith",
+              shortcuts: [
+                { shortcut: "triangle", ability: "Soul Drain" },
+                { shortcut: "circle", ability: "Fira" },
+              ],
             },
           ]}
         />
@@ -807,18 +807,18 @@ function Chapter17() {
                 { name: "Time" },
                 { name: "Magnify" },
                 { name: "First Strike", source: "cloud" },
-                { name: "ATB Assist" },
+                { name: "Lightning" },
               ],
-              armor: [{ name: "Lightning" }, { name: "Ice" }, { name: "Fire" }],
+              armor: [{ name: "Ice" }, { name: "Fire" }, { name: "Lightning" }],
               summon: [{ name: "" }],
             },
             {
               name: "Aerith",
               weapon: [
-                { name: "Ice" },
                 { name: "Refocus", source: "tifa" },
+                { name: "Ice" },
                 { name: "Lightning" },
-                { name: "Barrier" },
+                { name: "Subversion" },
               ],
               armor: [
                 { name: "ATB Boost" },
@@ -834,21 +834,21 @@ function Chapter17() {
                 { name: "" },
                 { name: "" },
                 { name: "Binding" },
-                { name: "Wind" },
+                { name: "" },
               ],
               armor: [
+                { name: "" },
+                { name: "" },
                 { name: "Wind", source: "barret" },
-                { name: "" },
-                { name: "" },
               ],
               summon: [{ name: "Ifrit" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "" },
+                { name: "ATB Assist" },
                 { name: "ATB Stagger" },
-                { name: "Lightning" },
+                { name: "" },
                 { name: "", source: "aerith" },
                 { name: "" },
               ],
@@ -862,21 +862,22 @@ function Chapter17() {
         name="Arsenal"
         phases={[
           [
-            "Barret: Haste All, Lock Drone C, Aerith Thundara, Overcharge, 2 ATB, Thundara",
-            "Aerith: Barret Thundara, Combo",
-            "Aerith: Thundara Cannon, Soul Drain Drones",
-            "Tempest Arsenal before last Drone",
+            "Barret: Overcharge Drone C",
+            "Aerith: Tempest full, Thundara, Tempest full, Thundara, Barret Thundara, Tempest full Drone C",
+            "Aerith: Barret Haste Aerith, Thundara Cannon, Combo + Soul Drain Drone B",
+            "Aerith: Thundara Cannon, Tempest full Arsenal, Combo + Soul Drain Drone A",
           ],
           [
-            "Aerith: Thundaga, Barret Haste All, Thundara + Combo Wheel",
-            "Aerith: Firaga, Barret Turbo Ether, Thundara + Combo Wheel",
+            "Aerith: Fira, Focused Shot, Tempest full, Thundaga Wheel x2",
+            "Aerith: Tempest full, Overcharge, Barret Turbo Ether, Combo",
           ],
           [
-            "Aerith: Thundara",
-            "Barret: Haste All + Turbo Ether",
-            "Thundara wheels when pressured",
+            "Aerith: Fira, Focused Shot, ATB Boost, Thundaga Wheel x2",
+            "Aerith: Tempest full, Combo, Thundaga",
+            "Barret: 1 ATB, Turbo Ether",
+            "Aerith: 1 ATB, Fira",
           ],
-          ["Aerith: Thundaga x2, Barret Thundara"],
+          ["Aerith: Tempest full, Thundaga, Thundara"],
         ]}
       />
     </Chapter>

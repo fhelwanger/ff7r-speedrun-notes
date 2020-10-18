@@ -45,8 +45,8 @@ function Chapter11() {
             {
               name: "Aerith",
               weapon: [
-                { name: "Wind", source: "tifa" },
                 { name: "ATB Boost" },
+                { name: "", source: "tifa" },
                 { name: "Fire" },
               ],
               armor: [{ name: "Lightning" }, { name: "Wind" }, { name: "Ice" }],
@@ -71,30 +71,32 @@ function Chapter11() {
           ]}
         />
       </Menu>
-      <Encounter enemies="Wererats x3" instructions={["TRIPOLOSKI"]} />
+      <Encounter
+        enemies="Wererats x3"
+        instructions={["TRIPOLOSKI, Starshower"]}
+      />
       <Encounter
         enemies="Cripshay x3 "
-        instructions={["TRIPOLOSKI, Starshower, Punisher"]}
+        instructions={["Cloud: TRIPOLOSKI", "Tifa: Starshower, Whirl"]}
       />
       <Encounter
         enemies="Wererats x2, Cripshay x2 "
-        instructions={["Dash, TRIPOLOSKI, Starshower, Punisher"]}
+        instructions={["Cloud: TRIPOLOSKI, Starshower, Punisher"]}
       />
       <Encounter
         enemies="Cripshay x5"
         instructions={[
-          "Tifa: Starshower, Whirl B/C",
-          "Tifa: TRIPOLOSKI, 1 ATB A",
+          "Cloud: Counter/TRIPOLOSKI A/B/C",
           "Tifa: Starshower, Whirl D/E",
         ]}
       />
       <Encounter
         enemies="Ghost"
-        instructions={["Starshower if not learned yet", "Phoenix Down"]}
+        instructions={["Starshower if less than 90%, Phoenix Down"]}
       />
       <Encounter
         enemies="Cripshay x3"
-        instructions={["Cloud: Dash, TRIPOLOSKI, Starshower"]}
+        instructions={["Cloud: Counter/TRIPOLOSKI, Starshower"]}
       />
       <Encounter
         enemies="Ghost x2"
@@ -102,9 +104,9 @@ function Chapter11() {
       />
       <Encounter
         enemies="Ghost"
-        instructions={["Starshower if not learned yet", "Phoenix Down"]}
+        instructions={["Starshower if not learned yet, Phoenix Down"]}
       />
-      <Pick item="1000 gil" />
+      <Pick item="1000 gil" optional />
       <Shop
         name="Vending Machine"
         buy={["Mega-Potion x3", "Ether x2", "Phoenix Down x2", "Binding"]}
@@ -132,10 +134,10 @@ function Chapter11() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "Wind", source: "aerith" },
+                { name: "", source: "aerith" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "Ice" }, { name: "Refocus" }],
+              armor: [{ name: "Refocus" }, { name: "Ice" }],
               summon: [{ name: "", source: "tifa" }],
             },
             {
@@ -154,8 +156,8 @@ function Chapter11() {
             {
               name: "Aerith",
               weapon: [
-                { name: "First Strike", source: "tifa" },
                 { name: "ATB Boost" },
+                { name: "First Strike", source: "tifa" },
                 { name: "Fire" },
               ],
               armor: [{ name: "Lightning" }, { name: "Wind" }, { name: "Ice" }],
@@ -191,18 +193,13 @@ function Chapter11() {
           ],
         ]}
       />
-      <Pick item="Mega-Potion x2" optional />
       <Encounter
-        enemies="Wererats x3"
-        instructions={["Aerith ATB Boost", "Berserk, 1 ATB, TRIPOLOSKI"]}
-      />
-      <Encounter
-        enemies="Ghost x2"
-        instructions={["Aerith: Phoenix Down x2"]}
-      />
-      <Encounter
-        enemies="Cripshay x4"
-        instructions={["Starshower, Whirl, Divekick"]}
+        enemies="Wererats x3 / Ghost x2 / Cripshay x4"
+        instructions={[
+          "Wererats x3: Aerith ATB Boost, Berserk, 1 ATB, TRIPOLOSKI",
+          "Ghost x2: Aerith Phoenix Down x2",
+          "Cripshay x4: Starshower, Whirl, Divekick",
+        ]}
       />
       <Pick item="Mega-Potion x2" optional />
       <Encounter
@@ -210,7 +207,7 @@ function Chapter11() {
         instructions={[
           "Lesser: Sleep, Aerith Aero, Tempest",
           "Lesser: Cloud 1 ATB, Tifa 1 ATB",
-          "Cerulean: Sleep, Aerith ATB Boost, Aerith Aerora, Cloud Aero",
+          "Cerulean: Sleep, Aerith ATB Boost, Cloud Blizzara, Aerith Aerora",
           "Cerulean: Whirl, Divekick, Whirl",
         ]}
       />
@@ -239,18 +236,18 @@ function Chapter11() {
         name="Eligor"
         phases={[
           [
-            "Dash, Counter, Aerith Blizzara, Operator, Counter",
-            "Blizzara, Punisher x2, Focused Thrust",
+            "Cloud: Dash, Counter, Aerith Blizzara, Operator",
+            "Cloud: Counter, Blizzara, Punisher x2, Focused Thrust",
             "Tifa: Whirl",
             "Aerith: Tempest full, 1 ATB, Blizzara, 1 ATB, Arcane Ward, Combo",
           ],
-          ["Aerith: Tifa Breach, 1 ATB, ATB Boost", "Aerith: Aerora x2"],
+          ["Aerith: Tifa Breach, 1 ATB, ATB Boost, Aerora x2"],
           [
-            "Tempest full",
-            "Tifa: Whirl, Divekick Left Wheel",
+            "Aerith: Tempest full",
             "Tifa: Whirl, Divekick Right Wheel",
+            "Tifa: Whirl, Divekick Left Wheel",
             "Tifa: Whirl",
-            "Aerith: Blizzard x2",
+            "Aerith: Cloud Blizzara, Tempest full, Blizzard",
           ],
         ]}
       />

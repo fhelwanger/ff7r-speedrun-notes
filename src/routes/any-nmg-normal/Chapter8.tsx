@@ -16,32 +16,86 @@ import UpgradeWeapons from "../../components/UpgradeWeapons";
 function Chapter8() {
   return (
     <Chapter number={8}>
+      <Menu>
+        <Equipment
+          characters={[
+            {
+              name: "Cloud",
+              equipments: [
+                { name: "Buster Sword" },
+                { name: "Titanium Bangle" },
+                { name: "Power Wristguards", source: "tifa" },
+              ],
+            },
+          ]}
+        />
+        <Materia
+          characters={[
+            {
+              name: "Cloud",
+              weapon: [
+                { name: "Barrier" },
+                { name: "First Strike" },
+                { name: "Lightning" },
+              ],
+              armor: [{ name: "Ice" }, { name: "Deadly Dodge" }],
+              summon: [{ name: "Ifrit", source: "tifa" }],
+            },
+            {
+              name: "Tifa",
+              weapon: [
+                { name: "Ice" },
+                { name: "Fire" },
+                { name: "Lightning" },
+              ],
+              armor: [{ name: "Wind" }],
+              summon: [{ name: "", source: "cloud" }],
+            },
+          ]}
+        />
+      </Menu>
       <Encounter
         enemies="Security Officer x2, Elite Security Officer"
         instructions={[
-          "Dash, Punisher B",
-          "TRIPOLOSKI + Focused Thrust Elite, Punisher",
+          "Punisher Security Officer A",
+          "TRIPOLOSKI, Focused Thrust, Punisher Elite",
         ]}
       />
       <Encounter
         enemies="Security Officer x2, Elite Security Officer"
-        instructions={[
-          "Punisher x6, Operator, TRIPOLOSKI, Focused Thrust, Punisher",
-        ]}
+        instructions={["Punisher full, Focused Thrust, TRIPOLOSKI Elite"]}
       />
       <Boss
         name="Reno"
         phases={[
           [
-            "Dash, Counter",
-            "Punisher x4, Focused Thrust",
-            "Punisher x3, Focused Thrust, Roll",
-            "Counter, Punisher full, Beserk, Punisher x4, Berserk",
+            "Roll over him, Punisher full, Berserk, Focused Thrust",
+            "Punisher x6, TRIPOLOSKI, Berserk",
           ],
-          ["Aero, Dash, Cross Slash"],
+          ["Cross Slash"],
         ]}
       />
       <Pick item="Ether" optional />
+      <Pick item="500 gil" optional />
+      <Encounter
+        enemies="Wererat x3"
+        instructions={["Deadly Dodge, TRIPOLOSKI"]}
+      />
+      <Encounter
+        enemies="Gorgers x3"
+        instructions={["TRIPOLOSKI, Deadly Dodge"]}
+      />
+      <Encounter
+        enemies="Hedgehog Pie x3"
+        instructions={["Deadly Dodge, TRIPOLOSKI, Deadly Dodge"]}
+      />
+      <Encounter
+        enemies="Smogger"
+        instructions={["Cloud: Dash, Berserk, Thundara, Punisher full"]}
+      />
+      <Break time="1m33s" description="TV" />
+      <Pick item="200 gil" />
+      <Shop name="Chadley" buy={["ATB Boost", "First Strike"]} />
       <Menu>
         <UpgradeWeapons
           characters={[
@@ -57,7 +111,7 @@ function Chapter8() {
               name: "Aerith",
               shortcuts: [
                 { shortcut: "square", ability: "Thundara" },
-                { shortcut: "circle", ability: "Aero" },
+                { shortcut: "circle", ability: "Fira" },
                 { shortcut: "x", ability: "Fire" },
               ],
             },
@@ -65,10 +119,6 @@ function Chapter8() {
         />
         <Equipment
           characters={[
-            {
-              name: "Cloud",
-              equipments: [{ name: "Titanium Bangle" }],
-            },
             {
               name: "Aerith",
               equipments: [{ name: "Earrings", source: "barret" }],
@@ -80,26 +130,26 @@ function Chapter8() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Wind" },
+                { name: "Wind", source: "tifa" },
                 { name: "First Strike" },
                 { name: "Lightning" },
               ],
               armor: [
-                { name: "Deadly Dodge", source: "barret" },
                 { name: "Refocus", source: "aerith" },
+                { name: "Deadly Dodge" },
               ],
-              summon: [{ name: "Ifrit", source: "tifa" }],
+              summon: [{ name: "Ifrit" }],
             },
             {
               name: "Aerith",
               weapon: [
-                { name: "", source: "inventory" },
-                { name: "" },
+                { name: "ATB Boost", source: "inventory" },
+                { name: "First Strike", source: "inventory" },
                 { name: "Fire", source: "barret" },
               ],
               armor: [
                 { name: "Lightning", source: "barret" },
-                { name: "", source: "cloud" },
+                { name: "Ice", source: "cloud" },
               ],
               summon: [{ name: "" }],
             },
@@ -107,7 +157,7 @@ function Chapter8() {
               name: "Barret",
               weapon: [
                 { name: "", source: "aerith" },
-                { name: "", source: "cloud" },
+                { name: "Fire" },
                 { name: "", source: "aerith" },
               ],
               armor: [{ name: "", source: "inventory" }],
@@ -120,50 +170,7 @@ function Chapter8() {
                 { name: "Fire" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "Fire" }],
-              summon: [{ name: "", source: "cloud" }],
-            },
-          ]}
-        />
-      </Menu>
-      <Pick item="500 gil" optional />
-      <Encounter
-        enemies="Wererat x3"
-        instructions={["Deadly Dodge, TRIPOLOSKI"]}
-      />
-      <Encounter
-        enemies="Gorgers x3"
-        instructions={["Deadly Dodge, TRIPOLOSKI"]}
-      />
-      <Encounter
-        enemies="Hedgehog Pie x3"
-        instructions={["Deadly Dodge, TRIPOLOSKI, Deadly Dodge"]}
-      />
-      <Encounter
-        enemies="Smogger"
-        instructions={["Cloud: Berserk, Thundara, Punisher"]}
-      />
-      <Break time="1m33s" description="TV, heal if needed" />
-      <Pick item="200 gil" />
-      <Shop
-        name="Materia Shop"
-        sell={["Mesmeric Armlet", "Revival", "Ice", "Barrier", "Prayer"]}
-      />
-      <Shop name="Chadley" buy={["Wind", "ATB Boost", "First Strike"]} />
-      <Menu>
-        <Materia
-          characters={[
-            {
-              name: "Aerith",
-              weapon: [
-                { name: "First Strike", source: "inventory" },
-                { name: "ATB Boost", source: "inventory" },
-                { name: "Fire" },
-              ],
-              armor: [
-                { name: "Lightning" },
-                { name: "Wind", source: "inventory" },
-              ],
+              armor: [{ name: "", source: "cloud" }],
               summon: [{ name: "" }],
             },
           ]}
@@ -171,7 +178,7 @@ function Chapter8() {
       </Menu>
       <Encounter
         enemies="Hedgehog Pie, Wererat x2"
-        instructions={["Deadly Dodge, TRIPOLOSKI, Punisher"]}
+        instructions={["Deadly Dodge, TRIPOLOSKI, Deadly Dodge"]}
       />
       <Encounter
         enemies="Wererat x4"
@@ -179,75 +186,37 @@ function Chapter8() {
       />
       <Encounter
         enemies="Hedgehog Pie x2, Wererat"
-        instructions={["Deadly Dodge, TRIPOLOSKI, Punisher"]}
+        instructions={["Deadly Dodge, TRIPOLOSKI, Punisher, TRIPOLOSKI"]}
       />
       <Encounter
-        enemies="Hedgehog Pie x2, Smogger"
+        enemies="Hedgehog Pie x2, Smogger / Hedgehog Pie x4 / Smogger x2"
         instructions={[
-          "Cloud: TRIPOLOSKI",
-          "Aerith: ATB Boost, Arcane Ward, Thundara Smogger",
-          "Cloud: Berserk, TRIPOLOSKI/Deadly Dodge Hedgehog Pies",
+          "Hedgehog Pie x2, Smogger: Cloud Thundara Smogger, Tempest full, TRIPOLOSKI/Punisher",
+          "Hedgehog Pie x4: Berserk, Punisher/TRIPOLOSKI, Arcane Ward, ATB Boost",
+          "Smogger x2: Aerith Thundara both",
         ]}
       />
       <Encounter
-        enemies="Hedgehog Pie x4"
-        instructions={["Aerith: 2 ATB", "Berserk, TRIPOLOSKI/Deadly Dodge"]}
-      />
-      <Encounter
-        enemies="Smogger x2"
-        instructions={["Aerith: Thundara both"]}
-      />
-      <Encounter
         enemies="Smogger"
-        instructions={["Cloud: Berserk, Thundara, Punisher"]}
+        instructions={["Cloud: Berserk, Arcane Ward, Thundara"]}
       />
       <Encounter
         enemies="Hedgehog Pie x3"
-        instructions={["Deadly Dodge, TRIPOLOSKI"]}
+        instructions={["Berserk A, TRIPOLOSKI, Punisher"]}
       />
-      <Bench optional description="Cloud needs 16 MP, Aerith needs 8 MP" />
-      <Menu>
-        <Materia
-          characters={[
-            {
-              name: "Cloud",
-              weapon: [
-                { name: "Wind" },
-                { name: "First Strike", source: "aerith" },
-                { name: "Lightning" },
-              ],
-              armor: [
-                { name: "Deadly Dodge" },
-                { name: "ATB Boost", source: "aerith" },
-              ],
-              summon: [{ name: "Ifrit" }],
-            },
-            {
-              name: "Aerith",
-              weapon: [
-                { name: "First Strike", source: "cloud" },
-                { name: "Refocus", source: "cloud" },
-                { name: "Fire" },
-              ],
-              armor: [{ name: "Lightning" }, { name: "Wind" }],
-              summon: [{ name: "" }],
-            },
-          ]}
-        />
-      </Menu>
+      <Bench optional description="Cloud needs 8 MP, Aerith needs 22 MP" />
       <Boss
         name="Rude"
         phases={[
           [
-            "Dash, Counter, Operator, Aero, Lock",
-            "Punisher x3, Focused Thrust, Aerith Aero",
-            "Punisher full, Berserk, Aero, Punisher",
+            "Dash, Counter, Operator, Aero, Aerith ATB Boost, Lock",
+            "Punisher x3, Focused Thrust, Aerith Thundara",
+            "Punisher full, Berserk, Punisher",
           ],
           [
-            "Roll, Dash, ATB Boost, Aero",
-            "Punisher x4, Berserk, Focused Thrust",
-            "Punisher full, Berserk, Focused Thrust, Aerith Aero",
-            "Punisher full, Berserk, Aero, Punisher",
+            "Run right, TRIPOLOSKI, Berserk, Focused Thrust",
+            "Punisher full, Berserk, Focused Thrust, Aerith Thundara",
+            "Punisher full, Aero, Punisher x3, TRIPOLOSKI, Punisher",
           ],
         ]}
       />

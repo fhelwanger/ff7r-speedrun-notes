@@ -21,81 +21,75 @@ function Chapter7() {
       <Pick item="Echo Mist x2" optional />
       <Encounter
         enemies="Monodrive x2, Slug Ray x2"
-        instructions={["Punisher Monodrives, Thunder Slug Rays"]}
+        instructions={["Berserk, Punisher Monodrives, Thunder Slug Rays"]}
       />
       <Pick item="Ether" optional />
       <Encounter
         enemies="Sweeper x2, Laser Cannon x2"
         instructions={[
-          "Barret: Overcharge Laser Cannon, Thunder the other",
+          "Barret: Overcharge Laser Cannon A, Thunder B",
           "Cloud: Berserk, Thunder to pressure",
-          "Cloud: Punisher, Focused Shot to stagger",
-          "Thunders when staggered",
+          "Cloud: Punisher, Focused Shot/Focused Thrust to stagger",
+          "Cloud/Tifa Thunder when staggered",
         ]}
       />
       <Encounter
         enemies="Elite Shock Trooper, Shock Trooper x2"
         instructions={[
-          "Berserk, Punisher until dodge, Blizzard",
-          "Punisher / TRIPOLOSKI / Counter",
+          "Berserk, Punisher x2, Operator, Blizzard",
+          "Counter/TRIPOLOSKI/Punisher",
         ]}
       />
       <Encounter
         enemies="Elite Security Officer x2, Security Officer x4"
-        instructions={[
-          "Deadly Dodge, Cleave, TRIPOLOSKI",
-          "Berserk, TRIPOLOSKI",
-        ]}
+        instructions={["Berserk, Punisher/TRIPOLOSKI"]}
       />
       <Pick item="the keycard" />
       <Encounter
         enemies="Laser Cannon x2, Monodrive x2"
         instructions={[
           "Deadly Dodge, TRIPOLOSKI Monodrives",
-          "Overcharge one Laser Cannon, Thunder other",
-          "Careful with the ladder",
+          "Overcharge Laser Cannon B, Thunder A",
         ]}
       />
       <Encounter
         enemies="Security Officer x2, Elite Grenadier x2"
-        instructions={[
-          "Punisher x3, Berserk, Operator Security Officer",
-          "TRIPOLOSKI",
-        ]}
+        instructions={["Berserk, Operator Security Officer, Roll, TRIPOLOSKI"]}
       />
       <Encounter
         enemies="Elite Shock Trooper, Laser Cannon x2"
         instructions={[
-          "Barret: Overcharge Cannon B, Thunder A",
-          "Cloud Blizzard Trooper",
-          "Tifa: Combo until stagger, Whirl + Divekick x2",
+          "Barret: Overcharge Cannon B, Thunder A, Combo B",
+          "Cloud Blizzard, Barret Fire Trooper",
+          "Tifa: Combo until stagger, Whirl/Divekick",
         ]}
       />
       <Encounter
         enemies="Elite Security Officer x3, Security Officer x2"
         instructions={[
           "Berserk, TRIPOLOSKI the one in computer",
-          "Punisher, Berserk, TRIPOLOSKI",
+          "Punisher/TRIPOLOSKI",
         ]}
       />
       <Pick item="Sonic Strikers" />
       <Encounter
         enemies="Elite Security Officer x2, Elite Grenadier x2"
         instructions={[
-          "Dash, TRIPOLOSKI Grenadier",
-          "Punisher, Berserk, TRIPOLOSKI",
+          "Dash, Berserk, Operator Grenadier",
+          "Punisher/TRIPOLOSKI",
         ]}
       />
       <Encounter
         enemies="Elite Shock Trooper x2"
         instructions={[
-          "Blizzard for pressure",
-          "Whirl + Divekick when staggered",
+          "Cloud: Berserk, Blizzard (stagger), Punisher full, Overcharge A",
+          "Tifa: Whirl/Divekick A",
+          "Blizzard to stagger B, Whirl/Divekick",
         ]}
       />
       <Encounter
         enemies="Riot Trooper x2, Elite Riot Trooper x2, Elite Grenadier"
-        instructions={["Grenade", "Punisher/Overcharge + Grenade/Fire"]}
+        instructions={["Grenade/Punisher Riot Troopers", "Punisher Grenadier"]}
       />
       <Pick item="Hi-Potion x3" />
       <Encounter
@@ -111,17 +105,23 @@ function Chapter7() {
         enemies="Monodrive x4"
         instructions={["Dash, Deadly Dodge, TRIPOLOSKI, Overcharge"]}
       />
-      <Bench />
       <Shop
         name="Vending Machine"
         buy={["Mega-Potion x3", "Ether", "Phoenix Down"]}
       />
+      <Bench />
       <Menu>
         <UpgradeWeapons
           characters={[
             {
               name: "Cloud",
-              weapons: [{ name: "Iron Blade", upgrade: "Auto - Attack" }],
+              weapons: [
+                {
+                  name: "Buster Sword",
+                  upgrade: "Auto - Attack, Auto - Balanced, Auto - Attack",
+                },
+                { name: "Iron Blade", upgrade: "Auto - Attack" },
+              ],
             },
             {
               name: "Barret",
@@ -160,7 +160,7 @@ function Chapter7() {
             {
               name: "Tifa",
               equipments: [
-                { name: "Metal Knucles" },
+                { name: "Metal Knuckles" },
                 { name: "Power Wristguards", source: "cloud" },
               ],
             },
@@ -171,18 +171,18 @@ function Chapter7() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Wind", source: "tifa" },
+                { name: "Barrier", source: "barret" },
                 { name: "First Strike" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "Ice" }, { name: "Barrier", source: "barret" }],
+              armor: [{ name: "Ice" }, { name: "Deadly Dodge" }],
               summon: [{ name: "", source: "tifa" }],
             },
             {
               name: "Barret",
               weapon: [
                 { name: "Lightning" },
-                { name: "Deadly Dodge", source: "cloud" },
+                { name: "Fire", source: "cloud" },
                 { name: "Fire" },
               ],
               armor: [{ name: "Revival" }],
@@ -195,7 +195,7 @@ function Chapter7() {
                 { name: "Fire" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "Fire", source: "cloud" }],
+              armor: [{ name: "Wind" }],
               summon: [{ name: "Ifrit", source: "cloud" }],
             },
           ]}
@@ -208,26 +208,27 @@ function Chapter7() {
             "Barret: Roll",
             "Tifa: Whirl, Roll, Combo x6, Whirl, Divekick",
             "Tifa: Combo x6, Whirl, Overcharge, Divekick",
-            "Tifa: Combo x6, Whirl, Divekick, Focused Shot, Blizzara",
-            "Tifa: Combo x3, Whirl, Divekick, Whirl, Divekick, Whirl",
+            "Tifa: Combo x6, Whirl, Focused Shot, Divekick, Blizzara",
+            "Tifa: Combo x6, Whirl, Divekick, Whirl, Divekick, Whirl",
           ],
           [
             "Tifa: Combo, Roll, Combo x6, Unbridled, Combo (take Tankbuster)",
             "Barret: Combo, Charge, Unbridled, Overcharge",
-            "Tifa: Hit to stagger, Rise, Omni, Whirl, Divekick",
-            "Tifa: Whirl, Divekick, Whirl, Divekick, Whirl, Barret Mega-Potion Tifa",
+            "Tifa: Hit to stagger, Rise, Omni, Whirl, Divekick, Barret Thunder",
+            "Tifa: Whirl, Divekick, Whirl, Divekick, Whirl, Barret Hi-Potion Tifa",
           ],
           [
-            "Barret: Combo, Charge, Combo, Charge",
-            "Barret: Thunder, Overcharge, Cloud Thundara",
+            "Barret: Combo, Charge, Combo, Charge, Thunder",
+            "Barret: Overcharge, Cloud Thundara, Combo x1",
             "Tifa: Defend, Whirl, Divekick, Whirl",
-            "Cloud: Berserk, 2 ATB, Thundara",
-            "Tifa: Whirl, Blizzard, Focused Shot, Focused Thrust, Blizzard, Combo",
-            "Tifa: Whirl, Divekick, Whirl",
-            "Cloud: Berserk, Thunder, Divekick, 1 ATB",
+            "Cloud: Punisher x4, Berserk, Punisher x2, Operator, Thundara",
+            "Tifa: Whirl, Blizzard, Focused Shot, Focused Thrust",
+            "Tifa: Combo x6, Blizzard, Combo x6 (stagger)",
+            "Tifa: Whirl, Divekick, Whirl, Divekick, Whirl",
+            "Cloud: Punisher full, Berserk, Divekick",
             "Barret: Overcharge",
           ],
-          ["Barret: Somersault, Cloud Thundara, Thunder"],
+          ["Barret: Somersault, Cloud Thundara, TRIPOLOSKI, Thunder"],
         ]}
       />
     </Chapter>
