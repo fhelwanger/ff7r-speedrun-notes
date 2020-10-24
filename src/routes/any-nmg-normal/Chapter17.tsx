@@ -635,7 +635,11 @@ function Chapter17() {
                 { name: "Refocus" },
                 { name: "" },
               ],
-              armor: [{ name: "" }, { name: "Parry" }, { name: "" }],
+              armor: [
+                { name: "ATB Boost", source: "aerith" },
+                { name: "Parry" },
+                { name: "" },
+              ],
               summon: [{ name: "Ifrit" }],
             },
             {
@@ -646,7 +650,7 @@ function Chapter17() {
                 { name: "Lightning" },
               ],
               armor: [
-                { name: "ATB Boost" },
+                { name: "", source: "tifa" },
                 { name: "First Strike" },
                 { name: "ATB Stagger" },
                 { name: "Fire" },
@@ -743,11 +747,31 @@ function Chapter17() {
                 { name: "ATB Assist" },
                 { name: "ATB Stagger" },
                 { name: "" },
-                { name: "Refocus" },
+                { name: "", source: "aerith" },
                 { name: "" },
               ],
-              armor: [{ name: "" }, { name: "Parry" }, { name: "" }],
+              armor: [
+                { name: "", source: "aerith" },
+                { name: "Parry" },
+                { name: "" },
+              ],
               summon: [{ name: "", source: "cloud" }],
+            },
+            {
+              name: "Aerith",
+              weapon: [
+                { name: "Refocus", source: "tifa" },
+                { name: "Ice" },
+                { name: "Lightning" },
+                { name: "Subversion" },
+              ],
+              armor: [
+                { name: "ATB Boost", source: "tifa" },
+                { name: "First Strike" },
+                { name: "ATB Stagger" },
+                { name: "Fire" },
+              ],
+              summon: [{ name: "" }],
             },
           ]}
         />
@@ -813,22 +837,6 @@ function Chapter17() {
               summon: [{ name: "" }],
             },
             {
-              name: "Aerith",
-              weapon: [
-                { name: "Refocus", source: "tifa" },
-                { name: "Ice" },
-                { name: "Lightning" },
-                { name: "Subversion" },
-              ],
-              armor: [
-                { name: "ATB Boost" },
-                { name: "First Strike" },
-                { name: "ATB Stagger" },
-                { name: "Fire" },
-              ],
-              summon: [{ name: "" }],
-            },
-            {
               name: "Cloud",
               weapon: [
                 { name: "" },
@@ -842,18 +850,6 @@ function Chapter17() {
                 { name: "Wind", source: "barret" },
               ],
               summon: [{ name: "Ifrit" }],
-            },
-            {
-              name: "Tifa",
-              weapon: [
-                { name: "ATB Assist" },
-                { name: "ATB Stagger" },
-                { name: "" },
-                { name: "", source: "aerith" },
-                { name: "" },
-              ],
-              armor: [{ name: "" }, { name: "Parry" }, { name: "" }],
-              summon: [{ name: "" }],
             },
           ]}
         />
