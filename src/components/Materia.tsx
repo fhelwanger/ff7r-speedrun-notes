@@ -7,6 +7,11 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
+import UpIcon from "@material-ui/icons/ArrowUpward";
+import RightIcon from "@material-ui/icons/ArrowForward";
+import DownIcon from "@material-ui/icons/ArrowDownward";
+import LeftIcon from "@material-ui/icons/ArrowBack";
+import SquareIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import { charactersPalette } from "./palette";
 
 const useStyles = makeStyles((theme) => ({
@@ -31,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
 export interface MateriaItem {
   name: string;
   source?: "inventory" | "cloud" | "tifa" | "barret" | "aerith";
+  inputs?: Array<"up" | "right" | "down" | "left" | "square">;
 }
 
 export interface MateriaProps {
@@ -45,6 +51,14 @@ export interface MateriaProps {
 function Materia({ characters }: MateriaProps) {
   const classes = useStyles();
 
+  const inputsIcons = {
+    up: UpIcon,
+    right: RightIcon,
+    down: DownIcon,
+    left: LeftIcon,
+    square: SquareIcon,
+  };
+
   const renderMateria = (materia: Array<MateriaItem>) => {
     return materia.map((x, i) => (
       <Typography
@@ -57,7 +71,20 @@ function Materia({ characters }: MateriaProps) {
           textTransform: x.source ? "uppercase" : undefined,
           color: x.source ? charactersPalette[x.source] : undefined,
         }}
-      >{`(${x.name || "Empty"}) `}</Typography>
+      >
+        {`(${x.name || "Empty"}`}
+        {x.inputs && (
+          <>
+            {x.inputs.map((inpuy, inputIndex) =>
+              React.createElement(inputsIcons[inpuy], {
+                key: inputIndex,
+                style: { verticalAlign: "middle", fontSize: "1em" },
+              })
+            )}
+          </>
+        )}
+        {`) `}
+      </Typography>
     ));
   };
 

@@ -1,18 +1,17 @@
 import React from "react";
 import Boss from "../../components/Boss";
+import Box from "../../components/Box";
 import BattleSettings from "../../components/BattleSettings";
 import Chapter from "../../components/Chapter";
 import Encounter from "../../components/Encounter";
+import Heal from "../../components/Heal";
 import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
 
 function Chapter1() {
   return (
     <Chapter number={1}>
-      <Encounter
-        enemies="Security Officer x2"
-        instructions={["Cleave left one"]}
-      />
+      <Encounter enemies="Security Officer x2" instructions={["Cleave"]} />
       <Encounter enemies="Security Officer x2" instructions={["Punisher"]} />
       <Menu>
         <BattleSettings
@@ -36,10 +35,11 @@ function Chapter1() {
       <Encounter
         enemies="Security Officer, Guard Dog"
         instructions={[
-          "Security Officer: Dash, Berserk",
+          "Security Officer: Dash, Punisher x3, Berserk",
           "Guard Dog: Fire, Punisher",
         ]}
       />
+      <Box description="2 sets before Jessie opens the fence." />
       <Encounter
         enemies="Security Officer x2, Guard Dog"
         instructions={[
@@ -53,13 +53,15 @@ function Chapter1() {
       />
       <Encounter
         enemies="Security Officer x4"
-        instructions={["Dash, Punisher rightmost one"]}
+        instructions={[
+          "Dash, Lock right or left one, Punisher full, Focused Thrust",
+        ]}
       />
       <Encounter
         enemies="Sentry Ray x3, Monodrive x3"
         instructions={[
-          "Overcharge Sentry Ray B, Combo A, Thunder x2",
-          "Punisher Monodrive B and C, Focused Thrust A",
+          "Barret: Overcharge Sentry Ray B, Combo A (2 ATB), Thunder x2",
+          "Cloud: Punisher x4, Operator Monodrive B/C, Dash, Focused Thrust A",
         ]}
       />
       <Menu>
@@ -69,8 +71,9 @@ function Chapter1() {
               name: "Barret",
               shortcuts: [
                 {
-                  shortcut: "square",
+                  shortcut: "x",
                   ability: "Thunder",
+                  inputs: ["down"],
                 },
                 {
                   shortcut: "circle",
@@ -86,11 +89,12 @@ function Chapter1() {
         instructions={[
           "Cloud: Dash, Punisher",
           "Barret: Overcharge, Combo, Charge, Thunder",
-          "Barret: Charge, Combo, Charge, Focused Shot, Focused Thrust, Overcharge",
-          "Cloud: Barret Thunder, Punisher (fill 2 ATB), Barret Thunder",
+          "Barret: Charge, Combo, Charge, Focused Thrust, Focused Shot (stagger), Overcharge",
+          "Cloud: Barret Thunder, Punisher (2 ATB), Barret Thunder",
         ]}
       />
       <Pick item="Ether" optional />
+      <Heal description="Ether x1 Barret" />
       <Boss
         name="Guard Scorpion"
         phases={[
@@ -98,36 +102,40 @@ function Chapter1() {
             "Cloud: Dash",
             "Barret: Lock, run back, Overcharge",
             "Cloud: Counter, Punisher full, Berserk, Fire, Focused Shot",
-            "Cloud: Punisher full, Fire, Punisher x4, Berserk, Fire, Punisher",
+            "Cloud: Punisher full, Fire, Punisher x4, Fire (stagger)",
+            "Cloud: Punisher x4, Operator",
           ],
           [
             "Cloud: Dash and Roll x2, go behind",
-            "Cloud: Punisher x4, Berserk, Fire, Punisher x3, Focused Thrust",
+            "Cloud: Punisher x4, Berserk, Fire, Punisher x4, Focused Thrust",
             "Barret: Combo, Focused Shot, Combo",
-            "Cloud: Counter, Punisher x4, Berserk, Focused Thrust, Thunder",
-            "Cloud: Punisher x4, Berserk, Overcharge, Punisher full, Thunder, Berserk",
+            "Cloud: Counter, Punisher x4, Berserk, Focused Thrust (stagger), Thunder",
+            "Cloud: Start Punisher, Overcharge, Punisher full, Thunder, Operator, Punisher",
           ],
           [
             "Cloud: Fire",
             "Barret: Combo, Thunder, Combo, Charge, Combo, Charge, Focused Shot",
-            "Cloud: Dash, Punisher x3, Berserk, Cross Slash",
-            "Barret: Overcharge, Combo, Swap to Cloud",
+            "Cloud: Dash, Berserk, Operator (stagger)",
+            "Barret: Overcharge, Cross Slash, Combo, Swap to Cloud",
           ],
-          ["Cloud: Dash, Berserk Left Leg, Thunder, Fire x2"],
+          [
+            "Cloud: Dash, Thunder, Braver Left Leg",
+            "Cloud: Thunder, Focused Thrust",
+          ],
         ]}
       />
       <Encounter
         enemies="Monodrive x2"
         instructions={[
           "B: Punisher x4, Operator",
-          "A: Dash, 1 ATB, Focused Thrust",
+          "A: Dash, Cleave, Focused Thrust (stagger)",
         ]}
       />
       <Encounter
         enemies="Security Officer x2, Monodrive x2"
         instructions={[
-          "Cloud: Operator x1 left Monodrive, Punisher full Monodrive + Security Officer",
-          "Cloud: Focused Thrust Security Officer",
+          "Cloud: Hit x1 left Monodrive, Punisher full Monodrive + Security Officer",
+          "Cloud: Roll, Punisher jump, Focused Thrust Security Officer",
           "Barret: Overcharge Monodrive",
         ]}
       />

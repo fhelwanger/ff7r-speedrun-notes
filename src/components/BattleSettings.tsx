@@ -10,6 +10,10 @@ import CircleIcon from "@material-ui/icons/RadioButtonUnchecked";
 import SquareIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import TriangleIcon from "@material-ui/icons/ChangeHistory";
 import XIcon from "@material-ui/icons/Close";
+import UpIcon from "@material-ui/icons/ArrowUpward";
+import RightIcon from "@material-ui/icons/ArrowForward";
+import DownIcon from "@material-ui/icons/ArrowDownward";
+import LeftIcon from "@material-ui/icons/ArrowBack";
 
 const useStyles = makeStyles((theme) => ({
   nestedList: {
@@ -25,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
   listItemText: {
     lineHeight: 1,
   },
+  listItemInputs: {
+    marginLeft: "10px",
+  },
   shortcutIcon: {
     minWidth: "30px",
   },
@@ -36,6 +43,7 @@ export interface BattleSettingsProps {
     shortcuts: Array<{
       shortcut?: "circle" | "square" | "triangle" | "x";
       ability: string;
+      inputs?: Array<"up" | "right" | "down" | "left">;
     }>;
   }>;
 }
@@ -43,11 +51,18 @@ export interface BattleSettingsProps {
 function BattleSettings({ characters }: BattleSettingsProps) {
   const classes = useStyles();
 
-  const icons = {
+  const shortcutItems = {
     circle: CircleIcon,
     square: SquareIcon,
     triangle: TriangleIcon,
     x: XIcon,
+  };
+
+  const inputsIcons = {
+    up: UpIcon,
+    right: RightIcon,
+    down: DownIcon,
+    left: LeftIcon,
   };
 
   return (
@@ -73,13 +88,22 @@ function BattleSettings({ characters }: BattleSettingsProps) {
               <ListItem key={shortcutIndex}>
                 {shortcut.shortcut && (
                   <ListItemIcon className={classes.shortcutIcon}>
-                    {React.createElement(icons[shortcut.shortcut])}
+                    {React.createElement(shortcutItems[shortcut.shortcut])}
                   </ListItemIcon>
                 )}
                 <ListItemText
                   primary={shortcut.ability}
                   classes={{ primary: classes.listItemText }}
                 />
+                {shortcut.inputs && shortcut.inputs.length > 0 && (
+                  <ListItemIcon className={classes.listItemInputs}>
+                    {shortcut.inputs.map((input, inputIndex) =>
+                      React.createElement(inputsIcons[input], {
+                        key: inputIndex,
+                      })
+                    )}
+                  </ListItemIcon>
+                )}
               </ListItem>
             ))}
           </List>

@@ -62,6 +62,17 @@ function Sections() {
       description: "When you must choose a non default dialogue option.",
     },
     {
+      name: "Healings",
+      color: cardsPalette.heal,
+      description: "When you need to use items to heal your HP/MP.",
+    },
+    {
+      name: "Shinra Boxes",
+      color: cardsPalette.box,
+      description:
+        "A Shinra box that you need to break. Usually for MP, which is fixed, but also for items when you need to wait anyway, which are random.",
+    },
+    {
       name: "Bench",
       color: cardsPalette.bench,
       description: "When you should use a bench to rest.",

@@ -7,6 +7,7 @@ import Chapter from "../../components/Chapter";
 import Dialogue from "../../components/Dialogue";
 import Encounter from "../../components/Encounter";
 import Equipment from "../../components/Equipment";
+import Heal from "../../components/Heal";
 import Materia from "../../components/Materia";
 import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
@@ -16,38 +17,105 @@ import UpgradeWeapons from "../../components/UpgradeWeapons";
 function Chapter9() {
   return (
     <Chapter number={9}>
+      <Encounter
+        enemies="Terpsicolt"
+        instructions={["Aerith Thundara, Punisher x4, Operator"]}
+      />
+      <Encounter
+        enemies="Lesser Drake"
+        instructions={[
+          "Aerith: Tempest x3, Hit x1 (stagger)",
+          "Aerith: Soul Drain, TRIPOLOSKI, Aero",
+        ]}
+      />
+      <Encounter
+        enemies="Sweeper Prototype"
+        instructions={[
+          "Aerith ATB Boost, Thundara, Arcane Ward Cloud",
+          "Cloud: Punisher full, Berserk, 2 ATB, Thundara, Thunder",
+        ]}
+      />
+      <Pick item="Hi-Potion x2" optional />
+      <Encounter
+        enemies="Terpsicolt x2"
+        instructions={["Aerith ATB Boost, Soul Drain x2", "Cloud flee"]}
+      />
+      <Pick item="Mega-Potion" optional />
+      <Encounter
+        enemies="Beck, Burke, Butch"
+        instructions={["Aerith Fira Butch", "Deadly Dodge, Cleave, TRIPOLOSKI"]}
+      />
+      <Heal description="Ether x1 Aerith" />
+      <Encounter
+        enemies="Sweeper Prototype, Bandit x2"
+        instructions={[
+          "Cloud: Lock Bandit A, Punisher full, Berserk",
+          "Cloud: Aerith ATB Boost, TRIPOLOSKI, Punisher Bandits",
+          "Cloud: Arcane Ward Aerith, Aerith Thundara Sweeper",
+          "Cloud: 2 ATB, Berserk, Thunder x2 (inside ward)",
+        ]}
+      />
+      <Encounter
+        enemies="Bandit x4"
+        instructions={["Aerith Fira C, Dash, TRIPOLOSKI"]}
+      />
+      <Dialogue
+        optionText="She's great at handling the books"
+        optionPosition="3rd"
+        details="when talking to Sam"
+      />
+      <Shop
+        name="Weapon Shop"
+        buy={[
+          { name: "Hardedge" },
+          { name: "Caliginous Bracelet", inputs: ["down", "down"] },
+        ]}
+      />
       <Menu>
+        <Equipment
+          characters={[
+            {
+              name: "Cloud",
+              equipments: [{ name: "Hardedge", inputs: ["right"] }],
+            },
+            {
+              name: "Aerith (R2)",
+              equipments: [{ name: "Caliginous Bracelet", inputs: ["up"] }],
+            },
+          ]}
+        />
         <Materia
           characters={[
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire", source: "barret" },
-                { name: "First Strike", source: "aerith" },
-                { name: "Lightning" },
+                { name: "Fire", source: "tifa" },
+                { name: "First Strike" },
+                { name: "Refocus" },
               ],
-              armor: [
-                { name: "ATB Boost", source: "aerith" },
-                { name: "Deadly Dodge" },
-              ],
+              armor: [{ name: "Lightning" }, { name: "Deadly Dodge" }],
               summon: [{ name: "Ifrit" }],
             },
             {
               name: "Aerith",
               weapon: [
-                { name: "Refocus", source: "cloud" },
-                { name: "First Strike", source: "cloud" },
-                { name: "Fire" },
+                { name: "Lightning" },
+                { name: "Wind" },
+                { name: "First Strike" },
               ],
-              armor: [{ name: "Lightning" }, { name: "Wind", source: "cloud" }],
+              armor: [
+                { name: "Fire" },
+                { name: "ATB Boost" },
+                { name: "Ice", source: "cloud" },
+              ],
               summon: [{ name: "" }],
             },
             {
-              name: "Barret",
+              name: "Tifa",
               weapon: [
+                { name: "", source: "aerith" },
                 { name: "" },
-                { name: "Ice", source: "aerith" },
-                { name: "" },
+                { name: "Lightning" },
               ],
               armor: [{ name: "" }],
               summon: [{ name: "" }],
@@ -57,58 +125,19 @@ function Chapter9() {
         <UpgradeWeapons
           characters={[
             {
-              name: "Tifa",
+              name: "Cloud",
+              weapons: [{ name: "Hardedge", upgrade: "Auto - Attack" }],
+            },
+            {
+              name: "Tifa (L2)",
               weapons: [
-                { name: "Sonic Strikers", upgrade: "Auto - Attack" },
+                { name: "Sonic Strikers", upgrade: "Auto - Balanced" },
                 { name: "Metal Knuckles", upgrade: "Manual" },
               ],
             },
           ]}
         />
       </Menu>
-      <Encounter
-        enemies="Terpsicolt"
-        instructions={["Aerith Thundara, Punisher, TRIPOLOSKI"]}
-      />
-      <Encounter
-        enemies="Lesser Drake"
-        instructions={["Aerith: Tempest spam (stagger), Aero, TRIPOLOSKI"]}
-      />
-      <Encounter
-        enemies="Sweeper Prototype"
-        instructions={[
-          "Cloud: Punisher full, Berserk, Arcane Ward, 2 ATB",
-          "Cloud: Thundara, ATB Boost, Thundara, TRIPOLOSKI",
-        ]}
-      />
-      <Pick item="Hi-Potion x2" optional />
-      <Pick item="Mega-Potion" optional />
-      <Encounter
-        enemies="Beck, Burke, Butch"
-        instructions={["Aerith Fira Butch, Deadly Dodge, TRIPOLOSKI, Punisher"]}
-      />
-      <Encounter
-        enemies="Sweeper Prototype, Bandit x2"
-        instructions={[
-          "Cloud: Punisher full, Berserk, Arcane Ward Bandit A",
-          "Cloud: TRIPOLOSKI, Punisher Bandits, ATB Boost, Thundara",
-          "Aerith: 1 ATB, Fire, Cloud Thundara",
-        ]}
-      />
-      <Encounter
-        enemies="Bandit x4"
-        instructions={["Aerith Fira, Dash, TRIPOLOSKI"]}
-      />
-      <Dialogue
-        optionText="She's great at handling the books"
-        optionPosition="3rd"
-        details="when talking to Sam"
-      />
-      <Shop
-        name="Weapon Shop"
-        sell={["Mesmeric Armlet", "Revival", "Ice", "Barrier", "Prayer"]}
-        buy={["Hardedge", "Caliginous Bracelet"]}
-      />
       <Pick item="1200 gil" optional />
       <Dialogue
         optionText="No deal."
@@ -125,75 +154,40 @@ function Chapter9() {
         optionPosition="3rd"
         details="when talking to Aerith"
       />
-      <Menu>
-        <Equipment
-          characters={[
-            {
-              name: "Cloud",
-              equipments: [{ name: "Hardedge" }],
-            },
-            {
-              name: "Tifa",
-              equipments: [
-                { name: "Sonic Strikers" },
-                { name: "Caliginous Bracelet" },
-                { name: "Mythril Armlet", source: "aerith" },
-              ],
-            },
-          ]}
-        />
-        <UpgradeWeapons
-          characters={[
-            {
-              name: "Cloud",
-              weapons: [{ name: "Hardedge", upgrade: "Auto - Attack" }],
-            },
-          ]}
-        />
-        <BattleSettings
-          characters={[
-            {
-              name: "Cloud",
-              shortcuts: [{ shortcut: "circle", ability: "Fira" }],
-            },
-            {
-              name: "Tifa",
-              shortcuts: [{ shortcut: "circle", ability: "Focused Strike" }],
-            },
-          ]}
-        />
-      </Menu>
       <Encounter
         enemies="Beastmaster, Bloodhound x2"
         instructions={[
-          "Cloud: Berserk, Punisher x6 Beastmaster",
-          "Cloud: TRIPOLOSKI, ATB Boost, TRIPOLOSKI",
+          "Cloud: Berserk, Aerith ATB Boost, Soul Drain, Punisher (2 ATB)",
+          "Cloud: Soul Drain/TRIPOLOSKI/Punisher",
         ]}
       />
       <Encounter
         enemies="Corneo Lackey 1 x5, Beck, Burke, Butch"
         instructions={[
-          "Deadly Dodge, Aerith Fira",
-          "TRIPOLOSKI, ATB Boost, TRIPOLOSKI",
+          "Cloud: Deadly Dodge, Aerith Fira",
+          "Cloud: TRIPOLOSKI/Fira",
         ]}
       />
-      <Bench />
+      <Heal description="Cloud 21 MP, Aerith 32 MP, both good HP" />
       <Encounter
         enemies="Cutter, Sweeper"
         instructions={[
           "Cloud: Berserk, Thundara, Aerith Thundara Sweeper",
-          "Aerith: 1 ATB, Thundara Sweeper",
-          "Cloud: Counter or Punisher full, Berserk, TRIPOLOSKI, ATB BOOST, Focused Thrust x2 Cutter",
-          "Aerith: 1 ATB, Thundara Cutter",
-          "Cloud: Punisher/Thundara",
+          "Aerith: 1 ATB, ATB Boost, Thundara Sweeper",
+          "Cloud: Counter/Berserk/Punisher (pressure), Focused Thrust x2 Cutter",
+          "Cloud: Aerith Thundara, Punisher, Thundara",
         ]}
       />
       <Bench />
       <Shop
         name="Vending Machine"
-        buy={["Mega-Potion x3", "Ether", "Phoenix Down"]}
+        buy={[
+          { name: "Mega-Potion x3", inputs: ["down", "down"] },
+          { name: "Ether", inputs: ["down", "down"] },
+          { name: "Phoenix Down", inputs: ["down", "down"] },
+        ]}
       />
-      <Menu>
+      <Menu instructions={["Remove Deadly Dodge from Cloud before swapping"]}>
         <Materia
           characters={[
             {
@@ -201,48 +195,50 @@ function Chapter9() {
               weapon: [
                 { name: "Fire" },
                 { name: "First Strike" },
-                { name: "Lightning" },
+                { name: "Refocus" },
               ],
-              armor: [
-                { name: "Refocus", source: "aerith" },
-                { name: "Ice", source: "barret" },
-              ],
+              armor: [{ name: "Lightning" }, { name: "Ice", source: "barret" }],
               summon: [{ name: "Ifrit" }],
             },
             {
-              name: "Aerith",
-              weapon: [
-                { name: "ATB Boost", source: "cloud" },
-                { name: "First Strike" },
-                { name: "Fire" },
-              ],
-              armor: [
-                { name: "Lightning" },
-                { name: "Wind" },
-                { name: "Ice", source: "tifa" },
-              ],
-              summon: [{ name: "" }],
-            },
-            {
               name: "Barret",
-              weapon: [
-                { name: "" },
-                { name: "", source: "cloud" },
-                { name: "" },
-              ],
-              armor: [{ name: "" }],
+              weapon: [{ name: "" }, { name: "" }, { name: "" }],
+              armor: [{ name: "", source: "cloud" }],
               summon: [{ name: "" }],
             },
+          ]}
+        />
+        <BattleSettings
+          characters={[
             {
-              name: "Tifa",
-              weapon: [
-                { name: "", source: "aerith" },
-                { name: "Fire" },
-                { name: "Lightning" },
-                { name: "" },
+              name: "Cloud",
+              shortcuts: [
+                {
+                  shortcut: "x",
+                  ability: "Blizzara",
+                  inputs: ["down", "down", "down"],
+                },
+                {
+                  shortcut: "circle",
+                  ability: "Fira",
+                  inputs: ["down"],
+                },
               ],
-              armor: [{ name: "" }, { name: "" }],
-              summon: [{ name: "" }],
+            },
+            {
+              name: "Aerith (R2)",
+              shortcuts: [
+                {
+                  shortcut: "circle",
+                  ability: "Fira",
+                  inputs: ["down"],
+                },
+                {
+                  shortcut: "x",
+                  ability: "Blizzard",
+                  inputs: ["down", "down"],
+                },
+              ],
             },
           ]}
         />
@@ -251,27 +247,31 @@ function Chapter9() {
         name="Hell House"
         phases={[
           [
-            "Cloud: Aerith ATB Boost, Arcane Ward, Berserk, Aerith Blizzard, Blizzara",
-            "Cloud: 1 ATB, TRIPOLOSKI, Berserk, Punisher",
+            "Cloud: Aerith ATB Boost, Arcane Ward Cloud, Defend chairs",
+            "Cloud: Aerith Blizzard, Cloud Blizzara",
+            "Aerith: Tempest full",
+            "Cloud: Take toy damage, Berserk",
           ],
           [
-            "Cloud: Counter x2, Punisher x2, Focused Thrust",
-            "Aerith: 3 hits, Fira",
-            "Cloud: Punisher x6, Focused Thrust, Punisher full, Berserk",
-            "Aerith: Combo x5, Charge Tempest",
-            "House jumps: Tempest, Cloud/Aerith Fira x2",
-            "Cloud: Berserk, Punisher full, Soul Drain, Infinity End",
+            "Cloud: Counter x2, Braver (pressure)",
+            "Aerith: Braver, Combo x1, Fira, Tempest full, Fira, Tempest full",
+            "Cloud: Berserk (stagger), Aerith Blizzard, Aerith Fira, Punisher full, Cross Slash",
+            "Aerith: Combo",
           ],
           [
-            'Cloud: Dash, Punisher, wait until "Two", Refocus',
-            "Aerith: Combo x5",
-            "Hellbound: Aerith Fire/Ice/Thunder/Aero, wait pressure, Fira",
-            "Cloud: Berserk, Focused Thrust, Infinity End",
+            "Aerith: Soul Drain, 2 ATB, Wait Hellbound",
+            "Aerith: Fire/Ice/Thunder/Aero (outside ward), Tempest full, Blizzard (inside ward)",
+            "Cloud: Berserk, Aerith Blizzard, Infinity's End",
           ],
         ]}
       />
-      <Shop name="Chadley" buy={["Parry", "Reset Hardedge"]} />
+      <Shop
+        name="Chadley (exit and enter again for Parry)"
+        buy={[{ name: "Parry", inputs: ["up", "up", "up", "up"] }]}
+        reset={[{ name: "Hardedge", inputs: ["up"] }]}
+      />
       <Pick item="Elixir" />
+      <Break time="50s" description="Dance practice" />
       <Dialogue
         optionText="No"
         optionPosition="2nd"
@@ -281,39 +281,31 @@ function Chapter9() {
       <Pick item="Turbo Ether" />
       <Shop
         name="Vending Machine"
-        buy={["Mega-Potion x3", "Ether", "Phoenix Down"]}
+        buy={[
+          { name: "Mega-Potion x3", inputs: ["down", "down", "down"] },
+          { name: "Ether", inputs: ["down", "down"] },
+          { name: "Phoenix Down", inputs: ["down", "down"] },
+        ]}
       />
-      <Menu>
-        <Materia
-          characters={[
-            {
-              name: "Aerith",
-              weapon: [
-                { name: "Deadly Dodge", source: "inventory" },
-                { name: "First Strike" },
-                { name: "Fire" },
-              ],
-              armor: [{ name: "Lightning" }, { name: "Wind" }, { name: "Ice" }],
-              summon: [{ name: "" }],
-            },
-          ]}
-        />
-      </Menu>
       <Encounter
         enemies="Corneo Lackey x3"
-        instructions={["Aerith: Deadly Dodge, Fira"]}
+        instructions={["Aerith: ATB Boost, Fira x2"]}
       />
       <Pick item="Fury Ring" />
       <Encounter
         enemies="Corneo Lackey x2"
-        instructions={["Aerith: Deadly Dodge, Fira"]}
+        instructions={["Aerith: Fira", "Aerith: 0.5 ATB, ATB Boost, Fira"]}
       />
-      <Menu>
+      <Menu instructions={["Equip Barrier before swap"]}>
         <Equipment
           characters={[
             {
-              name: "Aerith",
-              equipments: [{ name: "Fury Ring" }],
+              name: "Tifa",
+              equipments: [
+                { name: "Fury Ring", inputs: ["right"] },
+                { name: "Earrings", source: "aerith", inputs: ["up"] },
+                { name: "Power Wristguards", source: "cloud", inputs: ["up"] },
+              ],
             },
           ]}
         />
@@ -322,22 +314,31 @@ function Chapter9() {
             {
               name: "Tifa",
               weapon: [
+                { name: "Lightning", source: "aerith" },
                 { name: "" },
-                { name: "Fire" },
                 { name: "Lightning" },
-                { name: "" },
               ],
-              armor: [{ name: "" }, { name: "Parry", source: "inventory" }],
+              armor: [
+                {
+                  name: "Parry",
+                  source: "inventory",
+                  inputs: ["up"],
+                },
+              ],
               summon: [{ name: "" }],
             },
             {
               name: "Aerith",
               weapon: [
-                { name: "ATB Boost", source: "inventory" },
+                {
+                  name: "Barrier",
+                  source: "inventory",
+                  inputs: ["right", "down"],
+                },
+                { name: "Wind" },
                 { name: "First Strike" },
-                { name: "Fire" },
               ],
-              armor: [{ name: "Lightning" }, { name: "Wind" }, { name: "Ice" }],
+              armor: [{ name: "Fire" }, { name: "ATB Boost" }, { name: "Ice" }],
               summon: [{ name: "" }],
             },
           ]}

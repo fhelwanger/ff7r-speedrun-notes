@@ -3,6 +3,7 @@ import BattleSettings from "../../components/BattleSettings";
 import Boss from "../../components/Boss";
 import Chapter from "../../components/Chapter";
 import Encounter from "../../components/Encounter";
+import Equipment from "../../components/Equipment";
 import Materia from "../../components/Materia";
 import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
@@ -16,27 +17,23 @@ function Chapter4() {
         name="Bike minigame"
         phases={[
           [
-            'Security Officer: Break when Jessie says "Right...". Combo.',
+            'Security Officer: Break after Cloud says "Don\'t  blame me if ya get sick.". Combo.',
             "Security Officer x2: Break after tunnel. Spinning Slash.",
             "Security Officer x3: Break after ramp. Let 1 pass, Spinning Slash, Combo last.",
           ],
           [
-            'Elite Security Officer x2: Break and Defend until "We\'re not screwed, are we?". Spinning Slash + Combo.',
-            "Slug-Ray x4: Break until music changes. Spinning Slash, Combo rest.",
+            'Elite Security Officer x2: Break until "We\'re not screwed, are we?". Spinning Slash + Combo.',
+            "Slug-Ray x4: Break, let 1 pass, Spinning Slash, Combo rest.",
           ],
           [
             "Security Officer, Elite Security Officer, Slug-Ray x2: Break, let Security Officer pass, Spinning Slash, Combo rest.",
           ],
           [
             "Security Officer x4: Break, let 2 Security Officer pass, Spinning Slash, Combo rest.",
-            "Elite Security Officer x2: Break and hit, Combo to fill special.",
+            "Elite Security Officer x2: Break, Combo to fill special.",
           ],
-          ["Roche"],
+          ["Roche (9 lightnings)"],
         ]}
-      />
-      <Shop
-        name="Vending Machine"
-        buy={["Ether", "Fire", "Ice", "Lightning"]}
       />
       <Menu>
         <Materia
@@ -46,19 +43,14 @@ function Chapter4() {
               weapon: [
                 { name: "Fire" },
                 { name: "Deadly Dodge" },
-                { name: "Lightning", source: "inventory" },
+                {
+                  name: "Lightning",
+                  source: "inventory",
+                  inputs: ["up", "up"],
+                },
               ],
               armor: [{ name: "Ice" }],
               summon: [{ name: "Ifrit", source: "inventory" }],
-            },
-            {
-              name: "Tifa",
-              weapon: [
-                { name: "Ice", source: "inventory" },
-                { name: "Fire", source: "inventory" },
-              ],
-              armor: [],
-              summon: [{ name: "Empty" }],
             },
           ]}
         />
@@ -80,7 +72,13 @@ function Chapter4() {
           characters={[
             {
               name: "Cloud",
-              shortcuts: [{ shortcut: "square", ability: "Thunder" }],
+              shortcuts: [
+                {
+                  shortcut: "x",
+                  ability: "Thunder",
+                  inputs: ["down", "down"],
+                },
+              ],
             },
           ]}
         />
@@ -88,31 +86,40 @@ function Chapter4() {
       <Encounter
         enemies="Security Officers x17, Grenadier x2"
         instructions={[
-          "Deadly Dodge, Cleave, TRIPOLOSKI",
-          "Try to Berserk and 2 ATB for next phase",
+          "1st group: Walk 2 steps, Deadly Dodge, Cleave",
+          "2nd group: Roll left, TRIPOLOSKI",
+          "3rd group: 2 ATB, TRIPOLOSKI",
+          "4th group: Dash, Blizzard Grenadier, Punisher Officers",
+          "5th group: Berserk, Punisher",
         ]}
       />
       <Encounter
         enemies="Elite Security Officer, Riot Trooper"
-        instructions={["Fire each, Punisher Elite Security Officer"]}
+        instructions={[
+          "Deadly Dodge, Blizzard Riot Trooper, Fire Elite Security Officer",
+        ]}
       />
       <Encounter
         enemies="Shock Trooper,  Elite Grenadier"
-        instructions={["Berserk Elite Grenadier, Counter, Fire x2"]}
+        instructions={[
+          "Counter both, Blizzard Grenadier",
+          "Fire, Counter, Punisher Shock Trooper",
+        ]}
       />
       <Encounter
         enemies="Guard Dog x8"
         instructions={[
           "Dash, Cleave Wedge dogs, Lure them",
-          "Counter x3, Blizzard, Punisher, TRIPOLOSKI",
+          "Counter x2, Blizzard, Punisher/TRIPOLOSKI",
         ]}
       />
       <Encounter
         enemies="Sweeper x2"
         instructions={[
-          "Punisher/Berserk B",
+          "Punisher, Berserk B (until it jumps back, Thunder A for pressure if needed)",
           "Cross Slash A (hit both), Focused Thrust if Wedge used mine",
-          "Punisher, Berserk, Thunder...",
+          "Punisher/Berserk/Thunder (use Thunders for pressure)",
+          "Save half ATB/Berserk",
         ]}
       />
       <Boss
@@ -120,12 +127,12 @@ function Chapter4() {
         phases={[
           [
             "Berserk, Operator, Counter, Fire",
-            "Punisher x2, Operator, Counter, Fire, Punisher",
+            "Punisher x2, Operator, Counter, Punisher x4, Fire",
           ],
           [
-            "Fire, Dash, Counter, Punisher full, Focused Thrust, Roll",
-            "Fire, Dash, Counter, Punisher full, Berserk, Operator",
-            "Staggered: Fire x2, Punisher",
+            "Fire, Dash, Counter, Punisher full, Focused Thrust",
+            "Deadly Dodge, Cleave, Fire, Counter, Punisher full, Berserk",
+            "Staggered: Fire x2",
           ],
         ]}
       />
@@ -133,27 +140,40 @@ function Chapter4() {
       <Encounter
         enemies="Mysterious Spectre"
         instructions={[
-          "Deadly Dodge, Cleave, Counter if possible",
-          "Berserk, TRIPOLOSKIS/Fire/Divekick",
+          "Deadly Dodge, Cleave, Counter",
+          "Berserk/TRIPOLOSKIS/Counter",
+          "Fire/Divekick E/F",
         ]}
       />
       <Encounter
         enemies="Mysterious Spectre, Enigmatic Spectre"
         instructions={[
-          "Deadly Dodge, Cleave, Counter if possible",
-          "Cloud: Berserk, Punisher x4 on Mysterious",
-          "Tifa: Combo x6, Whirl, Unbridled, Combo/Whirl until Mysterious dead",
-          "Cloud: Blizzard, Punisher full, Berserk (stagger), Fire on Enigmatic",
+          "Cloud: Deadly Dodge, Cleave, Counter if possible",
+          "Cloud: Berserk, Punisher x6 Mysterious",
+          "Tifa: Combo x6, Whirl, Combo (stagger then kill), Unbridled",
+          "Cloud: Blizzard Enigmatic, Punisher full, Berserk (stagger), 2 ATB, Fire",
           "Tifa: Omni, Whirl, Divekick, Cloud Fire, Whril, Divekick",
         ]}
       />
-      <Shop name="Chadley" buy={["Wind", "First Strike", "Reset Iron Blade"]} />
+      <Shop
+        name="Item Shop"
+        sell={[{ name: "Healing" }, { name: "Revival" }]}
+      />
+      <Shop
+        name="Chadley"
+        buy={[
+          { name: "Wind" },
+          { name: "ATB Boost", inputs: ["down", "down"] },
+          { name: "First Strike x2", inputs: ["down"] },
+        ]}
+        reset={[{ name: "Iron Blade", inputs: ["down"] }]}
+      />
       <Menu>
-        <UpgradeWeapons
+        <Equipment
           characters={[
             {
-              name: "Barret",
-              weapons: [{ name: "Gatling Gun", upgrade: "Auto - Attack" }],
+              name: "Tifa",
+              equipments: [{ name: "Iron Bangle", source: "barret" }],
             },
           ]}
         />
@@ -163,19 +183,37 @@ function Chapter4() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "First Strike", source: "inventory" },
+                {
+                  name: "First Strike",
+                  source: "inventory",
+                  inputs: ["right"],
+                },
                 { name: "Lightning" },
               ],
               armor: [{ name: "Ice" }],
               summon: [{ name: "Ifrit" }],
             },
             {
-              name: "Barret",
+              name: "Tifa",
               weapon: [
-                { name: "Lightning" },
-                { name: "Barrier", source: "inventory" },
+                {
+                  name: "Barrier",
+                  source: "inventory",
+                  inputs: ["up"],
+                },
+                {
+                  name: "First Strike",
+                  source: "inventory",
+                  inputs: ["up"],
+                },
               ],
-              armor: [{ name: "Revival", source: "inventory" }],
+              armor: [
+                {
+                  name: "ATB Boost",
+                  source: "inventory",
+                  inputs: ["square", "right", "up"],
+                },
+              ],
               summon: [{ name: "Empty" }],
             },
           ]}

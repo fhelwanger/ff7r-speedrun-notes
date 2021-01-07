@@ -2,9 +2,14 @@ import React from "react";
 import Box from "@material-ui/core/Box";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import { makeStyles } from "@material-ui/core/styles";
+import UpIcon from "@material-ui/icons/ArrowUpward";
+import RightIcon from "@material-ui/icons/ArrowForward";
+import DownIcon from "@material-ui/icons/ArrowDownward";
+import LeftIcon from "@material-ui/icons/ArrowBack";
 import { charactersPalette } from "./palette";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
   listItemText: {
     lineHeight: 1,
   },
+  listItemInputs: {
+    marginLeft: "10px",
+  },
 }));
 
 export interface EquipmentProps {
@@ -29,12 +37,20 @@ export interface EquipmentProps {
     equipments: Array<{
       name: string;
       source?: "cloud" | "tifa" | "barret" | "aerith";
+      inputs?: Array<"up" | "right" | "down" | "left">;
     }>;
   }>;
 }
 
 function Equipment({ characters }: EquipmentProps) {
   const classes = useStyles();
+
+  const inputsIcons = {
+    up: UpIcon,
+    right: RightIcon,
+    down: DownIcon,
+    left: LeftIcon,
+  };
 
   return (
     <List
@@ -66,6 +82,15 @@ function Equipment({ characters }: EquipmentProps) {
                       : undefined,
                   }}
                 />
+                {equipment.inputs && equipment.inputs.length > 0 && (
+                  <ListItemIcon className={classes.listItemInputs}>
+                    {equipment.inputs.map((input, inputIndex) =>
+                      React.createElement(inputsIcons[input], {
+                        key: inputIndex,
+                      })
+                    )}
+                  </ListItemIcon>
+                )}
               </ListItem>
             ))}
           </List>

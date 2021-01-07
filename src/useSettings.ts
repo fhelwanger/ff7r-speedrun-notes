@@ -8,6 +8,8 @@ export interface Settings {
   showMenus: boolean;
   showShops: boolean;
   showDialogue: boolean;
+  showHeal: boolean;
+  showBox: boolean;
   showBench: boolean;
   showOptionalBench: boolean;
   showBreaks: boolean;
@@ -21,6 +23,8 @@ const defaultSettings: Settings = {
   showMenus: true,
   showShops: true,
   showDialogue: true,
+  showHeal: true,
+  showBox: true,
   showBench: true,
   showOptionalBench: true,
   showBreaks: true,
@@ -29,7 +33,7 @@ const defaultSettings: Settings = {
 export const SettingsContext = React.createContext(defaultSettings);
 
 function useSettings() {
-  const settingsStorageKey = "SETTINGS";
+  const settingsStorageKey = "SETTINGS_V2";
   const [settings, setSettings] = React.useState<Settings>(defaultSettings);
 
   React.useEffect(() => {

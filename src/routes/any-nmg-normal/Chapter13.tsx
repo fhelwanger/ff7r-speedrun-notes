@@ -5,11 +5,11 @@ import Boss from "../../components/Boss";
 import Chapter from "../../components/Chapter";
 import Encounter from "../../components/Encounter";
 import Equipment from "../../components/Equipment";
+import Heal from "../../components/Heal";
 import Materia from "../../components/Materia";
 import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
 import Shop from "../../components/Shop";
-import UpgradeWeapons from "../../components/UpgradeWeapons";
 
 function Chapter13() {
   return (
@@ -23,26 +23,10 @@ function Chapter13() {
           characters={[
             {
               name: "Cloud",
-              equipments: [{ name: "Iron Blade" }],
-            },
-            {
-              name: "Tifa",
-              equipments: [{ name: "Feathered Gloves" }],
-            },
-          ]}
-        />
-        <Materia
-          characters={[
-            {
-              name: "Tifa",
-              weapon: [
-                { name: "Subversion" },
-                { name: "Ice", source: "inventory" },
-                { name: "Lightning" },
-                { name: "Fire", source: "tifa" },
+              equipments: [
+                { name: "Iron Blade", inputs: ["up"] },
+                { name: "Fury Ring", source: "tifa", inputs: ["right"] },
               ],
-              armor: [{ name: "First Strike" }, { name: "Parry" }],
-              summon: [{ name: "Ifrit" }],
             },
           ]}
         />
@@ -50,15 +34,21 @@ function Chapter13() {
           characters={[
             {
               name: "Cloud",
-              shortcuts: [{ shortcut: "square", ability: "Thundara" }],
+              shortcuts: [
+                { shortcut: "x", ability: "Thundara", inputs: ["right", "up"] },
+              ],
             },
             {
-              name: "Barret",
-              shortcuts: [{ shortcut: "square", ability: "Thundara" }],
+              name: "Barret (R2)",
+              shortcuts: [
+                { shortcut: "x", ability: "Thundara", inputs: ["right", "up"] },
+              ],
             },
             {
-              name: "Tifa",
-              shortcuts: [{ shortcut: "square", ability: "Thundara" }],
+              name: "Tifa (R2)",
+              shortcuts: [
+                { shortcut: "x", ability: "Thundara", inputs: ["right", "up"] },
+              ],
             },
           ]}
         />
@@ -69,8 +59,8 @@ function Chapter13() {
         instructions={[
           "Smogger: Cloud Thundara, Tifa Thundara",
           "Barret: Overcharge, Thundara",
-          "Cloud: Berserk, 1 ATB, ATB Boost, Thundara, Thundara",
-          "Tifa: Whirl, Thundara",
+          "Cloud: Punisher full, ATB Boost",
+          "Tifa: Whirl x2, Cloud Thundara x2, Thundara",
         ]}
       />
       <Pick item="Heavy-Duty Bracer" />
@@ -79,17 +69,7 @@ function Chapter13() {
           characters={[
             {
               name: "Cloud",
-              equipments: [
-                { name: "Hardedge" },
-                { name: "Fury Ring", source: "tifa" },
-              ],
-            },
-            {
-              name: "Tifa",
-              equipments: [
-                { name: "Metal Knuckles" },
-                { name: "Heavy-Duty Bracer" },
-              ],
+              equipments: [{ name: "Hardedge", inputs: ["right"] }],
             },
           ]}
         />
@@ -97,13 +77,15 @@ function Chapter13() {
       <Encounter enemies="Bandit x2" instructions={["TRIPOLOSKI"]} />
       <Encounter
         enemies="Bandit x2"
-        instructions={["Starshower A", "Punisher, TRIPOLOSKI B"]}
+        instructions={["Starshower A", "TRIPOLOSKI, Punisher x4, Operator B"]}
       />
       <Encounter
         enemies="Beck, Burke, Butch, Grungy Bandit"
         instructions={[
-          "Cloud: TRIPOLOSKI, Starshower",
-          "Grungy: Punisher full + Overcharge, Focused Shot/Thrust",
+          "Cloud: ATB Boost, TRIPOLOSKI x2 Bandits",
+          "Barret: Overcharge, 2 ATB, Grungy",
+          "Barret: Starshower, Focused Shot (after Starshower starts) Grungy",
+          "Tifa: Whirl/Divekick",
         ]}
       />
       <Pick item="Orb of Gravity" description="Skip if picked in chapter 12" />
@@ -112,24 +94,20 @@ function Chapter13() {
         instructions={["ATB Boost, TRIPOLOSKI, Starshower, TRIPOLOSKI"]}
       />
       <Pick item="Magnify" />
-      <Shop name="Weapon Shop" buy={["Big Bertha"]} />
       <Menu>
-        <UpgradeWeapons
-          characters={[
-            {
-              name: "Barret",
-              weapons: [{ name: "Big Bertha", upgrade: "Auto - Attack" }],
-            },
-          ]}
-        />
         <Equipment
           characters={[
             {
               name: "Barret",
               equipments: [
-                { name: "Big Bertha" },
-                { name: "Fury Ring", source: "cloud" },
+                { name: "Remove Accessory" },
+                { name: "Fury Ring", source: "cloud", inputs: ["right"] },
+                { name: "Heavy-Duty Bracer", inputs: ["right"] },
               ],
+            },
+            {
+              name: "Tifa (R2)",
+              equipments: [{ name: "Caliginous Bracelet", inputs: ["up"] }],
             },
           ]}
         />
@@ -139,44 +117,48 @@ function Chapter13() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "Binding", source: "barret" },
                 { name: "", source: "barret" },
+                { name: "", source: "tifa" },
               ],
               armor: [
                 { name: "Lightning", source: "barret" },
                 { name: "Wind", source: "barret" },
               ],
-              summon: [{ name: "" }],
+              summon: [{ name: "", source: "tifa" }],
             },
             {
               name: "Barret",
               weapon: [
-                { name: "Refocus", source: "cloud" },
-                { name: "First Strike", source: "cloud" },
-                { name: "ATB Boost", source: "cloud" },
+                { name: "Ice" },
+                {
+                  name: "Magnify",
+                  source: "inventory",
+                  inputs: ["down", "down", "down"],
+                },
+                { name: "Subversion" },
                 { name: "Lightning", source: "cloud" },
               ],
               armor: [
-                { name: "Magnify", source: "inventory" },
-                { name: "Ice" },
-                { name: "Fire" },
+                { name: "First Strike", source: "cloud" },
+                { name: "ATB Boost", source: "cloud" },
+                { name: "Binding" },
               ],
-              summon: [{ name: "Ifrit", source: "tifa" }],
+              summon: [{ name: "" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "Subversion" },
                 { name: "Ice" },
-                { name: "Lightning" },
                 { name: "Fire" },
+                { name: "Lightning" },
+                { name: "Refocus", source: "cloud" },
               ],
               armor: [
-                { name: "First Strike" },
                 { name: "Parrry" },
+                { name: "First Strike" },
                 { name: "" },
               ],
-              summon: [{ name: "", source: "barret" }],
+              summon: [{ name: "Ifrit", source: "cloud" }],
             },
           ]}
         />
@@ -185,65 +167,99 @@ function Chapter13() {
             {
               name: "Barret",
               shortcuts: [
-                { shortcut: "x", ability: "Maximum Fury" },
-                { shortcut: "circle", ability: "Blizzard All" },
+                {
+                  shortcut: "square",
+                  ability: "Blizzard",
+                  inputs: ["down", "down"],
+                },
+                {
+                  shortcut: "circle",
+                  ability: "Blizzara All",
+                  inputs: ["down", "down", "down"],
+                },
               ],
             },
             {
-              name: "Tifa",
-              shortcuts: [{ shortcut: "circle", ability: "Focused Strike" }],
+              name: "Tifa (R2)",
+              shortcuts: [
+                {
+                  shortcut: "circle",
+                  ability: "Focused Strike",
+                  inputs: ["down", "down", "down"],
+                },
+              ],
             },
           ]}
         />
       </Menu>
-      <Encounter enemies="Bugaboo x4" instructions={["Maximum Fury"]} />
+      <Encounter
+        enemies="Bugaboo x4"
+        instructions={["Focused Shot, Overcharge"]}
+      />
       <Pick item="2000 gil" optional />
       <Encounter
         enemies="Bloodhound x2"
-        instructions={["Overcharge, Blizzard All, ATB Boost, Maximum Fury"]}
+        instructions={[
+          "Overcharge, Blizzara All (stagger)",
+          "ATB Boost, Blizzard each",
+        ]}
       />
       <Encounter
         enemies="Bloodhound, Bugaboo x3"
-        instructions={["Overcharge Bloodhound, Blizzard All, Maximum Fury"]}
+        instructions={[
+          "Overcharge Bloodhound, Blizzara All (stagger)",
+          "ATB Boost, Blizzard Bloodhound, Focused Shot Bugaboos",
+        ]}
       />
-      <Encounter
-        enemies="Gorger x2"
-        instructions={["Blizzard All, Overcharge"]}
-      />
+      <Encounter enemies="Gorger x2" instructions={["Blizzard All"]} />
       <Encounter
         enemies="Gorger, Bugaboo x2"
-        instructions={["Blizzard All, Overcharge"]}
+        instructions={["Overcharge Gorger, Focused Shot"]}
       />
-      <Menu>
-        <Equipment
-          characters={[
-            {
-              name: "Barret",
-              equipments: [{ name: "Light Machine Gun" }],
-            },
-          ]}
-        />
-      </Menu>
+      <Heal description="Barret 33 MP." />
       <Encounter
         enemies="Cutter, Monodrive x2"
         instructions={[
           "Barret: Overcharge Monodrive",
-          "Tifa: Combo x6, Whirl Monodrive",
-          "Tifa: Barret Thundara, Whirl, Divekick, Barret ATB Boost",
-          "Tifa: Combo x2, Whirl, Focused Strike x3",
-          "Barret Thundara x2, Tifa Whirl, Divekick",
+          "Tifa: Parry, Combo x6, Whirl Monodrive",
+          "Tifa: Whirl, Divekick, Barret Thundara, Barret ATB Boost",
+          "Tifa: Combo x2, Whirl, Barret Thundara, Focused Strike x2",
+          "Tifa: Unbridled, Omni, Whirl, Barret Thundara, Divekick",
         ]}
       />
-      <Shop name="Vending Machine" buy={["Mega-Potion x3", "Ether x2"]} />
+      <Shop
+        name="Vending Machine"
+        sell={[
+          { name: "Iron Bangle x2" },
+          { name: "Mesmeric Armlet" },
+          { name: "Mythril Armlet" },
+          { name: "Prayer", inputs: ["down"] },
+          { name: "Deadly Dodge" },
+        ]}
+        buy={[
+          { name: "Mega-Potion x3", inputs: ["down", "down", "down", "down"] },
+          { name: "Ether x2", inputs: ["down", "down"] },
+          {
+            name: "Supernatural Wristguards",
+            inputs: ["down", "down", "down", "down"],
+          },
+          { name: "Platinum Earrings", inputs: ["down", "down"] },
+        ]}
+      />
       <Bench />
       <Menu>
         <Equipment
           characters={[
             {
-              name: "Barret",
+              name: "Tifa",
               equipments: [
-                { name: "Big Bertha" },
-                { name: "Power Wristguards", source: "tifa" },
+                {
+                  name: "Heavy-Duty Bracer",
+                  source: "barret",
+                  inputs: ["down"],
+                },
+                { name: "Supernatural Wristguards", inputs: ["down", "down"] },
+                { name: "Fury Ring", source: "barret", inputs: ["right"] },
               ],
             },
           ]}
@@ -253,32 +269,32 @@ function Chapter13() {
             {
               name: "Barret",
               weapon: [
-                { name: "", source: "tifa" },
-                { name: "First Strike" },
-                { name: "ATB Boost" },
+                { name: "Ice" },
+                { name: "Fire", source: "tifa" },
+                { name: "Subversion" },
                 { name: "Lightning" },
               ],
               armor: [
-                { name: "Subversion", source: "tifa" },
-                { name: "Ice" },
-                { name: "Fire" },
+                { name: "First Strike" },
+                { name: "", source: "tifa" },
+                { name: "Binding" },
               ],
-              summon: [{ name: "", source: "tifa" }],
+              summon: [{ name: "" }],
             },
             {
               name: "Tifa",
               weapon: [
-                { name: "Magnify", source: "barret" },
                 { name: "Ice" },
+                { name: "Magnify", source: "barret" },
                 { name: "Lightning" },
-                { name: "Fire" },
+                { name: "Refocus" },
               ],
               armor: [
-                { name: "First Strike" },
                 { name: "Parrry" },
-                { name: "Refocus", source: "barret" },
+                { name: "First Strike" },
+                { name: "ATB Boost", source: "barret" },
               ],
-              summon: [{ name: "Ifrit", source: "barret" }],
+              summon: [{ name: "Ifrit" }],
             },
           ]}
         />
@@ -289,8 +305,14 @@ function Chapter13() {
               shortcuts: [{ shortcut: "circle", ability: "Blizzara" }],
             },
             {
-              name: "Tifa",
-              shortcuts: [{ shortcut: "circle", ability: "Blizzara All" }],
+              name: "Tifa (R2)",
+              shortcuts: [
+                {
+                  shortcut: "x",
+                  ability: "Blizzara All",
+                  inputs: ["down", "down", "down"],
+                },
+              ],
             },
           ]}
         />
@@ -299,18 +321,19 @@ function Chapter13() {
         name="Failed Experiment"
         phases={[
           [
-            "Barret: Overcharge, Tifa Blizzara All, Blizzara, Refocus",
-            "Barret: Combo + Blizzara x2",
-            "Tifa: Blizzara All, Combo + Whirl",
+            "Barret: Overcharge, Tifa ATB Boost, Blizzara",
+            "Barret: Tifa Blizzara All, Refocus, 2 ATB",
+            "Tifa: Blizzara All, Barret Blizzara, Combo/Whirl",
           ],
           [
             "Tifa: Blizzara All",
-            "Barret: Blizzara/Overcharge two far away",
-            "Tifa: Blizzara All, Combo + Whirl",
+            "Barret: Blizzara two far away, Overcharge",
+            "Tifa: Combo/Whirl",
           ],
-          ["Tifa: Go up, Blizzara All, Somersault, Barret ATB Boost"],
+          ["Tifa: Go up, Blizzara All, Somersault"],
           [
-            "Tifa: Fire in the Hole, Starshower, Maximum Fury, Starshower, Somersault",
+            "Tifa: Fire in the Hole",
+            "Tifa: Starshower x2, Somersault, Whirl/Divekick",
           ],
         ]}
       />

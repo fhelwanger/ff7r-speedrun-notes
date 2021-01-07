@@ -3,8 +3,7 @@ import BattleSettings from "../../components/BattleSettings";
 import Chapter from "../../components/Chapter";
 import Dialogue from "../../components/Dialogue";
 import Encounter from "../../components/Encounter";
-import Equipment from "../../components/Equipment";
-import Materia from "../../components/Materia";
+import Heal from "../../components/Heal";
 import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
 
@@ -15,18 +14,20 @@ function Chapter6() {
       <Encounter
         enemies="Grashtrike x3"
         instructions={[
-          "Cloud: Berserk, Blizzard",
-          "Barret: Overcharge, Focused Shot if less than 70% learned",
-          "Cloud: Punisher/Blizzard",
+          "Cloud: Punisher jump, Berserk, ATB Boost, Blizzard A, Blizzard B",
+          "Barret: Overcharge, Focused Shot (learn), Divekick C",
         ]}
       />
       <Encounter
         enemies="Sentry Ray x2"
-        instructions={["A: Overcharge", "B: Thunder"]}
+        instructions={[
+          "Barret: Overcharge one",
+          "Cloud: Run to painel, Tifa/Barret Thunder other",
+        ]}
       />
       <Encounter
         enemies="Sentry Gun Prototype x4"
-        instructions={["Cloud Thunder one, Tifa Flee"]}
+        instructions={["Cloud Thunder one while Tifa Flee"]}
       />
       <Menu>
         <BattleSettings
@@ -41,62 +42,23 @@ function Chapter6() {
       <Encounter
         enemies="Terpsicolt x2, Sentry Gun Prototype x2"
         instructions={[
-          "Cloud: Dash, Punisher full, Berserk Sentry Gun A",
-          "Cloud: TRIPOLOSKI, Punisher/Berserk Sentry Gun B",
-          "Cloud: TRIPOLOSKI/Punisher Terpsicolts",
+          "Cloud: ATB Boost, Blizzard, Berserk, Punisher Terpsicolt A",
+          "Cloud: Punisher (spinning), Overcharge, TRIPLOSKI Terpsicolt B",
+          "Tifa/Barret Thunder each Sentry",
         ]}
       />
       <Pick item="Mesmeric Armlet" />
-      <Menu>
-        <Equipment
-          characters={[
-            {
-              name: "Tifa",
-              equipments: [
-                { name: "Mesmeric Armlet" },
-                { name: "Iron Bangle", source: "cloud" },
-                { name: "Earrings", source: "cloud" },
-              ],
-            },
-          ]}
-        />
-        <Materia
-          characters={[
-            {
-              name: "Cloud",
-              weapon: [
-                { name: "Fire" },
-                { name: "First Strike" },
-                { name: "Lightning" },
-              ],
-              armor: [
-                { name: "Ice" },
-                { name: "Deadly Dodge", source: "inventory" },
-              ],
-              summon: [{ name: "Ifrit" }],
-            },
-            {
-              name: "Tifa",
-              weapon: [
-                { name: "Ice" },
-                { name: "Fire" },
-                { name: "Lightning" },
-              ],
-              armor: [{ name: "Wind", source: "inventory" }],
-              summon: [{ name: "" }],
-            },
-          ]}
-        />
-      </Menu>
+      <Heal description="Everyone full HP" />
       <Dialogue optionText="Nah. No time." optionPosition="2nd" />
       <Encounter
         enemies="Sentry Ray x2, Sentry Gun Prototype x2, Sentry Launcher x2"
         instructions={[
-          "Cloud: Dash, Punisher full, Berserk, 2 ATB, Thunder Launcher A",
-          "Barret: Overcharge Sentry Ray A, Cloud Thunder Launcher A, Thunder SGP A",
-          "Barret: Combo, Thunder Launcher B",
-          "Tifa: Combo, Thunder Launcher B",
-          "Cloud: Punisher Launcher B, Thunder rest",
+          "Cloud: Roll",
+          "Barret: Overcharge Ray A",
+          "Cloud: Dash, Berserk, Barret Thunder, Thunder Launcher A",
+          "Cloud: Punisher full, Operator Launcher A",
+          "Cloud: Thunder Launcher B, Tifa Thunder Sentry B, Thunder Launcher B",
+          "Cloud: Punisher full Launcher B, ATB Boost, Thunder each SGP",
         ]}
       />
     </Chapter>

@@ -12,7 +12,17 @@ import Shop from "../../components/Shop";
 function Chapter3() {
   return (
     <Chapter number={3}>
-      <Shop name="Item Shop" buy={["Deadly Dodge"]} />
+      <Shop
+        name="Item Shop"
+        sell={[
+          { name: "Potion x4" },
+          { name: "Hi-Potion x2", inputs: ["down"] },
+        ]}
+        buy={[
+          { name: "Deadly Dodge", inputs: ["up"] },
+          { name: "Lightning", inputs: ["up"] },
+        ]}
+      />
       <Menu>
         <Materia
           characters={[
@@ -20,7 +30,11 @@ function Chapter3() {
               name: "Cloud",
               weapon: [
                 { name: "Fire" },
-                { name: "Deadly Dodge", source: "inventory" },
+                {
+                  name: "Deadly Dodge",
+                  source: "inventory",
+                  inputs: ["right"],
+                },
               ],
               armor: [],
               summon: [],
@@ -31,18 +45,39 @@ function Chapter3() {
       <Pick item="Ether" optional />
       <Pick item="Ice" />
       <Encounter
-        enemies="Gorgers and Wererats"
-        instructions={["Deadly Dodge + Cleave, Punisher, Fire"]}
+        enemies="Gorger x2"
+        instructions={[
+          "A: Deadly Dodge, Cleave, Punisher x2, Operator",
+          "B: Fire",
+        ]}
       />
-      <Shop name="Weapon Shop" buy={["Earrings"]} />
+      <Encounter
+        enemies="Gorger, Wererat"
+        instructions={[
+          "Gorger: Dash, Deadly Dodge, Cleave, Punisher x2, Operator",
+          "Wererat: Fire",
+        ]}
+      />
+      <Encounter enemies="Wererat x2" instructions={["Deadly Dodge, Cleave"]} />
+      <Encounter
+        enemies="Gorger x2"
+        instructions={[
+          "A: Deadly Dodge, Cleave, Punisher x2, Operator",
+          "B: Fire",
+        ]}
+      />
+      <Shop
+        name="Weapon Shop"
+        buy={[{ name: "Earrings", inputs: ["down", "down"] }]}
+      />
       <Menu>
         <Equipment
           characters={[
             {
               name: "Cloud",
               equipments: [
-                { name: "Iron Blade" },
-                { name: "Iron Bangle" },
+                { name: "Iron Blade", inputs: ["right"] },
+                { name: "Iron Bangle", inputs: ["right"] },
                 { name: "Earrings" },
               ],
             },
@@ -55,9 +90,11 @@ function Chapter3() {
               weapon: [
                 { name: "Fire" },
                 { name: "Deadly Dodge" },
-                { name: "Assess", source: "inventory" },
+                { name: "Assess", source: "inventory", inputs: ["up", "up"] },
               ],
-              armor: [{ name: "Ice", source: "inventory" }],
+              armor: [
+                { name: "Ice", source: "inventory", inputs: ["down", "down"] },
+              ],
               summon: [],
             },
           ]}
@@ -67,16 +104,27 @@ function Chapter3() {
             {
               name: "Cloud",
               shortcuts: [
-                { shortcut: "square", ability: "Assess" },
-                { shortcut: "x", ability: "TRIPOLOSKI" },
+                {
+                  shortcut: "square",
+                  ability: "TRIPOLOSKI",
+                  inputs: ["down", "down"],
+                },
+                {
+                  shortcut: "triangle",
+                  ability: "Blizzard",
+                  inputs: ["down"],
+                },
+                {
+                  shortcut: "x",
+                  ability: "Assess",
+                  inputs: ["up", "up"],
+                },
               ],
             },
             {
               name: "Tifa",
               shortcuts: [
-                { shortcut: "x", ability: "Blizzard" },
-                { shortcut: "circle", ability: "Fire" },
-                { shortcut: "square", ability: "Thunder" },
+                { shortcut: "x", ability: "Thunder", inputs: ["down", "down"] },
               ],
             },
           ]}
@@ -85,17 +133,17 @@ function Chapter3() {
       <Encounter
         enemies="Wererats x2, Gorger"
         instructions={[
-          "Dash, Operator, Roll Gorger to build ATB",
+          "Counter Gorger",
           "Assess Gorger and Wererat",
           "Deadly Dodge/Cleave/TRIPOLOSKI",
-          "Flee if Call to Arms",
         ]}
       />
       <Encounter
         enemies="Security Officer x2, Elite Security Officer, Guard Dog"
         instructions={[
-          "Cloud: Deadly Dodge, Cleave, Counter",
-          "Cloud: Blizzard Dog, Berserk, TRIPOLOSKI",
+          "Cloud: Deadly Dodge, Counter/Cleave",
+          "Cloud: Blizzard, Berserk, TRIPOLOSKI Elite",
+          "Cloud: Punisher, Fire Dog",
         ]}
       />
       <Dialogue

@@ -182,6 +182,36 @@ function Drawer({ open, onClose, settings, setSettings }: DrawerProps) {
               </ListItemSecondaryAction>
             </ListItem>
             <ListItem>
+              <ListItemText primary="Show healings" />
+              <ListItemSecondaryAction>
+                <Switch
+                  edge="end"
+                  checked={settings.showHeal}
+                  onChange={() =>
+                    setSettings({
+                      ...settings,
+                      showHeal: !settings.showHeal,
+                    })
+                  }
+                />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Show Shinra boxes" />
+              <ListItemSecondaryAction>
+                <Switch
+                  edge="end"
+                  checked={settings.showBox}
+                  onChange={() =>
+                    setSettings({
+                      ...settings,
+                      showBox: !settings.showBox,
+                    })
+                  }
+                />
+              </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem>
               <ListItemText primary="Show benches" />
               <ListItemSecondaryAction>
                 <Switch
