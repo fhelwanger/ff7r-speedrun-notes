@@ -8,28 +8,19 @@ import { cardsPalette } from "./palette";
 
 export interface BenchProps {
   description?: string;
-  optional?: boolean;
 }
 
-function Bench({ description, optional }: BenchProps) {
+function Bench({ description }: BenchProps) {
   const settings = React.useContext(SettingsContext);
 
-  if (!settings.showBench && !optional) {
-    return null;
-  }
-
-  if (!settings.showOptionalBench && optional) {
+  if (!settings.showBench) {
     return null;
   }
 
   let text = "Use bench";
 
-  if (optional) {
-    text += " (optional)";
-  }
-
   return (
-    <Card color={optional ? cardsPalette.benchOptional : cardsPalette.bench}>
+    <Card color={cardsPalette.bench}>
       <List dense>
         <ListItem>
           <ListItemText primary={text} secondary={description} />

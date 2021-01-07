@@ -11,7 +11,6 @@ export interface Settings {
   showHeal: boolean;
   showBox: boolean;
   showBench: boolean;
-  showOptionalBench: boolean;
   showBreaks: boolean;
 }
 
@@ -26,7 +25,6 @@ const defaultSettings: Settings = {
   showHeal: true,
   showBox: true,
   showBench: true,
-  showOptionalBench: true,
   showBreaks: true,
 };
 

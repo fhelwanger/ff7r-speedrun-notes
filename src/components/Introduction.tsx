@@ -78,12 +78,6 @@ function Sections() {
       description: "When you should use a bench to rest.",
     },
     {
-      name: "Optional Bench",
-      color: cardsPalette.benchOptional,
-      description:
-        "A bench that should only be used to save items in case of emergency or marathon safety.",
-    },
-    {
       name: "Break",
       color: cardsPalette.break,
       description: "One of the few breaks that you have in this speedrun.",

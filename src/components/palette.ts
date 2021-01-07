@@ -17,6 +17,5 @@ export const cardsPalette = {
   heal: '#2196F3',
   box: '#E65100',
   bench: "#757575",
-  benchOptional: "#9E9E9E",
   break: "#4DB6AC",
 };

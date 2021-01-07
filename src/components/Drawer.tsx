@@ -227,21 +227,6 @@ function Drawer({ open, onClose, settings, setSettings }: DrawerProps) {
               </ListItemSecondaryAction>
             </ListItem>
             <ListItem>
-              <ListItemText primary="Show optional benches" />
-              <ListItemSecondaryAction>
-                <Switch
-                  edge="end"
-                  checked={settings.showOptionalBench}
-                  onChange={() =>
-                    setSettings({
-                      ...settings,
-                      showOptionalBench: !settings.showOptionalBench,
-                    })
-                  }
-                />
-              </ListItemSecondaryAction>
-            </ListItem>
-            <ListItem>
               <ListItemText primary="Show breaks" />
               <ListItemSecondaryAction>
                 <Switch
