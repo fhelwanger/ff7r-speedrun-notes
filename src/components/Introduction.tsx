@@ -176,38 +176,6 @@ function Menus() {
   );
 }
 
-function RecommendedSettings() {
-  const classes = useStyles();
-
-  const recommendedSettings = [
-    {
-      name: "Camera Distance: Out of Battle",
-      value: "3",
-    },
-    {
-      name: "Camera Distance: In Battle",
-      value: "3",
-    },
-    {
-      name: "Combo Targeting",
-      value: "Free",
-    },
-  ];
-
-  return (
-    <>
-      <Typography variant="h5">Recommended Settings</Typography>
-      <List className={classes.settingsList}>
-        {recommendedSettings.map((setting, settingIndex) => (
-          <ListItem key={settingIndex} className={classes.settingsListItem}>
-            <ListItemText primary={setting.name} secondary={setting.value} />
-          </ListItem>
-        ))}
-      </List>
-    </>
-  );
-}
-
 function Cutscenes() {
   const tips = [
     "To skip a cutscene, you can hold down, then press Options + X. The down input gets buffered and you skip it immediately.",
@@ -273,6 +241,168 @@ function FirstStrike() {
   );
 }
 
+function AtbBoost() {
+  const enemies = [
+    "Security Officer (Chapter 1 escape, Chapter 2/4 as backup)",
+    "Elite Security Officer (Johnny fight)",
+    "Grenadier (Chapter 4)",
+    "Elite Grenadier (Chapter 4)",
+    "Riot Trooper (Chapter 4)",
+    "Shock Trooper (Chapter 1)",
+    "Guard Dog (Chapter 1)",
+    "Monodrive (Chapter 1 after Scorpion)",
+    "Sentry Ray (Chapter 1)",
+    "Sweeper (Chapter 1)",
+    "The Huntsman",
+    "Roche",
+    "Guard Scorpion",
+    "Mysterious Spectre",
+    "Enigmatic Spectre",
+  ];
+
+  return (
+    <>
+      <Typography variant="h5" paragraph>
+        ATB Boost
+      </Typography>
+      <Typography>
+        Similiarly, we also need to buy ATB Boost in Chapter 4 by completing
+        "The Stagger Effect Pt.2" battle intel. For this you need to stagger 15
+        different enemy types until the end of Chapter 4. If you follow the
+        instructions for the fights you should be able to get it. The list is
+        the following:
+      </Typography>
+      <List dense>
+        {enemies.map((enemy, enemyIndex) => (
+          <ListItem key={enemyIndex}>
+            <ListItemText primary={enemy} />
+          </ListItem>
+        ))}
+      </List>
+    </>
+  );
+}
+
+function AtbAssist() {
+  return (
+    <>
+      <Typography variant="h5" paragraph>
+        ATB Assist
+      </Typography>
+      <Typography paragraph>
+        We also buy two materias from Chadley in chapter 14 that can be missed.
+        One of them is ATB Assist. To get this materia you need to complete the
+        "Refocus Analysis" battle intel which is done by using Refocus two
+        times. One of them is in chapter 10 on the 3 Sahagins fight. Be careful
+        that the Refocus animation should end for it to count. The other is in
+        chapter 13 on Failed Experiment. If you miss it on the Sahagins fight,
+        equip Refocus on Barret and use Blizzara All on the three Wererats at
+        the start of his solo section in Chapter 13.
+      </Typography>
+    </>
+  );
+}
+
+function AtbStagger() {
+  const enemies = [
+    "Elite Riot Trooper (Chapter 7)",
+    "Elite Shock Trooper (Chapter 7)",
+    "Helitrooper (Chapter 12)",
+    "Bloodhound (Chapter 13)",
+    "Laser Cannon (Chapter 7)",
+    "Sentry Launcher (Chapter 5)",
+    "Sentry Gun Prototype (Chapter 6)",
+    "Slug-Ray (Chapter 5 inside the train)",
+    "Cutter (Chapter 7)",
+    "Grungy Bandit (Chapter 13)",
+    "Lesser Drake (Chapter 9)",
+    "Cerulean Drake (Chapter 11)",
+    "Grashtrike (Chapter 5)",
+    "Queen Grashtrike (Chapter 5)",
+    "Terpsicolt (Chapter 6)",
+    "Hedgehog Pie (Chapter 8, first fight saving the children)",
+    "Sahagin (Chapter 10)",
+    "Reno",
+    "Rude",
+    "Crab Warden",
+    "Air Buster",
+    "Hell House",
+    "Abzu",
+    "Eligor",
+    "Unknown Entity",
+  ];
+
+  const backupEnemies = [
+    "Sentry Gun (Thunder if missed the Helitrooper)",
+    "Wererat (Blizzara on chapter 13 as solo Barret)",
+    "Gorger (Blizzara on chapter 13 as solo Barret)",
+  ];
+
+  return (
+    <>
+      <Typography variant="h5" paragraph>
+        ATB Stagger
+      </Typography>
+      <Typography>
+        The other materia that we buy in chapter 14 is ATB Stagger, which is
+        done by completing "The Stagger Effect Pt.4" battle intel. It's similar
+        to ATB Boost, but this time we need to stagger 40 different enemy types.
+        The list is the same as ATB Boost plus the following:
+      </Typography>
+      <List dense>
+        {enemies.map((enemy, enemyIndex) => (
+          <ListItem key={enemyIndex}>
+            <ListItemText primary={enemy} />
+          </ListItem>
+        ))}
+      </List>
+      <Typography>
+        If you missed any or are not sure, here are some quick backups to get
+        additional staggers:
+      </Typography>
+      <List dense>
+        {backupEnemies.map((enemy, enemyIndex) => (
+          <ListItem key={enemyIndex}>
+            <ListItemText primary={enemy} />
+          </ListItem>
+        ))}
+      </List>
+    </>
+  );
+}
+
+function RecommendedSettings() {
+  const classes = useStyles();
+
+  const recommendedSettings = [
+    {
+      name: "Camera Distance: Out of Battle",
+      value: "3",
+    },
+    {
+      name: "Camera Distance: In Battle",
+      value: "3",
+    },
+    {
+      name: "Combo Targeting",
+      value: "Free",
+    },
+  ];
+
+  return (
+    <>
+      <Typography variant="h5">Recommended Settings</Typography>
+      <List className={classes.settingsList}>
+        {recommendedSettings.map((setting, settingIndex) => (
+          <ListItem key={settingIndex} className={classes.settingsListItem}>
+            <ListItemText primary={setting.name} secondary={setting.value} />
+          </ListItem>
+        ))}
+      </List>
+    </>
+  );
+}
+
 function Introduction() {
   const theme = useTheme();
 
@@ -285,6 +415,9 @@ function Introduction() {
           <Menus />
           <Cutscenes />
           <FirstStrike />
+          <AtbBoost />
+          <AtbAssist />
+          <AtbStagger />
           <RecommendedSettings />
         </Box>
       </Card>
