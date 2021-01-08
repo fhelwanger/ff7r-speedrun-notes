@@ -19,13 +19,14 @@ function Chapter18() {
             'Keep right, break after Barret says "How the hell\'d we get saddled with this junker!?".',
             "Combo Security Officers.",
             'Spinning Slash when "Pull over right now!", break.',
-            "Combo Security Officers.",
+            "Combo x2, Combo x2 Security Officer.",
             "Combo full x4 Truck. Spinning Slash.",
           ],
           [
             'Combo Slug-Rays after Red says "there\'s more".',
             'Break, Spinning Slash after Aerith says "Uh, what the-!?".',
-            "Take ranged attacks, Combo + Spinning Slash when near, defend blades + punches.",
+            "Take ranged attacks, Combo full x5 + Spinning Slash when near, defend blades.",
+            "Take ranged attacks, Combo + Spinning Slash when near, defend punches.",
           ],
           ["Combo, Spinning Slash when both near."],
           [
@@ -131,9 +132,8 @@ function Chapter18() {
       <Encounter
         enemies="Whisper Viridi, Whisper Croceo"
         instructions={[
-          "Cloud: TRIPOLOSKI Croceo, Counterstance Viridi, Berserk",
-          "Cloud: Punisher (stagger), TRIPOLOSKI Viridi",
-          "Cloud: Punisher full, Berserk Viridi",
+          "Cloud: TRIPOLOSKI Croceo, Counterstance Viridi, Berserk, Punisher (stagger)",
+          "Cloud: TRIPOLOSKI, Punisher full, Berserk Viridi",
           "Barret: Overcharge Croceo",
           "Cloud: Punisher x2, Braver, TRIPOLOSKI Croceo",
           "Cloud: Punisher full, Berserk, Punisher Croceo",
@@ -144,19 +144,19 @@ function Chapter18() {
         phases={[
           ["Cloud: Haste All, Counterstance Rubrum, Berserk Croceo"],
           [
-            "Cloud: Counter, Aerith Firaga, Counterstance",
-            "Cloud: Aerith Firaga, Punisher full, Berserk, Braver",
+            "Cloud: Counter, Counterstance, Aerith Firaga",
+            "Cloud: Punisher full, Aerith Firaga, Berserk, Braver",
             "Tifa: Starshower x2, Omni, Whirl x2",
           ],
           [
-            "Cloud: TRIPOLOSKI Croceo, Punisher (1 ATB), TRIPOLOSKI Rubrum",
-            "Cloud: Aerith ATB Boost, Aerith Thundaga Rubrum",
-            "Cloud: Berserk, Braver, Punisher Rubrum",
+            "Cloud: TRIPOLOSKI Croceo, Aerith ATB Boost, 1 ATB, TRIPOLOSKI Rubrum",
+            "Cloud: Aerith Thundaga Rubrum (stagger)",
+            "Cloud: Berserk, Braver, Operator, Punisher Rubrum",
           ],
           ["Tifa: Starshower x2, Whirl, Aerith Firaga Viridi"],
           [
-            "Tifa: Whirl/Divekick (stagger), Whirl Croceo",
-            "Cloud: Starshower, Berserk, Infinity's End Croceo",
+            "Tifa: Whirl/Divekick (stagger)",
+            "Cloud: Berserk, Infinity's End Croceo",
             "Tifa: Whirl Croceo",
           ],
           ["Tifa Thunder"],
@@ -177,7 +177,7 @@ function Chapter18() {
         phases={[
           [
             "Cloud: Berserk, Lock, Counterstance, Punisher full, Counterstance",
-            "Cloud: Punisher full, Berserk, Operator, Punisher x2, TRIPOLOSKI",
+            "Cloud: Punisher full, Berserk, Punisher x2, TRIPOLOSKI",
           ],
           [
             "Cloud: Punisher jump, TRIPOLOSKI, Roll",
@@ -195,7 +195,10 @@ function Chapter18() {
             "Cloud: Berserk, Cross Slash",
             "Tifa: Omni, Whirl, Whirl, swap to Cloud",
           ],
-          ["Cloud: Berserk, Infinity's End", "Tifa: Starshower x2"],
+          [
+            "Cloud: Berserk, Infinity's End",
+            "Tifa: Starshower x2, Aerith Thundaga",
+          ],
         ]}
       />
     </Chapter>
