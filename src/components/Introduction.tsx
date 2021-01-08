@@ -12,17 +12,14 @@ import { charactersPalette, cardsPalette } from "./palette";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  settingsList: {
-    display: "flex",
-    flexWrap: "wrap",
-  },
-  settingsListItem: {
-    flexGrow: 1,
-    width: "auto",
+  paragraph: {
+    maxWidth: "900px",
   },
 }));
 
 function Sections() {
+  const classes = useStyles();
+
   const sections = [
     {
       name: "Encounter",
@@ -89,7 +86,7 @@ function Sections() {
       <Typography variant="h5" paragraph>
         Sections
       </Typography>
-      <Typography>
+      <Typography className={classes.paragraph}>
         The notes are divided in sections. For example, some sections for
         encounters, for bosses, shops, menus, etc. The color at the beginning of
         each section indicates its type. If you open the menu in the left side
@@ -115,6 +112,8 @@ function Sections() {
 }
 
 function Menus() {
+  const classes = useStyles();
+
   const materiaColors = [
     {
       colorName: "Purple",
@@ -148,7 +147,7 @@ function Menus() {
       <Typography variant="h5" paragraph>
         Menus
       </Typography>
-      <Typography>
+      <Typography className={classes.paragraph}>
         All materia menus display the final state of the menu. The changes are
         highlighted in bold, and the colors represent where the materia came
         from.
@@ -168,7 +167,7 @@ function Menus() {
           </ListItem>
         ))}
       </List>
-      <Typography paragraph>
+      <Typography className={classes.paragraph} paragraph>
         The same thing applies to equipment. If an armor is listed in yellow for
         example, it means that that armor was equipped in Cloud.
       </Typography>
@@ -177,6 +176,8 @@ function Menus() {
 }
 
 function Cutscenes() {
+  const classes = useStyles();
+
   const tips = [
     "To skip a cutscene, you can hold down, then press Options + X. The down input gets buffered and you skip it immediately.",
     "If you are not sure if you can skip a cutscene, press Triangle. If you see a Triangle icon in the bottom right side of the screen, you can.",
@@ -188,7 +189,7 @@ function Cutscenes() {
       <Typography variant="h5" paragraph>
         Cutscenes
       </Typography>
-      <Typography>
+      <Typography className={classes.paragraph}>
         I didn't include cutscene skips in the notes because after running the
         game a couple of times I found it to be too much information, which made
         the notes harder to follow. So I believe it's something that is better
@@ -207,6 +208,8 @@ function Cutscenes() {
 }
 
 function FirstStrike() {
+  const classes = useStyles();
+
   const enemies = [
     "Guard Dog",
     "Sweeper",
@@ -221,7 +224,7 @@ function FirstStrike() {
       <Typography variant="h5" paragraph>
         First Strike
       </Typography>
-      <Typography>
+      <Typography className={classes.paragraph}>
         For this route to work it's mandatory to get First Strike in Chapter 4,
         which you get by completing "The Stagger Effect Pt.1" battle intel. To
         do it you must fill an ATB bar using any "triangle" move (Punisher,
@@ -242,6 +245,8 @@ function FirstStrike() {
 }
 
 function AtbBoost() {
+  const classes = useStyles();
+
   const enemies = [
     "Security Officer (Chapter 1 escape, Chapter 2/4 as backup)",
     "Elite Security Officer (Johnny fight)",
@@ -265,7 +270,7 @@ function AtbBoost() {
       <Typography variant="h5" paragraph>
         ATB Boost
       </Typography>
-      <Typography>
+      <Typography className={classes.paragraph}>
         Similiarly, we also need to buy ATB Boost in Chapter 4 by completing
         "The Stagger Effect Pt.2" battle intel. For this you need to stagger 15
         different enemy types until the end of Chapter 4. If you follow the
@@ -284,12 +289,14 @@ function AtbBoost() {
 }
 
 function AtbAssist() {
+  const classes = useStyles();
+
   return (
     <>
       <Typography variant="h5" paragraph>
         ATB Assist
       </Typography>
-      <Typography paragraph>
+      <Typography className={classes.paragraph} paragraph>
         We also buy two materias from Chadley in chapter 14 that can be missed.
         One of them is ATB Assist. To get this materia you need to complete the
         "Refocus Analysis" battle intel which is done by using Refocus two
@@ -304,6 +311,8 @@ function AtbAssist() {
 }
 
 function AtbStagger() {
+  const classes = useStyles();
+
   const enemies = [
     "Elite Riot Trooper (Chapter 7)",
     "Elite Shock Trooper (Chapter 7)",
@@ -343,7 +352,7 @@ function AtbStagger() {
       <Typography variant="h5" paragraph>
         ATB Stagger
       </Typography>
-      <Typography>
+      <Typography className={classes.paragraph}>
         The other materia that we buy in chapter 14 is ATB Stagger, which is
         done by completing "The Stagger Effect Pt.4" battle intel. It's similar
         to ATB Boost, but this time we need to stagger 40 different enemy types.
@@ -356,7 +365,7 @@ function AtbStagger() {
           </ListItem>
         ))}
       </List>
-      <Typography>
+      <Typography className={classes.paragraph}>
         If you missed any or are not sure, here are some quick backups to get
         additional staggers:
       </Typography>
@@ -372,8 +381,6 @@ function AtbStagger() {
 }
 
 function RecommendedSettings() {
-  const classes = useStyles();
-
   const recommendedSettings = [
     {
       name: "Camera Distance: Out of Battle",
@@ -392,13 +399,50 @@ function RecommendedSettings() {
   return (
     <>
       <Typography variant="h5">Recommended Settings</Typography>
-      <List className={classes.settingsList}>
+      <List dense>
         {recommendedSettings.map((setting, settingIndex) => (
-          <ListItem key={settingIndex} className={classes.settingsListItem}>
+          <ListItem key={settingIndex}>
             <ListItemText primary={setting.name} secondary={setting.value} />
           </ListItem>
         ))}
       </List>
+    </>
+  );
+}
+
+function Thanks() {
+  const classes = useStyles();
+
+  const people = [
+    "Closetowar: for creating a lot of strats and the basis of this route in general",
+    "Hello1nternet: for coming up with a lot of crazy ideas for boss fights which improved them a lot",
+    "Ffamran: for writing the compendium which was a big help in the entire routing process and also for creating some sick strats",
+    "BlackLaMamba: for the Roche bike minigame research and some nice fight strats",
+    "Goran and ambcd33: for contributing with some nice strats",
+  ];
+
+  return (
+    <>
+      <Typography variant="h5" paragraph>
+        Thanks!
+      </Typography>
+      <Typography className={classes.paragraph}>
+        I wrote these notes but a lot of the strats and route listed here are
+        all thanks to the work of members of the community. In special, I'd like
+        to thank:
+      </Typography>
+      <List dense>
+        {people.map((person, personIndex) => (
+          <ListItem key={personIndex}>
+            <ListItemText primary={person} />
+          </ListItem>
+        ))}
+      </List>
+      <Typography className={classes.paragraph} paragraph>
+        I only said some key points of some members there but everyone helped a
+        lot in the entire process! And we also had help from other people so I'd
+        like to thank everyone who contributed to where we came so far!
+      </Typography>
     </>
   );
 }
@@ -419,6 +463,7 @@ function Introduction() {
           <AtbAssist />
           <AtbStagger />
           <RecommendedSettings />
+          <Thanks />
         </Box>
       </Card>
     </>
