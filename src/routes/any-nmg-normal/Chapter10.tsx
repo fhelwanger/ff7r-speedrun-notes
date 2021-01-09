@@ -114,8 +114,8 @@ function Chapter10() {
       <Encounter
         enemies="Sahagin"
         instructions={[
-          "Cloud: Aerith ATB Boost, Cleave, Aerith Fira",
-          "Cloud: Soul Drain, Fire",
+          "Cloud: Cleave, Aerith ATB Boost, Fira",
+          "Cloud: Soul Drain, Aerith Fira",
         ]}
       />
       <Encounter
