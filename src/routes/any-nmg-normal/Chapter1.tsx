@@ -90,7 +90,7 @@ function Chapter1() {
           "Cloud: Dash, Punisher",
           "Barret: Overcharge, Combo, Charge, Thunder",
           "Barret: Charge, Combo, Charge, Focused Thrust, Focused Shot (stagger), Overcharge",
-          "Cloud: Barret Thunder, Punisher (2 ATB), Barret Thunder",
+          "Cloud: Barret Thunder, Punisher (2 ATB), Barret Thunder, Focused Thrust",
         ]}
       />
       <Pick item="Ether" optional />
