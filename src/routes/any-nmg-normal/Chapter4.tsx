@@ -103,7 +103,7 @@ function Chapter4() {
         enemies="Shock Trooper,  Elite Grenadier"
         instructions={[
           "Counter both, Blizzard Grenadier",
-          "Fire, Counter, Punisher Shock Trooper",
+          "Fire, Counter, Punisher, (TRIPOLOSKI or Potion) Shock Trooper",
         ]}
       />
       <Encounter
