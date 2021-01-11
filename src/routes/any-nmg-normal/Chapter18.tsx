@@ -23,7 +23,7 @@ function Chapter18() {
             "Combo full x4 Truck. Spinning Slash.",
           ],
           [
-            'Combo Slug-Rays after Red says "there\'s more".',
+            'Break and Combo Slug-Rays after Red says "there\'s more".',
             'Break, Spinning Slash after Aerith says "Uh, what the-!?".',
             "Take ranged attacks, Combo full x5 + Spinning Slash when near, defend blades.",
             "Take ranged attacks, Combo + Spinning Slash when near, defend punches.",
