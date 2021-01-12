@@ -1,5 +1,6 @@
 import React from "react";
 import Route from "../../components/Route";
+import About from "./About";
 import Chapter1 from "./Chapter1";
 import Chapter2 from "./Chapter2";
 import Chapter3 from "./Chapter3";
@@ -22,6 +23,7 @@ import Chapter18 from "./Chapter18";
 function AnyPercentNoMajorGlitchesNormal() {
   return (
     <Route title="Any% No Major Glitches - Normal">
+      <About />
       <Chapter1 />
       <Chapter2 />
       <Chapter3 />
