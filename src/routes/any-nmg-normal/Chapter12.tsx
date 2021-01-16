@@ -120,7 +120,7 @@ function Chapter12() {
           characters={[
             {
               name: "Cloud",
-              shortcuts: [{ shortcut: "square", ability: "Fire" }],
+              shortcuts: [{ shortcut: "x", ability: "Fire" }],
             },
           ]}
         />
