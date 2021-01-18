@@ -56,7 +56,7 @@ function Chapter18() {
             {
               name: "Tifa",
               equipments: [
-                { name: "Heavy-Duty Bracer", inputs: ["up"] },
+                { name: "Heavy-Duty Bracer", inputs: ["up", "up"] },
                 { name: "Platinum Earrings", source: "barret", inputs: ["up"] },
                 { name: "Fury Ring", source: "aerith", inputs: ["right"] },
               ],

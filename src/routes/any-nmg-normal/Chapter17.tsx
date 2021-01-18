@@ -181,7 +181,7 @@ function Chapter17() {
             {
               name: "Aerith (R2)",
               equipments: [
-                { name: "Heavy-Duty Bracer", inputs: ["down", "down", "down"] },
+                { name: "Heavy-Duty Bracer", inputs: ["down", "down"] },
                 {
                   name: "Platinum Earrings",
                   source: "barret",
