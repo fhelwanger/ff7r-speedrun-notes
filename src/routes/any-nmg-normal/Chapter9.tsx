@@ -36,10 +36,6 @@ function Chapter9() {
         ]}
       />
       <Pick item="Hi-Potion x2" optional />
-      <Encounter
-        enemies="Terpsicolt x2"
-        instructions={["Aerith ATB Boost, Soul Drain x2", "Cloud flee"]}
-      />
       <Pick item="Mega-Potion" optional />
       <Encounter
         enemies="Beck, Burke, Butch"
