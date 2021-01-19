@@ -83,7 +83,11 @@ function Chapter5() {
             },
             {
               name: "Tifa",
-              weapon: [{ name: "Barrier" }, { name: "First Strike" }],
+              weapon: [
+                { name: "Barrier" },
+                { name: "First Strike" },
+                { name: "" },
+              ],
               armor: [{ name: "Lightning", source: "cloud" }],
               summon: [{ name: "Empty" }],
             },
