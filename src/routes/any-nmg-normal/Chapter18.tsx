@@ -135,7 +135,7 @@ function Chapter18() {
           "Cloud: TRIPOLOSKI Croceo, Counterstance Viridi, Berserk, Punisher (stagger)",
           "Cloud: TRIPOLOSKI, Punisher full, Berserk Viridi",
           "Barret: Overcharge Croceo",
-          "Cloud: Punisher x2, Braver, TRIPOLOSKI Croceo",
+          "Cloud: Braver, TRIPOLOSKI Croceo",
           "Cloud: Punisher full, Berserk, Punisher Croceo",
         ]}
       />
