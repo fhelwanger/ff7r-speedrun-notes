@@ -17,13 +17,15 @@ function Chapter4() {
         name="Bike minigame"
         phases={[
           [
-            'Security Officer: Break after Cloud says "Don\'t  blame me if ya get sick.". Combo.',
-            "Security Officer x2: Break after tunnel. Spinning Slash.",
-            "Security Officer x3: Break after ramp. Let 1 pass, Spinning Slash, Combo last.",
+            'Take ramp. Break after Cloud says "Don\'t  blame me if ya get sick.". Combo x4.',
+            "Security Officer: Combo.",
+            "Security Officer x2: Accelerate for 7s. Break for 1s. Spinning Slash.",
+            "Security Officer x3: Take ramp. Break. Let 1 pass, Spinning Slash, Combo last.",
           ],
           [
-            'Elite Security Officer x2: Break until "We\'re not screwed, are we?". Spinning Slash + Combo.',
-            "Slug-Ray x4: Break, let 1 pass, Spinning Slash, Combo rest.",
+            'Break and go right a little bit until "We\'re not screwed, are we?".',
+            "Elite Security Officer x2: Combo, Spinning Slash, Combo.",
+            "Slug-Ray x4: Break when music changes, let 1 pass, Spinning Slash, Combo rest.",
           ],
           [
             "Security Officer, Elite Security Officer, Slug-Ray x2: Break, let Security Officer pass, Spinning Slash, Combo rest.",
