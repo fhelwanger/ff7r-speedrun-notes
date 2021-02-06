@@ -43,7 +43,8 @@ function Chapter6() {
         enemies="Terpsicolt x2, Sentry Gun Prototype x2"
         instructions={[
           "Cloud: ATB Boost, Blizzard, Berserk, Punisher Terpsicolt A",
-          "Cloud: Punisher (spinning), Overcharge, TRIPLOSKI Terpsicolt B",
+          "Barret: Overcharge Terpsicolt B",
+          "Cloud: Punisher, TRIPLOSKI Terpsicolt B",
           "Tifa/Barret Thunder each Sentry",
         ]}
       />
@@ -57,7 +58,7 @@ function Chapter6() {
           "Barret: Overcharge Ray A",
           "Cloud: Dash, Berserk, Barret Thunder, Thunder Launcher A",
           "Cloud: Punisher full, Operator Launcher A",
-          "Cloud: Thunder Launcher B, Tifa Thunder Sentry B, Thunder Launcher B",
+          "Cloud: Tifa Thunder Sentry B, Thunder x2 Launcher B",
           "Cloud: Punisher full Launcher B, ATB Boost, Thunder each SGP",
         ]}
       />
