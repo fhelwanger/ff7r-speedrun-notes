@@ -60,7 +60,7 @@ function Chapter1() {
       <Encounter
         enemies="Sentry Ray x3, Monodrive x3"
         instructions={[
-          "Barret: Overcharge Sentry Ray B, Combo A (2 ATB), Thunder x2",
+          "Barret: Combo, Overcharge Sentry Ray B, Combo A, Thunder C",
           "Cloud: Punisher x4, Operator Monodrive B/C, Dash, Focused Thrust A",
         ]}
       />
