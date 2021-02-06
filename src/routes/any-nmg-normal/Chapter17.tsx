@@ -430,7 +430,7 @@ function Chapter17() {
         enemies="M.O.T.H Unit, Shock-Ray x3"
         instructions={[
           "Cloud: Thundaga middle Shock-Ray",
-          "Cloud: Counter + Counterstance until Learned",
+          "Cloud: Counter + Counterstance until learned",
           "Barret: Thundara x2, Cloud ATB Boost, Cloud Thundaga",
           "Barret: Overcharge, Thundara, TRIPOLOSKI",
         ]}
