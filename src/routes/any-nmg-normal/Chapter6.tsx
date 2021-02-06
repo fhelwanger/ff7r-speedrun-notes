@@ -27,7 +27,7 @@ function Chapter6() {
       />
       <Encounter
         enemies="Sentry Gun Prototype x4"
-        instructions={["Cloud Thunder one while Tifa Flee"]}
+        instructions={["Cloud ATB Boost, Thunder while Tifa Flee"]}
       />
       <Menu>
         <BattleSettings
