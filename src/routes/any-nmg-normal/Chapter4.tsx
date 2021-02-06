@@ -142,19 +142,18 @@ function Chapter4() {
       <Encounter
         enemies="Mysterious Spectre"
         instructions={[
-          "Deadly Dodge, Cleave, Counter",
-          "Berserk/TRIPOLOSKIS/Counter",
-          "Fire/Divekick E/F",
+          "Cloud: Deadly Dodge, Cleave, Counter, Berserk, TRIPOLOSKI",
+          "Cloud: Operator, TRIPOLOSKI, Counter, TRIPOLOSKI x2",
+          "Cloud: Berserk, Punisher, Divekick E",
+          "Cloud: Fire x2 F (stagger)",
         ]}
       />
       <Encounter
         enemies="Mysterious Spectre, Enigmatic Spectre"
         instructions={[
-          "Cloud: Deadly Dodge, Cleave, Counter if possible",
-          "Cloud: Berserk, Punisher x6 Mysterious",
-          "Tifa: Combo x6, Whirl, Combo (stagger then kill), Unbridled",
-          "Cloud: Blizzard Enigmatic, Punisher full, Berserk (stagger), 2 ATB, Fire",
-          "Tifa: Omni, Whirl, Divekick, Cloud Fire, Whril, Divekick",
+          "Cloud: Punisher full, Operator, Punisher x4, Operator, Berserk, Punisher C",
+          "Tifa: Cloud Blizzard, Combo x6, Whirl, Unbridled, TRIPOLOSKI, Combo Enigmatic (stagger)",
+          "Tifa: Unbridled, Rise, Omni, Whirl, Divekick, Whirl, Divekick",
         ]}
       />
       <Shop
