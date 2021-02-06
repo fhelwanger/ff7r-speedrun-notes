@@ -97,17 +97,15 @@ function Chapter5() {
       <Encounter
         enemies="Grashtrike, Wererat x2"
         instructions={[
-          "Cloud: ATB Boost, TRIPOLOSKI Rats",
-          "Barret: Overcharge, Focused Shot Grashtrike",
-          "Tifa: Whirl, Divekick Grashtrike",
+          "Cloud: Dash, TRIPOLOSKI Grashtrike",
+          "Barret: Overcharge, Focused Shot, Divekick Grashtrike",
         ]}
       />
       <Pick item="Hi-Potion x2" optional />
       <Encounter
         enemies="Grashtrike x2"
         instructions={[
-          "Barret: Overcharge, Focused Shot A",
-          "Tifa: Whirl, Divekick A",
+          "Barret: Overcharge, Focused Shot, Divekick A",
           "Cloud: Berserk, Blizzard B",
         ]}
       />
