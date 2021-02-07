@@ -89,8 +89,7 @@ function Chapter7() {
         enemies="Elite Shock Trooper, Shock Trooper x2"
         instructions={[
           "Berserk, Punisher x2, Operator, Blizzard Elite",
-          "Punisher (2 ATB) Elite, TRIPOLOSKI, ATB Boost",
-          "TRIPOLOSKI/Divekick/Counter",
+          "Counter/Punisher/TRIPOLOSKI/Divekick",
         ]}
       />
       <Encounter
@@ -104,7 +103,7 @@ function Chapter7() {
       <Encounter
         enemies="Laser Cannon x2, Monodrive x2"
         instructions={[
-          "Cloud: Dash, Cleave (if not 1 ATB), TRIPOLOSKI Monodrives",
+          "Cloud: Dash, TRIPOLOSKI Monodrives",
           "Barret: Overcharge Laser Cannon B, Thunder A",
           "Barret: Tifa Thunder Monos/Laser",
         ]}
@@ -307,19 +306,19 @@ function Chapter7() {
         />
       </Menu>
       <Heal description="Cloud 22 MP" />
-      <Pick item="Hi-Potion x3" />
+      <Pick item="Hi-Potion x3" optional />
       <Encounter
         enemies="Cutter"
         instructions={[
           "Cloud: Punisher x4, Berserk, Thundara, Overcharge",
-          "Cloud: 1 ATB, ATB Boost, Focused Shot, Focused Thrust (stagger), Thundara",
-          "Tifa: Whirl/Divekick",
+          "Cloud: 1 ATB, ATB Boost, Focused Shot, Focused Thrust (stagger)",
+          "Tifa: Whirl, Cloud Thundara, Divekick, Whirl, Divekick",
         ]}
       />
       <Pick item="Ether" />
       <Encounter
         enemies="Monodrive x4"
-        instructions={["Dash, TRIPOLOSKI, Tifa Thunder, Overcharge"]}
+        instructions={["Dash, TRIPOLOSKI, Overcharge"]}
       />
       <Shop
         name="Vending Machine"
@@ -350,8 +349,8 @@ function Chapter7() {
             "Barret: Combo, Charge, Combo, Charge, Thunder",
             "Barret: Overcharge, Cloud Thundara (wait overcharge shooting), Combo",
             "Tifa: Defend, Whirl, Divekick, Whirl",
-            "Cloud: Berserk, Punisher x4, Operator, Thundara",
-            "Tifa: Whirl, Divekick (pressure), ATB Boost, Combo x3",
+            "Cloud: Berserk, Punisher (2 ATB), Operator, Thundara",
+            "Tifa: Whirl, Divekick (pressure), Cloud ATB Boost, Combo x3",
             "Tifa: Cloud Blizzara, Focused Shot, Focused Thrust",
             "Tifa: Combo x6, Focused Strike (stagger)",
             "Tifa: Unbridled, Omni, Whirl",
