@@ -166,7 +166,7 @@ function Chapter8() {
       <Box description="After trying to open the door." />
       <Encounter
         enemies="Hedgehog Pie x3"
-        instructions={["Deadly Dodge, Cleave, TRIPOLOSKI"]}
+        instructions={["Deadly Dodge, TRIPOLOSKI, Cleave"]}
       />
       <Encounter
         enemies="Smogger"
@@ -183,7 +183,7 @@ function Chapter8() {
       />
       <Encounter
         enemies="Wererat x4"
-        instructions={["Deadly Dodge, TRIPOLOSKI"]}
+        instructions={["Deadly Dodge, Cleave, TRIPOLOSKI"]}
       />
       <Encounter
         enemies="Hedgehog Pie x2, Wererat"
@@ -207,7 +207,7 @@ function Chapter8() {
       />
       <Encounter
         enemies="Hedgehog Pie x3"
-        instructions={["Cloud: Berserk A, TRIPOLOSKI, Soul Drain"]}
+        instructions={["Cloud: Berserk A, TRIPOLOSKI, Soul Drain C"]}
       />
       <Heal description="Cloud 500 HP, Aerith 300 HP/11 MP" />
       <Boss
@@ -220,7 +220,7 @@ function Chapter8() {
           ],
           [
             "Cloud: Wait shockwave, swap",
-            "Aerith: Hit x2",
+            "Aerith: Hit x3",
             "Cloud: TRIPOLOSKI, Berserk, Focused Thrust",
             "Cloud: Punisher full, Berserk, Focused Thrust, Aerith Aero (stagger)",
             "Cloud: Punisher full, TRIPOLOSKI, Punisher x3, TRIPOLOSKI",
