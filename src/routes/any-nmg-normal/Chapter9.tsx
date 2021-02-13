@@ -25,7 +25,7 @@ function Chapter9() {
         enemies="Lesser Drake"
         instructions={[
           "Aerith: Tempest x3, Hit x1 (stagger)",
-          "Aerith: Soul Drain, TRIPOLOSKI, Aero",
+          "Aerith: TRIPOLOSKI, Soul Drain, Aero",
         ]}
       />
       <Encounter
@@ -45,10 +45,9 @@ function Chapter9() {
       <Encounter
         enemies="Sweeper Prototype, Bandit x2"
         instructions={[
-          "Cloud: Lock Bandit A, Punisher full, Berserk",
-          "Cloud: Aerith ATB Boost, TRIPOLOSKI, Punisher Bandits",
-          "Cloud: Arcane Ward Aerith, Aerith Thundara Sweeper",
-          "Cloud: 2 ATB, Berserk, Thunder x2 (inside ward)",
+          "Cloud: Lock Bandit A, Punisher full, Berserk, Aerith ATB Boost",
+          "Cloud: TRIPOLOSKI, Punisher Bandits, Aerith Thundara Sweeper",
+          "Cloud: 2 ATB, Berserk, Arcane Ward Cloud, Thundara, Thunder",
         ]}
       />
       <Encounter
@@ -67,7 +66,11 @@ function Chapter9() {
           { name: "Caliginous Bracelet", inputs: ["down", "down"] },
         ]}
       />
-      <Menu>
+      <Menu
+        instructions={[
+          "Equip Tifa's Fire (1st slot) on Aerith before swapping with Cloud",
+        ]}
+      >
         <Equipment
           characters={[
             {
@@ -161,17 +164,18 @@ function Chapter9() {
         enemies="Corneo Lackey 1 x5, Beck, Burke, Butch"
         instructions={[
           "Cloud: Deadly Dodge, Aerith Fira",
-          "Cloud: TRIPOLOSKI/Fira",
+          "Cloud: TRIPOLOSKI, Berserk, TRIPOLOSKI",
         ]}
       />
       <Heal description="Cloud 21 MP, Aerith 32 MP, both good HP" />
       <Encounter
         enemies="Cutter, Sweeper"
         instructions={[
-          "Cloud: Berserk, Thundara, Aerith Thundara Sweeper",
+          "Cloud: Berserk, Aerith Thundara, Thundara Sweeper",
           "Aerith: 1 ATB, ATB Boost, Thundara Sweeper",
-          "Cloud: Counter/Berserk/Punisher (pressure), Focused Thrust x2 Cutter",
-          "Cloud: Aerith Thundara, Punisher, Thundara",
+          "Cloud: Counter/Berserk/Punisher (pressure) Cutter",
+          "Cloud: Focused Thrust, Thundara, Punisher (stagger) Cutter",
+          "Cloud: Aerith Thundara, Punisher (1 ATB), TRIPOLOSKI Cutter",
         ]}
       />
       <Bench />
@@ -183,7 +187,7 @@ function Chapter9() {
           { name: "Phoenix Down", inputs: ["down", "down"] },
         ]}
       />
-      <Menu instructions={["Remove Deadly Dodge from Cloud before swapping"]}>
+      <Menu>
         <Materia
           characters={[
             {
@@ -193,7 +197,14 @@ function Chapter9() {
                 { name: "First Strike" },
                 { name: "Refocus" },
               ],
-              armor: [{ name: "Lightning" }, { name: "Ice", source: "barret" }],
+              armor: [
+                { name: "Lightning" },
+                {
+                  name: "Ice",
+                  source: "barret",
+                  inputs: ["left", "down", "down"],
+                },
+              ],
               summon: [{ name: "Ifrit" }],
             },
             {
@@ -210,14 +221,14 @@ function Chapter9() {
               name: "Cloud",
               shortcuts: [
                 {
-                  shortcut: "x",
-                  ability: "Blizzara",
-                  inputs: ["down", "down", "down"],
-                },
-                {
                   shortcut: "circle",
                   ability: "Fira",
                   inputs: ["down"],
+                },
+                {
+                  shortcut: "x",
+                  ability: "Blizzara",
+                  inputs: ["down", "down", "down"],
                 },
               ],
             },
@@ -225,14 +236,14 @@ function Chapter9() {
               name: "Aerith (R2)",
               shortcuts: [
                 {
-                  shortcut: "circle",
-                  ability: "Fira",
-                  inputs: ["down"],
-                },
-                {
                   shortcut: "x",
                   ability: "Blizzard",
                   inputs: ["down", "down"],
+                },
+                {
+                  shortcut: "circle",
+                  ability: "Fira",
+                  inputs: ["down"],
                 },
               ],
             },
