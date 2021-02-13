@@ -174,7 +174,9 @@ function Chapter4() {
           characters={[
             {
               name: "Tifa",
-              equipments: [{ name: "Iron Bangle", source: "barret" }],
+              equipments: [
+                { name: "Iron Bangle", source: "barret", inputs: ["down"] },
+              ],
             },
           ]}
         />
