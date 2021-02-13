@@ -140,7 +140,7 @@ function Chapter8() {
               weapon: [
                 { name: "Lightning", source: "cloud" },
                 { name: "Wind", source: "barret" },
-                { name: "First Strike", source: "barret" },
+                { name: "First Strike", source: "barret", inputs: ["right"] },
               ],
               armor: [
                 { name: "Fire", source: "barret" },

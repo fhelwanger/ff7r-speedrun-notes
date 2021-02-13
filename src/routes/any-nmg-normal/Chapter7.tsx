@@ -273,7 +273,7 @@ function Chapter7() {
               weapon: [
                 { name: "Lightning" },
                 { name: "Wind" },
-                { name: "First Strike", source: "tifa" },
+                { name: "First Strike", source: "tifa", inputs: ["right"] },
               ],
               armor: [{ name: "Fire" }],
               summon: [{ name: "" }],
