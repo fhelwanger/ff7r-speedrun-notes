@@ -12,7 +12,7 @@ function Chapter1() {
   return (
     <Chapter number={1}>
       <Encounter enemies="Security Officer x2" instructions={["Cleave"]} />
-      <Encounter enemies="Security Officer x2" instructions={["Punisher"]} />
+      <Encounter enemies="Security Officer x2" instructions={["Punisher guy to left"]} />
       <Menu>
         <BattleSettings
           characters={[
