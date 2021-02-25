@@ -39,7 +39,7 @@ function Chapter1() {
           "Guard Dog: Fire, Punisher",
         ]}
       />
-      <Box description="2 sets before Jessie opens the fence." />
+      <Box description="Two sets before Jessie opens the fence." />
       <Encounter
         enemies="Security Officer x2, Guard Dog"
         instructions={[
