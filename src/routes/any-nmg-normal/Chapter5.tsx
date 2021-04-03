@@ -207,6 +207,13 @@ function Chapter5() {
       />
       <Bench />
       <Pick item="Lightning" />
+      <Encounter
+        enemies="Elite Security Officer x2"
+        instructions={[
+          "Switch to Punisher, ATB Boost",
+          "TRIPOLOSKI, Berserk, TRIPOLOSKI B, Divekick A",
+        ]}
+      />
       <Menu>
         <Equipment
           characters={[
@@ -259,13 +266,6 @@ function Chapter5() {
           ]}
         />
       </Menu>
-      <Encounter
-        enemies="Elite Security Officer x2"
-        instructions={[
-          "Switch to Punisher, ATB Boost",
-          "TRIPOLOSKI, Berserk, TRIPOLOSKI B, Divekick A",
-        ]}
-      />
       <Boss
         name="Crab Warden"
         phases={[
