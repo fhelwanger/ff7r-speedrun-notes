@@ -17,34 +17,36 @@ function Chapter2() {
       />
       <Encounter
         enemies="Security Officer x2, Grenadier x2"
-        instructions={[
-          "Cleave Grenadiers",
-          "Fire Security Officer",
-          "Focused Thrust Security Officer",
-        ]}
+        instructions={["Grenadiers: Cleave", "Security Officers: Fire"]}
       />
       <Encounter
         enemies="Shock Troopers x2"
-        instructions={["Counter until both staggered", "Berserk, Fire"]}
+        instructions={[
+          "Punisher full, Berserk, Operator A",
+          "Counter x2, Fire x2 B",
+        ]}
       />
       <Encounter
         enemies="Security Officer x2, Grenadier x2"
         instructions={[
-          "Berserk Security Officer",
-          "Focused Thrust Security Officer",
-          "Cleave Grenadiers",
+          "Security Officer: Berserk, Operator",
+          "Security Officer: Punisher x3, Operator",
+          "Grenadiers: Cleave (Focused Thrust if alive)",
         ]}
       />
       <Pick item="Grenade x2" />
       <Pick item="Iron Bangle" />
-      <Encounter enemies="Grenadier x2" instructions={["Cleave"]} />
+      <Encounter
+        enemies="Grenadier x2"
+        instructions={["Cleave (kill at least 1)"]}
+      />
       <Encounter
         enemies="Security Officer x6, Grenadier x2, Riot Trooper x2, The Huntsman"
         instructions={[
-          "Cleave Grenadier, Counter, Grenade Riot Trooper",
-          "Counter, Grenade Riot Trooper, Fire Huntsman",
+          "1st wave: Cleave left Grenadier, Counter, Grenade Riot Trooper",
+          "2nd wave: Berserk, Operator right Officer, Counter, Grenade Riot Trooper, Fire Huntsman",
           "Huntsman: Punisher full, Berserk, Punisher x4, Fire",
-          "Huntsman: Punisher full, Berserk, Fire",
+          "Huntsman: Punisher full (stagger), Fire",
         ]}
       />
     </Chapter>

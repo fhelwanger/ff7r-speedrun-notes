@@ -16,6 +16,59 @@ function Chapter5() {
   return (
     <Chapter number={5}>
       <Pick item="Healing" />
+      <Menu>
+        <Equipment
+          characters={[
+            {
+              name: "Tifa",
+              equipments: [
+                { name: "Iron Bangle", source: "barret", inputs: ["down"] },
+              ],
+            },
+          ]}
+        />
+        <Materia
+          characters={[
+            {
+              name: "Cloud",
+              weapon: [
+                { name: "Fire" },
+                {
+                  name: "First Strike",
+                  source: "inventory",
+                  inputs: ["right"],
+                },
+                { name: "Lightning" },
+              ],
+              armor: [{ name: "Ice" }],
+              summon: [{ name: "Ifrit" }],
+            },
+            {
+              name: "Tifa",
+              weapon: [
+                {
+                  name: "Barrier",
+                  source: "inventory",
+                  inputs: ["up"],
+                },
+                {
+                  name: "First Strike",
+                  source: "inventory",
+                  inputs: ["up"],
+                },
+              ],
+              armor: [
+                {
+                  name: "ATB Boost",
+                  source: "inventory",
+                  inputs: ["square", "right", "up"],
+                },
+              ],
+              summon: [{ name: "Empty" }],
+            },
+          ]}
+        />
+      </Menu>
       <Encounter
         enemies="Slug Ray x5"
         instructions={[
@@ -97,8 +150,8 @@ function Chapter5() {
       <Encounter
         enemies="Grashtrike, Wererat x2"
         instructions={[
-          "Cloud: Dash, TRIPOLOSKI Grashtrike",
-          "Barret: Overcharge, Focused Shot, Divekick Grashtrike",
+          "Cloud: ATB Boost",
+          "Barret: TRIPOLOSKI, Overcharge, Focused Shot (stagger), Divekick Grashtrike",
         ]}
       />
       <Pick item="Hi-Potion x2" optional />
@@ -125,9 +178,8 @@ function Chapter5() {
       <Encounter
         enemies="Flametrooper, Security Officer x4"
         instructions={[
-          "Cloud: Punisher x3, Berserk Security Officer",
-          "Cloud: ATB Boost, Fire Flametrooper",
-          "Tifa: Whirl, Divekick Flametrooper",
+          "Cloud: Punisher x3, Berserk Security Officer, ATB Boost",
+          "Tifa: Cloud Fire, Whirl, Divekick Flametrooper",
           "Cloud: Roll, Dash, TRIPOLOSKI Security Officer",
         ]}
       />
@@ -218,10 +270,11 @@ function Chapter5() {
         name="Crab Warden"
         phases={[
           [
+            "Cloud: Berserk Crab, Thunder Rear Left",
             "Barret: Overcharge Front Left",
-            "Cloud: Berserk Front Left, Thunder Rear Left",
-            "Cloud: Punisher full, Whirl, Berserk, Punisher x4 Front Left",
-            "Cloud: Thunder, Tifa Thunder Rear Left (break)",
+            "Tifa: Whril Front Left",
+            "Cloud: Punisher full, Berserk, Punisher x4 Front Left",
+            "Cloud: Thunder, Tifa Thunder Rear Left (break, Barret Thunder if low damage roll)",
             "Cloud: Punisher x6 Front Left (break, stagger)",
             "Cloud: Thunder Rear Right, Punisher full, Berserk Front Right (target Rear Right)",
           ],
@@ -230,11 +283,11 @@ function Chapter5() {
             "Tifa: ATB Boost, Barret Thunder, Whirl, Divekick Front Right (break)",
             "Tifa: Whirl, Cloud Thunder, Divekick, Whirl Right Weapon",
             "Cloud: Punisher full, Barret Thunder, Berserk Crab, Thunder Left Weapon",
-            "Cloud: Punisher full Crab (switch to Generator mid combo)",
+            "Cloud: Unbridled, Punisher full Crab (switch to Generator mid combo)",
           ],
           [
             "Barret: Overcharge Right Weapon (Thunder after if still alive)",
-            "Tifa: Unbridled, Cloud Thunder Left Weapon (stagger)",
+            "Tifa: Cloud Thunder Left Weapon (stagger)",
             "Tifa: Omni, Whirl, Cloud Thunder, Divekick Generator",
           ],
         ]}

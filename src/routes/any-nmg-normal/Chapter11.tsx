@@ -21,14 +21,18 @@ function Chapter11() {
           characters={[
             {
               name: "Cloud",
-              equipments: [{ name: "Hardedge", inputs: ["right"] }],
+              equipments: [
+                { name: "Titanium Bangle", inputs: ["down"] },
+                { name: "Fury Ring", source: "aerith", inputs: ["right"] },
+              ],
             },
             {
-              name: "Aerith (R2, R2)",
-              equipments: [
-                { name: "Mythril Rod", inputs: ["right"] },
-                { name: "Earrings", source: "cloud", inputs: ["up"] },
-              ],
+              name: "Tifa (R2)",
+              equipments: [{ name: "Feathered Gloves", inputs: ["right"] }],
+            },
+            {
+              name: "Aerith (R2)",
+              equipments: [{ name: "Mythril Rod", inputs: ["right"] }],
             },
           ]}
         />
@@ -38,22 +42,25 @@ function Chapter11() {
               name: "Tifa",
               weapon: [
                 { name: "First Strike", source: "aerith" },
-                { name: "ATB Boost", source: "aerith" },
+                { name: "" },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "Parry" }, { name: "" }],
+              armor: [
+                { name: "Parry" },
+                { name: "ATB Boost", source: "aerith" },
+              ],
               summon: [{ name: "" }],
             },
             {
               name: "Aerith",
               weapon: [
+                { name: "Deadly Dodge" },
                 { name: "Barrier" },
-                { name: "Wind" },
-                { name: "Lightning", source: "tifa" },
+                { name: "Fire" },
               ],
               armor: [
-                { name: "Fire" },
-                { name: "", source: "tifa" },
+                { name: "Lightning", source: "tifa" },
+                { name: "Wind", source: "tifa" },
                 { name: "Ice" },
               ],
               summon: [{ name: "" }],
@@ -63,17 +70,22 @@ function Chapter11() {
         <BattleSettings
           characters={[
             {
-              name: "Cloud",
+              name: "Tifa (R2)",
               shortcuts: [
                 {
+                  shortcut: "square",
+                  ability: "Starshower",
+                  inputs: ["right", "up", "up"],
+                },
+                {
                   shortcut: "x",
-                  ability: "Blizzara",
-                  inputs: ["down", "down", "down"],
+                  ability: "Thundara",
+                  inputs: ["right", "up"],
                 },
               ],
             },
             {
-              name: "Aerith (R2, R2)",
+              name: "Aerith (R2)",
               shortcuts: [
                 {
                   shortcut: "x",
@@ -81,7 +93,7 @@ function Chapter11() {
                   inputs: ["down", "down", "down"],
                 },
                 {
-                  shortcut: "square",
+                  shortcut: "circle",
                   ability: "Aerora",
                   inputs: ["right", "down"],
                 },
@@ -95,17 +107,21 @@ function Chapter11() {
         instructions={["TRIPOLOSKI, Starshower"]}
       />
       <Encounter
-        enemies="Cripshay x3 "
-        instructions={["Cloud: TRIPOLOSKI", "Tifa: Starshower, Whirl"]}
+        enemies="Cripshay x3"
+        instructions={["Cloud: Tifa ATB Boost, TRIPOLOSKI, Starshower x2"]}
       />
       <Encounter
-        enemies="Wererats x2, Cripshay x2 "
-        instructions={["Starshower Cripshay, TRIPOLOSKI, Punisher"]}
+        enemies="Wererats x2, Cripshay x2"
+        instructions={[
+          "Cloud: Tifa ATB Boost, Starshower Cripshay A",
+          "Cloud: TRIPOLOSKI Wererat A, Starshower",
+        ]}
       />
       <Encounter
         enemies="Cripshay x5"
         instructions={[
-          "Cloud: Tifa ATB Boost, Counter, Starshower B/C, TRIPOLOSKI A, Starshower D/E",
+          "Cloud: Tifa ATB Boost, Counter, Starshower B/C, Starshower D/E",
+          "Cloud: TRIPOLOSKI x2",
         ]}
       />
       <Encounter enemies="Ghost" instructions={["Phoenix Down, Starshower"]} />
@@ -152,18 +168,44 @@ function Chapter11() {
         <Equipment
           characters={[
             {
-              name: "Cloud",
-              equipments: [{ name: "Iron Blade", inputs: ["up"] }],
-            },
-            {
-              name: "Tifa (R2)",
-              equipments: [{ name: "Metal Knuckles", inputs: ["up", "up"] }],
-            },
-            {
-              name: "Aerith (R2)",
+              name: "Tifa",
               equipments: [
+                { name: "Metal Knuckles", inputs: ["up", "up"] },
                 { name: "Fury Ring", source: "cloud", inputs: ["right"] },
-                { name: "Power Wristguards", source: "tifa", inputs: ["left"] },
+              ],
+            },
+          ]}
+        />
+      </Menu>
+      <Boss
+        name="Ghoul"
+        phases={[
+          [
+            "Tifa: ATB Boost, Starshower, Whirl, Cloud Elixir",
+            "Aerith: Hits, wait 2 ATB, swap to Tifa",
+          ],
+          [
+            "Tifa: Try to get near, defend Piercing Scream if get hit",
+            "Tifa: Starshower",
+            "Aerith: Elixir when Tifa lands",
+          ],
+        ]}
+      />
+      <Menu
+        instructions={[
+          "Remove Deadly Dodge before equipping Subversion on Tifa",
+        ]}
+      >
+        <Equipment
+          characters={[
+            {
+              name: "Aerith",
+              equipments: [
+                {
+                  name: "Fury Ring",
+                  source: "tifa",
+                  inputs: ["right"],
+                },
               ],
             },
           ]}
@@ -173,33 +215,44 @@ function Chapter11() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire" },
+                { name: "Ice" },
                 { name: "Lightning", source: "aerith" },
                 { name: "Refocus" },
               ],
-              armor: [{ name: "Lightning" }, { name: "Ice" }],
+              armor: [{ name: "Lightning" }, { name: "Fire" }],
               summon: [{ name: "", source: "tifa" }],
             },
             {
               name: "Tifa",
               weapon: [
                 { name: "First Strike" },
-                { name: "", source: "aerith" },
+                {
+                  name: "Binding",
+                  source: "inventory",
+                  inputs: ["square", "right", "up", "up"],
+                },
                 { name: "Lightning" },
               ],
-              armor: [{ name: "Parry" }, { name: "" }],
+              armor: [
+                { name: "Parry" },
+                {
+                  name: "Subversion",
+                  source: "inventory",
+                  inputs: ["right", "up"],
+                },
+              ],
               summon: [{ name: "Ifrit", source: "cloud" }],
             },
             {
               name: "Aerith",
               weapon: [
+                { name: "ATB Boost", source: "tifa" },
                 { name: "Barrier" },
-                { name: "Wind" },
-                { name: "First Strike", source: "cloud" },
+                { name: "Fire" },
               ],
               armor: [
-                { name: "Fire" },
-                { name: "ATB Boost", source: "tifa" },
+                { name: "First Strike", source: "cloud" },
+                { name: "Wind" },
                 { name: "Ice" },
               ],
               summon: [{ name: "" }],
@@ -220,68 +273,12 @@ function Chapter11() {
           ]}
         />
       </Menu>
-      <Boss
-        name="Ghoul"
-        phases={[
-          [
-            "Tifa: Defend and wait Telekinesis",
-            "Tifa: Starshower, Aerith ATB Boost, Whirl",
-            "Elixir when pressured, swap to Aerith then back to Tifa",
-          ],
-          [
-            "Tifa: Try to get near, defend Piercing Scream if get hit",
-            "Tifa: Starshower, Whirl",
-            "Elixir when pressured",
-          ],
-        ]}
-      />
-      <Menu>
-        <Equipment
-          characters={[
-            {
-              name: "Tifa",
-              equipments: [
-                {
-                  name: "Power Wristguards",
-                  source: "aerith",
-                  inputs: ["left"],
-                },
-              ],
-            },
-          ]}
-        />
-        <Materia
-          characters={[
-            {
-              name: "Tifa",
-              weapon: [
-                { name: "First Strike" },
-                {
-                  name: "Binding",
-                  source: "inventory",
-                  inputs: ["square", "right", "up", "up"],
-                },
-                { name: "Lightning" },
-              ],
-              armor: [
-                { name: "Parry" },
-                {
-                  name: "Subversion",
-                  source: "inventory",
-                  inputs: ["right", "up"],
-                },
-              ],
-              summon: [{ name: "Ifrit" }],
-            },
-          ]}
-        />
-      </Menu>
       <Box description="After pulling the lever." />
       <Encounter
         enemies="Wererats x3 / Ghost x2 / Cripshay x4"
         instructions={[
-          "Wererats x3: Aerith ATB Boost, Berserk, 1 ATB, TRIPOLOSKI",
-          "Ghost x2: Aerith Phoenix Down x2",
+          "Wererats x3: Punisher x4 C, Cleave B, Operator, TRIPOLOSKI A",
+          "Ghost x2: Aerith ATB Boost, Aerith Phoenix Down x2",
           "Cripshay x4: Starshower B (mid fall), Whirl/Divekick",
         ]}
       />
@@ -289,10 +286,10 @@ function Chapter11() {
       <Encounter
         enemies="Lesser Drake, Cerulean Drake"
         instructions={[
-          "Lesser: Sleep, Aerith Aero, Tempest x2",
-          "Lesser: Whirl x2, Aerith ATB Boost",
-          "Cerulean: Sleep, Aerith Aerora, Tempest",
-          "Cerulean: Soul Drain, Whirl/Divekick",
+          "Aerith: ATB Boost, Tifa Sleep, Aerora Cerulean",
+          "Aerith: Hits (stagger), Soul Drain Cerulean",
+          "Tifa: Whril, Hits (1.5 ATB), Whirl, Divekick Cerulean",
+          "Tifa: Sleep, Aerith Aero (stagger), Focused Thrust Lesser",
         ]}
       />
       <Heal description="Aerith 48 MP, everyone full HP." />
@@ -311,7 +308,7 @@ function Chapter11() {
             "Tifa: Combo x6, Whirl, Divekick Right Wheel",
             "Tifa: Parry, Whirl, Divekick Left Wheel",
             "Tifa: Cloud Blizzara, Aerith Blizzard",
-            "Tifa: Whirl, Hit x1, Whirl, Divekick",
+            "Tifa: Whirl, Hit x1, Whirl/Divekick",
           ],
         ]}
       />

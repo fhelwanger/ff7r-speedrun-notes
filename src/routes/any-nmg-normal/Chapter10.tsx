@@ -1,10 +1,7 @@
 import React from "react";
-import BattleSettings from "../../components/BattleSettings";
 import Boss from "../../components/Boss";
 import Chapter from "../../components/Chapter";
 import Encounter from "../../components/Encounter";
-import Equipment from "../../components/Equipment";
-import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
 
 function Chapter10() {
@@ -44,53 +41,11 @@ function Chapter10() {
       />
       <Pick item="Hi-Potion x2" optional />
       <Pick item="Feathered Gloves" />
-      <Encounter
-        enemies="Wererat x3"
-        instructions={["Tifa: Flee, TRIPOLOSKI"]}
-      />
+      <Encounter enemies="Wererat x3" instructions={["TRIPOLOSKI"]} />
       <Encounter
         enemies="Wererat x2, Scissorclaw"
         instructions={["Soul Drain Scissor, TRIPOLOSKI Rats"]}
       />
-      <Menu>
-        <Equipment
-          characters={[
-            {
-              name: "Cloud",
-              equipments: [
-                { name: "Iron Blade", inputs: ["up"] },
-                { name: "Titanium Bangle", inputs: ["down"] },
-              ],
-            },
-            {
-              name: "Tifa (R2)",
-              equipments: [
-                { name: "Mythril Armlet", inputs: ["right"] },
-                { name: "Feathered Gloves", inputs: ["right"] },
-              ],
-            },
-          ]}
-        />
-        <BattleSettings
-          characters={[
-            {
-              name: "Cloud",
-              shortcuts: [{ shortcut: "x", ability: "Fire" }],
-            },
-            {
-              name: "Tifa (R2)",
-              shortcuts: [
-                { shortcut: "circle", ability: "Fira", inputs: ["down"] },
-                {
-                  shortcut: "square",
-                  ability: "Starshower",
-                  inputs: ["right", "up", "up"],
-                },
-              ],
-            },
-          ]}
-        />
-      </Menu>
       <Encounter
         enemies="Scissorclaw x2"
         instructions={["ATB Boost, Soul Drain each"]}
@@ -106,10 +61,7 @@ function Chapter10() {
       />
       <Encounter
         enemies="Blugu, Scissorclaw x2"
-        instructions={[
-          "Soul Drain/Cloud Fire Scissors",
-          "Whirl, Divekick Blugu",
-        ]}
+        instructions={["ATB Boost, Soul Drain Scissors", "Braver Blugu"]}
       />
       <Encounter
         enemies="Sahagin"
@@ -134,14 +86,14 @@ function Chapter10() {
         enemies="Sahagin x2"
         instructions={[
           "Cloud: Aerith Fira A, Cleave, Fira B",
-          "Tifa: Whirl/Divekick",
+          "Cloud: Berserk, TRIPOLOSKI",
         ]}
       />
       <Encounter
         enemies="Blugu x2, Sahagin"
         instructions={[
           "Cloud: Cleave, Fira, Aerith Fira Sahagin",
-          "Cloud: Punisher/TRIPOLOSKI",
+          "Cloud: TRIPOLOSKI rest",
         ]}
       />
       <Encounter
@@ -149,7 +101,7 @@ function Chapter10() {
         instructions={[
           "Cloud: Aerith ATB Boost, Aerith Fira C, Cleave C/B",
           "Cloud: Aerith Fira A, Cleave/Counter, Refocus",
-          "Tifa: Whirl/Divekick",
+          "Tifa: Whirl/Divekick, TRIPOLOSKI",
         ]}
       />
     </Chapter>

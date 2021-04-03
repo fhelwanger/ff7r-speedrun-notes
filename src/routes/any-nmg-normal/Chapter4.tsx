@@ -3,7 +3,6 @@ import BattleSettings from "../../components/BattleSettings";
 import Boss from "../../components/Boss";
 import Chapter from "../../components/Chapter";
 import Encounter from "../../components/Encounter";
-import Equipment from "../../components/Equipment";
 import Materia from "../../components/Materia";
 import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
@@ -91,7 +90,7 @@ function Chapter4() {
           "1st group: Walk 2 steps, Deadly Dodge, Cleave",
           "2nd group: Roll left, TRIPOLOSKI",
           "3rd group: 2 ATB, TRIPOLOSKI",
-          "4th group: Dash, Blizzard Grenadier, Punisher Officers",
+          "4th group: Dash, Blizzard Grenadier, Counter/Punisher Officers",
           "5th group: Berserk, Punisher",
         ]}
       />
@@ -105,21 +104,21 @@ function Chapter4() {
         enemies="Shock Trooper,  Elite Grenadier"
         instructions={[
           "Counter both, Blizzard Grenadier",
-          "Fire, Counter, Punisher, (TRIPOLOSKI or Potion) Shock Trooper",
+          "Fire, Counter, Punisher Shock Trooper",
         ]}
       />
       <Encounter
         enemies="Guard Dog x8"
         instructions={[
-          "Dash, Cleave Wedge dogs, Lure them",
-          "Counter x2, Blizzard, Punisher/TRIPOLOSKI",
+          "Grenade C (right, left inputs to select target)",
+          "Go behind C, Counter/TRIPOLOSKI",
         ]}
       />
       <Encounter
         enemies="Sweeper x2"
         instructions={[
           "Punisher, Berserk B (until it jumps back, Thunder A for pressure if needed)",
-          "Cross Slash A (hit both), Focused Thrust if Wedge used mine",
+          "Roll left, Cross Slash A (hit both), Focused Thrust if Wedge used mine",
           "Punisher/Berserk/Thunder (use Thunders for pressure)",
           "Save half ATB/Berserk",
         ]}
@@ -169,59 +168,6 @@ function Chapter4() {
         ]}
         reset={[{ name: "Iron Blade", inputs: ["down"] }]}
       />
-      <Menu>
-        <Equipment
-          characters={[
-            {
-              name: "Tifa",
-              equipments: [
-                { name: "Iron Bangle", source: "barret", inputs: ["down"] },
-              ],
-            },
-          ]}
-        />
-        <Materia
-          characters={[
-            {
-              name: "Cloud",
-              weapon: [
-                { name: "Fire" },
-                {
-                  name: "First Strike",
-                  source: "inventory",
-                  inputs: ["right"],
-                },
-                { name: "Lightning" },
-              ],
-              armor: [{ name: "Ice" }],
-              summon: [{ name: "Ifrit" }],
-            },
-            {
-              name: "Tifa",
-              weapon: [
-                {
-                  name: "Barrier",
-                  source: "inventory",
-                  inputs: ["up"],
-                },
-                {
-                  name: "First Strike",
-                  source: "inventory",
-                  inputs: ["up"],
-                },
-              ],
-              armor: [
-                {
-                  name: "ATB Boost",
-                  source: "inventory",
-                  inputs: ["square", "right", "up"],
-                },
-              ],
-              summon: [{ name: "Empty" }],
-            },
-          ]}
-        />
-      </Menu>
     </Chapter>
   );
 }

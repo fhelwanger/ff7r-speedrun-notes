@@ -142,8 +142,9 @@ function Chapter3() {
         enemies="Security Officer x2, Elite Security Officer, Guard Dog"
         instructions={[
           "Cloud: Deadly Dodge, Counter/Cleave",
-          "Cloud: Blizzard, Berserk, TRIPOLOSKI Elite",
-          "Cloud: Punisher, Fire Dog",
+          "Cloud: Blizzard, Punisher x4, Berserk Elite (stagger)",
+          "Cloud: Blizzard Dog (Wind Materia)",
+          "Cloud: Punisher",
         ]}
       />
       <Dialogue
@@ -153,7 +154,10 @@ function Chapter3() {
       />
       <Encounter
         enemies="Hoodlum x4"
-        instructions={["Deadly Dodge, Fire", "Punisher/Berserk/Fire"]}
+        instructions={[
+          "Dash left, Deadly Dodge, Fire",
+          "Berserk/Fire/Punisher",
+        ]}
       />
       <Dialogue
         optionText="Yeah"

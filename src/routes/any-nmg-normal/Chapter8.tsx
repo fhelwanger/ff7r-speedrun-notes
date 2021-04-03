@@ -75,7 +75,8 @@ function Chapter8() {
         name="Reno"
         phases={[
           [
-            "Punisher jump, Roll over, Punisher full, Focused Thrust",
+            "Punisher jump, Lock, Roll over",
+            "Punisher full, Focused Thrust",
             "Berserk, Punisher x4, TRIPOLOSKI, Roll back",
           ],
           ["Cross Slash"],
@@ -140,10 +141,10 @@ function Chapter8() {
               weapon: [
                 { name: "Lightning", source: "cloud" },
                 { name: "Wind", source: "barret" },
-                { name: "First Strike", source: "barret", inputs: ["right"] },
+                { name: "Fire", source: "barret" },
               ],
               armor: [
-                { name: "Fire", source: "barret" },
+                { name: "First Strike", source: "barret" },
                 { name: "ATB Boost", source: "cloud" },
               ],
               summon: [{ name: "" }],
@@ -200,7 +201,7 @@ function Chapter8() {
           "Smogger x2: Cloud Thunder, Aerith Thundara each",
         ]}
       />
-      <Heal description="Ether Aerith" />
+      <Heal description="Ether x1 Aerith" />
       <Encounter
         enemies="Smogger"
         instructions={["Cloud: Aerith Thundara, go to exit, Thunder"]}

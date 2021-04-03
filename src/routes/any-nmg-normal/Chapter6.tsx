@@ -14,8 +14,8 @@ function Chapter6() {
       <Encounter
         enemies="Grashtrike x3"
         instructions={[
-          "Cloud: Punisher jump, Berserk, ATB Boost, Blizzard A, Blizzard B",
-          "Barret: Overcharge, Focused Shot (learn), Divekick C",
+          "Barret: Overcharge, ATB Boost, Focused Shot (learn), Divekick C",
+          "Cloud: Blizzard A, Blizzard B, Punisher",
         ]}
       />
       <Encounter

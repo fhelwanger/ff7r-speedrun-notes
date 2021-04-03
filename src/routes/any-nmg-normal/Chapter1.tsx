@@ -49,7 +49,10 @@ function Chapter1() {
       />
       <Encounter
         enemies="Security Officer x2"
-        instructions={["Dash, Punisher"]}
+        instructions={[
+          "Dash, Punisher x4 right",
+          "Roll left, Operator x3, Focused Thrust (stagger) left",
+        ]}
       />
       <Encounter
         enemies="Security Officer x4"
@@ -61,7 +64,7 @@ function Chapter1() {
         enemies="Sentry Ray x3, Monodrive x3"
         instructions={[
           "Barret: Combo, Overcharge Sentry Ray B, Combo A, Thunder C",
-          "Cloud: Punisher x4, Operator Monodrive B/C, Dash, Focused Thrust A",
+          "Cloud: Punisher x4, Operator Monodrive B/C, Cleave, Focused Shot A (stagger)",
         ]}
       />
       <Menu>
@@ -74,10 +77,6 @@ function Chapter1() {
                   shortcut: "x",
                   ability: "Thunder",
                   inputs: ["down"],
-                },
-                {
-                  shortcut: "circle",
-                  ability: "Fire",
                 },
               ],
             },
@@ -102,7 +101,7 @@ function Chapter1() {
             "Cloud: Dash",
             "Barret: Lock, run back, Overcharge",
             "Cloud: Counter, Punisher full, Berserk, Fire, Focused Shot",
-            "Cloud: Punisher full, Fire, Punisher x4, Fire (stagger)",
+            "Cloud: Punisher full, Fire, Punisher x4, Berserk, Fire (stagger)",
             "Cloud: Punisher x4, Operator",
           ],
           [
@@ -134,16 +133,17 @@ function Chapter1() {
       <Encounter
         enemies="Security Officer x2, Monodrive x2"
         instructions={[
-          "Cloud: Hit x1 left Monodrive, Punisher full Monodrive + Security Officer",
-          "Cloud: Roll, Punisher jump, Focused Thrust Security Officer",
+          "Cloud: Dash left Monodrive, Punisher full Monodrive + Security Officer",
+          "Cloud: Focused Thrust Security Officer",
           "Barret: Overcharge Monodrive",
         ]}
       />
       <Encounter
         enemies="Shock Trooper x3, Sentry Ray x2"
         instructions={[
-          "Barret: Overcharge one Sentry Ray, Thunder other",
-          "Cloud: Counter and Fire/Punisher Shock Troopers",
+          "Barret: Overcharge Sentry Ray A",
+          "Cloud: Counter Shock Troopers, Fire Sentry Ray B",
+          "Cloud: Counter (stagger), Berserk/Fire/Focused Shot",
         ]}
       />
     </Chapter>

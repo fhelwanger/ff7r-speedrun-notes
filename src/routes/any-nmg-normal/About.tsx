@@ -53,14 +53,14 @@ function AtbBoost() {
   const classes = useStyles();
 
   const enemies = [
-    "Security Officer (Chapter 1 escape, Chapter 2/4 as backup)",
+    "Security Officer (Chapter 1 after fence or escape, Chapter 2/4)",
     "Elite Security Officer (Johnny fight)",
     "Grenadier (Chapter 4)",
     "Elite Grenadier (Chapter 4)",
     "Riot Trooper (Chapter 4)",
     "Shock Trooper (Chapter 1)",
     "Guard Dog (Chapter 1)",
-    "Monodrive (Chapter 1 after Scorpion)",
+    "Monodrive (Chapter 1 first Barret fight or after Scorpion)",
     "Sentry Ray (Chapter 1)",
     "Sweeper (Chapter 1)",
     "The Huntsman",

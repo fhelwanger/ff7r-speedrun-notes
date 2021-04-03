@@ -27,6 +27,7 @@ function Chapter18() {
             'Break, Spinning Slash after Aerith says "Uh, what the-!?".',
             "Take ranged attacks, Combo x5 + Spinning Slash when near, defend blades.",
             "Take ranged attacks, Combo + Spinning Slash when near, defend punches.",
+            "Break when charges.",
           ],
           ["Combo, Spinning Slash when both near."],
           [
@@ -40,7 +41,7 @@ function Chapter18() {
       <Shop
         name="Vending Machine"
         buy={[
-          { name: "Mega-Potion x9", inputs: ["down", "down"] },
+          { name: "Mega-Potion x8", inputs: ["down", "down"] },
           { name: "Mega-Potion x3", inputs: ["down"] },
           { name: "Elixir", inputs: ["down", "down", "down"] },
           { name: "HP Up x5", inputs: ["right"] },
@@ -56,8 +57,7 @@ function Chapter18() {
             {
               name: "Tifa",
               equipments: [
-                { name: "Heavy-Duty Bracer", inputs: ["up", "up"] },
-                { name: "Platinum Earrings", source: "barret", inputs: ["up"] },
+                { name: "Heavy-Duty Bracer", source: "barret", inputs: ["up"] },
                 { name: "Fury Ring", source: "aerith", inputs: ["right"] },
               ],
             },
@@ -68,21 +68,22 @@ function Chapter18() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Magnify" },
                 { name: "Time" },
-                { name: "HP Up", source: "inventory", inputs: ["up"] },
-                { name: "HP Up", source: "inventory", inputs: ["up"] },
+                { name: "Magnify" },
+                { name: "Refocus" },
+                { name: "ATB Stagger" },
               ],
               armor: [
+                { name: "HP Up", source: "inventory", inputs: ["up"] },
+                { name: "HP Up", source: "inventory", inputs: ["up"] },
                 { name: "First Strike" },
-                { name: "ATB Stagger" },
-                { name: "Refocus" },
               ],
               summon: [{ name: "Ifrit" }],
             },
             {
               name: "Tifa",
               weapon: [
+                { name: "Fire" },
                 {
                   name: "HP Up",
                   source: "inventory",
@@ -91,9 +92,12 @@ function Chapter18() {
                 { name: "HP Up", source: "inventory", inputs: ["up"] },
                 { name: "HP Up", source: "inventory", inputs: ["up"] },
                 { name: "" },
-                { name: "" },
               ],
-              armor: [{ name: "Parry" }, { name: "" }, { name: "Lightning" }],
+              armor: [
+                { name: "Parry" },
+                { name: "Lightning" },
+                { name: "ATB Stagger" },
+              ],
               summon: [{ name: "" }],
             },
           ]}

@@ -17,7 +17,7 @@ function Chapter12() {
         enemies="Mysterious Spectre, Enigmatic Spectre"
         instructions={[
           "Aerith: Tempest full, Arcane Ward, ATB Boost Mysterious",
-          "Aerith: Fira x2 Enigmatic",
+          "Aerith: Aerora x2 Enigmatic",
           "Tifa: 2 ATB, Starshower x2 Enigmatic",
         ]}
       />
@@ -27,25 +27,21 @@ function Chapter12() {
             {
               name: "Cloud",
               equipments: [
+                { name: "Iron Blade", inputs: ["up"] },
                 { name: "Remove Accessory" },
                 { name: "Fury Ring", source: "aerith", inputs: ["right"] },
               ],
             },
             {
-              name: "Barret (L2)",
+              name: "Barret (R2)",
               equipments: [
                 { name: "Earrings", inputs: ["down"] },
-                { name: "Remove Armor" },
                 {
                   name: "Caliginous Bracelet",
                   source: "aerith",
                   inputs: ["right", "up"],
                 },
               ],
-            },
-            {
-              name: "Tifa (L2, L2)",
-              equipments: [{ name: "Feathered Gloves", inputs: ["right"] }],
             },
           ]}
         />
@@ -54,27 +50,42 @@ function Chapter12() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire" },
+                { name: "ATB Boost", source: "aerith" },
                 { name: "Lightning" },
                 { name: "Refocus" },
               ],
               armor: [
-                { name: "First Strike", source: "tifa" },
-                { name: "ATB Boost", source: "inventory", inputs: ["right"] },
+                { name: "First Strike", source: "aerith" },
+                { name: "Fire" },
               ],
               summon: [{ name: "Ifrit", source: "tifa" }],
             },
             {
-              name: "Tifa",
+              name: "Barret",
               weapon: [
-                { name: "Ice", source: "inventory", inputs: ["up", "up"] },
-                { name: "Fire", source: "inventory", inputs: ["left", "down"] },
-                { name: "Lightning" },
+                { name: "Ice", source: "cloud" },
+                { name: "Binding", source: "tifa" },
+                {
+                  name: "Wind",
+                  source: "inventory",
+                  inputs: ["right", "square", "up"],
+                },
               ],
               armor: [
-                { name: "Parry" },
-                { name: "First Strike", source: "aerith" },
+                { name: "Lightning", source: "cloud" },
+                { name: "Subversion", source: "tifa" },
+                { name: "Barrier", source: "aerith" },
               ],
+              summon: [{ name: "" }],
+            },
+            {
+              name: "Tifa",
+              weapon: [
+                { name: "First Strike" },
+                { name: "", source: "barret" },
+                { name: "Lightning" },
+              ],
+              armor: [{ name: "Parry" }, { name: "", source: "barret" }],
               summon: [{ name: "", source: "cloud" }],
             },
             {
@@ -82,36 +93,10 @@ function Chapter12() {
               weapon: [
                 { name: "", source: "barret" },
                 { name: "", source: "barret" },
-                { name: "", source: "barret" },
+                { name: "Fire" },
                 { name: "" },
               ],
-              armor: [],
-              summon: [{ name: "" }],
-            },
-            {
-              name: "Barret",
-              weapon: [
-                {
-                  name: "Ice",
-                  source: "inventory",
-                  inputs: ["down", "down"],
-                },
-                { name: "Barrier", source: "aerith" },
-                { name: "Subversion", source: "tifa" },
-              ],
-              armor: [
-                {
-                  name: "Lightning",
-                  source: "inventory",
-                  inputs: ["down", "down", "down", "down", "down"],
-                },
-                { name: "Wind", source: "aerith" },
-                {
-                  name: "Binding",
-                  source: "inventory",
-                  inputs: ["right", "up", "up"],
-                },
-              ],
+              armor: [{ name: "", source: "barret" }],
               summon: [{ name: "" }],
             },
           ]}
@@ -120,7 +105,16 @@ function Chapter12() {
           characters={[
             {
               name: "Cloud",
-              shortcuts: [{ shortcut: "x", ability: "Fire" }],
+              shortcuts: [
+                { shortcut: "triangle", ability: "Fire" },
+                { shortcut: "x", ability: "Thundara", inputs: ["right", "up"] },
+              ],
+            },
+            {
+              name: "Barret (R2)",
+              shortcuts: [
+                { shortcut: "x", ability: "Thundara", inputs: ["right", "up"] },
+              ],
             },
           ]}
         />
@@ -156,19 +150,21 @@ function Chapter12() {
       <Encounter
         enemies="Elite Riot Trooper x2 / Elite Grenadier, Helitrooper"
         instructions={[
-          "Riot Troopers: Cloud Fira A, Tifa Fira B, Punisher",
+          "Riot Troopers: Cloud Fire, Punisher A, Divekick/Punisher B",
           "Helitrooper / Grenadier: Block for 2 ATB",
-          "Helitrooper / Grenadier: Fira, ATB Boost, Fire Helitrooper, Thunder Grenadier",
+          "Helitrooper / Grenadier: Fira, ATB Boost, Fire Helitrooper, Fire Grenadier",
         ]}
       />
-      <Heal description="Cloud 34 MP, Tifa 30 MP." />
+      <Heal description="Cloud 23 MP, Tifa 32 MP." />
       <Encounter
         enemies="Elite Shock Trooper, Helitrooper x2, Sentry Gun x2"
         instructions={[
-          "Shock Trooper: Cloud Fira, Tifa Fira, Punisher",
-          "Heli A: Fira, ATB Boost, Fire",
-          "Heli B: Cloud Fira, Whirl Sentries, Tifa Fira",
-          "Sentries: Whirl (2 ATB), Tifa Thunder each",
+          "Cloud: Fira, Tifa Thundara Shock Trooper",
+          "Tifa: Combo (stagger), Whirl Shock Trooper",
+          "Cloud: Punisher x4, Operator, ATB Boost Shock Trooper",
+          "Tifa: Whirl, Divekick Shock Trooper",
+          "Tifa: Whirl (2 ATB) Sentries, Cloud Fira, Cloud Fire Helitrooper",
+          "Tifa: Thundara Sentries, Somersault Helitrooper",
         ]}
       />
       <Pick item="Elixir" optional />
@@ -178,13 +174,9 @@ function Chapter12() {
           characters={[
             {
               name: "Cloud",
-              equipments: [{ name: "Hardedge", inputs: ["right"] }],
-            },
-            {
-              name: "Tifa (R2)",
               equipments: [
-                { name: "Metal Knuckles", inputs: ["up", "up"] },
-                { name: "Fury Ring", source: "cloud", inputs: ["right"] },
+                { name: "Hardedge", inputs: ["right"] },
+                { name: "Power Wristguards", source: "tifa", inputs: ["left"] },
               ],
             },
           ]}
@@ -211,17 +203,18 @@ function Chapter12() {
             "Cloud: Punisher x2, TRIPOLOSKI, Whirl, Punisher",
           ],
           [
-            "Barret: Overcharge, Thunder, Combo, Thunder Helicopter",
-            "Barret: Charge x3, Overcharge Reno",
+            "Barret: Overcharge, Thundara, Combo, Charge x3 Helicopter",
+            "Barret: Overcharge Reno",
             "Tifa: Starshower",
-            "Cloud: Punisher x4, Berserk, Punisher, Wait Pyramid, TRIPOLOSKI",
-            "Tifa: Cloud ATB Boost, Combo (2 ATB)",
-            "Barret: 2 ATB, Thunder, Swap to Cloud",
+            "Cloud: Punisher x4, Berserk, Punisher x4, TRIPOLOSKI",
+            "Tifa: Whirl Reno, Cloud ATB Boost, Combo (2 ATB) Helicopter",
+            "Cloud: Barret Thundara",
           ],
           [
-            "Cloud: TRIPOLOSKI, Barret Aero Reno",
-            "Tifa: Wait flying, Starshower, Lock Rude",
-            "Cloud: Berserk, Starshower, TRIPOLOSKI, Punisher full, TRIPOLOSKI",
+            "Cloud: TRIPOLOSKI",
+            "Tifa: Parry, Starshower",
+            "Cloud: Berserk, Starshower, TRIPOLOSKI",
+            "Cloud: Punisher x4, TRIPOLOSKI, Punisher, Focused Shot",
           ],
         ]}
       />

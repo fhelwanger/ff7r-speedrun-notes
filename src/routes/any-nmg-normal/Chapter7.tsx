@@ -27,10 +27,7 @@ function Chapter7() {
             },
             {
               name: "Barret (R2)",
-              equipments: [
-                { name: "Iron Bangle", inputs: ["down", "down"] },
-                { name: "Light Machine Gun", inputs: ["right"] },
-              ],
+              equipments: [{ name: "Iron Bangle", inputs: ["down", "down"] }],
             },
           ]}
         />
@@ -50,12 +47,6 @@ function Chapter7() {
               summon: [{ name: "Ifrit" }],
             },
             {
-              name: "Barret",
-              weapon: [{ name: "Lightning" }, { name: "Wind" }],
-              armor: [{ name: "Fire", source: "inventory", inputs: ["down"] }],
-              summon: [{ name: "" }],
-            },
-            {
               name: "Tifa",
               weapon: [
                 { name: "Fire" },
@@ -67,24 +58,47 @@ function Chapter7() {
             },
           ]}
         />
+        <BattleSettings
+          characters={[
+            {
+              name: "Tifa",
+              shortcuts: [
+                {
+                  shortcut: "circle",
+                  ability: "Fira",
+                  inputs: ["down"],
+                },
+              ],
+            },
+          ]}
+        />
       </Menu>
-      <Encounter enemies="Monodrive x4" instructions={["Dash, TRIPOLOSKI"]} />
+      <Encounter
+        enemies="Monodrive x4"
+        instructions={["Dash, TRIPOLOSKI", "Overcharge if not dead"]}
+      />
       <Pick item="Echo Mist x2" optional />
       <Encounter
         enemies="Monodrive x2, Slug Ray x2"
-        instructions={["Punisher Monodrives, Thunder Slug Rays"]}
+        instructions={[
+          "Punisher x4, Berserk Monodrive",
+          "ATB Boost, Thunder each Slug Ray",
+          "Overcharge Monodrive",
+        ]}
       />
       <Pick item="Ether" optional />
       <Encounter
         enemies="Sweeper x2, Laser Cannon x2"
         instructions={[
-          "Barret: Overcharge, Combo Laser Cannon A, Thunder B",
-          "Cloud: Berserk, Thunder to pressure",
-          "Cloud: Punisher, Focused Shot/Focused Thrust to stagger",
-          "Cloud/Tifa Thunder when staggered",
+          "Cloud: Dash Sweeper, ATB Boost, Thunder each Laser Cannon",
+          "Cloud: Punisher full, Overcharge, Berserk, Thunder Sweeper (pressure)",
+          "Cloud: Focused Shot, Tifa Fira, Punisher Sweeper (stagger), Cross Slash",
+          "Tifa: Whirls (2 ATB)",
+          "Cloud: Berserk + Punisher (kill), Thunder other (pressure)",
+          "Cloud: Tifa Fira x2, Punisher (stagger), Thunder, Barret Thunder",
         ]}
       />
-      <Heal description="Ether Cloud, everyone good HP" />
+      <Heal description="Ether x1 Cloud, everyone good HP" />
       <Encounter
         enemies="Elite Shock Trooper, Shock Trooper x2"
         instructions={[
@@ -120,7 +134,7 @@ function Chapter7() {
         instructions={[
           "Barret: Overcharge, ATB Boost, Combo Laser B",
           "Barret: Thunder Laser A, Unbridled",
-          "Barret: Cloud Blizzard, 1 ATB, Fire Trooper",
+          "Barret: Cloud Blizzard, 1 ATB, Focused Shotx Trooper",
           "Tifa: Omni, Whirl, Divekick",
         ]}
       />
@@ -219,7 +233,7 @@ function Chapter7() {
         enemies="Elite Security Officer x2, Elite Grenadier x2"
         instructions={[
           "Barret: Overcharge Grenadier A, ATB Boost, Thunder left Security Officer",
-          "Tifa: Combo x3, Focused Strike left Security Officer",
+          "Tifa: Combo x3, Whirl, Focused Strike left Security Officer",
           "Tifa: TRIPOLOSKI, Combo x3, Focused Strike, Divekick right Security Officer",
         ]}
       />
@@ -230,15 +244,15 @@ function Chapter7() {
           "Cloud: 1 ATB, ATB Boost, TRIPOLOSKI A",
           "Barret: Overcharge A",
           "Tifa: Whirl, Divekick A, Unbridled",
-          "Tifa: Barret Fire/Cloud Blizzard (stagger), Omni, Whirl, Divekick B",
+          "Tifa: Cloud Blizzard/Focused Shot (stagger), Omni, Whirl, Divekick B",
         ]}
       />
       <Encounter
         enemies="Riot Trooper x2, Elite Riot Trooper x2, Elite Grenadier"
         instructions={[
           "Cloud: ATB Boost, Grenade Elite",
-          "Tifa: Combo x3, Focused Strike Elite",
-          "Barret: Overcharge, Focused Strike (learn) Elite",
+          "Tifa: Combo x3, Whirl, Focused Strike, Whirl Elite",
+          "Barret: Overcharge, Focused Strike (learn)",
           "Cloud: Punisher/TRIPOLOSKI/Focused Shot",
         ]}
       />
@@ -246,7 +260,16 @@ function Chapter7() {
         <Equipment
           characters={[
             {
-              name: "Tifa",
+              name: "Barret",
+              equipments: [
+                {
+                  name: "Light Machine Gun",
+                  inputs: ["up"],
+                },
+              ],
+            },
+            {
+              name: "Tifa (R2)",
               equipments: [
                 {
                   name: "Metal Knuckles",
@@ -273,9 +296,9 @@ function Chapter7() {
               weapon: [
                 { name: "Lightning" },
                 { name: "Wind" },
-                { name: "First Strike", source: "tifa", inputs: ["right"] },
+                { name: "Fire" },
               ],
-              armor: [{ name: "Fire" }],
+              armor: [{ name: "First Strike", source: "tifa" }],
               summon: [{ name: "" }],
             },
             {
@@ -305,14 +328,14 @@ function Chapter7() {
           ]}
         />
       </Menu>
-      <Heal description="Cloud 22 MP" />
+      <Heal description="Cloud 16 MP" />
       <Pick item="Hi-Potion x3" optional />
       <Encounter
         enemies="Cutter"
         instructions={[
-          "Cloud: Punisher x4, Berserk, Thundara, Overcharge",
-          "Cloud: 1 ATB, ATB Boost, Focused Shot, Focused Thrust (stagger)",
-          "Tifa: Whirl, Cloud Thundara, Divekick, Whirl, Divekick",
+          "Cloud: Punisher full, Berserk, Thunder, Overcharge",
+          "Cloud: ATB Boost, Focused Shot, Focused Thrust (stagger)",
+          "Tifa: Whirl/Divekick, Cloud Thundara, Barret Thunder",
         ]}
       />
       <Pick item="Ether" />

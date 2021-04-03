@@ -39,7 +39,7 @@ function Chapter9() {
       <Pick item="Mega-Potion" optional />
       <Encounter
         enemies="Beck, Burke, Butch"
-        instructions={["Aerith Fira Butch", "Deadly Dodge, Cleave, TRIPOLOSKI"]}
+        instructions={["Aerith Fira Butch", "TRIPOLOSKI/Punisher"]}
       />
       <Heal description="Ether x1 Aerith" />
       <Encounter
@@ -66,11 +66,7 @@ function Chapter9() {
           { name: "Caliginous Bracelet", inputs: ["down", "down"] },
         ]}
       />
-      <Menu
-        instructions={[
-          "Equip Tifa's Fire (1st slot) on Aerith before swapping with Cloud",
-        ]}
-      >
+      <Menu>
         <Equipment
           characters={[
             {
@@ -80,44 +76,6 @@ function Chapter9() {
             {
               name: "Aerith (R2)",
               equipments: [{ name: "Caliginous Bracelet", inputs: ["up"] }],
-            },
-          ]}
-        />
-        <Materia
-          characters={[
-            {
-              name: "Cloud",
-              weapon: [
-                { name: "Fire", source: "tifa" },
-                { name: "First Strike" },
-                { name: "Refocus" },
-              ],
-              armor: [{ name: "Lightning" }, { name: "Deadly Dodge" }],
-              summon: [{ name: "Ifrit" }],
-            },
-            {
-              name: "Aerith",
-              weapon: [
-                { name: "Lightning" },
-                { name: "Wind" },
-                { name: "First Strike" },
-              ],
-              armor: [
-                { name: "Fire" },
-                { name: "ATB Boost" },
-                { name: "Ice", source: "cloud" },
-              ],
-              summon: [{ name: "" }],
-            },
-            {
-              name: "Tifa",
-              weapon: [
-                { name: "", source: "aerith" },
-                { name: "" },
-                { name: "Lightning" },
-              ],
-              armor: [{ name: "" }],
-              summon: [{ name: "" }],
             },
           ]}
         />
@@ -156,14 +114,14 @@ function Chapter9() {
       <Encounter
         enemies="Beastmaster, Bloodhound x2"
         instructions={[
-          "Cloud: Berserk, Aerith ATB Boost, Soul Drain, Punisher (2 ATB)",
+          "Cloud: Berserk, Aerith ATB Boost, Soul Drain, Punisher (2 ATB) Beastmaster",
           "Cloud: Soul Drain/TRIPOLOSKI/Punisher",
         ]}
       />
       <Encounter
         enemies="Corneo Lackey 1 x5, Beck, Burke, Butch"
         instructions={[
-          "Cloud: Deadly Dodge, Aerith Fira",
+          "Cloud: Aerith Fira Beck, Deadly Dodge",
           "Cloud: TRIPOLOSKI, Berserk, TRIPOLOSKI",
         ]}
       />
@@ -173,9 +131,9 @@ function Chapter9() {
         instructions={[
           "Cloud: Berserk, Aerith Thundara, Thundara Sweeper",
           "Aerith: 1 ATB, ATB Boost, Thundara Sweeper",
-          "Cloud: Counter/Berserk/Punisher (pressure) Cutter",
-          "Cloud: Focused Thrust, Thundara, Punisher (stagger) Cutter",
-          "Cloud: Aerith Thundara, Punisher (1 ATB), TRIPOLOSKI Cutter",
+          "Cloud: Counter/TRIPOLOSKI (pressure) Cutter",
+          "Cloud: Punisher full, Berserk, Focused Thrust, Punisher (stagger) Cutter",
+          "Cloud: Thundara/Aerith Thundara Cutter",
         ]}
       />
       <Bench />
@@ -193,24 +151,41 @@ function Chapter9() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Fire" },
+                { name: "Ice", source: "barret" },
                 { name: "First Strike" },
                 { name: "Refocus" },
               ],
-              armor: [
-                { name: "Lightning" },
-                {
-                  name: "Ice",
-                  source: "barret",
-                  inputs: ["left", "down", "down"],
-                },
-              ],
+              armor: [{ name: "Lightning" }, { name: "Fire", source: "tifa" }],
               summon: [{ name: "Ifrit" }],
+            },
+            {
+              name: "Aerith",
+              weapon: [
+                { name: "Lightning" },
+                { name: "Wind" },
+                { name: "Fire" },
+              ],
+              armor: [
+                { name: "First Strike" },
+                { name: "ATB Boost" },
+                { name: "Ice", source: "cloud" },
+              ],
+              summon: [{ name: "" }],
             },
             {
               name: "Barret",
               weapon: [{ name: "" }, { name: "" }, { name: "" }],
               armor: [{ name: "", source: "cloud" }],
+              summon: [{ name: "" }],
+            },
+            {
+              name: "Tifa",
+              weapon: [
+                { name: "Deadly Dodge", source: "cloud" },
+                { name: "" },
+                { name: "Lightning" },
+              ],
+              armor: [{ name: "" }],
               summon: [{ name: "" }],
             },
           ]}
@@ -294,24 +269,16 @@ function Chapter9() {
           { name: "Phoenix Down", inputs: ["down", "down"] },
         ]}
       />
-      <Encounter
-        enemies="Corneo Lackey x3"
-        instructions={["Aerith: ATB Boost, Fira x2"]}
-      />
       <Pick item="Fury Ring" />
-      <Encounter
-        enemies="Corneo Lackey x2"
-        instructions={["Aerith: Fira", "Aerith: 0.5 ATB, ATB Boost, Fira"]}
-      />
       <Menu instructions={["Equip Barrier before swap"]}>
         <Equipment
           characters={[
             {
               name: "Tifa",
               equipments: [
+                { name: "Mythril Armlet", inputs: ["right"] },
                 { name: "Fury Ring", inputs: ["right"] },
                 { name: "Earrings", source: "aerith", inputs: ["up"] },
-                { name: "Power Wristguards", source: "cloud", inputs: ["up"] },
               ],
             },
           ]}
@@ -331,26 +298,39 @@ function Chapter9() {
                   source: "inventory",
                   inputs: ["up"],
                 },
+                { name: "Wind", source: "aerith" },
               ],
               summon: [{ name: "" }],
             },
             {
               name: "Aerith",
               weapon: [
+                { name: "Deadly Dodge", source: "tifa" },
                 {
                   name: "Barrier",
                   source: "inventory",
-                  inputs: ["right", "down"],
+                  inputs: ["up", "up", "up", "up"],
                 },
-                { name: "Wind" },
-                { name: "First Strike" },
+                { name: "Fire" },
               ],
-              armor: [{ name: "Fire" }, { name: "ATB Boost" }, { name: "Ice" }],
+              armor: [
+                { name: "First Strike" },
+                { name: "ATB Boost" },
+                { name: "Ice" },
+              ],
               summon: [{ name: "" }],
             },
           ]}
         />
       </Menu>
+      <Encounter
+        enemies="Corneo Lackey x3"
+        instructions={["Aerith: Deadly Dodge, Fira"]}
+      />
+      <Encounter
+        enemies="Corneo Lackey x2"
+        instructions={["Aerith: Deadly Dodge, Fira"]}
+      />
     </Chapter>
   );
 }
