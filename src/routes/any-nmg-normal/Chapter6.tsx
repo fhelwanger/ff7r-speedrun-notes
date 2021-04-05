@@ -1,5 +1,6 @@
 import React from "react";
 import BattleSettings from "../../components/BattleSettings";
+import Box from "../../components/Box";
 import Chapter from "../../components/Chapter";
 import Dialogue from "../../components/Dialogue";
 import Encounter from "../../components/Encounter";
@@ -11,6 +12,7 @@ function Chapter6() {
   return (
     <Chapter number={6}>
       <Pick item="Hi-Potion" optional />
+      <Box description="Before the fans." />
       <Encounter
         enemies="Grashtrike x3"
         instructions={[
