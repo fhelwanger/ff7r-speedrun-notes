@@ -27,7 +27,7 @@ function Chapter10() {
             "Tifa: Parry, Combo x6, Focused Strike, Focused Thrust, Focused Strike x2, Whirl",
             "Aerith: Combo (jumps to water), Tempest full",
             "Tifa: Whirl, Aerith Fira, Divekick",
-            "Tifa: Combo x6, Focused Strike, Focused Thrust, Combo x6 (stagger)",
+            "Tifa: Combo x6, Whirl, Focused Strike, Focused Thrust, Combo (stagger)",
             "Tifa: Unbridled, Soul Drain, Omni, Whirl, Soul Drain, Divekick, Whirl, Divekick",
           ],
         ]}
