@@ -366,7 +366,7 @@ function Chapter16() {
       <Encounter
         enemies="Armored Troopers x2"
         instructions={[
-          "Cloud: ATB Boost, Thundaga x2",
+          "Cloud: ATB Boost, Thundaga x2 left",
           "Tifa: Overpower, Combo, Overpower if alive",
         ]}
       />
