@@ -134,7 +134,7 @@ function Chapter7() {
         instructions={[
           "Barret: Overcharge, ATB Boost, Combo Laser B",
           "Barret: Thunder Laser A, Unbridled",
-          "Barret: Cloud Blizzard, 1 ATB, Focused Shotx Trooper",
+          "Barret: Cloud Blizzard, 1 ATB, Focused Shot Trooper",
           "Tifa: Omni, Whirl, Divekick",
         ]}
       />
