@@ -91,9 +91,9 @@ function Chapter7() {
         enemies="Sweeper x2, Laser Cannon x2"
         instructions={[
           "Cloud: Dash Sweeper, ATB Boost, Thunder each Laser Cannon",
-          "Cloud: Punisher full, Overcharge, Berserk, Thunder Sweeper (pressure)",
+          "Cloud: Overcharge, Punisher full, Berserk, Thunder Sweeper (pressure)",
           "Cloud: Focused Shot, Tifa Fira, Punisher Sweeper (stagger), Cross Slash",
-          "Tifa: Whirls (2 ATB)",
+          "Tifa: Whirl, Combo x6, Whirl (2 ATB)",
           "Cloud: Berserk + Punisher (kill), Thunder other (pressure)",
           "Cloud: Tifa Fira x2, Punisher (stagger), Thunder, Barret Thunder",
         ]}
