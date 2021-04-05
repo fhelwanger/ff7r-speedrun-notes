@@ -200,8 +200,8 @@ function Chapter18() {
             "Tifa: Omni, Whirl, Whirl, swap to Cloud",
           ],
           [
-            "Cloud: Berserk, Infinity's End",
-            "Tifa: Starshower x2, Aerith Thundaga",
+            "Tifa: Cloud Infinity's End",
+            "Tifa: Starshower x2, Aerith Thundara",
           ],
         ]}
       />
