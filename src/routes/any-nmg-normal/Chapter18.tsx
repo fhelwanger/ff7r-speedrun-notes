@@ -184,24 +184,22 @@ function Chapter18() {
             "Cloud: Punisher full, Berserk, Punisher x2, TRIPOLOSKI",
           ],
           [
-            "Cloud: Punisher jump, TRIPOLOSKI, Roll",
+            "Cloud: Cleave, TRIPOLOSKI, Roll",
             "Cloud: Dash, Counter, Counterstance",
             "Cloud: Berserk, Operator, Counter, Counterstance",
-            "Cloud: Operator, Counter x2 (stagger)",
-            "Cloud: Haste All, Hit",
-            "Cloud: Berserk, Whirl, Punisher",
+            "Cloud: Operator, Counter (stagger), Haste All, Hit",
+            "Cloud: (Elixir if needed), Berserk, Whirl, Punisher",
           ],
           [
-            "Tifa: Braver, Aerith ATB Boost, Aerith Magic",
-            "Tifa: Whirl, Divekick, Aerith Magic, Whirl, Divekick",
-            "Tifa: Whirl, Focused Strike x3",
-            "Cloud: Counter, Focused Thrust, Unbridled (stagger)",
-            "Cloud: Berserk, Cross Slash",
-            "Tifa: Omni, Whirl, Whirl, swap to Cloud",
+            "Tifa: Braver, Aerith ATB Boost, Starshower",
+            "Tifa: Aerith -aga x2, Whirl x2, Focused Strike x3",
+            "Cloud: Focused Thrust, Counter (stagger)",
+            "Cloud: Unbridled, Berserk, Cross Slash",
+            "Tifa: Omni, Whirl, Divekick, Whirl, (Divekick if needed)",
           ],
           [
             "Tifa: Cloud Infinity's End",
-            "Tifa: Starshower x2, Aerith Thundara",
+            "Tifa: Combo x6, Whirl, Starshower x2, Aerith Thundara",
           ],
         ]}
       />
