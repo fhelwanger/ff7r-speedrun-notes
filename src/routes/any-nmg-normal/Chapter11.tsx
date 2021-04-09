@@ -229,7 +229,7 @@ function Chapter11() {
                 {
                   name: "Binding",
                   source: "inventory",
-                  inputs: ["square", "right", "up", "up"],
+                  inputs: ["right", "up", "up"],
                 },
                 { name: "Lightning" },
               ],
@@ -238,7 +238,7 @@ function Chapter11() {
                 {
                   name: "Subversion",
                   source: "inventory",
-                  inputs: ["right", "up"],
+                  inputs: ["square", "right", "up"],
                 },
               ],
               summon: [{ name: "Ifrit", source: "cloud" }],
