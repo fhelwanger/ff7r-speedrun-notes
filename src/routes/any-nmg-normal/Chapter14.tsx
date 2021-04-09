@@ -48,7 +48,11 @@ function Chapter14() {
           { name: "Platinum Earrings", inputs: ["down", "down"] },
         ]}
       />
-      <Menu>
+      <Menu
+        instructions={[
+          "Move Lightning to Cloud, do Cloud then Barret then Tifa",
+        ]}
+      >
         <Equipment
           characters={[
             {
@@ -212,7 +216,10 @@ function Chapter14() {
       />
       <Encounter
         enemies="Blugu x2, Scissorclaw x2"
-        instructions={["Cloud: Blade Burst"]}
+        instructions={[
+          "Blugus far: Blade Burst",
+          "Blugus near: Fira All, Starshower",
+        ]}
       />
       <Pick item="Ether" />
       <Encounter
@@ -328,16 +335,6 @@ function Chapter14() {
         <BattleSettings
           characters={[
             {
-              name: "Cloud",
-              shortcuts: [
-                {
-                  shortcut: "triangle",
-                  ability: "Focused Thrust",
-                  inputs: ["down"],
-                },
-              ],
-            },
-            {
               name: "Tifa",
               shortcuts: [{ ability: "Leader" }],
             },
@@ -387,6 +384,11 @@ function Chapter14() {
             "Tifa: Starshower x2, Somersault Abzu, TRIPOLOSKI x2 Shoats",
           ],
         ]}
+      />
+      <Dialogue
+        optionText="Yes"
+        optionPosition="2nd"
+        details="to go up after holding L1"
       />
       <Dialogue optionText="Yes" optionPosition="2nd" details="to climb" />
     </Chapter>
