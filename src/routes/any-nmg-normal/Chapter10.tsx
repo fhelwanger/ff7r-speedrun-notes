@@ -41,27 +41,33 @@ function Chapter10() {
       />
       <Pick item="Hi-Potion x2" optional />
       <Pick item="Feathered Gloves" />
-      <Encounter enemies="Wererat x3" instructions={["TRIPOLOSKI"]} />
+      <Encounter enemies="Wererat x3" instructions={["Cloud: TRIPOLOSKI"]} />
       <Encounter
         enemies="Wererat x2, Scissorclaw"
-        instructions={["Soul Drain Scissor, TRIPOLOSKI Rats"]}
+        instructions={["Cloud: Soul Drain Scissor, TRIPOLOSKI Rats"]}
       />
       <Encounter
         enemies="Scissorclaw x2"
-        instructions={["ATB Boost, Soul Drain each"]}
+        instructions={["Cloud: Aerith ATB Boost, Soul Drain each"]}
       />
       <Pick item="keys" />
       <Encounter
         enemies="Wererat x3, Blugu"
-        instructions={["Soul Drain, TRIPOLOSKI Blugu", "Cleave rest"]}
+        instructions={[
+          "Cloud: Soul Drain, TRIPOLOSKI Blugu",
+          "Cloud: Cleave rest",
+        ]}
       />
       <Encounter
         enemies="Blugu x2, Scissorclaw"
-        instructions={["Soul Drain Scissor", "TRIPOLOSKI Blugus"]}
+        instructions={["Cloud: Soul Drain Scissor", "Cloud: TRIPOLOSKI Blugus"]}
       />
       <Encounter
         enemies="Blugu, Scissorclaw x2"
-        instructions={["ATB Boost, Soul Drain Scissors", "Braver Blugu"]}
+        instructions={[
+          "Aerith: ATB Boost, Soul Drain Scissors",
+          "Cloud: Braver Blugu",
+        ]}
       />
       <Encounter
         enemies="Sahagin"
@@ -72,11 +78,14 @@ function Chapter10() {
       />
       <Encounter
         enemies="Scissorclaw x2"
-        instructions={["ATB Boost, Soul Drain each"]}
+        instructions={["Cloud: ATB Boost, Soul Drain each"]}
       />
       <Encounter
         enemies="Wererat x2, Blugu, Scissorclaw"
-        instructions={["Soul Drain Scissor", "TRIPOLOSKI, Cleave rest"]}
+        instructions={[
+          "Cloud: Soul Drain Scissor",
+          "Cloud: TRIPOLOSKI, Cleave rest",
+        ]}
       />
       <Encounter
         enemies="Minigame Visual Cues"
@@ -85,7 +94,7 @@ function Chapter10() {
       <Encounter
         enemies="Sahagin x2"
         instructions={[
-          "Cloud: Aerith Fira A, Cleave, Fira B",
+          "Cloud: Aerith/Cloud Fira each",
           "Cloud: Berserk, TRIPOLOSKI",
         ]}
       />
