@@ -48,7 +48,7 @@ function Chapter13() {
         instructions={["ATB Boost, TRIPOLOSKI, Starshower, TRIPOLOSKI"]}
       />
       <Pick item="Magnify" />
-      <Menu>
+      <Menu instructions={["Start swapping Barret Ice slot, then Magnify"]}>
         <Equipment
           characters={[
             {
@@ -78,14 +78,14 @@ function Chapter13() {
             {
               name: "Barret",
               weapon: [
-                { name: "Ice" },
+                { name: "Lightning", source: "cloud" },
                 {
                   name: "Magnify",
                   source: "inventory",
                   inputs: ["square", "down", "down"],
                 },
                 { name: "Wind" },
-                { name: "Lightning", source: "cloud" },
+                { name: "Ice", source: "barret" },
               ],
               armor: [
                 { name: "First Strike", source: "cloud" },
@@ -121,8 +121,8 @@ function Chapter13() {
               shortcuts: [
                 {
                   shortcut: "square",
-                  ability: "Blizzard All",
-                  inputs: ["down", "down"],
+                  ability: "Thunder All",
+                  inputs: ["right", "up", "up"],
                 },
                 {
                   shortcut: "circle",
@@ -152,18 +152,20 @@ function Chapter13() {
       <Encounter
         enemies="Bloodhound x2"
         instructions={[
-          "Blizzard All (stagger), Combo A, Blizzara B",
-          "Overcharge, Focused Shot A",
+          "Go up, Overcharge, Thunder All (stagger)",
+          "1 ATB, ATB Boost, Blizzara pressured, Blizzara staggered",
+          "Combo rest",
         ]}
       />
       <Encounter
         enemies="Bloodhound, Bugaboo x3"
         instructions={[
-          "Overcharge Bloodhound, Blizzard All (stagger)",
-          "ATB Boost, Blizzard Bloodhound, Focused Shot Bugaboos",
+          "Overcharge Bloodhound, Thunder All (stagger)",
+          "1 ATB, ATB Boost, Focused Shot Bloodhound",
+          "Combo rest",
         ]}
       />
-      <Encounter enemies="Gorger x2" instructions={["Blizzard All"]} />
+      <Encounter enemies="Gorger x2" instructions={["Thunder All"]} />
       <Encounter
         enemies="Gorger, Bugaboo x2"
         instructions={["Overcharge Gorger, Focused Shot"]}
@@ -207,7 +209,7 @@ function Chapter13() {
                   inputs: ["right", "up", "up"],
                 },
                 { name: "Ice", source: "barret" },
-                { name: "Lightning" },
+                { name: "Lightning", source: "barret" },
               ],
               armor: [
                 { name: "First Strike" },
