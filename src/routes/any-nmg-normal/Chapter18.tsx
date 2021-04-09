@@ -114,7 +114,7 @@ function Chapter18() {
           "Cloud: Dash, Counter, Berserk, Focused Thrust Rubrum",
           "Barret: Overcharge Rubrum",
           "Cloud: Punisher full, Berserk, Punisher full Rubrum, Haste All",
-          "Tifa: Whirl x2, Unbridled, Combos Croceo",
+          "Tifa: Whirl x2, Unbridled",
           "Move Cloud down",
         ]}
       />
