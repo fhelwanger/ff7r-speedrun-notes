@@ -205,8 +205,8 @@ function Chapter12() {
           [
             "Barret: Overcharge, Thundara, Combo, Charge x3 Helicopter",
             "Barret: Overcharge Reno",
-            "Tifa: Starshower",
-            "Cloud: Punisher x4, Berserk, Punisher x4, TRIPOLOSKI",
+            "Tifa: Hit, Starshower",
+            "Cloud: Punisher x4, Berserk, Punisher (wait Pyramid), TRIPOLOSKI",
             "Tifa: Whirl Reno, Cloud ATB Boost, Combo (2 ATB) Helicopter",
             "Cloud: Barret Thundara",
           ],
