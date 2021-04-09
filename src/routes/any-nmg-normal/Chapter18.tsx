@@ -23,17 +23,20 @@ function Chapter18() {
             "Combo x4 Truck. Spinning Slash.",
           ],
           [
-            'Break and Combo Slug-Rays after Red says "there\'s more".',
-            'Break, Spinning Slash after Aerith says "Uh, what the-!?".',
-            "Take ranged attacks, Combo x5 + Spinning Slash when near, defend blades.",
-            "Take ranged attacks, Combo + Spinning Slash when near, defend punches.",
+            'Break until Red says "there\'s more". Combo x3, Spinning Slash Slug-Rays.',
+            'Break until Aerith says "Uh, what the-!?". Combo M.O.T.H.',
+            "Take ranged attacks, Spinning Slash, Combo full x5 when near, defend blades.",
+            "Take ranged attacks, Sharp Gust when possible, Combo + Spinning Slash when near, defend punches.",
             "Break when charges.",
           ],
-          ["Combo, Spinning Slash when both near."],
           [
-            "Spinning Slash one side, Combo the other. Combo x5, Spinning Slash.",
-            "Defend Fire, Spinning Slash one side, Combo the other. Combo x5, Spinning Slash.",
-            "Combo, Defend Fire, Spinning Slash one side, Combo the other. Combo x5, Spinning Slash.",
+            "Combo, Spinning Slash when both near.",
+            "Stay on right side for the ramp.",
+          ],
+          [
+            "Spinning Slash 4 wheels, Combo the rest. Combo x5, Spinning Slash.",
+            "Defend Fire, Spinning Slash one side, Combo the rest. Combo x5, Spinning Slash.",
+            "Combo, Defend Fire, Spinning Slash one side, Break until throwing, Combo the rest. Combo x5, Spinning Slash.",
             "Try a extra hit or start the stagger with the last hit of the wheels during the staggers.",
           ],
         ]}
