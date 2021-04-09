@@ -52,6 +52,7 @@ function Chapter18() {
       />
       <Menu
         instructions={[
+          "Remove Fire before equipping HP Ups on Tifa",
           "Remove Binding/Subversion before equipping HP Ups on Cloud",
         ]}
       >
@@ -86,7 +87,6 @@ function Chapter18() {
             {
               name: "Tifa",
               weapon: [
-                { name: "Fire" },
                 {
                   name: "HP Up",
                   source: "inventory",
@@ -94,6 +94,7 @@ function Chapter18() {
                 },
                 { name: "HP Up", source: "inventory", inputs: ["up"] },
                 { name: "HP Up", source: "inventory", inputs: ["up"] },
+                { name: "" },
                 { name: "" },
               ],
               armor: [

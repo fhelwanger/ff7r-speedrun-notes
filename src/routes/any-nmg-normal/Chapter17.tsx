@@ -494,7 +494,7 @@ function Chapter17() {
                 { name: "Fire" },
                 { name: "" },
                 { name: "First Strike", source: "barret" },
-                { name: "Refocus", source: "cloud" },
+                { name: "Refocus", source: "cloud", inputs: ["up"] },
                 { name: "" },
               ],
               armor: [
