@@ -31,7 +31,7 @@ function Chapter13() {
       <Encounter enemies="Bandit x2" instructions={["TRIPOLOSKI, Divekick"]} />
       <Encounter
         enemies="Bandit x2"
-        instructions={["Starshower A", "TRIPOLOSKI, Punisher full B"]}
+        instructions={["Starshower A", "TRIPOLOSKI, Punisher x6, Operator B"]}
       />
       <Encounter
         enemies="Beck, Burke, Butch, Grungy Bandit"
