@@ -7,7 +7,6 @@ import Equipment from "../../components/Equipment";
 import Materia from "../../components/Materia";
 import Menu from "../../components/Menu";
 import Shop from "../../components/Shop";
-import UpgradeWeapons from "../../components/UpgradeWeapons";
 
 function Chapter18() {
   return (
@@ -170,16 +169,6 @@ function Chapter18() {
           ["Tifa Thunder"],
         ]}
       />
-      <Menu>
-        <UpgradeWeapons
-          characters={[
-            {
-              name: "Tifa",
-              weapons: [{ name: "Leather Gloves", upgrade: "Auto - Balanced" }],
-            },
-          ]}
-        />
-      </Menu>
       <Boss
         name="Sephiroth"
         phases={[

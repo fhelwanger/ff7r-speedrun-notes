@@ -189,8 +189,8 @@ function Chapter8() {
       <Encounter
         enemies="Hedgehog Pie x2, Wererat"
         instructions={[
-          "Deadly Dodge, TRIPOLOSKI Rat",
-          "Punisher Pie, Soul Drain other Pie",
+          "Deadly Dodge, Cleave Rat",
+          "TRIPOLOSKI Pie, Soul Drain other Pie",
         ]}
       />
       <Encounter

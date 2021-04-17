@@ -45,9 +45,8 @@ function Chapter6() {
         enemies="Terpsicolt x2, Sentry Gun Prototype x2"
         instructions={[
           "Cloud: ATB Boost, Blizzard, Berserk, Punisher Terpsicolt A",
-          "Barret: Overcharge Terpsicolt B",
-          "Cloud: Punisher, TRIPLOSKI Terpsicolt B",
-          "Tifa/Barret Thunder each Sentry",
+          "Cloud: Braver, Overcharge, Counter Terpsicolt B",
+          "Cloud: TRIPLOSKI, Tifa/Barret Thunder each Sentry",
         ]}
       />
       <Pick item="Mesmeric Armlet" />

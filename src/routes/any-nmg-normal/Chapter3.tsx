@@ -46,24 +46,21 @@ function Chapter3() {
       <Pick item="Ice" />
       <Encounter
         enemies="Gorger x2"
-        instructions={[
-          "A: Deadly Dodge, Cleave, Punisher x2, Operator",
-          "B: Fire",
-        ]}
+        instructions={["A: Dash, Punisher x5, Operator", "B: Fire"]}
       />
       <Encounter
         enemies="Gorger, Wererat"
         instructions={[
-          "Gorger: Dash, Deadly Dodge, Cleave, Punisher x2, Operator",
-          "Wererat: Fire",
+          "Gorger: Dash, Deadly Dodge, Cleave, Focused Thrust (stagger)",
+          "Wererat: Cleave",
         ]}
       />
       <Encounter enemies="Wererat x2" instructions={["Deadly Dodge, Cleave"]} />
       <Encounter
         enemies="Gorger x2"
         instructions={[
-          "A: Deadly Dodge, Cleave, Punisher x2, Operator",
-          "B: Fire",
+          "A: Dash, Punisher x5, Operator",
+          "B: Fire or Cleave + Focused Thrust if need stagger",
         ]}
       />
       <Shop

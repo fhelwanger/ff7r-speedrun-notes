@@ -22,8 +22,8 @@ function Chapter4() {
             "Security Officer x3: Take ramp. Break. Let 1 pass, Spinning Slash, Combo last.",
           ],
           [
-            'Break and go right a little bit until "We\'re not screwed, are we?".',
-            "Elite Security Officer x2: Combo, Spinning Slash, Combo.",
+            'Break until "We\'re not screwed, are we?".',
+            "Elite Security Officer x2: Combo one, Spinning Slash both, Combo other.",
             "Slug-Ray x4: Break when music changes, let 1 pass, Spinning Slash, Combo rest.",
           ],
           [
@@ -142,8 +142,8 @@ function Chapter4() {
         enemies="Mysterious Spectre"
         instructions={[
           "Cloud: Deadly Dodge, Cleave, Counter, Berserk, TRIPOLOSKI",
-          "Cloud: Operator, TRIPOLOSKI, Counter, TRIPOLOSKI x2",
-          "Cloud: Berserk, Punisher, Divekick E",
+          "Cloud: Counter/TRIPOLOSKI A/B/C/D",
+          "Cloud: Punisher/Divekick E",
           "Cloud: Fire x2 F (stagger)",
         ]}
       />

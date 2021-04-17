@@ -118,8 +118,8 @@ function Chapter7() {
         enemies="Laser Cannon x2, Monodrive x2"
         instructions={[
           "Cloud: Dash, TRIPOLOSKI Monodrives",
-          "Barret: Overcharge Laser Cannon B, Thunder A",
-          "Barret: Tifa Thunder Monos/Laser",
+          "Barret: Overcharge, Combo Laser Cannon B, Thunder A",
+          "Barret: Thunder any if alive",
         ]}
       />
       <Encounter
@@ -132,10 +132,8 @@ function Chapter7() {
       <Encounter
         enemies="Elite Shock Trooper, Laser Cannon x2"
         instructions={[
-          "Barret: Overcharge, ATB Boost, Combo Laser B",
-          "Barret: Thunder Laser A, Unbridled",
-          "Barret: Cloud Blizzard, 1 ATB, Focused Shot Trooper",
-          "Tifa: Omni, Whirl, Divekick",
+          "Cloud: Cleave Trooper, ATB Boost, Thunder each Laser",
+          "Cloud: Tifa Fira Trooper, Cleave Trooper (stagger), Cross Slash",
         ]}
       />
       <Encounter
@@ -252,8 +250,9 @@ function Chapter7() {
         instructions={[
           "Cloud: ATB Boost, Grenade Elite",
           "Tifa: Combo x3, Whirl, Focused Strike, Whirl Elite",
-          "Barret: Overcharge, Focused Strike (learn)",
-          "Cloud: Punisher/TRIPOLOSKI/Focused Shot",
+          "Barret: Overcharge, Focused Strike (learn) Elite",
+          "Barret: 2 ATB, Thunder, Focused Shot (stagger), TRIPOLOSKI Elite",
+          "Barret: Divekick, Combo Grenadier",
         ]}
       />
       <Menu>
@@ -328,12 +327,12 @@ function Chapter7() {
           ]}
         />
       </Menu>
-      <Heal description="Cloud 16 MP" />
+      <Heal description="Cloud 22 MP" />
       <Pick item="Hi-Potion x3" optional />
       <Encounter
         enemies="Cutter"
         instructions={[
-          "Cloud: Punisher full, Berserk, Thunder, Overcharge",
+          "Cloud: Punisher x4, Berserk, Thundara, Overcharge",
           "Cloud: ATB Boost, Focused Shot, Focused Thrust (stagger)",
           "Tifa: Whirl/Divekick, Cloud Thundara, Barret Thunder",
         ]}

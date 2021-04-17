@@ -292,7 +292,7 @@ function Chapter11() {
           "Tifa: Sleep, Aerith Aero (stagger), Focused Thrust Lesser",
         ]}
       />
-      <Heal description="Aerith 48 MP, everyone full HP." />
+      <Heal description="Aerith 46 MP, everyone full HP." />
       <Boss
         name="Eligor"
         phases={[
@@ -302,13 +302,16 @@ function Chapter11() {
             "Tifa: Whirl",
             "Aerith: Tempest full, Blizzara, Arcane Ward, Combo",
           ],
-          ["Aerith: Tifa Breach, Combo x3, Roll, 2 ATB", "Aerith: Aerora x2"],
+          [
+            "Aerith: Tifa Breach, Combo x3, Roll up-left, Combo (2 ATB)",
+            "Aerith: Aerora x2",
+          ],
           [
             "Aerith: Tempest full",
             "Tifa: Combo x6, Whirl, Divekick Right Wheel",
             "Tifa: Parry, Whirl, Divekick Left Wheel",
-            "Tifa: Cloud Blizzara, Aerith Blizzard",
-            "Tifa: Whirl, Hit x1, Whirl/Divekick",
+            "Tifa: Whirl, Aerith ATB Boost, Cloud Blizzara",
+            "Tifa: Whirl, Aerith Soul Drain, Aerith Blizzara, Whirl x2",
           ],
         ]}
       />

@@ -278,7 +278,7 @@ function Chapter16() {
             "Tifa: Whirl, Lock Claw",
             "Cloud: Counter, Punisher (take Seize)",
             "Tifa: Divekick, Whirl, Combo Claw",
-            "Tifa: Whirl, Focused Shot, Focused Thrust, Combo x6, Focused Strike x2",
+            "Tifa: Whirl, Focused Shot, Focused Thrust, Focused Strike x3",
             "Tifa: Starshower x2, Cloud Mega-Potion Tifa",
             "Barret: Overcharge",
             "Tifa: Lifesaver, Whirl, Combo x6, Whirl",

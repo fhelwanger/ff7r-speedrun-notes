@@ -97,11 +97,6 @@ function Chapter9() {
       </Menu>
       <Pick item="1200 gil" optional />
       <Dialogue
-        optionText="No deal."
-        optionPosition="3rd"
-        details="when talking to Sam"
-      />
-      <Dialogue
         optionText="Poor Man's"
         optionPosition="3rd"
         details="when talking to Madam M"

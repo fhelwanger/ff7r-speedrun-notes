@@ -164,7 +164,7 @@ function Chapter12() {
           "Cloud: Punisher x4, Operator, ATB Boost Shock Trooper",
           "Tifa: Whirl, Divekick Shock Trooper",
           "Tifa: Whirl (2 ATB) Sentries, Cloud Fira, Cloud Fire Helitrooper",
-          "Tifa: Thundara Sentries, Somersault Helitrooper",
+          "Tifa: Thundara Sentries, Parry, Somersault Helitrooper",
         ]}
       />
       <Pick item="Elixir" optional />
@@ -213,8 +213,8 @@ function Chapter12() {
           [
             "Cloud: TRIPOLOSKI",
             "Tifa: Parry, Starshower",
-            "Cloud: Berserk, Starshower, TRIPOLOSKI",
-            "Cloud: Punisher x4, TRIPOLOSKI, Punisher, Focused Shot",
+            "Cloud: Punisher full, Starshower Rude then Lock Reno, Berserk, TRIPOLOSKI",
+            "Cloud: Punisher x2, TRIPOLOSKI, Focused Shot, Punisher",
           ],
         ]}
       />

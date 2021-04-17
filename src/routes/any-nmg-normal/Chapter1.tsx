@@ -43,8 +43,8 @@ function Chapter1() {
       <Encounter
         enemies="Security Officer x2, Guard Dog"
         instructions={[
-          "Security Officers: Punisher",
-          "Guard Dog: Fire, Berserk, Punisher",
+          "Security Officers: Punisher, Berserk",
+          "Guard Dog: Fire, Punisher",
         ]}
       />
       <Encounter
@@ -89,7 +89,7 @@ function Chapter1() {
           "Cloud: Dash, Punisher",
           "Barret: Overcharge, Combo, Charge, Thunder",
           "Barret: Charge, Combo, Charge, Focused Thrust, Focused Shot (stagger), Overcharge",
-          "Cloud: Barret Thunder, Punisher (2 ATB), Barret Thunder, Focused Thrust",
+          "Cloud: Barret Thunder, Punisher (2 ATB), Barret Thunder, Operator, Roll",
         ]}
       />
       <Pick item="Ether" optional />
