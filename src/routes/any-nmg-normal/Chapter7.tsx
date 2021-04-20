@@ -371,11 +371,11 @@ function Chapter7() {
             "Barret: Combo, Charge, Combo, Charge, Thunder",
             "Barret: Overcharge, Cloud Thundara (wait overcharge shooting), Combo",
             "Tifa: Defend, Whirl, Divekick, Whirl",
-            "Cloud: Berserk, Thundara, Divekick, Punisher (2 ATB), ATB Boost",
+            "Cloud: Berserk, Thundara, Divekick, Punisher (1 ATB), ATB Boost",
             "Tifa: Whirl, Cloud Blizzara, Focused Shot, Focused Thrust",
             "Tifa: Combo x6, Whirl, Focused Strike (stagger)",
             "Tifa: Unbridled, Omni, Whirl",
-            "Cloud: Punisher full, Berserk, Divekick, Punisher (2 ATB)",
+            "Cloud: Punisher x4, Berserk, Divekick, Punisher full",
           ],
           [
             "Barret: Overcharge, Somersault, Cloud Thundara, TRIPOLOSKI, Thunder",
