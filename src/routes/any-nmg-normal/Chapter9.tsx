@@ -124,8 +124,8 @@ function Chapter9() {
       <Encounter
         enemies="Cutter, Sweeper"
         instructions={[
-          "Cloud: Berserk, Aerith Thundara, Thundara Sweeper",
-          "Aerith: 1 ATB, ATB Boost, Thundara Sweeper",
+          "Cloud: Aerith ATB Boost, Aerith Thundara, Berserk, Thundara Sweeper",
+          "Aerith: Combo (2 ATB), Thundara Sweeper",
           "Cloud: Counter/TRIPOLOSKI (pressure) Cutter",
           "Cloud: Punisher full, Berserk, Focused Thrust, Punisher (stagger) Cutter",
           "Cloud: Thundara/Aerith Thundara Cutter",
