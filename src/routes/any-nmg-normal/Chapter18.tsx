@@ -177,10 +177,9 @@ function Chapter18() {
             "Cloud: (Elixir if needed), Berserk, Whirl, Punisher",
           ],
           [
-            "Tifa: Braver, Aerith ATB Boost, Starshower",
-            "Tifa: Aerith -aga x2, Whirl x2, Focused Strike x3",
-            "Cloud: Focused Thrust, Counter (stagger)",
-            "Cloud: Unbridled, Berserk, Cross Slash",
+            "Tifa: Braver, Aerith ATB Boost, Whirl, Starshower, Aerith -aga",
+            "Tifa: Whirl (pressure), Aerith Blizzaga, Focused Thrust, Focused Strike, Combo",
+            "Cloud: Counter (stagger), Unbridled, Berserk, Cross Slash",
             "Tifa: Omni, Whirl, Divekick, Whirl, (Divekick if needed)",
           ],
           [
