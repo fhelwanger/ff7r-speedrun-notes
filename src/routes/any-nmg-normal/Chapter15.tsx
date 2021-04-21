@@ -440,12 +440,10 @@ function Chapter15() {
             "Barret: Tifa Thundara, Charge, Combo",
           ],
           [
-            "Barret: Overcharge, Cloud Thundaga",
-            "Tifa: Whirl, Parry, Whirl if Omni not ready",
-            "Cloud: Dodge laser, Unbridled if Omni not ready",
-            "Cloud: Punisher (stagger), Thundaga",
-            "Tifa: Omni, Barret Thunder, Whirl, Barret Thunder, Cloud Thundara",
-            "Tifa: Whirl, Thundara x2",
+            "Barret: Overcharge, Cloud Thundara",
+            "Tifa: Whirl, Parry, Whirl",
+            "Cloud: Dodge laser, Unbridled, Punisher (stagger)",
+            "Tifa: Omni, Cloud Thundaga x2, Barret Thunder x2, Whirl x2, Thundara x2",
           ],
         ]}
       />
