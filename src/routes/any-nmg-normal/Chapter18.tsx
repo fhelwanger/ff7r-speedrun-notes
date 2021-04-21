@@ -109,7 +109,6 @@ function Chapter18() {
           "Barret: Overcharge Rubrum",
           "Cloud: Punisher full, Berserk, Punisher full Rubrum, Haste All",
           "Tifa: Whirl x2, Unbridled",
-          "Move Cloud down",
         ]}
       />
       <Encounter
@@ -118,27 +117,26 @@ function Chapter18() {
           "Cloud: Dash, Cleave, Counter, Berserk Rubrum",
           "Barret: Overcharge Rubrum",
           "Cloud: Punisher full, Berserk, Focused Thrust Rubrum",
-          "Cloud: Punisher Rubrum, Haste All, 2 ATB",
-          "Barret Mega-Potion Cloud and Tifa",
+          "Cloud: Punisher Rubrum, Barret Mega-Potion Tifa",
         ]}
       />
       <Encounter
         enemies="Whisper Rubrum"
         instructions={[
-          "Cloud: Dash, TRIPOLOSKI, Punisher x2, Operator, Counterstance",
-          "Tifa: Starshower x2, Omni",
-          "Tifa: Combo (2 ATB), Unbridled",
-          "Cloud: Berserk, Punisher, swap to Tifa",
+          "Cloud: Dash, Braver",
+          "Barret: Thundaga, TRIPOLOSKI, Starshower x2, Charge x3, Overcharge",
+          "Tifa: Omni",
+          "Cloud: Berserk, Punisher x6",
+          "Tifa: Combo x6, Whirl, Unbridled",
         ]}
       />
       <Encounter
         enemies="Whisper Viridi, Whisper Croceo"
         instructions={[
-          "Cloud: TRIPOLOSKI Croceo, Counterstance Viridi, Berserk, Punisher (stagger)",
+          "Cloud: TRIPOLOSKI Croceo, Counterstance Viridi, Punisher full, Berserk (stagger)",
           "Cloud: TRIPOLOSKI, Punisher full, Berserk Viridi",
-          "Barret: Overcharge Croceo",
-          "Cloud: Braver, TRIPOLOSKI Croceo",
-          "Cloud: Punisher full, Berserk, Punisher Croceo",
+          "Barret: Overcharge, TRIPOLOSKI, Thundara, Braver Croceo",
+          "Cloud: Berserk, Punisher Croceo, Barret Mega-Potion Cloud",
         ]}
       />
       <Boss
@@ -146,12 +144,12 @@ function Chapter18() {
         phases={[
           ["Cloud: Haste All, Counterstance Rubrum, Berserk Croceo"],
           [
-            "Cloud: Counter, Counterstance, Aerith Firaga",
+            "Cloud: Counter, Counterstance, Aerith Firaga, Aerith ATB Boost",
             "Cloud: Punisher full, Aerith Firaga, Berserk, Braver",
-            "Tifa: Starshower x2, Omni, Whirl x2",
+            "Tifa: Starshower x2, Omni, Whirl",
           ],
           [
-            "Cloud: TRIPOLOSKI Croceo, Aerith ATB Boost, 1 ATB, TRIPOLOSKI Rubrum",
+            "Cloud: TRIPOLOSKI Croceo, 1 ATB, TRIPOLOSKI Rubrum",
             "Cloud: Aerith Thundaga Rubrum (stagger)",
             "Cloud: Berserk, Braver, Operator, Punisher Rubrum",
           ],
