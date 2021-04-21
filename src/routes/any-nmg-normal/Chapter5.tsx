@@ -199,8 +199,8 @@ function Chapter5() {
         name="Vending Machine"
         sell={["Healing x2"]}
         buy={[
-          { name: "Ether", inputs: ["down", "down", "down"] },
-          { name: "Phoenix Down", inputs: ["down", "down"] },
+          { name: "Hi-Potion x1", inputs: ["down", "down"] },
+          { name: "Ether", inputs: ["down"] },
           { name: "Power Wristguards" },
           { name: "Fire", inputs: ["down", "down"] },
         ]}
