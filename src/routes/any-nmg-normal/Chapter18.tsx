@@ -43,15 +43,14 @@ function Chapter18() {
       <Shop
         name="Vending Machine"
         buy={[
-          { name: "Mega-Potion x8", inputs: ["down", "down"] },
+          { name: "Mega-Potion x5", inputs: ["down", "down"] },
           { name: "Mega-Potion x3", inputs: ["down"] },
           { name: "Elixir", inputs: ["down", "down", "down"] },
-          { name: "HP Up x5", inputs: ["right"] },
+          { name: "HP Up x6", inputs: ["right"] },
         ]}
       />
       <Menu
         instructions={[
-          "Remove Fire before equipping HP Ups on Tifa",
           "Remove Binding/Subversion before equipping HP Ups on Cloud",
         ]}
       >
@@ -92,15 +91,11 @@ function Chapter18() {
                   inputs: ["square", "up"],
                 },
                 { name: "HP Up", source: "inventory", inputs: ["up"] },
-                { name: "HP Up", source: "inventory", inputs: ["up"] },
-                { name: "" },
-                { name: "" },
-              ],
-              armor: [
-                { name: "Parry" },
-                { name: "Lightning" },
                 { name: "ATB Stagger" },
+                { name: "HP Up", source: "inventory", inputs: ["up"] },
+                { name: "HP Up", source: "inventory", inputs: ["up"] },
               ],
+              armor: [{ name: "Parry" }, { name: "Lightning" }, { name: "" }],
               summon: [{ name: "" }],
             },
           ]}

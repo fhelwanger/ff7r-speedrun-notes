@@ -55,7 +55,7 @@ function Chapter16() {
               ],
               armor: [
                 { name: "Time", source: "tifa" },
-                { name: "Fire" },
+                { name: "", source: "inventory" },
                 { name: "Barrier" },
               ],
               summon: [{ name: "" }],
@@ -77,14 +77,7 @@ function Chapter16() {
           characters={[
             {
               name: "Cloud",
-              shortcuts: [
-                { ability: "Leader" },
-                {
-                  shortcut: "triangle",
-                  ability: "Fira All",
-                  inputs: ["down"],
-                },
-              ],
+              shortcuts: [{ ability: "Leader" }],
             },
             {
               name: "Barret (R2)",
@@ -103,6 +96,25 @@ function Chapter16() {
                   shortcut: "x",
                   ability: "Overpower",
                   inputs: ["down", "down"],
+                },
+              ],
+            },
+            {
+              name: "Aerith (R2)",
+              shortcuts: [
+                {
+                  shortcut: "x",
+                  ability: "Blizzara All",
+                },
+                {
+                  shortcut: "circle",
+                  ability: "Thundaga",
+                  inputs: ["right"],
+                },
+                {
+                  shortcut: "triangle",
+                  ability: "Thundara",
+                  inputs: ["right", "up"],
                 },
               ],
             },
@@ -176,8 +188,15 @@ function Chapter16() {
       <Bench description="Or Cloud 14 MP, everyone full HP." />
       <Shop
         name="Vending Machine"
+        sell={[
+          { name: "Titanium Bangle" },
+          { name: "Earrings" },
+          { name: "Protective Boots" },
+          { name: "Fire" },
+        ]}
         buy={[
           { name: "Mega-Potion x3", inputs: ["down", "down", "down"] },
+          { name: "Ether x9", inputs: ["down"] },
           { name: "Ether x2", inputs: ["down"] },
           { name: "Supreme Bracer", inputs: ["down", "down"] },
         ]}
@@ -195,7 +214,7 @@ function Chapter16() {
                 {
                   name: "Platinum Earrings",
                   source: "barret",
-                  inputs: ["up", "up"],
+                  inputs: ["up"],
                 },
               ],
             },
@@ -205,7 +224,7 @@ function Chapter16() {
                 {
                   name: "Supernatural Wristguards",
                   source: "tifa",
-                  inputs: ["down", "down"],
+                  inputs: ["down"],
                 },
                 {
                   name: "Heavy-Duty Bracer",
@@ -242,7 +261,7 @@ function Chapter16() {
               ],
               armor: [
                 { name: "Lightning", source: "cloud" },
-                { name: "Fire" },
+                { name: "" },
                 { name: "Barrier" },
               ],
               summon: [{ name: "" }],
@@ -336,7 +355,7 @@ function Chapter16() {
               ],
               armor: [
                 { name: "Time", source: "cloud" },
-                { name: "Fire" },
+                { name: "" },
                 { name: "Barrier" },
               ],
               summon: [{ name: "" }],

@@ -251,7 +251,7 @@ function Chapter15() {
         ]}
       />
       <Heal description="Ether x1 Cloud." />
-      <Pick item="Turbo Ether" optional />
+      <Pick item="Turbo Ether" description="Ignore if already dropped" />
       <Menu>
         <Materia
           characters={[
@@ -405,6 +405,11 @@ function Chapter15() {
             {
               name: "Cloud",
               shortcuts: [
+                {
+                  shortcut: "triangle",
+                  ability: "Fira All",
+                  inputs: ["down"],
+                },
                 {
                   shortcut: "circle",
                   ability: "Thundaga",
