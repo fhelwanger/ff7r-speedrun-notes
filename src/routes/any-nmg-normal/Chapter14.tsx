@@ -270,7 +270,7 @@ function Chapter14() {
         enemies="Blugu x2, Scissorclaw, Sahagin"
         instructions={["Cloud: ATB Boost, Fira All x2, Starshower Sahagin"]}
       />
-      <Pick item="Ether" description="Skip if no additional Ethers used." />
+      <Pick item="Ether" description="Skip if no additional Ethers used" />
       <Heal description="Cloud 30 MP, Barret 10 MP, everyone +1500 HP." />
       <Pick
         item="Protective Boots"
