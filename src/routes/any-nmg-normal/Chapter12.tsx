@@ -134,8 +134,9 @@ function Chapter12() {
       <Encounter
         enemies="Helitrooper x2"
         instructions={[
-          "ATB Boost, Fira, Fire B",
-          "Dash, Punisher x6, Operator, Fira, Counter A",
+          "Run until line on floor, ATB Boost, Fira, Fire left",
+          "Punisher jump, full, Operator, Hit, Roll back",
+          "Aerial x2, Fira A",
         ]}
       />
       <Pick item="Ether" optional />
