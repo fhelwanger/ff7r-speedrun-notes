@@ -278,7 +278,7 @@ function Chapter16() {
             "Tifa: Whirl, Lock Claw",
             "Cloud: Counter, Punisher (take Seize)",
             "Tifa: Divekick, Whirl, Combo Claw",
-            "Tifa: Whirl, Focused Shot, Focused Thrust, Focused Strike x3",
+            "Tifa: Whirl, Focused Shot, Focused Thrust, Focused Strike x3 (stagger)",
             "Tifa: Starshower x2, Cloud Mega-Potion Tifa",
             "Barret: Overcharge",
             "Tifa: Lifesaver, Whirl, Combo x6, Whirl",
@@ -367,7 +367,7 @@ function Chapter16() {
         enemies="Armored Troopers x2"
         instructions={[
           "Cloud: ATB Boost, Thundaga x2 left",
-          "Tifa: Overpower, Combo, Overpower if alive",
+          "Tifa: Overpower, Combo (pressure), Whirl, Divekick if alive",
         ]}
       />
     </Chapter>
