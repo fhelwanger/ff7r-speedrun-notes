@@ -933,7 +933,7 @@ function Chapter17() {
             "Aerith: Combo Arsenal",
           ],
           [
-            "Aerith: Combo x2, Thundara, Focused Shot",
+            "Aerith: Combo x3, Thundara, Focused Shot",
             "Aerith: Tempest full Right Front Wheel, Blizzara Left Front Wheel",
             "Barret: Combo full, Combo full",
             "Aerith: Tempest full, Thundaga, Combo",
