@@ -70,7 +70,7 @@ function Chapter11() {
         <BattleSettings
           characters={[
             {
-              name: "Tifa (R2)",
+              name: "Tifa",
               shortcuts: [
                 {
                   shortcut: "square",
