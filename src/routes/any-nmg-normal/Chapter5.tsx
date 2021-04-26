@@ -187,7 +187,7 @@ function Chapter5() {
           "Cloud: Roll, Dash, TRIPOLOSKI Security Officer",
         ]}
       />
-      <Heal description="Everyone full HP, Cloud 16 MP" />
+      <Heal description="Everyone good HP, Cloud 16 MP" />
       <Encounter
         enemies="Flametrooper x2, Sentry Launcher x2"
         instructions={[
@@ -207,7 +207,7 @@ function Chapter5() {
           { name: "Fire", inputs: ["down", "down"] },
         ]}
       />
-      <Bench />
+      <Bench description="Or Cloud 38 MP, Barret 13 MP, Tifa 5 MP, good HP." />
       <Pick item="Lightning" />
       <Encounter
         enemies="Elite Security Officer x2"

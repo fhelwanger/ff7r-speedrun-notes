@@ -50,7 +50,7 @@ function Chapter6() {
         ]}
       />
       <Pick item="Mesmeric Armlet" />
-      <Heal description="Everyone full HP" />
+      <Heal description="Everyone good HP" />
       <Dialogue optionText="Nah. No time." optionPosition="2nd" />
       <Encounter
         enemies="Sentry Ray x2, Sentry Gun Prototype x2, Sentry Launcher x2"
