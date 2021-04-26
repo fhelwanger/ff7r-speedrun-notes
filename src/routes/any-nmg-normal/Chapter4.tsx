@@ -137,7 +137,7 @@ function Chapter4() {
       <Encounter
         enemies="Mysterious Spectre"
         instructions={[
-          "Cloud: Deadly Dodge, Cleave, Counter, Berserk, TRIPOLOSKI",
+          "Cloud: Berserk, Deadly Dodge, Cleave, Counter, TRIPOLOSKI",
           "Cloud: Counter/TRIPOLOSKI A/B/C/D",
           "Cloud: Punisher/Divekick E",
           "Cloud: Fire x2 F (stagger)",
