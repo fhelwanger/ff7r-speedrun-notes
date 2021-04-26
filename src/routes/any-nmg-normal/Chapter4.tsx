@@ -58,10 +58,6 @@ function Chapter4() {
         <UpgradeWeapons
           characters={[
             {
-              name: "Cloud",
-              weapons: [{ name: "Iron Blade", upgrade: "Auto - Attack" }],
-            },
-            {
               name: "Tifa",
               weapons: [
                 { name: "Leather Gloves", upgrade: "Auto - Attack, Manual" },
@@ -166,7 +162,6 @@ function Chapter4() {
           { name: "ATB Boost", inputs: ["down", "down"] },
           { name: "First Strike x2", inputs: ["down"] },
         ]}
-        reset={[{ name: "Iron Blade", inputs: ["down"] }]}
       />
     </Chapter>
   );

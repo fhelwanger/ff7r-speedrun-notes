@@ -15,7 +15,11 @@ import UpgradeWeapons from "../../components/UpgradeWeapons";
 function Chapter5() {
   return (
     <Chapter number={5}>
-      <Pick item="Healing" />
+      <Pick
+        item="Healing"
+        description="Can sell to buy healing items before Crab"
+        optional
+      />
       <Menu>
         <Equipment
           characters={[
@@ -197,10 +201,8 @@ function Chapter5() {
       />
       <Shop
         name="Vending Machine"
-        sell={["Healing x2"]}
+        sell={["Healing"]}
         buy={[
-          { name: "Hi-Potion x1", inputs: ["down", "down"] },
-          { name: "Ether", inputs: ["down"] },
           { name: "Power Wristguards" },
           { name: "Fire", inputs: ["down", "down"] },
         ]}
