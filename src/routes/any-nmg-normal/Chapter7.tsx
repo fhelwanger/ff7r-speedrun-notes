@@ -364,18 +364,18 @@ function Chapter7() {
           [
             "Tifa: Combo x3, Roll, Combo x6, Unbridled, Combo (take Tankbuster)",
             "Barret: Combo, Charge, Unbridled, Overcharge",
-            "Tifa: Hit to stagger, Rise, Omni, Whirl, Barret Thunder, Divekick",
-            "Tifa: Whirl, Divekick, Whirl, Divekick, Whirl, Barret Potion Tifa",
+            "Tifa: Hit to stagger, Rise, Omni, Whirl, Barret Potion Tifa, Divekick",
+            "Tifa: Whirl, Barret Thunder, Divekick, Whirl, Divekick, Whirl",
           ],
           [
             "Barret: Combo, Charge, Combo, Charge, Thunder",
             "Barret: Overcharge, Cloud Thundara (wait overcharge shooting), Combo",
             "Tifa: Defend, Whirl, Divekick, Whirl",
-            "Cloud: Berserk, Thundara, Divekick, Punisher (1 ATB), ATB Boost",
+            "Cloud: Berserk, Punisher (2 ATB), Divekick, Thundara, ATB Boost",
             "Tifa: Whirl, Cloud Blizzara, Focused Shot, Focused Thrust",
             "Tifa: Combo x6, Whirl, Focused Strike (stagger)",
             "Tifa: Unbridled, Omni, Whirl",
-            "Cloud: Punisher x4, Berserk, Divekick, Punisher full",
+            "Cloud: Punisher full, Berserk, Divekick, Punisher (2 ATB)",
           ],
           [
             "Barret: Overcharge, Somersault, Cloud Thundara, TRIPOLOSKI, Thunder",
