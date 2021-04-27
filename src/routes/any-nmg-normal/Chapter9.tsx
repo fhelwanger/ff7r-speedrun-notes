@@ -120,7 +120,7 @@ function Chapter9() {
           "Cloud: TRIPOLOSKI, Berserk, TRIPOLOSKI",
         ]}
       />
-      <Heal description="Cloud 21 MP, Aerith 32 MP, both good HP" />
+      <Bench />
       <Encounter
         enemies="Cutter, Sweeper"
         instructions={[
@@ -131,15 +131,7 @@ function Chapter9() {
           "Cloud: Thundara/Aerith Thundara Cutter",
         ]}
       />
-      <Bench />
-      <Shop
-        name="Vending Machine"
-        buy={[
-          { name: "Mega-Potion x3", inputs: ["down", "down"] },
-          { name: "Ether", inputs: ["down", "down"] },
-          { name: "Phoenix Down", inputs: ["down", "down"] },
-        ]}
-      />
+      <Heal description="Cloud 14 MP, Aerith full MP, both good HP." />
       <Menu>
         <Materia
           characters={[

@@ -9,6 +9,7 @@ import Heal from "../../components/Heal";
 import Materia from "../../components/Materia";
 import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
+import Shop from "../../components/Shop";
 
 function Chapter13() {
   return (
@@ -257,6 +258,13 @@ function Chapter13() {
         ]}
       />
       <Bench />
+      <Shop
+        name="Vending Machine"
+        buy={[
+          { name: "Mega-Potion x3", inputs: ["down", "down", "down", "down"] },
+          { name: "Ether x2", inputs: ["down", "down"] },
+        ]}
+      />
       <Boss
         name="Failed Experiment"
         phases={[
