@@ -1,6 +1,7 @@
 import React from "react";
 import BattleSettings from "../../components/BattleSettings";
 import Boss from "../../components/Boss";
+import Box from "../../components/Box";
 import Chapter from "../../components/Chapter";
 import Encounter from "../../components/Encounter";
 import Equipment from "../../components/Equipment";
@@ -120,12 +121,17 @@ function Chapter12() {
         />
       </Menu>
       <Encounter
-        enemies="Elite Security Officer x3, Sentry Gun / Elite Riot Trooper x2, Elite Grenadier"
+        enemies="Elite Security Officer x3, Sentry Gun"
         instructions={[
-          "Lure everyone to the top of stairs",
-          "Fira, ATB Boost, Fira, TRIPOLOSKI",
+          "Lure officers to the top of stairs, Fira",
+          "Punisher x4, Fire if one alive",
         ]}
       />
+      <Encounter
+        enemies="Elite Riot Trooper x2, Elite Grenadier"
+        instructions={["ATB Boost, Fire Grenadier, Fira Riot Troopers"]}
+      />
+      <Heal description="Ether x1 Cloud." />
       <Pick
         item="Orb of Gravity x2"
         optional
@@ -139,29 +145,36 @@ function Chapter12() {
           "Aerial x2, Fira A",
         ]}
       />
+      <Heal description="Ether x1 Cloud, good HP." />
       <Pick item="Ether" optional />
       <Encounter
         enemies="Helitrooper, Elite Security Officer x2"
         instructions={[
-          "ATB Boost, Fira, Fire Heli",
-          "Dash, Counter, TRIPOLOSKI",
+          "Roll back, ATB Boost, Fira, Fire Heli",
+          "Counter, Fira if can hit both, Fire otherwise",
         ]}
       />
-      <Encounter enemies="Elite Riot Trooper x2" instructions={["Fira"]} />
+      <Box description="x3 while fleeing with Tifa." />
+      <Encounter
+        enemies="Elite Riot Trooper x2"
+        instructions={["Fira right"]}
+      />
+      <Heal description="Cloud 19 or 23 MP (can use Box)." />
       <Encounter
         enemies="Elite Riot Trooper x2 / Elite Grenadier, Helitrooper"
         instructions={[
           "Riot Troopers: Cloud Fire, Punisher A, Divekick/Punisher B",
           "Helitrooper / Grenadier: Block for 2 ATB",
-          "Helitrooper / Grenadier: Fira, ATB Boost, Fire Helitrooper, Fire Grenadier",
+          "Helitrooper / Grenadier: Fira, ATB Boost, Fire Helitrooper",
+          "Helitrooper / Grenadier: Fire Grenadier if 8 MP or more, Combo x5, Whirl otherwise",
         ]}
       />
-      <Heal description="Cloud 23 MP, Tifa 32 MP." />
+      <Heal description="Cloud 24 MP, Tifa 33 MP." />
       <Encounter
         enemies="Elite Shock Trooper, Helitrooper x2, Sentry Gun x2"
         instructions={[
-          "Cloud: Fira, Tifa Thundara Shock Trooper",
-          "Tifa: Combo (stagger), Whirl Shock Trooper",
+          "Cloud: Operator x2, Tifa Thundara, Fira Shock Trooper",
+          "Tifa: Hit (stagger), Whirl Shock Trooper",
           "Cloud: Punisher x4, Operator, ATB Boost Shock Trooper",
           "Tifa: Whirl, Divekick Shock Trooper",
           "Tifa: Whirl (2 ATB) Sentries, Cloud Fira, Cloud Fire Helitrooper",
@@ -169,7 +182,7 @@ function Chapter12() {
         ]}
       />
       <Pick item="Elixir" optional />
-      <Heal description="Everyone full HP, don't need MP." />
+      <Heal description="Everyone good HP, don't need MP." />
       <Menu>
         <Equipment
           characters={[
