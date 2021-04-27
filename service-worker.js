@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ff7r-speedrun-notes/precache-manifest.fccceb628e2975fd61d616a347b7894b.js"
+  "/ff7r-speedrun-notes/precache-manifest.56699b55bc26e728cc1eb024097c75bc.js"
 );
 
 self.addEventListener('message', (event) => {
