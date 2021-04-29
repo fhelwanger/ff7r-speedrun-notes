@@ -248,20 +248,21 @@ function Chapter14() {
       <Encounter
         enemies="Abzu Shoat x2, Blugu"
         instructions={[
-          "Cloud: ATB Boost, Fira All x2, Starshower Shoat",
-          "Barret: Overcharge, Fira",
-          "Tifa: Whirl/Divekick",
+          "Cloud: Cleave, Punisher x6, Operator Blugu",
+          "Cloud: Fira, Starshower Shoat",
+          "Cloud: ATB Boost, Fira, Fire Shoat",
         ]}
       />
       <Heal description="Ether x1 Cloud" />
       <Encounter
         enemies="Sahagin, Abzu Shoat x2"
         instructions={[
-          "Cloud: ATB Boost, Fira All x2, Starshower Sahagin",
+          "Cloud: Go left, ATB Boost",
+          "Cloud: Fira All x2, Starshower Sahagin",
           "Barret: Overcharge, Fira",
-          "Tifa: Whirl/Divekick",
         ]}
       />
+      <Heal description="Ether x1 Cloud" />
       <Encounter
         enemies="Abzu Shoat, Scissorclaw x2"
         instructions={["Cloud: Blade Burst Scissorclaw", "Tifa: Flee"]}
@@ -270,8 +271,8 @@ function Chapter14() {
         enemies="Blugu x2, Scissorclaw, Sahagin"
         instructions={["Cloud: ATB Boost, Fira All x2, Starshower Sahagin"]}
       />
-      <Pick item="Ether" description="Skip if no additional Ethers used" />
-      <Heal description="Cloud 30 MP, Barret 10 MP, everyone +1500 HP" />
+      <Pick item="Ether" optional />
+      <Heal description="Cloud 30 MP, Barret 10 MP, good HP" />
       <Pick
         item="Protective Boots"
         description='Cross yellow line after "Just like his owner"'
@@ -380,8 +381,9 @@ function Chapter14() {
             "Tifa: Combo x6, Whirl, Cloud Fira",
           ],
           [
-            "Tifa: Blizzara All, Cloud ATB Boost, Whirl x2, Barret Sleep, Whirl",
-            "Tifa: Starshower x2, Somersault Abzu, TRIPOLOSKI x2 Shoats",
+            "Tifa: Blizzara All, Cloud ATB Boost, Blade Burst, Whirl x2",
+            "Tifa: Barret Sleep, Starshower x2, Somersault Abzu",
+            "Cloud: TRIPOLOSKI/Barret Fira Shoats",
           ],
         ]}
       />
