@@ -16,7 +16,7 @@ function Chapter13() {
     <Chapter number={13}>
       <Encounter
         enemies="Gorgers x4"
-        instructions={["TRIPOLOSKI, Starshower"]}
+        instructions={["Cloud: TRIPOLOSKI, Starshower"]}
       />
       <Pick item="Mega-Potion" optional />
       <Encounter
@@ -24,15 +24,21 @@ function Chapter13() {
         instructions={[
           "Cloud: Berserk, Tifa Thundara, Thundara Smogger",
           "Tifa: Combo x5, Whirl, Combo x5, Whirl Sweeper",
-          "Cloud: Berserk, ATB Boost Sweeper",
-          "Cloud: Thundara x2, Starshower, Tifa Thundara Sweeper",
+          "Cloud: Berserk, Starshower, ATB Boost Sweeper",
+          "Cloud: Thundara x2, Tifa Thundara Sweeper",
         ]}
       />
       <Pick item="Heavy-Duty Bracer" />
-      <Encounter enemies="Bandit x2" instructions={["TRIPOLOSKI, Divekick"]} />
       <Encounter
         enemies="Bandit x2"
-        instructions={["Starshower A", "TRIPOLOSKI, Punisher x6, Operator B"]}
+        instructions={["Cloud: TRIPOLOSKI, Divekick"]}
+      />
+      <Encounter
+        enemies="Bandit x2"
+        instructions={[
+          "Cloud: ATB Boost, Starshower B",
+          "Cloud: TRIPOLOSKI, Braver A",
+        ]}
       />
       <Encounter
         enemies="Beck, Burke, Butch, Grungy Bandit"
@@ -46,7 +52,7 @@ function Chapter13() {
       <Pick item="Orb of Gravity" description="Skip if picked in chapter 12" />
       <Encounter
         enemies="Ringmaw x3"
-        instructions={["ATB Boost, TRIPOLOSKI, Starshower, TRIPOLOSKI"]}
+        instructions={["Cloud: ATB Boost, TRIPOLOSKI x2, Starshower"]}
       />
       <Pick item="Magnify" />
       <Menu instructions={["Start swapping Barret Ice slot, then Magnify"]}>
@@ -153,11 +159,12 @@ function Chapter13() {
       <Encounter
         enemies="Bloodhound x2"
         instructions={[
-          "Go up, Overcharge, Thunder All (stagger)",
+          "Overcharge, Thunder All (stagger)",
           "1 ATB, ATB Boost, Blizzara pressured, Blizzara staggered",
           "Combo rest",
         ]}
       />
+      <Heal description="Ether x1 Barret" />
       <Encounter
         enemies="Bloodhound, Bugaboo x3"
         instructions={[
@@ -168,7 +175,6 @@ function Chapter13() {
       />
       <Encounter enemies="Gorger x2" instructions={["Thunder All"]} />
       <Encounter enemies="Gorger, Bugaboo x2" instructions={["Thunder All"]} />
-      <Heal description="Barret 11 MP" />
       <Menu>
         <Equipment
           characters={[
@@ -257,7 +263,7 @@ function Chapter13() {
           "Barret: Starshower x2, run to ladder, Combo",
         ]}
       />
-      <Bench />
+      <Bench description="Or Tifa 39 MP, Barret 29 MP, good HP" />
       <Shop
         name="Vending Machine"
         buy={[
