@@ -128,7 +128,7 @@ function Chapter16() {
           "Cloud: Fira All x2, Divekick",
         ]}
       />
-      <Heal description="Ether x1 Cloud." />
+      <Heal description="Ether x1 Cloud" />
       <Encounter
         enemies="Elite Security Officer x2 / 3-C Soldier Operator x2"
         instructions={[
@@ -139,7 +139,7 @@ function Chapter16() {
           "Barret: Starshower x2",
         ]}
       />
-      <Heal description="Cloud 30 MP." />
+      <Heal description="Cloud 30 MP" />
       <Encounter
         enemies="Elite Security Officer x2, Elite Grenadier x2, Guard Dog x3"
         instructions={[
@@ -147,7 +147,7 @@ function Chapter16() {
           "2nd: Fira All, Cross Slash Dogs, Overpower Grenadiers",
         ]}
       />
-      <Heal description="Cloud 40 MP." />
+      <Heal description="Cloud 40 MP" />
       <Encounter
         enemies="Elite Riot Trooper x3, 3-C Soldier Operator x2, Guard Dog x3"
         instructions={[
@@ -157,7 +157,7 @@ function Chapter16() {
           "Tifa: Starshower Soldier, Whirl/Divekick/Overpower",
         ]}
       />
-      <Heal description="Cloud 20 MP." />
+      <Heal description="Cloud 20 MP" />
       <Encounter
         enemies="Elite Security Officer x2"
         instructions={["Fira All, Divekick"]}
@@ -185,7 +185,7 @@ function Chapter16() {
           "Tifa: Cloud Thundaga, Barret Thundara, Whirl/Divekick",
         ]}
       />
-      <Bench description="Or Cloud 14 MP, everyone full HP." />
+      <Bench description="Or Cloud 14 MP, everyone full HP" />
       <Shop
         name="Vending Machine"
         sell={[
@@ -307,7 +307,7 @@ function Chapter16() {
           ],
         ]}
       />
-      <Bench description="Or heal Cloud full MP, good HP." />
+      <Bench description="Or heal Cloud full MP, good HP" />
       <Menu>
         <Equipment
           characters={[

@@ -207,7 +207,7 @@ function Chapter5() {
           { name: "Fire", inputs: ["down", "down"] },
         ]}
       />
-      <Bench description="Or Cloud 38 MP, Barret 13 MP, Tifa 5 MP, good HP." />
+      <Bench description="Or Cloud 38 MP, Barret 13 MP, Tifa 5 MP, good HP" />
       <Pick item="Lightning" />
       <Encounter
         enemies="Elite Security Officer x2"

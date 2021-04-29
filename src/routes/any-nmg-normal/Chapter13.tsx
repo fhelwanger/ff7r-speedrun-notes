@@ -168,7 +168,7 @@ function Chapter13() {
       />
       <Encounter enemies="Gorger x2" instructions={["Thunder All"]} />
       <Encounter enemies="Gorger, Bugaboo x2" instructions={["Thunder All"]} />
-      <Heal description="Barret 11 MP." />
+      <Heal description="Barret 11 MP" />
       <Menu>
         <Equipment
           characters={[

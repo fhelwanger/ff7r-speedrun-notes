@@ -131,7 +131,7 @@ function Chapter9() {
           "Cloud: Thundara/Aerith Thundara Cutter",
         ]}
       />
-      <Heal description="Cloud 14 MP, Aerith full MP, both good HP." />
+      <Heal description="Cloud 14 MP, Aerith full MP, both good HP" />
       <Menu>
         <Materia
           characters={[

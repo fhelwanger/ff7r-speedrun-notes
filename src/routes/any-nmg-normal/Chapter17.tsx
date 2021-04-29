@@ -98,7 +98,7 @@ function Chapter17() {
       />
       <Pick item="Twin Stinger" />
       <Pick item="3000 gil" optional />
-      <Heal description="Cloud 44 MP, Barret 22 MP." />
+      <Heal description="Cloud 44 MP, Barret 22 MP" />
       <Encounter
         enemies="Blast-Ray, Shock-Ray x2"
         instructions={[
@@ -220,7 +220,7 @@ function Chapter17() {
         enemies="Zenene"
         instructions={["Tifa: Aerith Thundara, Starshower, Whirl, Divekick"]}
       />
-      <Heal description="Ether x1 Aerith." />
+      <Heal description="Ether x1 Aerith" />
       <Encounter
         enemies="Zenene x2"
         instructions={[
@@ -410,7 +410,7 @@ function Chapter17() {
           "Barret: Overcharge, Thundara, TRIPOLOSKI",
         ]}
       />
-      <Heal description="Full HP, Ether x2 (or x1 + boxes) Barret." />
+      <Heal description="Full HP, Ether x2 (or x1 + boxes) Barret" />
       <Menu>
         <Equipment
           characters={[
@@ -429,7 +429,7 @@ function Chapter17() {
           "Cloud: Dash, Hit, Barret Thundara, Focused Thrust the other 2",
         ]}
       />
-      <Heal description="Full HP, Barret 30 MP." />
+      <Heal description="Full HP, Barret 30 MP" />
       <Pick item="Chain Bangle" />
       <Boss
         name="Brain Pod"
@@ -445,7 +445,7 @@ function Chapter17() {
           ],
         ]}
       />
-      <Heal description="Cloud/Barret good HP, Barret 31 MP." />
+      <Heal description="Cloud/Barret good HP, Barret 31 MP" />
       <Encounter
         enemies="Unknown Entity x2"
         instructions={["Cloud: ATB Boost, TRIPOLOSKI x2"]}
@@ -557,7 +557,7 @@ function Chapter17() {
           "Tifa: Overpower",
         ]}
       />
-      <Heal description="Full HP, Ether Aerith x2." />
+      <Heal description="Full HP, Ether Aerith x2" />
       <Encounter
         enemies="Shock-Ray x2, Slug-Ray x2"
         instructions={[
@@ -565,7 +565,7 @@ function Chapter17() {
           "Aerith: Combo (1 ATB), ATB Boost, Thundara x2",
         ]}
       />
-      <Heal description="Aerith 57 MP." />
+      <Heal description="Aerith 57 MP" />
       <Dialogue details="Pull lever number 4" />
       <Menu>
         <Materia
@@ -694,7 +694,7 @@ function Chapter17() {
           ],
         ]}
       />
-      <Bench description="Or full HP, Cloud 24 MP, Aerith full MP." />
+      <Bench description="Or full HP, Cloud 24 MP, Aerith full MP" />
       <Boss
         name="Jenova Dreamweaver"
         phases={[

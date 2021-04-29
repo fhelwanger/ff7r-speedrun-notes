@@ -292,7 +292,7 @@ function Chapter11() {
           "Tifa: Sleep, Aerith Aero (stagger), Focused Thrust Lesser",
         ]}
       />
-      <Heal description="Aerith 46 MP, everyone full HP." />
+      <Heal description="Aerith 46 MP, everyone full HP" />
       <Boss
         name="Eligor"
         phases={[

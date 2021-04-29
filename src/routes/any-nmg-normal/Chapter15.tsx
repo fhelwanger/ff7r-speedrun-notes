@@ -154,7 +154,7 @@ function Chapter15() {
           ]}
         />
       </Menu>
-      <Heal description="Cloud 30 MP." />
+      <Heal description="Cloud 30 MP" />
       <Encounter
         enemies="3-C Soldier Operator x2"
         instructions={[
@@ -162,7 +162,7 @@ function Chapter15() {
           "Tifa: Starshower",
         ]}
       />
-      <Heal description="Cloud 40 MP." />
+      <Heal description="Cloud 40 MP" />
       <Encounter
         enemies="Gauntlet"
         instructions={[
@@ -242,7 +242,7 @@ function Chapter15() {
           "Barret: Cloud Thundara All Shocks, Barret/Tifa Thundara",
         ]}
       />
-      <Heal description="Ether x1 Cloud." />
+      <Heal description="Ether x1 Cloud" />
       <Encounter
         enemies="Blast-Ray"
         instructions={[
@@ -250,7 +250,7 @@ function Chapter15() {
           "Cloud: 2 ATB, Thunder, ATB Boost, Thundara x2",
         ]}
       />
-      <Heal description="Ether x1 Cloud." />
+      <Heal description="Ether x1 Cloud" />
       <Pick item="Turbo Ether" description="Ignore if already dropped" />
       <Menu>
         <Materia
@@ -296,7 +296,7 @@ function Chapter15() {
           "Barret: Aerora All x2, Cross Slash, Starshower",
         ]}
       />
-      <Heal description="Ether x1 Cloud." />
+      <Heal description="Ether x1 Cloud" />
       <Encounter
         enemies="Byobapolis"
         instructions={["Barret: Cloud Aerora, Combo, Overcharge"]}
@@ -338,7 +338,7 @@ function Chapter15() {
           ]}
         />
       </Menu>
-      <Heal description="Ether x1 Cloud." />
+      <Heal description="Ether x1 Cloud" />
       <Box description="Right side before Blast-Rays." />
       <Encounter
         enemies="Blast-Ray x2"
@@ -348,7 +348,7 @@ function Chapter15() {
           "B: Barret Thundara, Tifa Thundara x2, Cloud Thundara x2",
         ]}
       />
-      <Heal description="Cloud 20 MP, Barret 10 MP, Tifa 8 MP." />
+      <Heal description="Cloud 20 MP, Barret 10 MP, Tifa 8 MP" />
       <Encounter
         enemies="Elite Helitrooper x2"
         instructions={[

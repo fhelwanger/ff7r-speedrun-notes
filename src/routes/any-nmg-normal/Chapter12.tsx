@@ -131,7 +131,7 @@ function Chapter12() {
         enemies="Elite Riot Trooper x2, Elite Grenadier"
         instructions={["ATB Boost, Fire Grenadier, Fira Riot Troopers"]}
       />
-      <Heal description="Ether x1 Cloud." />
+      <Heal description="Ether x1 Cloud" />
       <Pick
         item="Orb of Gravity x2"
         optional
@@ -145,7 +145,7 @@ function Chapter12() {
           "Aerial x2, Fira A",
         ]}
       />
-      <Heal description="Ether x1 Cloud, good HP." />
+      <Heal description="Ether x1 Cloud, good HP" />
       <Pick item="Ether" optional />
       <Encounter
         enemies="Helitrooper, Elite Security Officer x2"
@@ -159,7 +159,7 @@ function Chapter12() {
         enemies="Elite Riot Trooper x2"
         instructions={["Fira right"]}
       />
-      <Heal description="Cloud 19 or 23 MP (can use Box)." />
+      <Heal description="Cloud 19 or 23 MP (can use Box)" />
       <Encounter
         enemies="Elite Riot Trooper x2 / Elite Grenadier, Helitrooper"
         instructions={[
@@ -169,7 +169,7 @@ function Chapter12() {
           "Helitrooper / Grenadier: Fire Grenadier if 8 MP or more, Combo x5, Whirl otherwise",
         ]}
       />
-      <Heal description="Cloud 24 MP, Tifa 33 MP." />
+      <Heal description="Cloud 24 MP, Tifa 33 MP" />
       <Encounter
         enemies="Elite Shock Trooper, Helitrooper x2, Sentry Gun x2"
         instructions={[
@@ -182,7 +182,7 @@ function Chapter12() {
         ]}
       />
       <Pick item="Elixir" optional />
-      <Heal description="Everyone good HP, don't need MP." />
+      <Heal description="Everyone good HP, don't need MP" />
       <Menu>
         <Equipment
           characters={[

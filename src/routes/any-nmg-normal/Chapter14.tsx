@@ -239,12 +239,12 @@ function Chapter14() {
           "Barret: Run to ladder",
         ]}
       />
-      <Heal description="Ether x1 Cloud." />
+      <Heal description="Ether x1 Cloud" />
       <Encounter
         enemies="Abzu Shoat"
         instructions={["Cloud: Fira, Starshower"]}
       />
-      <Heal description="Ether x1 Cloud." />
+      <Heal description="Ether x1 Cloud" />
       <Encounter
         enemies="Abzu Shoat x2, Blugu"
         instructions={[
@@ -253,7 +253,7 @@ function Chapter14() {
           "Tifa: Whirl/Divekick",
         ]}
       />
-      <Heal description="Ether x1 Cloud." />
+      <Heal description="Ether x1 Cloud" />
       <Encounter
         enemies="Sahagin, Abzu Shoat x2"
         instructions={[
@@ -271,7 +271,7 @@ function Chapter14() {
         instructions={["Cloud: ATB Boost, Fira All x2, Starshower Sahagin"]}
       />
       <Pick item="Ether" description="Skip if no additional Ethers used" />
-      <Heal description="Cloud 30 MP, Barret 10 MP, everyone +1500 HP." />
+      <Heal description="Cloud 30 MP, Barret 10 MP, everyone +1500 HP" />
       <Pick
         item="Protective Boots"
         description='Cross yellow line after "Just like his owner"'
@@ -364,7 +364,7 @@ function Chapter14() {
           { name: "Ether x2", inputs: ["down", "down"] },
         ]}
       />
-      <Bench description="Or Cloud 10 MP, Barret 5 MP, Tifa 10 MP, full HP." />
+      <Bench description="Or Cloud 10 MP, Barret 5 MP, Tifa 10 MP, full HP" />
       <Boss
         name="Abzu"
         phases={[
