@@ -22,11 +22,12 @@ function Chapter18() {
             "Combo x4 Truck. Spinning Slash.",
           ],
           [
+            "Defend last bomb before tunnel.",
             'Break until Red says "there\'s more". Combo x3, Spinning Slash Slug-Rays.',
             'Break until Aerith says "Uh, what the-!?". Combo M.O.T.H.',
             "Take ranged attacks, Spinning Slash, Combo full x5 when near, defend blades.",
             "Take ranged attacks, Sharp Gust when possible, Combo + Spinning Slash when near, defend punches.",
-            "Break when charges.",
+            "Break when it charges.",
           ],
           [
             "Combo, Spinning Slash when both near.",
@@ -43,7 +44,7 @@ function Chapter18() {
       <Shop
         name="Vending Machine"
         buy={[
-          { name: "Mega-Potion x5", inputs: ["down", "down"] },
+          { name: "Mega-Potion x7", inputs: ["down", "down"] },
           { name: "Mega-Potion x3", inputs: ["down"] },
           { name: "Elixir", inputs: ["down", "down", "down"] },
           { name: "HP Up x6", inputs: ["right"] },
@@ -59,7 +60,11 @@ function Chapter18() {
             {
               name: "Tifa",
               equipments: [
-                { name: "Heavy-Duty Bracer", source: "barret", inputs: ["up"] },
+                {
+                  name: "Platinum Earrings",
+                  source: "barret",
+                  inputs: ["down", "down"],
+                },
                 { name: "Fury Ring", source: "aerith", inputs: ["right"] },
               ],
             },
@@ -70,17 +75,17 @@ function Chapter18() {
             {
               name: "Cloud",
               weapon: [
-                { name: "Time" },
-                { name: "Magnify" },
-                { name: "Refocus" },
+                { name: "HP Up", source: "inventory", inputs: ["up"] },
+                { name: "HP Up", source: "inventory", inputs: ["up"] },
                 { name: "ATB Stagger" },
+                { name: "Refocus", source: "inventory", inputs: ["up"] },
               ],
               armor: [
-                { name: "HP Up", source: "inventory", inputs: ["up"] },
-                { name: "HP Up", source: "inventory", inputs: ["up"] },
+                { name: "Time" },
+                { name: "Magnify" },
                 { name: "First Strike" },
               ],
-              summon: [{ name: "Ifrit" }],
+              summon: [{ name: "Ifrit", source: "tifa" }],
             },
             {
               name: "Tifa",
@@ -93,10 +98,10 @@ function Chapter18() {
                 { name: "HP Up", source: "inventory", inputs: ["up"] },
                 { name: "ATB Stagger" },
                 { name: "HP Up", source: "inventory", inputs: ["up"] },
-                { name: "HP Up", source: "inventory", inputs: ["up"] },
+                { name: "HP Up", source: "inventory", inputs: ["right"] },
               ],
               armor: [{ name: "Parry" }, { name: "Lightning" }, { name: "" }],
-              summon: [{ name: "" }],
+              summon: [{ name: "", source: "cloud" }],
             },
           ]}
         />
@@ -167,7 +172,7 @@ function Chapter18() {
         phases={[
           [
             "Cloud: Berserk, Lock, Counterstance, Punisher full, Counterstance",
-            "Cloud: Punisher full, Berserk, Punisher x2, TRIPOLOSKI",
+            "Cloud: Punisher full, Berserk, Operator, TRIPOLOSKI",
           ],
           [
             "Cloud: Cleave, TRIPOLOSKI, Roll",
