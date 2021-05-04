@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1d0ff38ecbe379ac56ae135fa34d7b45",
+    "revision": "172e428676bbacfa2f6dc81c64c8bfc7",
     "url": "/ff7r-speedrun-notes/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ff7r-speedrun-notes/static/js/2.f2bf462b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "38b5cb0454b25bd8af71",
-    "url": "/ff7r-speedrun-notes/static/js/main.5e33f55d.chunk.js"
+    "revision": "d262102fc7b899a90090",
+    "url": "/ff7r-speedrun-notes/static/js/main.d1752af6.chunk.js"
   },
   {
     "revision": "42d994a4b76930ef39b6",
