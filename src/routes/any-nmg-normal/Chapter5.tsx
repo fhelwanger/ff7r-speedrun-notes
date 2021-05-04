@@ -133,7 +133,7 @@ function Chapter5() {
               name: "Barret",
               weapon: [
                 { name: "Lightning" },
-                { name: "Wind", source: "inventory", inputs: ["right"] },
+                { name: "Wind", source: "inventory", inputs: ["right", "up"] },
               ],
               armor: [],
               summon: [{ name: "Empty" }],
