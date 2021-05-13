@@ -19,9 +19,8 @@ function Chapter17() {
       <Encounter
         enemies="Unknown Entity x4"
         instructions={[
-          "Cloud: Tifa ATB Boost, Divekick casting Thundaga",
-          "Cloud: Berserk, TRIPOLOSKI casting Thundaga",
-          "Cloud: TRIPOLOSKI/Overpower",
+          "Cloud: Divekick, Berserk, TRIPOLOSKI (focus casting Thundaga)",
+          "Cloud: Punisher/TRIPOLOSKI",
         ]}
       />
       <Menu>
@@ -99,7 +98,7 @@ function Chapter17() {
       <Encounter
         enemies="Monodrive x2, Mark II Monodrive x2"
         instructions={[
-          "Cloud: Dash, Braver Green, Thundara, Punisher full, TRIPOLOSKI Blue",
+          "Cloud: Dash, Braver Green, Barret Thundara, Punisher full, TRIPOLOSKI Blue",
           "Cloud: Overcharge Monodrive, Punisher/TRIPOLOSKI",
           "Cloud: Barret Sleep/Thundara when only 1 remaining, Braver/Punisher",
         ]}

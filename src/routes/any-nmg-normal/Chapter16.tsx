@@ -34,7 +34,7 @@ function Chapter16() {
               name: "Cloud",
               weapon: [
                 { name: "Fire", source: "cloud" },
-                { name: "Magnify", source: "tifa" },
+                { name: "Magnify", source: "inventory", inputs: ["down"] },
                 { name: "ATB Boost" },
                 { name: "ATB Stagger" },
               ],
@@ -60,75 +60,13 @@ function Chapter16() {
               ],
               summon: [{ name: "" }],
             },
-            {
-              name: "Tifa",
-              weapon: [
-                { name: "Time" },
-                { name: "Subversion", source: "cloud" },
-                { name: "First Strike" },
-                { name: "ATB Stagger" },
-              ],
-              armor: [{ name: "Parry" }, { name: "Lightning" }, { name: "" }],
-              summon: [{ name: "Ifrit" }],
-            },
           ]}
         />
         <BattleSettings
           characters={[
             {
               name: "Cloud",
-              shortcuts: [
-                { ability: "Leader" },
-                {
-                  shortcut: "triangle",
-                  ability: "Fira All",
-                  inputs: ["down"],
-                },
-              ],
-            },
-            {
-              name: "Barret (R2)",
-              shortcuts: [
-                {
-                  shortcut: "circle",
-                  ability: "Mega-Potion",
-                  inputs: ["down", "down"],
-                },
-              ],
-            },
-            {
-              name: "Tifa (R2)",
-              shortcuts: [
-                {
-                  shortcut: "x",
-                  ability: "Overpower",
-                  inputs: ["down", "down"],
-                },
-              ],
-            },
-            {
-              name: "Aerith (R2)",
-              shortcuts: [
-                {
-                  shortcut: "x",
-                  ability: "Blizzara All",
-                },
-                {
-                  shortcut: "circle",
-                  ability: "Thundaga",
-                  inputs: ["right"],
-                },
-                {
-                  shortcut: "triangle",
-                  ability: "Thundara",
-                  inputs: ["right", "up"],
-                },
-                {
-                  shortcut: "square",
-                  ability: "Blizzard All",
-                  inputs: ["down", "down"],
-                },
-              ],
+              shortcuts: [{ ability: "Leader" }],
             },
           ]}
         />
@@ -156,7 +94,7 @@ function Chapter16() {
         enemies="Elite Security Officer x2, Elite Grenadier x2, Guard Dog x3"
         instructions={[
           "1st group: ATB Boost, Fira All x2, Divekick Dog",
-          "2nd group: Fira All, Cross Slash Dogs, Overpower Grenadiers",
+          "2nd group: Fira All, Cross Slash Dogs, Whirl/Divekick Grenadiers",
         ]}
       />
       <Heal description="Ether x1 Cloud" />
@@ -178,7 +116,7 @@ function Chapter16() {
       />
       <Break time="59s" description="1st presentation" />
       <Break time="57s" description="2nd presentation" />
-      <Menu>
+      <Menu instructions={["Start moving ATB Assist to Tifa"]}>
         <Equipment
           characters={[
             {
@@ -209,7 +147,11 @@ function Chapter16() {
                 { name: "ATB Stagger" },
               ],
               armor: [
-                { name: "Time", source: "tifa" },
+                {
+                  name: "Time",
+                  source: "inventory",
+                  inputs: ["left", "right"],
+                },
                 { name: "First Strike" },
                 { name: "Lightning" },
               ],
@@ -230,13 +172,13 @@ function Chapter16() {
               name: "Tifa",
               weapon: [
                 { name: "ATB Assist", source: "cloud" },
-                { name: "Subversion" },
+                { name: "Subversion", source: "tifa" },
                 { name: "First Strike" },
                 { name: "ATB Stagger" },
               ],
               armor: [
                 { name: "Parry" },
-                { name: "Lightning" },
+                { name: "Lightning", source: "tifa" },
                 { name: "ATB Boost", source: "cloud" },
               ],
               summon: [{ name: "Ifrit" }],
@@ -269,10 +211,10 @@ function Chapter16() {
           { name: "Fire" },
         ]}
         buy={[
+          { name: "Supreme Bracer", inputs: ["down", "down"] },
           { name: "Mega-Potion x3", inputs: ["down", "down", "down"] },
           { name: "Ether x9", inputs: ["down"] },
           { name: "Ether x2", inputs: ["down"] },
-          { name: "Supreme Bracer", inputs: ["down", "down"] },
         ]}
       />
       <Boss
