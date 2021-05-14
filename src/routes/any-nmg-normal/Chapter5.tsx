@@ -15,11 +15,6 @@ import UpgradeWeapons from "../../components/UpgradeWeapons";
 function Chapter5() {
   return (
     <Chapter number={5}>
-      <Pick
-        item="Healing"
-        description="Can sell to buy healing items before Crab"
-        optional
-      />
       <Menu>
         <Equipment
           characters={[
