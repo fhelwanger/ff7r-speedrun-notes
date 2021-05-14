@@ -110,11 +110,10 @@ function Chapter17() {
       <Encounter
         enemies="M.O.T.H Unit"
         instructions={[
-          "Cloud Thundaga, ATB Boost, Thundaga, Thundara",
-          "Barret Thundara x2",
+          "Cloud Thundaga, Barret Thundara x2",
+          "Cloud ATB Boost, Thundaga, Thundara",
         ]}
       />
-      <Pick item="Twin Stinger" />
       <Heal description="Cloud 44 MP, Barret 22 MP" />
       <Pick item="3000 gil" optional />
       <Encounter
@@ -221,8 +220,8 @@ function Chapter17() {
       <Encounter
         enemies="Bloodhound x6"
         instructions={[
-          "Tifa: Combo (2 ATB), Aerith Blizzara All",
-          "Tifa: Starshower/Aerith Blizzara All (ATB Boost if needed)",
+          "Tifa: Combo (2 ATB), Aerith Blizzara All, Starshower",
+          "Tifa: ATB Boost, Starshower/Aerith Blizzara All",
         ]}
       />
       <Heal description="Ether x1 Aerith" />
@@ -244,8 +243,8 @@ function Chapter17() {
       <Encounter
         enemies="Sentry Launcher x3"
         instructions={[
-          "Tifa: ATB Boost, Thundara B",
-          "Aerith: Thundara A, Thundara C, Divekick B, Blizzara All",
+          "Tifa: ATB Boost, Thundara x2 B",
+          "Aerith: Thundara A, Thundara C, Blizzara All",
         ]}
       />
       <Heal description="Ether x2 Aerith" />
@@ -256,7 +255,6 @@ function Chapter17() {
             {
               name: "Cloud",
               equipments: [
-                { name: "Twin Stinger", inputs: ["right"] },
                 { name: "Supreme Bracer", source: "tifa", inputs: ["right"] },
                 { name: "Fury Ring", source: "tifa", inputs: ["right"] },
               ],
@@ -359,7 +357,6 @@ function Chapter17() {
             {
               name: "Cloud",
               weapons: [
-                { name: "Twin Stinger", upgrade: "Auto - Attack" },
                 { name: "Hardedge", upgrade: "Auto - Attack, Auto - Balanced" },
               ],
             },
@@ -379,11 +376,6 @@ function Chapter17() {
                   ability: "Focused Thrust",
                   inputs: ["down"],
                 },
-                {
-                  shortcut: "x",
-                  ability: "Counterstance",
-                  inputs: ["right", "up"],
-                },
               ],
             },
             {
@@ -402,25 +394,22 @@ function Chapter17() {
       <Encounter
         enemies="Zenene x2"
         instructions={[
-          "Barret: Overcharge, Focused Shot",
-          "Cloud: Punisher/TRIPOLOSKI/Counterstance",
-          "Try to learn 40% or 10%",
+          "Barret: Overcharge, Focused Shot (pressured)",
+          "Cloud: Punisher/TRIPOLOSKI",
         ]}
       />
-      <Heal description="Full HP, Cloud 26 MP, Barret 21 MP" />
-      <Menu instructions={["Do upgrades here if level 29 earlier"]} />
+      <Heal description="Full HP, Cloud 45 MP, Barret 21 MP" />
       <Box description="Before next fight" />
       <Encounter
         enemies="M.O.T.H Unit, Shock-Ray x3"
         instructions={[
-          "Cloud: Thundaga middle Shock-Ray",
-          "Cloud: Counter + Counterstance until learned",
-          "Barret: Thundara x2, Cloud ATB Boost, Cloud Thundaga",
-          "Barret: Overcharge, Thundara",
+          "Cloud: Thundaga Shock-Ray",
+          "Barret: Overcharge (Shock-Ray if alive), Thundara x2",
+          "Barret: Cloud ATB Boost, Cloud Thundaga x2, 1 ATB, Thundara",
         ]}
       />
       <Heal description="Full HP, Ether x1 Barret" />
-      <Menu>
+      <Menu instructions={["Do upgrades here first if level 29 earlier"]}>
         <Equipment
           characters={[
             {
@@ -435,8 +424,9 @@ function Chapter17() {
         enemies="Sledgeworm x3"
         instructions={[
           "Cloud: Barret Thunder left, Punisher x3, Focused Thrust (stagger)",
-          "Cloud: Punisher x6, Overcharge, Operator",
+          "Cloud: Overcharge, Punisher x6, Operator",
           "Cloud: Dash, Hit, Barret Thundara, Focused Thrust the other 2",
+          "Cloud: Punisher full the 2nd, Punisher x2 + Braver the 3rd to kill",
         ]}
       />
       <Heal description="Full HP, Ether x1 Barret" />
@@ -570,11 +560,12 @@ function Chapter17() {
         ]}
       />
       <Heal description="Full HP, Ether Aerith x2" />
+      <Pick item="Ether" description="After sending Red" />
       <Encounter
         enemies="Shock-Ray x2, Slug-Ray x2"
         instructions={[
-          "Aerith: Combo (2 ATB), Arcane Ward Tifa, Tifa Thundara",
-          "Aerith: ATB Boost, Thundara x2",
+          "Tifa: Aerith ATB Boost, Aerith Thundara x2",
+          "Tifa: Run to lever, Thundara rest",
         ]}
       />
       <Heal description="Aerith 57 MP" />
@@ -760,20 +751,6 @@ function Chapter17() {
                 { name: "Wind" },
               ],
               summon: [{ name: "" }],
-            },
-          ]}
-        />
-        <BattleSettings
-          characters={[
-            {
-              name: "Cloud",
-              shortcuts: [
-                {
-                  shortcut: "x",
-                  ability: "Counterstance",
-                  inputs: ["right", "up"],
-                },
-              ],
             },
           ]}
         />
