@@ -132,11 +132,6 @@ function Chapter12() {
         instructions={["ATB Boost, Fire Grenadier, Fira Riot Troopers"]}
       />
       <Heal description="Ether x1 Cloud" />
-      <Pick
-        item="Orb of Gravity x2"
-        optional
-        description="Pick in chapter 13 is faster, but relies on a random drop"
-      />
       <Encounter
         enemies="Helitrooper x2"
         instructions={[

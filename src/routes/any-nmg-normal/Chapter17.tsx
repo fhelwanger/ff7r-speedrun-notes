@@ -677,8 +677,8 @@ function Chapter17() {
         name="Swordipede"
         phases={[
           [
-            "Barret: Overcharge, Cloud Orb of Gravity, Orb of Gravity",
-            "If 1 Orb: Overcharge, Cloud Sleep, Barret Orb of Gravity, Berserk, Braver",
+            "Barret: Overcharge, Cloud Sleep",
+            "Cloud: Barret Orb of Gravity, Berserk, Braver",
           ],
           [
             "Tifa: Whirl",

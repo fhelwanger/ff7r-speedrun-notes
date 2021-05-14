@@ -49,7 +49,7 @@ function Chapter13() {
           "Tifa: Combo (stagger, 2 ATB), Starshower x2 Grungy",
         ]}
       />
-      <Pick item="Orb of Gravity" description="Skip if picked in chapter 12" />
+      <Pick item="Orb of Gravity" description="Ignore if already dropped" />
       <Encounter
         enemies="Ringmaw x3"
         instructions={["Cloud: ATB Boost, TRIPOLOSKI x2, Starshower"]}
