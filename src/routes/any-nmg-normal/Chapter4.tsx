@@ -124,7 +124,7 @@ function Chapter4() {
         phases={[
           [
             "Berserk, Operator, Counter, Fire",
-            "Punisher x2, Operator, Counter, Punisher x4, Fire",
+            "Punisher x2, Operator, Counter, Berserk, Operator, Fire",
           ],
           [
             "Fire, Dash, Counter, Punisher full, Focused Thrust",
