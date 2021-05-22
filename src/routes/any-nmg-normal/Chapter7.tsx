@@ -90,7 +90,7 @@ function Chapter7() {
       <Encounter
         enemies="Sweeper x2, Laser Cannon x2"
         instructions={[
-          "Cloud: Dash Sweeper, ATB Boost, Thunder each Laser Cannon",
+          "Cloud: Dash Sweeper, 1 ATB, ATB Boost, Thunder each Laser Cannon",
           "Cloud: Overcharge, Punisher full, Berserk, Thunder Sweeper (pressure)",
           "Cloud: Focused Shot, Tifa Fira, Punisher Sweeper (stagger), Cross Slash",
           "Tifa: Whirl, Combo x6, Whirl (2 ATB)",
@@ -238,21 +238,20 @@ function Chapter7() {
       <Encounter
         enemies="Elite Shock Trooper x2"
         instructions={[
-          "Cloud: Dash, Berserk, Punisher (wait attack), Blizzard (stagger) A",
-          "Cloud: 1 ATB, ATB Boost, TRIPOLOSKI A",
-          "Barret: Overcharge A",
-          "Tifa: Whirl, Divekick A, Unbridled",
-          "Tifa: Cloud Blizzard/Focused Shot (stagger), Omni, Whirl, Divekick B",
+          "Cloud: Cleave, ATB Boost, wait attack, Blizzard (stagger)",
+          "Barret: Overcharge",
+          "Tifa: Unbridled, Omni, Whirl, Divekick",
+          "Tifa: Wait attack, Cloud Blizzard (stagger)",
+          "Tifa: Focused Shot, Whirl/Divekick",
         ]}
       />
       <Encounter
         enemies="Riot Trooper x2, Elite Riot Trooper x2, Elite Grenadier"
         instructions={[
           "Cloud: ATB Boost, Grenade Elite",
-          "Tifa: Combo x3, Whirl, Focused Strike, Whirl Elite",
-          "Barret: Overcharge, Focused Strike (learn) Elite",
-          "Barret: 2 ATB, Thunder, Focused Shot (stagger), TRIPOLOSKI Elite",
-          "Barret: Divekick, Combo Grenadier",
+          "Tifa: Combo x3, Whirl, Focused Strike, Whirl, Focused Strike, Whirl Elite",
+          "Barret: Overcharge, Focused Strike, TRIPOLOSKI Elite",
+          "Barret: Focused Shot, Combo Grenadier",
         ]}
       />
       <Menu>
