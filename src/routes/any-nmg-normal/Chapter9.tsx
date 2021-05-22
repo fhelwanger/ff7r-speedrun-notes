@@ -36,12 +36,15 @@ function Chapter9() {
         ]}
       />
       <Pick item="Hi-Potion x2" optional />
+      <Encounter
+        enemies="Terpsicolt x2"
+        instructions={["Aerith ATB Boost, Soul Drain x2", "Cloud: Flee"]}
+      />
       <Pick item="Mega-Potion" optional />
       <Encounter
         enemies="Beck, Burke, Butch"
         instructions={["Aerith Fira Butch", "TRIPOLOSKI/Punisher"]}
       />
-      <Heal description="Ether x1 Aerith" />
       <Encounter
         enemies="Sweeper Prototype, Bandit x2"
         instructions={[
@@ -113,6 +116,7 @@ function Chapter9() {
           "Cloud: Soul Drain/TRIPOLOSKI/Punisher",
         ]}
       />
+      <Heal description="Aerith 10 MP" />
       <Encounter
         enemies="Corneo Lackey 1 x5, Beck, Burke, Butch"
         instructions={[
