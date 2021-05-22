@@ -349,7 +349,7 @@ function Chapter7() {
           { name: "Phoenix Down", inputs: ["down", "down"] },
         ]}
       />
-      <Bench />
+      <Bench description="Or Cloud 41 MP, Barret 13 MP, full HP (take shop before Eligor)" />
       <Boss
         name="Air Buster"
         phases={[
