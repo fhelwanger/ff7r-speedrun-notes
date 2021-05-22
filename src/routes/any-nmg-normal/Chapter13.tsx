@@ -61,7 +61,6 @@ function Chapter13() {
             {
               name: "Barret",
               equipments: [
-                { name: "Heavy-Duty Bracer", inputs: ["right"] },
                 { name: "Fury Ring", source: "tifa", inputs: ["right"] },
               ],
             },
@@ -179,13 +178,7 @@ function Chapter13() {
         <Equipment
           characters={[
             {
-              name: "Barret",
-              equipments: [
-                { name: "Caliginous Bracelet", inputs: ["up", "up"] },
-              ],
-            },
-            {
-              name: "Tifa (R2)",
+              name: "Tifa",
               equipments: [
                 { name: "Heavy-Duty Bracer", inputs: ["right"] },
                 { name: "Fury Ring", source: "barret", inputs: ["right"] },
