@@ -135,7 +135,7 @@ function Chapter9() {
           "Cloud: Thundara/Aerith Thundara Cutter",
         ]}
       />
-      <Heal description="Cloud 14 MP, Aerith full MP, both good HP" />
+      <Heal description="Cloud 14 MP, Aerith 46 MP, full HP" />
       <Menu>
         <Materia
           characters={[
@@ -228,13 +228,13 @@ function Chapter9() {
           [
             "Cloud: Counter x2, Braver (pressure)",
             "Aerith: Braver, Combo x1, Fira, Tempest full, Fira, Tempest full",
-            "Cloud: Berserk (stagger), Aerith Blizzard, Aerith Fira, Punisher full, Cross Slash",
-            "Aerith: Combo",
+            "Cloud: Berserk (stagger), Aerith Fira, Punisher x4, Operator, Braver",
+            "Aerith: Cross Slash, Soul Drain",
           ],
           [
-            "Aerith: Soul Drain, 2 ATB, Wait Hellbound",
-            "Aerith: Fire/Ice/Thunder/Aero (outside ward), Tempest full, Blizzard (inside ward)",
-            "Cloud: Berserk, Aerith Blizzard, Infinity's End",
+            "Aerith: 2 ATB, Wait Hellbound",
+            "Aerith: Spell (outside ward), Tempest full, Blizzard (inside ward)",
+            "Cloud: Berserk, Aerith Blizzard, Operator, Infinity's End",
           ],
         ]}
       />
