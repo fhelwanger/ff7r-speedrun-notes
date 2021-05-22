@@ -86,7 +86,10 @@ function Chapter5() {
           ]}
         />
       </Menu>
-      <Encounter enemies="Wererat x3" instructions={["Tifa: TRIPOLOSKI"]} />
+      <Encounter
+        enemies="Wererat x3"
+        instructions={["Tifa: Whirl, TRIPOLOSKI"]}
+      />
       <Menu>
         <UpgradeWeapons
           characters={[
@@ -149,23 +152,24 @@ function Chapter5() {
       <Encounter
         enemies="Grashtrike, Wererat x2"
         instructions={[
-          "Cloud: ATB Boost",
-          "Barret: TRIPOLOSKI, Overcharge, Focused Shot (stagger), Divekick Grashtrike",
+          "Cloud: ATB Boost, Dash, TRIPOLOSKI Rats",
+          "Barret: Overcharge, Focused Shot (stagger), Divekick Grashtrike",
         ]}
       />
       <Pick item="Hi-Potion x2" optional />
       <Encounter
         enemies="Grashtrike x2"
         instructions={[
-          "Barret: Overcharge, Focused Shot, Divekick A",
-          "Cloud: Berserk, Blizzard B",
+          "Cloud: ATB Boost",
+          "Barret: Overcharge B, Cloud Blizzard A",
+          "Barret: Focused Shot, Divekick B",
         ]}
       />
       <Encounter
         enemies="Grashtrike x2, Queen Grashtrike"
         instructions={[
           "Cloud: Punisher jump, Berserk, Blizzard A",
-          "Barret: Overcharge B (if they're split)",
+          "Barret: Overcharge B",
           "Cloud: Punisher full, Operator B",
           "Cloud: ATB Boost, Divekick, Blizzard Queen (pressure)",
           "Cloud: Berserk, Focused Shot, Blizzard, Punisher Queen (stagger)",
