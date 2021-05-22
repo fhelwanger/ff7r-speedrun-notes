@@ -128,8 +128,8 @@ function Chapter18() {
       <Encounter
         enemies="Whisper Rubrum"
         instructions={[
-          "Cloud: Dash, Braver",
-          "Barret: Thundaga, TRIPOLOSKI, Starshower x2, Charge x3, Overcharge",
+          "Cloud: Dash, Barret Thundaga, Braver",
+          "Barret: TRIPOLOSKI, Starshower x2, Charge x3, Overcharge",
           "Tifa: Omni, Whirl, Combo x6, Whirl",
           "Cloud: Unbridled, Punisher x4, Berserk",
           "Tifa: Combo",
