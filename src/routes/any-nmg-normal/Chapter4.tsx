@@ -116,7 +116,7 @@ function Chapter4() {
           "Punisher, Berserk B (until it jumps back, Thunder A for pressure if needed)",
           "Roll left, Cross Slash A (hit both), Focused Thrust if Wedge used mine",
           "Punisher/Berserk/Thunder (use Thunders for pressure)",
-          "Save half ATB/Berserk",
+          "Save 0.25 ATB",
         ]}
       />
       <Boss
