@@ -106,8 +106,8 @@ function Chapter4() {
       <Encounter
         enemies="Guard Dog x8"
         instructions={[
-          "Grenade C (right, left inputs to select target)",
-          "Go behind C, Counter/TRIPOLOSKI",
+          "Dash, TRIPOLOSKI Dogs near Wedge",
+          "Counter/TRIPOLOSKI",
         ]}
       />
       <Encounter
