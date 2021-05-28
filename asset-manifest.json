@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/ff7r-speedrun-notes/static/js/main.c5203fe3.chunk.js",
-    "main.js.map": "/ff7r-speedrun-notes/static/js/main.c5203fe3.chunk.js.map",
+    "main.js": "/ff7r-speedrun-notes/static/js/main.9222763c.chunk.js",
+    "main.js.map": "/ff7r-speedrun-notes/static/js/main.9222763c.chunk.js.map",
     "runtime-main.js": "/ff7r-speedrun-notes/static/js/runtime-main.12c092d6.js",
     "runtime-main.js.map": "/ff7r-speedrun-notes/static/js/runtime-main.12c092d6.js.map",
     "static/js/2.f2bf462b.chunk.js": "/ff7r-speedrun-notes/static/js/2.f2bf462b.chunk.js",
     "static/js/2.f2bf462b.chunk.js.map": "/ff7r-speedrun-notes/static/js/2.f2bf462b.chunk.js.map",
     "index.html": "/ff7r-speedrun-notes/index.html",
-    "precache-manifest.ea196c3588fe5354ef343f1117c5dd06.js": "/ff7r-speedrun-notes/precache-manifest.ea196c3588fe5354ef343f1117c5dd06.js",
+    "precache-manifest.f7bc37ee6f2fce33a2abc1c27fdc3cf2.js": "/ff7r-speedrun-notes/precache-manifest.f7bc37ee6f2fce33a2abc1c27fdc3cf2.js",
     "service-worker.js": "/ff7r-speedrun-notes/service-worker.js",
     "static/js/2.f2bf462b.chunk.js.LICENSE.txt": "/ff7r-speedrun-notes/static/js/2.f2bf462b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.12c092d6.js",
     "static/js/2.f2bf462b.chunk.js",
-    "static/js/main.c5203fe3.chunk.js"
+    "static/js/main.9222763c.chunk.js"
   ]
 }
