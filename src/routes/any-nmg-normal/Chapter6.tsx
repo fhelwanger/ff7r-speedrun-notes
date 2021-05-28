@@ -5,13 +5,57 @@ import Chapter from "../../components/Chapter";
 import Dialogue from "../../components/Dialogue";
 import Encounter from "../../components/Encounter";
 import Heal from "../../components/Heal";
+import Materia from "../../components/Materia";
 import Menu from "../../components/Menu";
 import Pick from "../../components/Pick";
+import UpgradeWeapons from "../../components/UpgradeWeapons";
 
 function Chapter6() {
   return (
     <Chapter number={6}>
       <Pick item="Hi-Potion" optional />
+      <Menu>
+        <Materia
+          characters={[
+            {
+              name: "Cloud",
+              weapon: [
+                { name: "Ice", source: "tifa" },
+                { name: "First Strike" },
+                { name: "ATB Boost" },
+              ],
+              armor: [{ name: "Lightning" }],
+              summon: [{ name: "Ifrit" }],
+            },
+            {
+              name: "Tifa",
+              weapon: [
+                { name: "Fire" },
+                { name: "First Strike" },
+                { name: "Lightning" },
+              ],
+              armor: [{ name: "Barrier", source: "cloud" }],
+              summon: [{ name: "" }],
+            },
+          ]}
+        />
+        <UpgradeWeapons
+          characters={[
+            {
+              name: "Cloud",
+              weapons: [{ name: "Iron Blade", upgrade: "Manual" }],
+            },
+          ]}
+        />
+        <BattleSettings
+          characters={[
+            {
+              name: "Tifa",
+              shortcuts: [{ ability: "Leader" }],
+            },
+          ]}
+        />
+      </Menu>
       <Box description="Before the fans." />
       <Encounter
         enemies="Grashtrike x3"

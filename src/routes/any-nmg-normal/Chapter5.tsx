@@ -293,48 +293,6 @@ function Chapter5() {
           ],
         ]}
       />
-      <Menu>
-        <Materia
-          characters={[
-            {
-              name: "Cloud",
-              weapon: [
-                { name: "Ice", source: "tifa" },
-                { name: "First Strike" },
-                { name: "ATB Boost" },
-              ],
-              armor: [{ name: "Lightning" }],
-              summon: [{ name: "Ifrit" }],
-            },
-            {
-              name: "Tifa",
-              weapon: [
-                { name: "Fire" },
-                { name: "First Strike" },
-                { name: "Lightning" },
-              ],
-              armor: [{ name: "Barrier", source: "cloud" }],
-              summon: [{ name: "" }],
-            },
-          ]}
-        />
-        <UpgradeWeapons
-          characters={[
-            {
-              name: "Cloud",
-              weapons: [{ name: "Iron Blade", upgrade: "Manual" }],
-            },
-          ]}
-        />
-        <BattleSettings
-          characters={[
-            {
-              name: "Tifa",
-              shortcuts: [{ ability: "Leader" }],
-            },
-          ]}
-        />
-      </Menu>
     </Chapter>
   );
 }
