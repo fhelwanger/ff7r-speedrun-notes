@@ -21,14 +21,14 @@ function Chapter11() {
           characters={[
             {
               name: "Cloud",
-              equipments: [
-                { name: "Titanium Bangle", inputs: ["down"] },
-                { name: "Fury Ring", source: "aerith", inputs: ["right"] },
-              ],
+              equipments: [{ name: "Titanium Bangle", inputs: ["down"] }],
             },
             {
               name: "Tifa (R2)",
-              equipments: [{ name: "Feathered Gloves", inputs: ["right"] }],
+              equipments: [
+                { name: "Fury Ring", source: "aerith", inputs: ["right"] },
+                { name: "Feathered Gloves", inputs: ["right"] },
+              ],
             },
             {
               name: "Aerith (R2)",
@@ -142,6 +142,16 @@ function Chapter11() {
         enemies="Ghost"
         instructions={["Phoenix Down, Starshower if not learned yet"]}
       />
+      <Menu instructions={["Can do this as soon as Starshower learned"]}>
+        <Equipment
+          characters={[
+            {
+              name: "Tifa",
+              equipments: [{ name: "Metal Knuckles", inputs: ["up", "up"] }],
+            },
+          ]}
+        />
+      </Menu>
       <Pick item="1000 gil" optional />
       <Shop
         name="Vending Machine"
@@ -164,19 +174,6 @@ function Chapter11() {
           },
         ]}
       />
-      <Menu>
-        <Equipment
-          characters={[
-            {
-              name: "Tifa",
-              equipments: [
-                { name: "Metal Knuckles", inputs: ["up", "up"] },
-                { name: "Fury Ring", source: "cloud", inputs: ["right"] },
-              ],
-            },
-          ]}
-        />
-      </Menu>
       <Boss
         name="Ghoul"
         phases={[
@@ -201,6 +198,11 @@ function Chapter11() {
             {
               name: "Aerith",
               equipments: [
+                {
+                  name: "Power Wristguards",
+                  source: "cloud",
+                  inputs: ["left"],
+                },
                 {
                   name: "Fury Ring",
                   source: "tifa",
