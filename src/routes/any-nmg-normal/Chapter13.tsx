@@ -253,9 +253,9 @@ function Chapter13() {
         instructions={[
           "Barret: Overcharge Monodrive",
           "Tifa: Parry, Combo x3, Whirl Monodrive",
-          "Tifa: Barret Thundara, Starshower, Focused Shot",
-          "Tifa: Combo x6, Parry, Combo x6",
-          "Barret: Starshower x2, run to ladder, Combo",
+          "Tifa: Barret Thundara, Starshower, Whirl, Focused Strike, Focused Shot",
+          "Tifa: Whirl x2, Starshower x2",
+          "Barret: Run to ladder",
         ]}
       />
       <Bench description="Or Tifa 39 MP, Barret 29 MP, good HP" />
