@@ -226,8 +226,8 @@ function Chapter9() {
             "Cloud: Take toy damage, Berserk",
           ],
           [
-            "Cloud: Counter x2, Braver (pressure)",
-            "Aerith: Braver, Combo x1, Fira, Tempest full, Fira, Tempest full",
+            "Cloud: Counter x2",
+            "Aerith: Braver x2, Combo x1 (wait pressure), Fira, Tempest full, Fira, Tempest full",
             "Cloud: Berserk (stagger), Aerith Fira, Punisher x4, Operator, Braver",
             "Aerith: Cross Slash, Soul Drain",
           ],
