@@ -124,6 +124,7 @@ function Chapter11() {
           "Cloud: TRIPOLOSKI x2",
         ]}
       />
+      <Box description="While waiting for the door to open." />
       <Encounter enemies="Ghost" instructions={["Phoenix Down, Starshower"]} />
       <Encounter
         enemies="Cripshay x3"
