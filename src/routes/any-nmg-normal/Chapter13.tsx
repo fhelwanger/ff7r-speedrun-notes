@@ -14,6 +14,7 @@ import Shop from "../../components/Shop";
 function Chapter13() {
   return (
     <Chapter number={13}>
+      <Menu instructions={["Open and close menu to upgrade Barret's weapon"]} />
       <Encounter
         enemies="Gorgers x4"
         instructions={["Cloud: TRIPOLOSKI, Starshower"]}
@@ -22,10 +23,11 @@ function Chapter13() {
       <Encounter
         enemies="Sweeper Prototype, Smogger"
         instructions={[
-          "Cloud: Berserk, Tifa Thundara, Thundara Smogger",
-          "Tifa: Combo x5, Whirl, Combo x5, Whirl Sweeper",
-          "Cloud: Berserk, Starshower, ATB Boost Sweeper",
-          "Cloud: Thundara x2, Tifa Thundara Sweeper",
+          "Cloud: Thundara Smogger",
+          "Barret: Overcharge, Thundara Smogger",
+          "Tifa: Whirl Smogger, Whirl Sweeper",
+          "Cloud: Punisher full, Starshower, Berserk",
+          "Tifa: Starshower, Cloud ATB Boost, Cloud Thundara x2, Whirl",
         ]}
       />
       <Pick item="Heavy-Duty Bracer" />
