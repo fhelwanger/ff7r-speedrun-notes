@@ -47,7 +47,7 @@ function Chapter13() {
         instructions={[
           "Cloud: ATB Boost",
           "Tifa: Starshower, TRIPOLOSKI, Whirl/Divekick Bandits",
-          "Barret: Overcharge, 2 ATB, TRIPOLOSKI, Focused Shot Grungy",
+          "Barret: Overcharge, 2 ATB, Cloud Fira, Focused Shot Grungy",
           "Tifa: Combo (stagger, 2 ATB), Starshower x2 Grungy",
         ]}
       />
