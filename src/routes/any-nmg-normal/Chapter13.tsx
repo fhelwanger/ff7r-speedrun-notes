@@ -258,7 +258,7 @@ function Chapter13() {
           "Barret: Run to ladder",
         ]}
       />
-      <Bench description="Or Tifa 39 MP, Barret 29 MP, good HP" />
+      <Bench description="Or Tifa 39 MP, Barret 19 MP, Tifa full/Barret good HP" />
       <Shop
         name="Vending Machine"
         buy={[
@@ -270,8 +270,8 @@ function Chapter13() {
         name="Failed Experiment"
         phases={[
           [
-            "Barret: Overcharge, Tifa ATB Boost, Tifa Blizzara All, Tifa Refocus",
-            "Barret: Combo low HP ones, Blizzara, Tifa Blizzara All",
+            "Barret: Overcharge, Tifa ATB Boost, Tifa Blizzara All",
+            "Barret: Blizzara left one, Tifa Refocus, Tifa Blizzara All, Combo",
             "Tifa: Combo/Whirl/Focused Strike",
           ],
           [
@@ -281,8 +281,8 @@ function Chapter13() {
           ],
           ["Tifa: Go up, Blizzara All, Somersault"],
           [
-            "Tifa: Fire in the Hole, Parry up",
-            "Tifa: Starshower x2, Somersault, Whirl/Divekick",
+            "Tifa: Parry up, Starshower x2, Somersault",
+            "Tifa: Combo x6, Whirl/Divekick",
           ],
         ]}
       />
