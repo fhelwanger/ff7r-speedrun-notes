@@ -126,7 +126,7 @@ function Chapter17() {
       />
       <Heal description="Ether x1 Cloud/Barret" />
       <Dialogue details="Pull lever number 3" />
-      <Menu>
+      <Menu instructions={["Do Aerith Weapon, then Tifa, then Aerith Armor"]}>
         <Equipment
           characters={[
             {
