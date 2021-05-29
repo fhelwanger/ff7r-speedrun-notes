@@ -250,7 +250,7 @@ function Chapter14() {
         instructions={[
           "Cloud: Cleave, Punisher x6, Operator Blugu",
           "Cloud: Fira, Starshower Shoat",
-          "Cloud: ATB Boost, Fira, Fire Shoat",
+          "Cloud: ATB Boost, Fira, Blade Burst Shoat",
         ]}
       />
       <Heal description="Ether x1 Cloud" />
