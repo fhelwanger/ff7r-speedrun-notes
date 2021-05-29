@@ -114,9 +114,11 @@ function Chapter15() {
       <Encounter
         enemies="Cerulean Drake x2"
         instructions={[
-          "Cloud: ATB Boost, Aerora All x2",
-          "Overcharge/Sleep/Cloud Aerora/Tifa Blizzara to stagger",
-          "Whirl/Divekick/Starshower when staggered",
+          "Cloud: ATB Boost",
+          "Barret: Roll right, Overcharge",
+          "Tifa: Parry right, Cloud Aerora All x2",
+          "Sleep/Cloud Aerora/Tifa Blizzara to stagger",
+          "Omni/Whirl/Divekick/Cloud Aerora when staggered",
         ]}
       />
       <Heal description="Ether x1 Cloud" />
