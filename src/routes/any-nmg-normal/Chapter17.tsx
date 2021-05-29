@@ -442,7 +442,7 @@ function Chapter17() {
             "Cloud: Cleave, Punisher full",
           ],
           [
-            "Cloud: Barret Blizzara All, Punisher jump, Braver, Operator, TRIPOLOSKI A",
+            "Cloud: Punisher jump, Braver, Operator, TRIPOLOSKI A",
             "Cloud: TRIPOLOSKI/ATB Boost/Barret Blizzara All",
           ],
         ]}
