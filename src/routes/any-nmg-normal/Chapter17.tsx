@@ -394,8 +394,9 @@ function Chapter17() {
       <Encounter
         enemies="Zenene x2"
         instructions={[
-          "Barret: Overcharge, Focused Shot (pressured)",
-          "Cloud: Punisher/TRIPOLOSKI",
+          "Cloud: TRIPOLOSKI",
+          "Barret: Overcharge",
+          "Cloud: Focused Shot one, Punisher full other, TRIPOLOSKI x2",
         ]}
       />
       <Heal description="Full HP, Cloud 45 MP, Barret 21 MP" />
