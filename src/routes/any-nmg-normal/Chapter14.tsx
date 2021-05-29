@@ -381,7 +381,7 @@ function Chapter14() {
             "Tifa: Combo x6, Whirl, Cloud Fira",
           ],
           [
-            "Tifa: Blizzara All, Cloud ATB Boost, Blade Burst, Whirl x2",
+            "Tifa: Blizzara All, Cloud ATB Boost, TRIPOLOSKI, Whirl x2",
             "Tifa: Barret Sleep, Starshower x2, Somersault Abzu",
             "Cloud: TRIPOLOSKI/Barret Fira Shoats",
           ],
