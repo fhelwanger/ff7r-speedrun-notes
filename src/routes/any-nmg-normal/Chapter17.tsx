@@ -243,8 +243,8 @@ function Chapter17() {
       <Encounter
         enemies="Sentry Launcher x3"
         instructions={[
-          "Tifa: ATB Boost, Thundara x2 B",
-          "Aerith: Thundara A, Thundara C, Blizzara All",
+          "Tifa: Aerith Thundara A and C, Thundara B",
+          "Tifa: Aerith Blizzara All A/C, Thundara B",
         ]}
       />
       <Heal description="Ether x2 Aerith" />
