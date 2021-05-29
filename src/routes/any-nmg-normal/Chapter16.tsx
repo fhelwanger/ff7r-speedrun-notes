@@ -74,8 +74,8 @@ function Chapter16() {
       <Encounter
         enemies="Elite Security Officer x3 / Elite Security Officer x3, Elite Grenadier x2"
         instructions={[
-          "Cloud: Fira All, Divekick",
-          "Cloud: Fira All x2, Divekick",
+          "Cloud: Fira All x2, ATB Boost",
+          "Tifa: Starshower, TRIPOLOSKI",
         ]}
       />
       <Heal description="Ether x1 Cloud" />
@@ -89,7 +89,7 @@ function Chapter16() {
           "Barret: Starshower x2",
         ]}
       />
-      <Heal description="Ether x2 Cloud" />
+      <Heal description="Ether x1 Cloud" />
       <Encounter
         enemies="Elite Security Officer x2, Elite Grenadier x2, Guard Dog x3"
         instructions={[
@@ -97,12 +97,13 @@ function Chapter16() {
           "2nd group: Fira All, Cross Slash Dogs, Whirl/Divekick Grenadiers",
         ]}
       />
-      <Heal description="Ether x1 Cloud" />
+      <Heal description="Ether x2 Cloud" />
       <Encounter
         enemies="Elite Riot Trooper x3, 3-C Soldier Operator x2, Guard Dog x3"
         instructions={[
+          "Cloud: Fira All, ATB Boost if don't have 1 ATB, approach Soldiers",
           "Cloud: Fira All x2, Cross Slash Soldiers",
-          "Tifa: Starshower x2, Cloud Fira All, TRIPOLOSKI",
+          "Tifa: Starshower x2, TRIPOLOSKI",
         ]}
       />
       <Heal description="Cloud 20 MP" />
