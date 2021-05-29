@@ -271,8 +271,8 @@ function Chapter15() {
       <Encounter
         enemies="Elite Helitrooper x2"
         instructions={[
-          "Barret: Cloud ATB Boost, Cloud Fira, Tifa Thundara A",
-          "Barret: Overcharge, Cloud Fira, Barret Fira B",
+          "Barret: Cloud ATB Boost, Overcharge, Cloud Fira, Tifa Thundara A",
+          "Barret: Cloud Fira, Fira B",
         ]}
       />
       <Bench />
