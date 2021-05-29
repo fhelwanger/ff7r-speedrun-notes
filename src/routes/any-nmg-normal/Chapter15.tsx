@@ -77,6 +77,17 @@ function Chapter15() {
             },
           ]}
         />
+        <UpgradeWeapons
+          characters={[
+            {
+              name: "Tifa",
+              weapons: [
+                { name: "Metal Knuckles", upgrade: "Manual" },
+                { name: "Mythril Claws", upgrade: "Auto - Attack" },
+              ],
+            },
+          ]}
+        />
         <BattleSettings
           characters={[
             {
@@ -126,17 +137,6 @@ function Chapter15() {
                 { name: "Lightning", source: "cloud" },
               ],
               summon: [{ name: "" }],
-            },
-          ]}
-        />
-        <UpgradeWeapons
-          characters={[
-            {
-              name: "Tifa",
-              weapons: [
-                { name: "Metal Knuckles", upgrade: "Manual" },
-                { name: "Mythril Claws", upgrade: "Auto - Attack" },
-              ],
             },
           ]}
         />
