@@ -415,7 +415,7 @@ function Chapter17() {
           characters={[
             {
               name: "Cloud",
-              equipments: [{ name: "Hardedge", inputs: ["up", "up"] }],
+              equipments: [{ name: "Hardedge", inputs: ["up"] }],
             },
           ]}
         />
