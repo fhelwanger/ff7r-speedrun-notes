@@ -150,16 +150,16 @@ function Chapter15() {
           "Cloud: ATB Boost, Fira x2 other",
         ]}
       />
-      <Heal description="Cloud 30 MP" />
+      <Heal description="Cloud 40 MP" />
       <Encounter
         enemies="Gauntlet"
         instructions={[
           "Dog/Officers: Cloud Fira All, Starshower, Punisher",
           "Helitrooper/Officers: Overcharge, Cloud Fira All, Barret Fira Helitrooper",
-          "Helitrooper/Officers: Cloud Combo (stagger) Helitrooper, TRIPOLOSKI, ATB Boost",
-          "Officers/Grenadiers: Cross Slash, TRIPOLOSKI",
+          "Helitrooper/Officers: Cloud Combo (stagger) Helitrooper, TRIPOLOSKI",
+          "Officers/Grenadiers: Fira All, TRIPOLOSKI, ATB Boost",
           "Helitrooper/Officers/Grenadiers: Cloud Fira, Barret Fira Helitrooper",
-          "Helitrooper/Officers/Grenadiers: Starshower/Whirl/Divekick",
+          "Helitrooper/Officers/Grenadiers: Cross Slash, Whirl/Divekick",
         ]}
       />
       <Shop
