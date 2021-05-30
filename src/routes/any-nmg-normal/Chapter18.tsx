@@ -138,7 +138,7 @@ function Chapter18() {
       <Encounter
         enemies="Whisper Viridi, Whisper Croceo"
         instructions={[
-          "Cloud: TRIPOLOSKI Croceo, Counter, Berserk, TRIPOLOSKI Viridi",
+          "Cloud: TRIPOLOSKI Croceo, Counter (Roll and Block if Azure Plume), Berserk, TRIPOLOSKI Viridi",
           "Cloud: Punisher full, TRIPOLOSKI, Punisher full Viridi",
           "Barret: Overcharge, TRIPOLOSKI, Thundara, Braver Croceo",
           "Cloud: Berserk, Punisher Croceo, Barret Mega-Potion Cloud",
