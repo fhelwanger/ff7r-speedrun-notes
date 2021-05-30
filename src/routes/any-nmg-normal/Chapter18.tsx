@@ -130,7 +130,7 @@ function Chapter18() {
         instructions={[
           "Cloud: Dash, Barret Thundaga, Braver",
           "Barret: TRIPOLOSKI, Starshower x2, Charge x3",
-          "Tifa: Omni, Whirl, Combo x6, Whirl",
+          "Tifa: Omni, Combo x6, Whirl x2",
           "Cloud: Unbridled, Punisher x4, Berserk",
           "Tifa: Combo",
         ]}
@@ -149,25 +149,25 @@ function Chapter18() {
         phases={[
           ["Cloud: TRIPOLOSKI Rubrum", "Aerith: Combo"],
           [
-            "Cloud: Counter, Aerith Firaga, Aerith ATB Boost, Berserk, Braver",
-            "Cloud: Punisher full, Aerith Firaga, Berserk, Braver",
-            "Tifa: Starshower x2, Omni, Whirl",
+            "Cloud: Counter, Aerith Firaga, Aerith ATB Boost",
+            "Cloud: Punisher x4, Berserk, Aerith Firaga, Braver",
+            "Cloud: Punisher full, Starshower x2, Berserk",
+            "Tifa: Omni, Whirl",
           ],
           [
-            "Cloud: TRIPOLOSKI Croceo, 1 ATB, TRIPOLOSKI Rubrum",
-            "Cloud: Aerith Thundaga Rubrum (stagger)",
+            "Cloud: Braver, Aerith Thundaga Rubrum (stagger)",
             "Cloud: Berserk, Braver, Operator, Punisher Rubrum",
           ],
           [
-            "Tifa: Starshower, Whirl, Aerith Firaga Viridi",
-            "Tifa: Whirl, Divekick, Whirl",
+            "Tifa: Starshower, Whirl (stagger) Viridi",
+            "Tifa: Aerith Firaga, Whirl/Divekick Viridi",
           ],
           [
-            "Tifa: Whirl/Divekick (stagger)",
+            "Tifa: Starshower, Whirl (stagger) Croceo",
             "Cloud: Berserk, Infinity's End Croceo",
             "Tifa: Whirl Croceo",
           ],
-          ["Tifa Thunder"],
+          ["Tifa: Thunder"],
         ]}
       />
       <Boss
