@@ -147,7 +147,7 @@ function Chapter18() {
       <Boss
         name="Whisper Rubrum, Whisper Viridi, Whisper Croceo / Whisper Bahamut / Whisper Harbinger"
         phases={[
-          ["Cloud: Dash, TRIPOLOSKI Rubrum", "Aerith: Combo"],
+          ["Cloud: TRIPOLOSKI Rubrum", "Aerith: Combo"],
           [
             "Cloud: Counter, Aerith Firaga, Aerith ATB Boost, Berserk, Braver",
             "Cloud: Punisher full, Aerith Firaga, Berserk, Braver",
