@@ -181,8 +181,9 @@ function Chapter18() {
           [
             "Cloud: Cleave, TRIPOLOSKI",
             "Tifa: Combo x5, Whirl",
-            "Cloud: Berserk, Operator, Counter, Operator, Counter, Focused Thrust",
-            "Cloud: Launch, Berserk",
+            "Cloud: Combo x2, Counter, Berserk",
+            "Cloud: Operator, Counter, Operator, Mega-Potion Tifa",
+            "Cloud: Counter, Focused Thrust, Launch, Berserk",
             "Tifa: Whirl, Divekick, Whirl, Divekick, Whirl",
           ],
           [
@@ -191,7 +192,7 @@ function Chapter18() {
             "Tifa: Aerith Blizzara, Focused Strike, Combo",
             "Cloud: Counter, Operator, Counter (stagger)",
             "Cloud: Unbridled, Berserk, Cross Slash",
-            "Tifa: Omni, Whirl, Divekick, Whirl",
+            "Tifa: Omni, Whirl, Divekick, Combo",
           ],
           [
             "Tifa: Cloud Infinity's End",
